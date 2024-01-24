@@ -22,7 +22,7 @@
             "name": "fps booster",
             "descripcion": "Este mod te da mas fps en tu minecraft, idea por si tienes problemas de rendimiento",
             "version": "1.18.2-15.122.1",
-            "file": "fps_booster-15.122.1.jar"
+            "file": "fps_booster-15.122.1.jar",
             "disponible": True
         }
     ]
