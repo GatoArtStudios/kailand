@@ -6,13 +6,15 @@
             "name": "Carryon",
             "descripcion": "Mods para cargar objetos en la mano",
             "version": "1.18.2-1.17.1.12",
-            "file": "carryon-1.18.2-1.17.1.12.jar"
+            "file": "carryon-1.18.2-1.17.1.12.jar",
+            "disponible": True
         },
         {
             "name": "Jei",
             "descripcion": "Este mod te permite buscar los crafteos y te muestra la receta",
             "version": "1.18.2-10.2.1.1005",
-            "file": "jei-1.18.2-forge-10.2.1.1005.jar"
+            "file": "jei-1.18.2-forge-10.2.1.1005.jar",
+            "disponible": True
         }
     ],
     "complementos": [
@@ -21,6 +23,7 @@
             "descripcion": "Este mod te da mas fps en tu minecraft, idea por si tienes problemas de rendimiento",
             "version": "1.18.2-15.122.1",
             "file": "fps_booster-15.122.1.jar"
+            "disponible": True
         }
     ]
 }
