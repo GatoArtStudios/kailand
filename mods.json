@@ -1,7 +1,8 @@
 {
     "configVersion": "1.0.14",
     "launcherVersion": "1.0.0",
-    "reglas": "Actualzacion V 1.0.14 \nPor el momento no hay reglas...",
+    "reglas": "Actualizacion V 1.0.14 \nPor el momento no hay reglas...",
+    "horario": "No disponible aun",
     "mods": [
         {
             "name": "Carryon",
