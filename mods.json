@@ -2,6 +2,7 @@
     "configVersion": "1.0.16",
     "launcherVersion": "1.0.16.0",
     "launcherUrl": "https://mega.nz/file/Im8DwBrY#T1JX5XQKmaPW0RxoDfyf6mlWCjxjoedGM6Nrk8Znn4M",
+    "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: El launcher ahora notificara cuando halla una actualizacion del mismo launcher y se corriguieron errores de creacion de directorio, tambien se descargan los mods en automatico desde el sitio oficial de cada mod"
     "reglas": "Actualizacion V 1.0.16 \nPor el momento no hay reglas...",
     "horario": "No disponible aun",
     "mods": [
