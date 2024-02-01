@@ -1,9 +1,9 @@
 {
-    "configVersion": "1.0.18",
+    "configVersion": "1.0.19",
     "launcherVersion": "1.0.16.0",
     "launcherUrl": "https://www.mediafire.com/file/ywvvwqfe49c5xdj/Kailand.exe/file",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: El launcher ahora notificara cuando halla una actualizacion del mismo launcher y se corriguieron errores de creacion de directorio, tambien se descargan los mods en automatico desde el sitio oficial de cada mod",
-    "reglas": "Actualizacion V 1.0.18 \nPor el momento no hay reglas...",
+    "reglas": "Actualizacion V 1.0.19 \nPor el momento no hay reglas...",
     "horario": "No disponible aun",
     "mods": [
         {
@@ -30,9 +30,9 @@
         {
             "name": "coroutil",
             "descripcion": "Sin Datos",
-            "file": "coroutil-forge-1.18.2-1.3.6.jar",
-            "url": "https://mediafilez.forgecdn.net/files/5008/370/coroutil-forge-1.18.2-1.3.6.jar",
-            "disponible": false
+            "file": "coroutil-forge-1.19.2-1.3.6.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5010/127/coroutil-forge-1.19.2-1.3.6.jar",
+            "disponible": true
         },
         {
             "name": "CreativeCore",
@@ -294,11 +294,11 @@
             "disponible": true
         },
         {
-            "name": "Improvements",
+            "name": "AI-Improvements",
             "descripcion": "Sin Datos",
-            "file": "AI-Improvements-1.18.2-0.5.2.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4019/126/AI-Improvements-1.18.2-0.5.2.jar",
-            "disponible": false
+            "file": "AI-Improvements-1.19.2-0.5.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4019/127/AI-Improvements-1.19.2-0.5.2.jar",
+            "disponible": true
         },
         {
             "name": "trashslot",
