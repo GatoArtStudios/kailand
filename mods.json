@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.19",
+    "configVersion": "1.0.20",
     "launcherVersion": "1.0.16.0",
     "launcherUrl": "https://www.mediafire.com/file/ywvvwqfe49c5xdj/Kailand.exe/file",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: El launcher ahora notificara cuando halla una actualizacion del mismo launcher y se corriguieron errores de creacion de directorio, tambien se descargan los mods en automatico desde el sitio oficial de cada mod",
@@ -494,6 +494,20 @@
             "descripcion": "Sin Datos",
             "file": "betterfpsdist-1.19.2-4.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4818/278/betterfpsdist-1.19.2-4.0.jar",
+            "disponible": true
+        },
+        {
+            "name": "Atlas",
+            "descripcion": "Sin Datos",
+            "file": "Atlas-Lib-1.19.2-1.1.6.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4088/354/Atlas-Lib-1.19.2-1.1.6.jar",
+            "disponible": true
+        },
+        {
+            "name": "Placebo",
+            "descripcion": "Sin Datos",
+            "file": "Placebo-1.19.2-7.3.4.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4876/369/Placebo-1.19.2-7.3.4.jar",
             "disponible": true
         }
     ],
