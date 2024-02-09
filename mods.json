@@ -1,9 +1,9 @@
 {
-    "configVersion": "1.0.22",
+    "configVersion": "1.0.23",
     "launcherVersion": "1.0.16.0",
     "launcherUrl": "https://www.mediafire.com/file/ywvvwqfe49c5xdj/Kailand.exe/file",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: El launcher ahora notificara cuando halla una actualizacion del mismo launcher y se corriguieron errores de creacion de directorio, tambien se descargan los mods en automatico desde el sitio oficial de cada mod",
-    "reglas": "Actualizacion V 1.0.19 \n1️⃣ NO tocar por ningún motivo las tumbas ajenas.\n2️⃣ NO tener mas de 2 cofres dobles o cualquier tipo de mueble de almacenamiento con contraseña. Cada jugador decide si usar un solo tipo de cualquier mueble con contraseña (2 cofres dobles o 4 barriles con contraseña).\n3️⃣ NO comercializar ni regalar el huevo del dragón.\n4️⃣ NO hacerte pasar por otra persona, es decir, hacerte pasar por otro usuario, o tener MULTICUENTAS.\n5️⃣ NO hacer Spawn-Kill sin algún motivo del mismo peso (es decir matar a un jugador sin ningún móvil que justifique el asesinato constante).\n6️⃣ NO exceder el limite del nivel 40 de cualquier encantamiento.\n7️⃣ NO spawnear o invocar ningún tipo boss o mob a 1000 bloques de cada dirección del Spawn del Survival.\n8️⃣ Está totalmente prohibido utilizar el 'Code Breaker'.\n9️⃣ NO tener cofres (normales o codificados), ni casa y/o base a más de 10000 de bloques empezando por el Lobby del Survival hacia cualquier dirección.\n1️⃣ 0️⃣ Está totalmente PROHIBIDO dupear (duplicar) items.",
+    "reglas": "Actualizacion V 1.0.20 \n1️⃣ NO tocar por ningún motivo las tumbas ajenas.\n2️⃣ NO tener mas de 2 cofres dobles o cualquier tipo de mueble de almacenamiento con contraseña. Cada jugador decide si usar un solo tipo de cualquier mueble con contraseña (2 cofres dobles o 4 barriles con contraseña).\n3️⃣ NO comercializar ni regalar el huevo del dragón.\n4️⃣ NO hacerte pasar por otra persona, es decir, hacerte pasar por otro usuario, o tener MULTICUENTAS.\n5️⃣ NO hacer Spawn-Kill sin algún motivo del mismo peso (es decir matar a un jugador sin ningún móvil que justifique el asesinato constante).\n6️⃣ NO exceder el limite del nivel 40 de cualquier encantamiento.\n7️⃣ NO spawnear o invocar ningún tipo boss o mob a 1000 bloques de cada dirección del Spawn del Survival.\n8️⃣ Está totalmente prohibido utilizar el 'Code Breaker'.\n9️⃣ NO tener cofres (normales o codificados), ni casa y/o base a más de 10000 de bloques empezando por el Lobby del Survival hacia cualquier dirección.\n1️⃣ 0️⃣ Está totalmente PROHIBIDO dupear (duplicar) items.",
     "horario": "No disponible aun",
     "mods": [
         {
@@ -683,6 +683,13 @@
             "descripcion": "Sin Datos",
             "file": "TA-0.9.5-1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4558/60/TA-0.9.5-1.19.2.jar",
+            "disponible": true
+        },
+        {
+            "name": "Kailand_Mod",
+            "descripcion": "Sin Datos",
+            "file": "Kailand_Mod_1.19.2.jar",
+            "url": "https://raw.githubusercontent.com/DonGatun/kailand/Gatun/mods/Kailand_Mod_1.19.2.jar",
             "disponible": true
         }
     ],
