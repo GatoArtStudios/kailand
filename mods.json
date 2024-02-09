@@ -1,9 +1,9 @@
 {
-    "configVersion": "1.0.20",
+    "configVersion": "1.0.21",
     "launcherVersion": "1.0.16.0",
     "launcherUrl": "https://www.mediafire.com/file/ywvvwqfe49c5xdj/Kailand.exe/file",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: El launcher ahora notificara cuando halla una actualizacion del mismo launcher y se corriguieron errores de creacion de directorio, tambien se descargan los mods en automatico desde el sitio oficial de cada mod",
-    "reglas": "Actualizacion V 1.0.19 \nPor el momento no hay reglas...",
+    "reglas": "Actualizacion V 1.0.19 \n1️⃣ NO tocar por ningún motivo las tumbas ajenas.\n2️⃣ NO tener mas de 2 cofres dobles o cualquier tipo de mueble de almacenamiento con contraseña. Cada jugador decide si usar un solo tipo de cualquier mueble con contraseña (2 cofres dobles o 4 barriles con contraseña).\n3️⃣ NO comercializar ni regalar el huevo del dragón.\n4️⃣ NO hacerte pasar por otra persona, es decir, hacerte pasar por otro usuario, o tener MULTICUENTAS.\n5️⃣ NO hacer Spawn-Kill sin algún motivo del mismo peso (es decir matar a un jugador sin ningún móvil que justifique el asesinato constante).\n6️⃣ NO exceder el limite del nivel 40 de cualquier encantamiento.\n7️⃣ NO spawnear o invocar ningún tipo boss o mob a 1000 bloques de cada dirección del Spawn del Survival.\n8️⃣ Está totalmente prohibido utilizar el 'Code Breaker'.\n9️⃣ NO tener cofres (normales o codificados), ni casa y/o base a más de 10000 de bloques empezando por el Lobby del Survival hacia cualquier dirección.\n1️⃣ 0️⃣ Está totalmente PROHIBIDO dupear (duplicar) items.",
     "horario": "No disponible aun",
     "mods": [
         {
@@ -11,7 +11,7 @@
             "descripcion": "Sin Datos",
             "file": "BadMobs-1.19.2-16.1.3.jar",
             "url": "https://mediafilez.forgecdn.net/files/4057/652/BadMobs-1.19.2-16.1.3.jar",
-            "disponible": true
+            "disponible": false
         },
         {
             "name": "bloodandgore",
@@ -130,7 +130,7 @@
             "descripcion": "Sin Datos",
             "file": "Jade-1.19.1-forge-8.9.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4800/904/Jade-1.19.1-forge-8.9.1.jar",
-            "disponible": true
+            "disponible": false
         },
         {
             "name": "CosmeticArmorReworked",
@@ -298,7 +298,7 @@
             "descripcion": "Sin Datos",
             "file": "AI-Improvements-1.19.2-0.5.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4019/127/AI-Improvements-1.19.2-0.5.2.jar",
-            "disponible": true
+            "disponible": false
         },
         {
             "name": "trashslot",
@@ -508,6 +508,111 @@
             "descripcion": "Sin Datos",
             "file": "Placebo-1.19.2-7.3.4.jar",
             "url": "https://mediafilez.forgecdn.net/files/4876/369/Placebo-1.19.2-7.3.4.jar",
+            "disponible": true
+        },
+        {
+            "name": "sophisticatedcore",
+            "descripcion": "Sin Datos",
+            "file": "sophisticatedcore-1.19.2-0.5.111.525.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4993/648/sophisticatedcore-1.19.2-0.5.111.525.jar",
+            "disponible": true
+        },
+        {
+            "name": "FarmersDelight",
+            "descripcion": "Sin Datos",
+            "file": "FarmersDelight-1.19.2-1.2.4.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5051/241/FarmersDelight-1.19.2-1.2.4.jar",
+            "disponible": true
+        },
+        {
+            "name": "Butchersdelight Foods",
+            "descripcion": "Sin Datos",
+            "file": "Butchersdelight%20Foods%20beta%201.19.2%201.0.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4813/851/Butchersdelight%20Foods%20beta%201.19.2%201.0.2.jar",
+            "disponible": true
+        },
+        {
+            "name": "bettervillage",
+            "descripcion": "Sin Datos",
+            "file": "bettervillage-forge-1.19.2-3.2.0.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4703/619/bettervillage-forge-1.19.2-3.2.0.jar",
+            "disponible": true
+        },
+        {
+            "name": "libraryferret",
+            "descripcion": "Sin Datos",
+            "file": "libraryferret-forge-1.19.2-4.0.0.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4435/523/libraryferret-forge-1.19.2-4.0.0.jar",
+            "disponible": true
+        },
+        {
+            "name": "awesomedungeonnether",
+            "descripcion": "Sin Datos",
+            "file": "awesomedungeonnether-forge-1.19.2-3.1.1.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4454/55/awesomedungeonnether-forge-1.19.2-3.1.1.jar",
+            "disponible": true
+        },
+        {
+            "name": "awesomedungeonend",
+            "descripcion": "Sin Datos",
+            "file": "awesomedungeonend-forge-1.19.2-3.1.1.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4454/472/awesomedungeonend-forge-1.19.2-3.1.1.jar",
+            "disponible": true
+        },
+        {
+            "name": "awesomedungeonocean",
+            "descripcion": "Sin Datos",
+            "file": "awesomedungeonocean-forge-1.19.2-3.3.0.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4490/706/awesomedungeonocean-forge-1.19.2-3.3.0.jar",
+            "disponible": true
+        },
+        {
+            "name": "awesomedungeon",
+            "descripcion": "Sin Datos",
+            "file": "awesomedungeon-forge-1.19.2-3.2.0.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4494/359/awesomedungeon-forge-1.19.2-3.2.0.jar",
+            "disponible": true
+        },
+        {
+            "name": "DungeonCrawl",
+            "descripcion": "Sin Datos",
+            "file": "DungeonCrawl-1.19-2.3.12.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4437/208/DungeonCrawl-1.19-2.3.12.jar",
+            "disponible": true
+        },
+        {
+            "name": "elevatorid",
+            "descripcion": "Sin Datos",
+            "file": "elevatorid-1.19.2-1.8.10.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4859/577/elevatorid-1.19.2-1.8.10.jar",
+            "disponible": true
+        },
+        {
+            "name": "spiderstpo",
+            "descripcion": "Sin Datos",
+            "file": "spiderstpo-1.19.2-2.0.4.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4139/288/spiderstpo-1.19.2-2.0.4.jar",
+            "disponible": true
+        },
+        {
+            "name": "rechiseled",
+            "descripcion": "Sin Datos",
+            "file": "rechiseled-1.1.5c-forge-mc1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4872/816/rechiseled-1.1.5c-forge-mc1.19.2.jar",
+            "disponible": true
+        },
+        {
+            "name": "Repurposed_Structures",
+            "descripcion": "Sin Datos",
+            "file": "Repurposed_Structures-Better_Strongholds_v4.zip",
+            "url": "https://mediafilez.forgecdn.net/files/4031/688/Repurposed_Structures-Better_Strongholds_v4.zip",
+            "disponible": true
+        },
+        {
+            "name": "SkyVillages",
+            "descripcion": "Sin Datos",
+            "file": "SkyVillages-1.0.3-1.19.2-1.20.x-forge-release.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4787/87/SkyVillages-1.0.3-1.19.2-1.20.x-forge-release.jar",
             "disponible": true
         }
     ],
