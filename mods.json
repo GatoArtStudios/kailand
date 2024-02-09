@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.21",
+    "configVersion": "1.0.22",
     "launcherVersion": "1.0.16.0",
     "launcherUrl": "https://www.mediafire.com/file/ywvvwqfe49c5xdj/Kailand.exe/file",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: El launcher ahora notificara cuando halla una actualizacion del mismo launcher y se corriguieron errores de creacion de directorio, tambien se descargan los mods en automatico desde el sitio oficial de cada mod",
@@ -613,6 +613,76 @@
             "descripcion": "Sin Datos",
             "file": "SkyVillages-1.0.3-1.19.2-1.20.x-forge-release.jar",
             "url": "https://mediafilez.forgecdn.net/files/4787/87/SkyVillages-1.0.3-1.19.2-1.20.x-forge-release.jar",
+            "disponible": true
+        },
+        {
+            "name": "soundphysics",
+            "descripcion": "Sin Datos",
+            "file": "soundphysics-forge-1.19.2-1.0.18.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4199/798/soundphysics-forge-1.19.2-1.0.18.jar",
+            "disponible": true
+        },
+        {
+            "name": "Terralith_1",
+            "descripcion": "Sin Datos",
+            "file": "Terralith_1.19.3_v2.3.12.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4823/693/Terralith_1.19.3_v2.3.12.jar",
+            "disponible": true
+        },
+        {
+            "name": "toolleveling",
+            "descripcion": "Sin Datos",
+            "file": "toolleveling-forge-1.19.2-1.4.1.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4018/720/toolleveling-forge-1.19.2-1.4.1.jar",
+            "disponible": false
+        },
+        {
+            "name": "fusion",
+            "descripcion": "Sin Datos",
+            "file": "fusion-1.1.0c-forge-mc1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5005/119/fusion-1.1.0c-forge-mc1.19.2.jar",
+            "disponible": true
+        },
+        {
+            "name": "supermartijn642configlib",
+            "descripcion": "Sin Datos",
+            "file": "supermartijn642configlib-1.1.8-forge-mc1.19.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4715/406/supermartijn642configlib-1.1.8-forge-mc1.19.jar",
+            "disponible": true
+        },
+        {
+            "name": "supermartijn642corelib",
+            "descripcion": "Sin Datos",
+            "file": "supermartijn642corelib-1.1.16-forge-mc1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4926/970/supermartijn642corelib-1.1.16-forge-mc1.19.2.jar",
+            "disponible": true
+        },
+        {
+            "name": "dropz",
+            "descripcion": "Sin Datos",
+            "file": "dropz-forge-2.2.0%2B1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4492/490/dropz-forge-2.2.0%2B1.19.2.jar",
+            "disponible": true
+        },
+        {
+            "name": "rayon",
+            "descripcion": "Sin Datos",
+            "file": "rayon-forge-1.7.1%2B1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4502/284/rayon-forge-1.7.1%2B1.19.2.jar",
+            "disponible": true
+        },
+        {
+            "name": "Dimensional",
+            "descripcion": "Sin Datos",
+            "file": "Dimensional-Paintings-1.19.2-1.4.1.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4363/227/Dimensional-Paintings-1.19.2-1.4.1.jar",
+            "disponible": true
+        },
+        {
+            "name": "TA",
+            "descripcion": "Sin Datos",
+            "file": "TA-0.9.5-1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4558/60/TA-0.9.5-1.19.2.jar",
             "disponible": true
         }
     ],
