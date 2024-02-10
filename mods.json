@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.24",
+    "configVersion": "1.0.25",
     "launcherVersion": "1.0.16.0",
     "launcherUrl": "https://www.mediafire.com/file/ywvvwqfe49c5xdj/Kailand.exe/file",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: El launcher ahora notificara cuando halla una actualizacion del mismo launcher y se corriguieron errores de creacion de directorio, tambien se descargan los mods en automatico desde el sitio oficial de cada mod",
@@ -324,9 +324,9 @@
         {
             "name": "immersive-portals",
             "descripcion": "Sin Datos",
-            "file": "immersive-portals-2.3.6-mc1.19.2-forge.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4896/844/immersive-portals-2.3.6-mc1.19.2-forge.jar",
-            "disponible": false
+            "file": "immersive-portals-2.3.7-mc1.19.2-forge.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5093/111/immersive-portals-2.3.7-mc1.19.2-forge.jar",
+            "disponible": true
         },
         {
             "name": "cgm",
