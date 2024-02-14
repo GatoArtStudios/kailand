@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.26",
+    "configVersion": "1.0.27",
     "launcherVersion": "1.0.17.0",
     "launcherUrl": "https://www.mediafire.com/file/ywvvwqfe49c5xdj/Kailand.exe/file",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: Se a cambiado la animacion de los contenedores del launcher,\nAhora el blur de los contenedores estaran animados,\nla estetica del contenedor de reglas a cambiado y se ha animado,\nAhora por defecto el launcher estar en tema Dark",
@@ -326,7 +326,7 @@
             "descripcion": "Sin Datos",
             "file": "immersive-portals-2.3.7-mc1.19.2-forge.jar",
             "url": "https://mediafilez.forgecdn.net/files/5093/111/immersive-portals-2.3.7-mc1.19.2-forge.jar",
-            "disponible": true
+            "disponible": false
         },
         {
             "name": "cgm",
