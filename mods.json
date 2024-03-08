@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.27",
+    "configVersion": "1.0.28",
     "launcherVersion": "1.0.17.0",
     "launcherUrl": "https://www.mediafire.com/file/ywvvwqfe49c5xdj/Kailand.exe/file",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: Se a cambiado la animacion de los contenedores del launcher,\nAhora el blur de los contenedores estaran animados,\nla estetica del contenedor de reglas a cambiado y se ha animado,\nAhora por defecto el launcher estar en tema Dark",
@@ -52,7 +52,7 @@
             "name": "firstaid",
             "descripcion": "Sin Datos",
             "file": "firstaid-1.12.0.jar",
-            "url": "https://mediafilez.forgecdn.net/files/3952/683/firstaid-1.12.0.jar",
+            "url": "https://raw.githubusercontent.com/DonGatun/kailand/Gatun/mods/firstaid-1.12.0.jar",
             "disponible": true
         },
         {
