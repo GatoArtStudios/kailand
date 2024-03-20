@@ -4,10 +4,16 @@ Hola bienvenido a este repositorio en el cual tenemos todo el codigo del proyect
 
 ## Redes:
 
-[Desarrollador](https://linktr.ee/gatoartstudio)...
-...[Discord-Kailand](https://discord.gg/chwAE86T6W)...
-...[Owner-Proyect](https://www.instagram.com/soyellioth/)...
-...[Web](https://gatoartstudios.github.io/kailand/)...
+[Desarrollador](https://linktr.ee/gatoartstudio)
+</br>
+
+[Discord-Kailand](https://discord.gg/chwAE86T6W)
+</br>
+
+[Owner-Proyect](https://www.instagram.com/soyellioth/)
+</br>
+
+[Web](https://gatoartstudios.github.io/kailand/)
 
 > [!WARNING]
 > Se prohibe el uso del codigo sin autorizacion.
