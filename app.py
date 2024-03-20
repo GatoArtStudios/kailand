@@ -6,6 +6,7 @@ import time
 import logging
 import requests
 import webbrowser
+from typing import Any
 import subprocess
 import flet as ft
 from flet import *
@@ -646,14 +647,14 @@ class DataWidget:
         self.buttom_discord = ft.ElevatedButton(text = "discord",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=icons.DISCORD, url = "https://discord.gg/chwAE86T6W", on_click=self.animate_buttom, animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
         self.buttom_ajustes = ft.ElevatedButton(text = "Ajustes",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=icons.SETTINGS, icon_color="white", on_click=self.ajustes_gui, animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
         self.buttom_jugar = ft.ElevatedButton(text = mc.boton_jugar, bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, top = 210, right = 1, left = 1, disabled = mc.mc_disponible, on_click=lambda e: mc.ejecuta_mc(e) if mc.options["username"] else (self.user_none_alert_show(e), self.animate_buttom(e)), animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
-        self.star_def = ft.Stack(
-            [
-                ft.Container(
-                    content = ft.Text(self.open_dlg_modal()),
-                    top = 500,
-                )
-            ]
-        )
+        # self.star_def = ft.Stack(
+        #     [
+        #         ft.Container(
+        #             content = ft.Text(app.open_dlg_modal()),
+        #             top = 500,
+        #         )
+        #     ]
+        # )
         
     def close_launcher_update(e):
         '''
@@ -781,48 +782,7 @@ class DataWidget:
         self.user_alert.open = False
         self.user_alert.update()
         
-    def open_dlg_modal(self, e = None):
-        '''
-        Abre alerta con opciones si faltan recursos ///// Se ejecuta al iniciar el launcher de forma automatica para comprodar datos
-        '''
-        print('Chequeando actualizaciones del servidor')
-        logging.info('Chequeando actualizaciones del servidor')
-        if mc.check_update_launcher():
-            # page.window_visible = False # Vuelve invicible la ventana
-            response = requests.get("https://raw.githubusercontent.com/DonGatun/kailand/Gatun/mods.json")
-            if response.status_code == 200:
-                __temp_data_get = response.json()
-                mc.url_new_vercion = __temp_data_get["launcherUrl"]
-                self.check_vercion_launcher.content = ft.Text(f"{__temp_data_get['updateDescription']}")
-            e.page.dialog = self.check_vercion_launcher
-            self.check_vercion_launcher.open = True
-            e.page.update()
-            time.sleep(20)
-            webbrowser.open(__temp_data_get["launcherUrl"])
-            e.page.window_destroy()
-            time.sleep(3)
-            try:
-                sys.exit(1)
-            except SystemExit:
-                os._exit(1)
-            
-        elif not mc.validate_directory():
-            logging.info("Faltan Recursos necesarios, por favor verifica los recursos y acepta la instalacion de recursos")
-            self.buttom_jugar.text = "No instalado"
-            self.buttom_jugar.icon = icons.DISABLED_BY_DEFAULT
-            self.buttom_jugar.disabled = True
-            self.buttom_jugar.bgcolor = ft.colors.with_opacity(0.2, "red")
-            e.page.dialog = self.dlg_modal
-            self.dlg_modal.open = True
-            e.page.update()
-        else:
-            logging.info("Recursos necesarios estan instaldos correctamente")
-            self.buttom_jugar.text = "Jugar"
-            self.buttom_jugar.icon = False
-            self.buttom_jugar.bgcolor = ft.colors.with_opacity(0.2, "white")
-            self.buttom_jugar.disabled = False
-            e.page.update()
-            return True
+    
         
     def save_info(self, e):
         '''
@@ -1023,35 +983,26 @@ class DataWidget:
         
 class LauncherVentana:
     def __init__(self):
-        self.title = 'Kailand V'
-        self.padding = 0
-        self.vertical_alignment = ft.MainAxisAlignment.CENTER
-        self.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-        self.bgcolor = "black"
-        self.theme_mode = ft.ThemeMode.DARK
-        self.window_max_height = 720
-        self.window_min_height = 720
-        self.window_max_width = 1277
-        self.window_min_width = 1277
-        self.window_resizable = False
-        self.window_center = True
+        self.__page = None
         
-    def flet_windows(self, page: ft.Page):
-        page.title = self.title
-        page.padding = self.padding
-        page.vertical_alignment = self.vertical_alignment
-        page.horizontal_alignment = self.horizontal_alignment
-        page.bgcolor = self.bgcolor
-        page.theme_mode = self.theme_mode
-        page.window_max_height = self.window_max_height
-        page.window_min_height = self.window_min_height
-        page.window_max_width = self.window_max_width
-        page.window_min_width = self.window_min_width
-        page.window_resizable = self.window_resizable
-        
-        page.overlay.append(data_widget.java_info)
-        page.overlay.append(data_widget.user_alert)
-        page.add(
+    
+    def __call__(self, flet_page: ft.Page) -> Any:
+        self.__page = flet_page
+        self.__page.title = 'Kailand V'
+        self.__page.padding = 0
+        self.__page.vertical_alignment = ft.MainAxisAlignment.CENTER
+        self.__page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+        self.__page.bgcolor = "black"
+        self.__page.theme_mode = ft.ThemeMode.DARK
+        self.__page.window_max_height = 720
+        self.__page.window_min_height = 720
+        self.__page.window_max_width = 1277
+        self.__page.window_min_width = 1277
+        self.__page.window_resizable = False
+        self.__page.window_center = True
+        self.__page.overlay.append(data_widget.java_info)
+        self.__page.overlay.append(data_widget.user_alert)
+        self.__page.add(
             # Contenedor Principal y donde se agrega el fondo de la ventana
             ft.Container(
                 content=ft.Row(
@@ -1094,7 +1045,14 @@ class LauncherVentana:
                         ),
                         # Contenedor derecho que contiene la info segun el boton precionado por el usuario
                         data_widget.c_derecho,
-                        data_widget.star_def,
+                        ft.Stack(
+                            [
+                                ft.Container(
+                                    content = ft.Text(self.open_dlg_modal()),
+                                    top = 500,
+                                )
+                            ]
+                        )
                     ]
                 ),
                 # Fondo del launcher
@@ -1103,7 +1061,61 @@ class LauncherVentana:
                 expand=True,
             )
         )
-        
+    
+    def open_dlg_modal(self):
+        '''
+        Abre alerta con opciones si faltan recursos ///// Se ejecuta al iniciar el launcher de forma automatica para comprodar datos
+        '''
+        print('Chequeando actualizaciones del servidor')
+        print(self.__page)
+        logging.info('Chequeando actualizaciones del servidor')
+        if mc.check_update_launcher():
+            # page.window_visible = False # Vuelve invicible la ventana
+            response = requests.get("https://raw.githubusercontent.com/DonGatun/kailand/Gatun/mods.json")
+            if response.status_code == 200:
+                __temp_data_get = response.json()
+                mc.url_new_vercion = __temp_data_get["launcherUrl"]
+                data_widget.check_vercion_launcher.content = ft.Text(f"{__temp_data_get['updateDescription']}")
+            self.__page.dialog = data_widget.check_vercion_launcher
+            # e.page.dialog = self.check_vercion_launcher
+            data_widget.check_vercion_launcher.open = True
+            # e.page.update()
+            self.__page.update()
+            time.sleep(20)
+            webbrowser.open(__temp_data_get["launcherUrl"])
+            self.__page.window_destroy()
+            time.sleep(3)
+            try:
+                sys.exit(1)
+            except SystemExit:
+                os._exit(1)
+            
+        elif not mc.validate_directory():
+            logging.info("Faltan Recursos necesarios, por favor verifica los recursos y acepta la instalacion de recursos")
+            data_widget.buttom_jugar.text = "No instalado"
+            data_widget.buttom_jugar.icon = icons.DISABLED_BY_DEFAULT
+            data_widget.buttom_jugar.disabled = True
+            data_widget.buttom_jugar.bgcolor = ft.colors.with_opacity(0.2, "red")
+            # e.page.dialog = self.dlg_modal
+            self.__page.dialog = data_widget.dlg_modal
+            data_widget.dlg_modal.open = True
+            # e.page.update()
+            self.__page.update()
+        else:
+            logging.info("Recursos necesarios estan instaldos correctamente")
+            data_widget.buttom_jugar.text = "Jugar"
+            data_widget.buttom_jugar.icon = False
+            data_widget.buttom_jugar.bgcolor = ft.colors.with_opacity(0.2, "white")
+            data_widget.buttom_jugar.disabled = False
+            # e.page.update()
+            self.__page.update()
+            return True
+    
+    def page_update(self):
+        '''
+        Actualiza la pagina web desde una funcion externa
+        '''
+        self.__page.update()
     
         
 if __name__ == "__main__":
@@ -1111,4 +1123,4 @@ if __name__ == "__main__":
     data_widget = DataWidget()
     app = LauncherVentana()
     logging.info("Debug del launcher iniciado")
-    ft.app(target=app.flet_windows, assets_dir="assets")
+    ft.app(target=app, assets_dir="assets")
