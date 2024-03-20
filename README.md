@@ -1,4 +1,4 @@
-# Proeycto web en Astro🚀
+# Proyecto web en Astro🚀
 
 
 [![Discord](https://www.svgrepo.com/download/353655/discord-icon.svg)](https://discord.com/invite/chwAE86T6W)
