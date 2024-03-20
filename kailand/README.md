@@ -1,6 +1,5 @@
 # Proyecto web en Astro🚀
 
-
 [Discord](https://discord.com/invite/chwAE86T6W)
 [Desarrollador](https://linktr.ee/gatoartstudio)
 
