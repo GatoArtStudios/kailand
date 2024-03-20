@@ -30,7 +30,7 @@ class Mc:
         self.data_nube = {}
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
-        self.launcherVersion = "1.0.17.0"
+        self.launcherVersion = "1.0.18.0"
         self.boton_jugar = "Iniciado"   
         self.mc_disponible = True
         self.minecraft_directory = f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand"
@@ -274,7 +274,7 @@ class Mc:
         '''
         Consulta el archivo de configuracon en el servidor'
         '''
-        response = requests.get("https://raw.githubusercontent.com/DonGatun/kailand/Gatun/mods.json")
+        response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
         if response.status_code == 200:
             temp_json = response.json()
             if os.path.exists(os.path.join(self.minecraft_directory, "mods_data.json")):
@@ -370,7 +370,7 @@ class Mc:
         '''
         Chequea actualizaciones en el servidor
         '''
-        response = requests.get("https://raw.githubusercontent.com/DonGatun/kailand/Gatun/mods.json")
+        response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
         if response.status_code == 200:
             __temp_data_get = response.json()
             if not __temp_data_get["launcherVersion"] == self.launcherVersion: # Si la vercion no es la misma es valido
@@ -1071,7 +1071,7 @@ class LauncherVentana:
         logging.info('Chequeando actualizaciones del servidor')
         if mc.check_update_launcher():
             # page.window_visible = False # Vuelve invicible la ventana
-            response = requests.get("https://raw.githubusercontent.com/DonGatun/kailand/Gatun/mods.json")
+            response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
             if response.status_code == 200:
                 __temp_data_get = response.json()
                 mc.url_new_vercion = __temp_data_get["launcherUrl"]
