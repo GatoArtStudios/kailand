@@ -1,8 +1,8 @@
 # Proyecto web en Astro🚀
 
 
-[![Discord](https://www.svgrepo.com/download/353655/discord-icon.svg)](https://discord.com/invite/chwAE86T6W)
-[![Desarrollador](https://www.svgrepo.com/download/476415/social-email.svg)](https://linktr.ee/gatoartstudio)
+[Discord](https://discord.com/invite/chwAE86T6W)
+[Desarrollador](https://linktr.ee/gatoartstudio)
 
 ## 🚀 Project Structure
 
