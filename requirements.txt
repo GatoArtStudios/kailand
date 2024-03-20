@@ -1,0 +1,4 @@
+flet>=0.20.2
+requests>=2.31.0
+minecraft-launcher-lib>=6.4
+Pillow>=10.2.0
