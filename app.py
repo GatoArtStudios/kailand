@@ -172,8 +172,9 @@ class Mc:
         # Crea el directorio de trabajo principal
         if not os.path.exists(self.minecraft_directory):
             os.mkdir(self.minecraft_directory)
+            os.chdir(self.minecraft_directory)
         else:
-            pass
+            os.chdir(self.minecraft_directory)
         # Crea el directorio de mods
         if not os.path.exists(os.path.join(self.minecraft_directory, "mods")):
             os.mkdir(os.path.join(self.minecraft_directory, "mods"))
