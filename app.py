@@ -342,6 +342,9 @@ class Mc:
             # Obtiene el comando para ejecutar Minecraft
             minecraft_command = minecraft_launcher_lib.command.get_minecraft_command("1.19.2-forge-43.3.8", self.minecraft_directory, self.options)
             # Agrega datos al logging
+            # minecraft_command.extend(['--skin_url','http://textures.minecraft.net/texture/9d089d19977d7001618d0a3f3ed58c48e5c2989fce9539377bb833d74eb0f3d1'])
+            # logging.info(minecraft_command)
+            # logging.info(type(minecraft_command))
             logging.info("Ejecutando Minecraft")
             e.control.bgcolor = ft.colors.with_opacity(0.1, "white")
             e.control.icon = icons.PLAY_CIRCLE
