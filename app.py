@@ -406,7 +406,7 @@ class Mc:
                 data_widget.buttom_jugar.bgcolor = ft.colors.with_opacity(0.2, "white")
                 e.page.splash = None
                 e.page.update()
-                data_widget.open_dlg("a")
+                data_widget.open_dlg(e)
         
     
 
@@ -618,13 +618,6 @@ class DataWidget:
                             opacity=0.3,
                             animate_opacity=300,
                             disabled=True
-                            #shadow=ft.BoxShadow(
-                                #spread_radius = 1,
-                                #blur_radius = 5,
-                                #color = "black",
-                                #offset = ft.Offset(0, 0),
-                                #blur_style = ft.ShadowBlurStyle.OUTER,
-                            #)
         )
         self.user_alert = ft.BottomSheet(
             ft.Container(
@@ -647,14 +640,6 @@ class DataWidget:
         self.buttom_discord = ft.ElevatedButton(text = "discord",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=icons.DISCORD, url = "https://discord.gg/chwAE86T6W", on_click=self.animate_buttom, animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
         self.buttom_ajustes = ft.ElevatedButton(text = "Ajustes",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=icons.SETTINGS, icon_color="white", on_click=self.ajustes_gui, animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
         self.buttom_jugar = ft.ElevatedButton(text = mc.boton_jugar, bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, top = 210, right = 1, left = 1, disabled = mc.mc_disponible, on_click=lambda e: mc.ejecuta_mc(e) if mc.options["username"] else (self.user_none_alert_show(e), self.animate_buttom(e)), animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
-        # self.star_def = ft.Stack(
-        #     [
-        #         ft.Container(
-        #             content = ft.Text(app.open_dlg_modal()),
-        #             top = 500,
-        #         )
-        #     ]
-        # )
         
     def close_launcher_update(e):
         '''
@@ -766,7 +751,7 @@ class DataWidget:
         e.page.splash = ft.ProgressBar(tooltip="Instalando recursos necesarios...", height=5)
         self.dlg_modal.open = False
         e.page.update()
-        mc.install_minecraft("a")
+        mc.install_minecraft(e)
         
     def user_none_alert_show(self, e):
         '''
@@ -854,9 +839,8 @@ class DataWidget:
         mc.changer_save_file_kailand()
         
     def change_ram_text(self, e, text_data):
-        global valor_xmx_temp
         text_data.value = f"Ram Seleccionada: ({int(e.control.value)} GB)"
-        valor_xmx_temp = int(e.control.value)
+        mc.valor_xmx_temp = int(e.control.value)
         e.page.update()
         
     def result_java_path(self, e: ft.FilePickerResultEvent):
@@ -874,6 +858,9 @@ class DataWidget:
             return mc.options["executablePath"]
     
     def consulta_reglas(e = None):
+        '''
+        Consulta las reglas de la variable mc.data_nube -> Dict
+        '''
         try:
             __data_temp = mc.data_nube["reglas"]
             if mc.data_nube["reglas"]:
@@ -908,6 +895,9 @@ class DataWidget:
             e.control.update()
             
     def blur_container(self, e):
+        '''
+        Animacion del efecto Blur en contenedores.
+        '''
         if self.c_derecho.blur == 4:
             self.c_derecho.blur = 0
             self.c_derecho.bgcolor = None
@@ -917,6 +907,9 @@ class DataWidget:
         e.page.update()
         
     def animation_opacity(self, e):
+        '''
+        Realiza la animacion de opacidad con hover en contenedores.
+        '''
         if e.data == "true":
             e.control.opacity = 1
             e.control.update()
