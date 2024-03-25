@@ -14,6 +14,13 @@ import minecraft_launcher_lib
 from minecraft_launcher_lib import *
 import minecraft_launcher_lib.forge as forgemc
 
+# Crea el directorio de trabajo principal
+if not os.path.exists(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand"):
+    os.mkdir(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand")
+    os.chdir(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand")
+else:
+    os.chdir(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand")
+
 logging.basicConfig(
     filename=os.path.join(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand", "launcher.log"),
     level=logging.INFO,
