@@ -782,6 +782,20 @@
             "file": "cupboard-1.19.2-2.3.jar",
             "url": "https://mediafilez.forgecdn.net/files/5063/778/cupboard-1.19.2-2.3.jar",
             "disponible": true
+        },
+        {
+            "name": "azurelib-forge-1.19.2-1.0.41.jar",
+            "descripcion": "Sin Datos",
+            "file": "azurelib-forge-1.19.2-1.0.41.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5069/926/azurelib-forge-1.19.2-1.0.41.jar",
+            "disponible": true
+        },
+        {
+            "name": "LibX",
+            "descripcion": "Sin Datos",
+            "file": "LibX-1.19.2-4.2.8.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4052/778/LibX-1.19.2-4.2.8.jar",
+            "disponible": true
         }
     ],
     "complementos": [
