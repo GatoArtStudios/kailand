@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['app.py'],
+    ['main.py'],
     pathex=[],
     binaries=[],
     datas=[('assets\\', 'assets')],
@@ -34,6 +34,6 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    version='C:\\Users\\Gatun\\AppData\\Local\\Temp\\80fdd3bc-b622-4914-b609-b01e86e820de',
+    version='C:\\Users\\Gatun\\AppData\\Local\\Temp\\40d3dcf9-9af3-409f-8b57-a1ba575a3073',
     icon=['assets\\favicon.png'],
 )
