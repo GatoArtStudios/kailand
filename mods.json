@@ -42,25 +42,11 @@
             "disponible": true
         },
         {
-            "name": "EnhancedVisuals",
-            "descripcion": "Sin Datos",
-            "file": "EnhancedVisuals_FORGE_v1.5.9_mc1.19.2.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4123/555/EnhancedVisuals_FORGE_v1.5.9_mc1.19.2.jar",
-            "disponible": true
-        },
-        {
             "name": "firstaid",
             "descripcion": "Sin Datos",
             "file": "firstaid-1.12.0.jar",
             "url": "https://github.com/GatoArtStudios/kailand/raw/config/mods/firstaid-1.12.0.jar",
             "disponible": false
-        },
-        {
-            "name": "jei",
-            "descripcion": "Sin Datos",
-            "file": "jei-1.19.2-forge-11.6.0.1018.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4712/866/jei-1.19.2-forge-11.6.0.1018.jar",
-            "disponible": true
         },
         {
             "name": "Silence's Turrets",
@@ -168,13 +154,6 @@
             "disponible": true
         },
         {
-            "name": "appleskin",
-            "descripcion": "Sin Datos",
-            "file": "appleskin-forge-mc1.19-2.4.2.jar",
-            "url": "https://mediafilez.forgecdn.net/files/3872/808/appleskin-forge-mc1.19-2.4.2.jar",
-            "disponible": true
-        },
-        {
             "name": "PlayerRevive",
             "descripcion": "Sin Datos",
             "file": "PlayerRevive_FORGE_v2.0.14_mc1.19.2.jar",
@@ -278,13 +257,6 @@
             "file": "balm-forge-1.19.2-4.6.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4751/735/balm-forge-1.19.2-4.6.0.jar",
             "disponible": true
-        },
-        {
-            "name": "FpsReducer2",
-            "descripcion": "Sin Datos",
-            "file": "FpsReducer2-forge-1.19.2-2.1.jar",
-            "url": "https://mediafilez.forgecdn.net/files/3931/329/FpsReducer2-forge-1.19.2-2.1.jar",
-            "disponible": false
         },
         {
             "name": "FallingTree",
@@ -490,13 +462,6 @@
             "disponible": true
         },
         {
-            "name": "betterfpsdist",
-            "descripcion": "Sin Datos",
-            "file": "betterfpsdist-1.19.2-4.0.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4818/278/betterfpsdist-1.19.2-4.0.jar",
-            "disponible": false
-        },
-        {
             "name": "Atlas",
             "descripcion": "Sin Datos",
             "file": "Atlas-Lib-1.19.2-1.1.6.jar",
@@ -614,13 +579,6 @@
             "file": "SkyVillages-1.0.3-1.19.2-1.20.x-forge-release.jar",
             "url": "https://mediafilez.forgecdn.net/files/4787/87/SkyVillages-1.0.3-1.19.2-1.20.x-forge-release.jar",
             "disponible": false
-        },
-        {
-            "name": "soundphysics",
-            "descripcion": "Sin Datos",
-            "file": "soundphysics-forge-1.19.2-1.0.18.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4199/798/soundphysics-forge-1.19.2-1.0.18.jar",
-            "disponible": true
         },
         {
             "name": "Terralith_1",
@@ -784,16 +742,118 @@
             "disponible": true
         },
         {
-            "name": ""
+            "name": "sculkhorde",
+            "descripcion": "Sin Datos",
+            "file": "sculkhorde-1.19.2-0.8.1.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5011/383/sculkhorde-1.19.2-0.8.1.jar",
+            "disponible": true
+        },
+        {
+            "name": "dungeons-and-taverns",
+            "descripcion":"Sin Datos",
+            "file": "dungeons-and-taverns-2.0.2 forge.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4506/854/dungeons-and-taverns-2.0.2%20forge.jar",
+            "disponible": true
+        },
+        {
+            "name": "structureessentials",
+            "descripcion":"Sin Datos",
+            "file": "structureessentials-1.19.2-3.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4882/269/structureessentials-1.19.2-3.2.jar",
+            "disponible": true
+        },
+        {
+            "name": "dungeons_plus",
+            "descripcion": "Sin Datos",
+            "file": "dungeons_plus-1.19.2-1.3.1.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4489/759/dungeons_plus-1.19.2-1.3.1.jar",
+            "disponible": true
+        },
+        {
+            "name": "structure_gel",
+            "descripcion":"Sin Datos",
+            "file": "structure_gel-1.19.2-2.7.3.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4765/558/structure_gel-1.19.2-2.7.3.jar",
+            "disponible": true
         }
     ],
     "complementos": [
         {
-            "name": "fps booster",
-            "descripcion": "Este mod te da mas fps en tu minecraft, idea por si tienes problemas de rendimiento",
-            "version": "1.18.2-15.122.1",
-            "file": "fps_booster-15.122.1.jar",
+            "name": "jei",
+            "descripcion": "Sin Datos",
+            "file": "jei-1.19.2-forge-11.6.0.1018.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4712/866/jei-1.19.2-forge-11.6.0.1018.jar",
+            "disponible": true
+        },
+        {
+            "name": "appleskin",
+            "descripcion": "Sin Datos",
+            "file": "appleskin-forge-mc1.19-2.4.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/3872/808/appleskin-forge-mc1.19-2.4.2.jar",
+            "disponible": true
+        },
+        {
+            "name": "EnhancedVisuals",
+            "descripcion": "Sin Datos",
+            "file": "EnhancedVisuals_FORGE_v1.5.9_mc1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4123/555/EnhancedVisuals_FORGE_v1.5.9_mc1.19.2.jar",
+            "disponible": true
+        },
+        {
+            "name": "PresenceFootsteps",
+            "descripcion":"Sin Datos",
+            "file": "PresenceFootsteps-1.19.2-1.6.4.1-forge.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4291/556/PresenceFootsteps-1.19.2-1.6.4.1-forge.jar",
+            "disponible": true
+        },
+        {
+            "name": "soundphysics",
+            "descripcion": "Sin Datos",
+            "file": "soundphysics-forge-1.19.2-1.0.18.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4199/798/soundphysics-forge-1.19.2-1.0.18.jar",
+            "disponible": true
+        },
+        {
+            "name": "AmbientSounds",
+            "descripcion": "Sin Datos",
+            "file": "AmbientSounds_FORGE_v5.2.13_mc1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4126/142/AmbientSounds_FORGE_v5.2.13_mc1.19.2.jar",
+            "disponible": true
+        },
+        {
+            "name": "oculus-mc",
+            "descripcion": "Sin Datos",
+            "file": "oculus-mc1.19.2-1.6.9.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4763/262/oculus-mc1.19.2-1.6.9.jar",
+            "disponible": true
+        },
+        {
+            "name": "iris",
+            "descripcion": "Sin Datos",
+            "file": "iris-mc1.19.2-1.6.9.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4861/705/iris-mc1.19.2-1.6.9.jar",
+            "disponible": true
+        },
+        {
+            "name": "FpsReducer2",
+            "descripcion": "Sin Datos",
+            "file": "FpsReducer2-forge-1.19.2-2.1.jar",
+            "url": "https://mediafilez.forgecdn.net/files/3931/329/FpsReducer2-forge-1.19.2-2.1.jar",
             "disponible": false
+        },
+        {
+            "name": "betterfpsdist",
+            "descripcion": "Sin Datos",
+            "file": "betterfpsdist-1.19.2-4.0.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4818/278/betterfpsdist-1.19.2-4.0.jar",
+            "disponible": false
+        },
+        {
+            "name": "cupboard",
+            "descripcion": "Sin Datos",
+            "file": "cupboard-1.19.2-2.3.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5063/778/cupboard-1.19.2-2.3.jar",
+            "disponible": true
         }
     ]
 }
