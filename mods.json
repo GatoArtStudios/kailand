@@ -775,6 +775,13 @@
             "file": "structure_gel-1.19.2-2.7.3.jar",
             "url": "https://mediafilez.forgecdn.net/files/4765/558/structure_gel-1.19.2-2.7.3.jar",
             "disponible": true
+        },
+        {
+            "name": "cupboard",
+            "descripcion": "Cupboard proporciona código, diferentes marcos y utilidades para modificaciones de Minecraft.",
+            "file": "cupboard-1.19.2-2.3.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5063/778/cupboard-1.19.2-2.3.jar",
+            "disponible": true
         }
     ],
     "complementos": [
@@ -857,14 +864,6 @@
             "file": "betterfpsdist-1.19.2-4.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4818/278/betterfpsdist-1.19.2-4.0.jar",
             "disponible": false
-        },
-        {
-            "name": "cupboard",
-            "descripcion": "Cupboard proporciona código, diferentes marcos y utilidades para modificaciones de Minecraft.",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/cupboard",
-            "file": "cupboard-1.19.2-2.3.jar",
-            "url": "https://mediafilez.forgecdn.net/files/5063/778/cupboard-1.19.2-2.3.jar",
-            "disponible": true
         }
     ]
 }
