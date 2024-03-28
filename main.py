@@ -249,7 +249,7 @@ class Mc:
             except Exception as e:
                 logging.info(f"Error durante la descarga del mod '{mod['name']}': {e}")
                 
-    def eliminar_mod(archivo):
+    def eliminar_mod(self, archivo):
         '''
         Elimina mods, pasandole como argumento la ruta del archivo a remover
         '''
@@ -485,7 +485,7 @@ class DataWidget:
         self.resolution_width = ft.TextField(label="Ancho", hint_text="Ancho (pixeles)", border_color="white", disabled=False, value=mc.options["resolutionWidth"], color="white")
         self.resolution_x = ft.Text("X", color="white")
         self.resolution_height = ft.TextField(label="Alto", hint_text="Alto (pixeles)", border_color="white", disabled=False, value=mc.options["resolutionHeight"], color="white")
-        self.buttom_mods = ft.ElevatedButton(text="Mods  ", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.open_folder_mods, icon=icons.FOLDER, icon_color="white", animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
+        self.buttom_mods = ft.ElevatedButton(text="Mods  ", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.mods_gui, icon=icons.FOLDER, icon_color="white", animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
         self.buttom_shaders = ft.ElevatedButton(text="Shaders", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.open_folder_shaderpacks, icon=icons.FOLDER, icon_color="white", animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
         self.buttom_textures = ft.ElevatedButton(text="Textures", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.open_folder_resourcepacks, icon=icons.FOLDER, icon_color="white", animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
         self.buttom_login = ElevatedButton(text="Login", bgcolor = ft.colors.with_opacity(0.2, "white"), disabled=True, color="white")
@@ -652,6 +652,9 @@ class DataWidget:
         self.buttom_discord = ft.ElevatedButton(text = "discord",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=icons.DISCORD, url = "https://discord.gg/chwAE86T6W", on_click=self.animate_buttom, animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
         self.buttom_ajustes = ft.ElevatedButton(text = "Ajustes",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=icons.SETTINGS, icon_color="white", on_click=self.ajustes_gui, animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
         self.buttom_jugar = ft.ElevatedButton(text = mc.boton_jugar, bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, top = 210, right = 1, left = 1, disabled = mc.mc_disponible, on_click=lambda e: mc.ejecuta_mc(e) if mc.options["username"] else (self.user_none_alert_show(e), self.animate_buttom(e)), animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
+        self.div_mods = ft.Container(
+            content=ft.Text('En construnccion')
+        )
         
     def close_launcher_update(e):
         '''
@@ -778,8 +781,6 @@ class DataWidget:
         '''
         self.user_alert.open = False
         self.user_alert.update()
-        
-    
         
     def save_info(self, e):
         '''
@@ -956,6 +957,20 @@ class DataWidget:
         else:
             self.consulta_reglas()
             self.c_derecho.content = self.reglas_widget
+            self.c_derecho.disabled = False
+        e.page.update()
+        self.animate_buttom(e)
+        
+    def mods_gui(self, e):
+        '''
+        Muestra el contenedor de mods opcionales
+        '''
+        if self.c_derecho.content == self.div_mods:
+            self.c_derecho.content = self.c_derecho_cont
+            self.c_derecho.disabled = True
+        else:
+            self.consulta_reglas()
+            self.c_derecho.content = self.div_mods
             self.c_derecho.disabled = False
         e.page.update()
         self.animate_buttom(e)
