@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.33",
+    "configVersion": "1.0.34",
     "launcherVersion": "1.0.19.0",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nAhora hay pagina web para descargar el launcher y demas, el launcher se a cambiado a estructura OOP (Lenguaje Orientado a Objeto) para generar una experiencia mas intuitiva a los usuarios, tambien se cambio los dominios donde se encuentra la informacio, tambien actualizacion y reubicacion de los mods cunstom que es el firstaid y el Kailand_Mod, espero disfrutes al maximo del servidor.",
@@ -8,546 +8,546 @@
     "mods": [
         {
             "name": "BadMobs",
-            "descripcion": "Sin Datos",
+            "descripcion": "Bad mobs",
             "file": "BadMobs-1.19.2-16.1.3.jar",
             "url": "https://mediafilez.forgecdn.net/files/4057/652/BadMobs-1.19.2-16.1.3.jar",
             "disponible": false
         },
         {
             "name": "bloodandgore",
-            "descripcion": "Sin Datos",
+            "descripcion": "Blood and gore",
             "file": "bloodandgore1.19.2v1.1(beta).jar",
             "url": "https://mediafilez.forgecdn.net/files/4373/528/bloodandgore1.19.2v1.1%28beta%29.jar",
             "disponible": true
         },
         {
             "name": "carryon",
-            "descripcion": "Sin Datos",
+            "descripcion": "Carry on",
             "file": "carryon-forge-1.19.2-2.1.1.22.jar",
             "url": "https://mediafilez.forgecdn.net/files/4882/496/carryon-forge-1.19.2-2.1.1.22.jar",
             "disponible": true
         },
         {
             "name": "coroutil",
-            "descripcion": "Sin Datos",
+            "descripcion": "Coro útil",
             "file": "coroutil-forge-1.19.2-1.3.6.jar",
             "url": "https://mediafilez.forgecdn.net/files/5010/127/coroutil-forge-1.19.2-1.3.6.jar",
             "disponible": true
         },
         {
             "name": "CreativeCore",
-            "descripcion": "Sin Datos",
+            "descripcion": "Creative core",
             "file": "CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
             "disponible": true
         },
         {
             "name": "firstaid",
-            "descripcion": "Sin Datos",
+            "descripcion": "First aid",
             "file": "firstaid-1.12.0.jar",
             "url": "https://github.com/GatoArtStudios/kailand/raw/config/mods/firstaid-1.12.0.jar",
             "disponible": false
         },
         {
             "name": "Silence's Turrets",
-            "descripcion": "Sin Datos",
+            "descripcion": "Silence’s turrets",
             "file": "Silence's Turrets.jar",
             "url": "https://mediafilez.forgecdn.net/files/5030/766/Silence%27s%20Turrets.jar",
             "disponible": true
         },
         {
             "name": "lostcities",
-            "descripcion": "Sin Datos",
+            "descripcion": "The lost cities",
             "file": "lostcities-1.19-6.0.20.jar",
             "url": "https://mediafilez.forgecdn.net/files/5045/66/lostcities-1.19-6.0.20.jar",
             "disponible": true
         },
         {
             "name": "MineTraps",
-            "descripcion": "Sin Datos",
+            "descripcion": "Mine traps",
             "file": "MineTraps-1.19.x-(v.2.2.4).jar",
             "url": "https://mediafilez.forgecdn.net/files/4086/827/MineTraps-1.19.x-%28v.2.2.4%29.jar",
             "disponible": true
         },
         {
             "name": "Satako",
-            "descripcion": "Sin Datos",
+            "descripcion": "Satako library",
             "file": "Satako-6.0.16-1.19.jar",
             "url": "https://mediafilez.forgecdn.net/files/4777/150/Satako-6.0.16-1.19.jar",
             "disponible": true
         },
         {
             "name": "voicechat",
-            "descripcion": "Sin Datos",
+            "descripcion": "Simple voice chat",
             "file": "voicechat-forge-1.19.2-2.4.32.jar",
             "url": "https://mediafilez.forgecdn.net/files/4961/338/voicechat-forge-1.19.2-2.4.32.jar",
             "disponible": true
         },
         {
             "name": "Wegotrunners",
-            "descripcion": "Sin Datos",
+            "descripcion": "We got runners",
             "file": "Wegotrunners0.5.1.20.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4945/216/Wegotrunners0.5.1.20.1.jar",
             "disponible": false
         },
         {
             "name": "zombieawareness",
-            "descripcion": "Sin Datos",
+            "descripcion": "Zombie awareness",
             "file": "zombieawareness-1.19.2-1.12.3.jar",
             "url": "https://mediafilez.forgecdn.net/files/3928/998/zombieawareness-1.19.2-1.12.3.jar",
             "disponible": true
         },
         {
             "name": "corpse",
-            "descripcion": "Sin Datos",
+            "descripcion": "Corpse",
             "file": "corpse-1.19.2-1.0.9.jar",
             "url": "https://mediafilez.forgecdn.net/files/4913/868/corpse-1.19.2-1.0.9.jar",
             "disponible": true
         },
         {
             "name": "twilightforest",
-            "descripcion": "Sin Datos",
+            "descripcion": "The twilight forest",
             "file": "twilightforest-1.19.2-4.2.1518-universal.jar",
             "url": "https://mediafilez.forgecdn.net/files/4389/567/twilightforest-1.19.2-4.2.1518-universal.jar",
             "disponible": false
         },
         {
             "name": "Jade",
-            "descripcion": "Sin Datos",
+            "descripcion": "Jade",
             "file": "Jade-1.19.1-forge-8.9.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4800/904/Jade-1.19.1-forge-8.9.1.jar",
             "disponible": true
         },
         {
             "name": "CosmeticArmorReworked",
-            "descripcion": "Sin Datos",
+            "descripcion": "Cosmetic armor reworked",
             "file": "CosmeticArmorReworked-1.19.2-v1a.jar",
             "url": "https://mediafilez.forgecdn.net/files/4016/732/CosmeticArmorReworked-1.19.2-v1a.jar",
             "disponible": true
         },
         {
             "name": "sophisticatedbackpacks",
-            "descripcion": "Sin Datos",
+            "descripcion": "Sophisticated backpacks",
             "file": "sophisticatedbackpacks-1.19.2-3.19.5.989.jar",
             "url": "https://mediafilez.forgecdn.net/files/4993/658/sophisticatedbackpacks-1.19.2-3.19.5.989.jar",
             "disponible": true
         },
         {
             "name": "L_Enders_Cataclysm",
-            "descripcion": "Sin Datos",
+            "descripcion": "Cataclysm",
             "file": "L_Enders_Cataclysm-1.89%20-1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/5039/717/L_Enders_Cataclysm-1.89%20-1.19.2.jar",
             "disponible": true
         },
         {
             "name": "YungsBetterEndIsland",
-            "descripcion": "Sin Datos",
+            "descripcion": "Yung’s better end island",
             "file": "YungsBetterEndIsland-1.19.2-Forge-1.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4752/474/YungsBetterEndIsland-1.19.2-Forge-1.0.jar",
             "disponible": true
         },
         {
             "name": "OPF",
-            "descripcion": "Sin Datos",
+            "descripcion": "Modern online picture frame",
             "file": "OPF-15.jar",
             "url": "https://mediafilez.forgecdn.net/files/4033/108/OPF-15.jar",
-            "disponible": true
+            "disponible": false
         },
         {
             "name": "PlayerRevive",
-            "descripcion": "Sin Datos",
+            "descripcion": "Player revive",
             "file": "PlayerRevive_FORGE_v2.0.14_mc1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4095/245/PlayerRevive_FORGE_v2.0.14_mc1.19.2.jar",
             "disponible": true
         },
         {
             "name": "cfm",
-            "descripcion": "Sin Datos",
+            "descripcion": "MrCrayfish’s furniture",
             "file": "cfm-7.0.0-pre35-1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4374/996/cfm-7.0.0-pre35-1.19.2.jar",
             "disponible": true
         },
         {
             "name": "YungsApi",
-            "descripcion": "Sin Datos",
+            "descripcion": "Yung’s API",
             "file": "YungsApi-1.19.2-Forge-3.8.10.jar",
             "url": "https://mediafilez.forgecdn.net/files/4876/62/YungsApi-1.19.2-Forge-3.8.10.jar",
             "disponible": true
         },
         {
             "name": "journeymap",
-            "descripcion": "Sin Datos",
+            "descripcion": "Journey map",
             "file": "journeymap-1.19.2-5.9.7-forge.jar",
             "url": "https://mediafilez.forgecdn.net/files/4532/924/journeymap-1.19.2-5.9.7-forge.jar",
             "disponible": true
         },
         {
             "name": "theoneprobe",
-            "descripcion": "Sin Datos",
+            "descripcion": "The one probe",
             "file": "theoneprobe-1.19-6.2.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/3965/693/theoneprobe-1.19-6.2.2.jar",
             "disponible": false
         },
         {
             "name": "curios",
-            "descripcion": "Sin Datos",
+            "descripcion": "Curios API",
             "file": "curios-forge-1.19.2-5.1.4.4.jar",
             "url": "https://mediafilez.forgecdn.net/files/4985/476/curios-forge-1.19.2-5.1.4.4.jar",
             "disponible": true
         },
         {
             "name": "citadel",
-            "descripcion": "Sin Datos",
+            "descripcion": "Citadel",
             "file": "citadel-2.1.4-1.19.jar",
             "url": "https://mediafilez.forgecdn.net/files/4556/677/citadel-2.1.4-1.19.jar",
             "disponible": true
         },
         {
             "name": "architectury",
-            "descripcion": "Sin Datos",
+            "descripcion": "Architectury API",
             "file": "architectury-6.5.85-forge.jar",
             "url": "https://mediafilez.forgecdn.net/files/4555/749/architectury-6.5.85-forge.jar",
             "disponible": true
         },
         {
             "name": "forgivingvoid",
-            "descripcion": "Sin Datos",
+            "descripcion": "Forgiving void",
             "file": "forgivingvoid-forge-1.19-7.0.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/3833/506/forgivingvoid-forge-1.19-7.0.0.jar",
             "disponible": true
         },
         {
             "name": "simplyswords",
-            "descripcion": "Sin Datos",
+            "descripcion": "Simple swords",
             "file": "simplyswords-forge-1.47.0-1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4553/225/simplyswords-forge-1.47.0-1.19.2.jar",
             "disponible": true
         },
         {
             "name": "cloth-config",
-            "descripcion": "Sin Datos",
+            "descripcion": "Cloth config API",
             "file": "cloth-config-8.3.115-forge.jar",
             "url": "https://mediafilez.forgecdn.net/files/4973/444/cloth-config-8.3.115-forge.jar",
             "disponible": true
         },
         {
             "name": "netherportalfix",
-            "descripcion": "Sin Datos",
+            "descripcion": "Nether portal fix",
             "file": "netherportalfix-forge-1.19-10.0.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4412/699/netherportalfix-forge-1.19-10.0.1.jar",
             "disponible": false
         },
         {
             "name": "deeperdarker",
-            "descripcion": "Sin Datos",
+            "descripcion": "Deeper and darker",
             "file": "deeperdarker-forge-1.1.6-forge.jar",
             "url": "https://mediafilez.forgecdn.net/files/4166/676/deeperdarker-forge-1.1.6-forge.jar",
             "disponible": true
         },
         {
             "name": "geckolib",
-            "descripcion": "Sin Datos",
+            "descripcion": "Geckolib",
             "file": "geckolib-forge-1.19-3.1.40.jar",
             "url": "https://mediafilez.forgecdn.net/files/4407/241/geckolib-forge-1.19-3.1.40.jar",
             "disponible": true
         },
         {
             "name": "balm",
-            "descripcion": "Sin Datos",
+            "descripcion": "Balm",
             "file": "balm-forge-1.19.2-4.6.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4751/735/balm-forge-1.19.2-4.6.0.jar",
             "disponible": true
         },
         {
             "name": "FallingTree",
-            "descripcion": "Sin Datos",
+            "descripcion": "Falling tree",
             "file": "FallingTree-1.19.2-3.10.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4821/386/FallingTree-1.19.2-3.10.1.jar",
             "disponible": true
         },
         {
             "name": "AI-Improvements",
-            "descripcion": "Sin Datos",
+            "descripcion": "Ai improvements",
             "file": "AI-Improvements-1.19.2-0.5.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4019/127/AI-Improvements-1.19.2-0.5.2.jar",
             "disponible": true
         },
         {
             "name": "trashslot",
-            "descripcion": "Sin Datos",
+            "descripcion": "Trash slot",
             "file": "trashslot-forge-1.19.2-12.1.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4753/179/trashslot-forge-1.19.2-12.1.0.jar",
             "disponible": true
         },
         {
             "name": "easy_npc",
-            "descripcion": "Sin Datos",
+            "descripcion": "Easy npc",
             "file": "easy_npc_1.19.2-3.7.3.jar",
             "url": "https://mediafilez.forgecdn.net/files/5014/506/easy_npc_1.19.2-3.7.3.jar",
             "disponible": true
         },
         {
             "name": "The-Hordes",
-            "descripcion": "Sin Datos",
+            "descripcion": "The hordes",
             "file": "The-Hordes-1.19.2-1.2.1a.jar",
             "url": "https://mediafilez.forgecdn.net/files/4886/619/The-Hordes-1.19.2-1.2.1a.jar",
             "disponible": false
         },
         {
             "name": "immersive-portals",
-            "descripcion": "Sin Datos",
+            "descripcion": "Immersive portals",
             "file": "immersive-portals-2.3.7-mc1.19.2-forge.jar",
             "url": "https://mediafilez.forgecdn.net/files/5093/111/immersive-portals-2.3.7-mc1.19.2-forge.jar",
             "disponible": false
         },
         {
             "name": "cgm",
-            "descripcion": "Sin Datos",
+            "descripcion": "MrCrayfish’s gun",
             "file": "cgm-forge-1.19.2-1.3.7.jar",
             "url": "https://mediafilez.forgecdn.net/files/4718/583/cgm-forge-1.19.2-1.3.7.jar",
             "disponible": true
         },
         {
             "name": "projectarsenal",
-            "descripcion": "Sin Datos",
+            "descripcion": "Project arsenal",
             "file": "projectarsenal-0.4.0-1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4981/253/projectarsenal-0.4.0-1.19.2.jar",
             "disponible": true
         },
         {
             "name": "additional",
-            "descripcion": "Sin Datos",
+            "descripcion": "Additional guns",
             "file": "additional-guns-0.8.2-1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4357/648/additional-guns-0.8.2-1.19.2.jar",
             "disponible": true
         },
         {
             "name": "simpleplanes",
-            "descripcion": "Sin Datos",
+            "descripcion": "Simple planes",
             "file": "simpleplanes-1.19.2-5.2.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4417/286/simpleplanes-1.19.2-5.2.2.jar",
             "disponible": true
         },
         {
             "name": "MutantMonsters",
-            "descripcion": "Sin Datos",
+            "descripcion": "Mutant monsters",
             "file": "MutantMonsters-v4.0.6-1.19.2-Forge.jar",
             "url": "https://mediafilez.forgecdn.net/files/4569/847/MutantMonsters-v4.0.6-1.19.2-Forge.jar",
             "disponible": true
         },
         {
             "name": "FalloutInspiredPA",
-            "descripcion": "Sin Datos",
+            "descripcion": "Fallout inspired power armor",
             "file": "(NoStructures)FalloutInspiredPA(1.19.2).jar",
             "url": "https://mediafilez.forgecdn.net/files/4626/636/%28NoStructures%29FalloutInspiredPA%281.19.2%29.jar",
             "disponible": false
         },
         {
             "name": "TacCraft",
-            "descripcion": "Sin Datos",
+            "descripcion": "Tac craft tactical armor pack",
             "file": "TacCraft [Forge 1.19.2] 0.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4544/813/TacCraft%20%5BForge%201.19.2%5D%200.1.jar",
             "disponible": true
         },
         {
             "name": "torchmaster",
-            "descripcion": "Sin Datos",
+            "descripcion": "Torchmaster",
             "file": "torchmaster-19.2.93.jar",
             "url": "https://mediafilez.forgecdn.net/files/4669/791/torchmaster-19.2.93.jar",
             "disponible": false
         },
         {
             "name": "WitherSkeletonTweaks",
-            "descripcion": "Sin Datos",
+            "descripcion": "Wither Skeleton Tweaks",
             "file": "WitherSkeletonTweaks-1.19.2-8.0.4.jar",
             "url": "https://mediafilez.forgecdn.net/files/4631/144/WitherSkeletonTweaks-1.19.2-8.0.4.jar",
             "disponible": false
         },
         {
-            "name": "geckolib",
-            "descripcion": "Sin Datos",
-            "file": "geckolib-forge-1.19-3.1.40.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4407/241/geckolib-forge-1.19-3.1.40.jar",
-            "disponible": true
-        },
-        {
             "name": "damageindicator",
-            "descripcion": "Sin Datos",
+            "descripcion": "JeremySeq’s damage indicator",
             "file": "damageindicator-1.0.0-1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4612/733/damageindicator-1.0.0-1.19.2.jar",
             "disponible": true
         },
         {
             "name": "DamageTilt",
-            "descripcion": "Sin Datos",
+            "descripcion": "Damage tilt",
             "file": "DamageTilt-1.19-forge-0.1.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/3937/119/DamageTilt-1.19-forge-0.1.2.jar",
             "disponible": false
         },
         {
             "name": "framework",
-            "descripcion": "Sin Datos",
+            "descripcion": "framework",
             "file": "framework-forge-1.19.2-0.6.16.jar",
             "url": "https://mediafilez.forgecdn.net/files/4718/247/framework-forge-1.19.2-0.6.16.jar",
             "disponible": true
         },
         {
             "name": "Hunting_Delight",
-            "descripcion": "Sin Datos",
+            "descripcion": "x",
             "file": "Hunting_Delight Forge 1.19.2 2.9.9.jar",
             "url": "https://mediafilez.forgecdn.net/files/4088/225/Hunting_Delight%20Forge%201.19.2%202.9.9.jar",
+            "disponible": false
+        },
+        {
+            "name": "Butchersdelight beta 1.19.2 2.0.9f.jar",
+            "descripcion": "Butcher’s delight",
+            "file": "Butchersdelight beta 1.19.2 2.0.9f.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5054/559/Butchersdelight%20beta%201.19.2%202.0.9f.jar",
             "disponible": true
         },
         {
             "name": "PuzzlesLib",
-            "descripcion": "Sin Datos",
+            "descripcion": "Puzzles lib",
             "file": "PuzzlesLib-v4.4.3-1.19.2-Forge.jar",
             "url": "https://mediafilez.forgecdn.net/files/4600/775/PuzzlesLib-v4.4.3-1.19.2-Forge.jar",
             "disponible": true
         },
         {
             "name": "eh",
-            "descripcion": "Sin Datos",
+            "descripcion": "Enhanced Hordes",
             "file": "eh1.1-1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4705/367/eh1.1-1.19.2.jar",
             "disponible": true
         },
         {
             "name": "alexsmobs",
-            "descripcion": "Sin Datos",
+            "descripcion": "Alex’s Mobs",
             "file": "alexsmobs-1.21.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4159/154/alexsmobs-1.21.1.jar",
             "disponible": true
         },
         {
             "name": "camera",
-            "descripcion": "Sin Datos",
+            "descripcion": "Camera mod",
             "file": "camera-1.19.2-1.0.6.jar",
             "url": "https://mediafilez.forgecdn.net/files/4814/527/camera-1.19.2-1.0.6.jar",
             "disponible": true
         },
         {
             "name": "YungsBetterNetherFortresses",
-            "descripcion": "Sin Datos",
+            "descripcion": "Yung’s better nether fortresses",
             "file": "YungsBetterNetherFortresses-1.19.2-Forge-1.0.6.jar",
             "url": "https://mediafilez.forgecdn.net/files/4655/719/YungsBetterNetherFortresses-1.19.2-Forge-1.0.6.jar",
             "disponible": true
         },
         {
             "name": "DungeonsArise",
-            "descripcion": "Sin Datos",
+            "descripcion": "When dungeons Arise",
             "file": "DungeonsArise-1.19.2-2.1.56-beta.jar",
             "url": "https://mediafilez.forgecdn.net/files/4599/706/DungeonsArise-1.19.2-2.1.56-beta.jar",
             "disponible": true
         },
         {
             "name": "illageandspillage",
-            "descripcion": "Sin Datos",
+            "descripcion": "Illage and spillage",
             "file": "illageandspillage-1.19.2-1.2.4.jar",
             "url": "https://mediafilez.forgecdn.net/files/4263/798/illageandspillage-1.19.2-1.2.4.jar",
             "disponible": true
         },
         {
             "name": "advancednetherite",
-            "descripcion": "Sin Datos",
+            "descripcion": "Advanced Netherite",
             "file": "advancednetherite-1.14.7-1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4438/333/advancednetherite-1.14.7-1.19.2.jar",
             "disponible": true
         },
         {
             "name": "ParCool",
-            "descripcion": "Sin Datos",
+            "descripcion": "Parcool",
             "file": "ParCool-1.19.2-3.1.0.6-R.jar",
             "url": "https://mediafilez.forgecdn.net/files/4944/978/ParCool-1.19.2-3.1.0.6-R.jar",
             "disponible": true
         },
         {
             "name": "Atlas",
-            "descripcion": "Sin Datos",
+            "descripcion": "Atlas lib",
             "file": "Atlas-Lib-1.19.2-1.1.6.jar",
             "url": "https://mediafilez.forgecdn.net/files/4088/354/Atlas-Lib-1.19.2-1.1.6.jar",
             "disponible": false
         },
         {
             "name": "Placebo",
-            "descripcion": "Sin Datos",
+            "descripcion": "Placebo",
             "file": "Placebo-1.19.2-7.3.4.jar",
             "url": "https://mediafilez.forgecdn.net/files/4876/369/Placebo-1.19.2-7.3.4.jar",
             "disponible": false
         },
         {
             "name": "sophisticatedcore",
-            "descripcion": "Sin Datos",
+            "descripcion": "Sophisticated core",
             "file": "sophisticatedcore-1.19.2-0.5.111.525.jar",
             "url": "https://mediafilez.forgecdn.net/files/4993/648/sophisticatedcore-1.19.2-0.5.111.525.jar",
             "disponible": true
         },
         {
             "name": "FarmersDelight",
-            "descripcion": "Sin Datos",
+            "descripcion": "Farmer’s delight",
             "file": "FarmersDelight-1.19.2-1.2.4.jar",
             "url": "https://mediafilez.forgecdn.net/files/5051/241/FarmersDelight-1.19.2-1.2.4.jar",
             "disponible": true
         },
         {
             "name": "Butchersdelight Foods",
-            "descripcion": "Sin Datos",
+            "descripcion": "Butcher’s delight foods",
             "file": "Butchersdelight%20Foods%20beta%201.19.2%201.0.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4813/851/Butchersdelight%20Foods%20beta%201.19.2%201.0.2.jar",
             "disponible": true
         },
         {
             "name": "bettervillage",
-            "descripcion": "Sin Datos",
+            "descripcion": "Better villages",
             "file": "bettervillage-forge-1.19.2-3.2.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4703/619/bettervillage-forge-1.19.2-3.2.0.jar",
             "disponible": true
         },
         {
             "name": "libraryferret",
-            "descripcion": "Sin Datos",
+            "descripcion": "Library ferret",
             "file": "libraryferret-forge-1.19.2-4.0.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4435/523/libraryferret-forge-1.19.2-4.0.0.jar",
             "disponible": true
         },
         {
             "name": "awesomedungeonnether",
-            "descripcion": "Sin Datos",
+            "descripcion": "Awesome dungeon nether",
             "file": "awesomedungeonnether-forge-1.19.2-3.1.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4454/55/awesomedungeonnether-forge-1.19.2-3.1.1.jar",
             "disponible": true
         },
         {
             "name": "awesomedungeonend",
-            "descripcion": "Sin Datos",
+            "descripcion": "Awesome dungeon the end",
             "file": "awesomedungeonend-forge-1.19.2-3.1.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4454/472/awesomedungeonend-forge-1.19.2-3.1.1.jar",
             "disponible": true
         },
         {
             "name": "awesomedungeonocean",
-            "descripcion": "Sin Datos",
+            "descripcion": "Awesome dungeon the ocean",
             "file": "awesomedungeonocean-forge-1.19.2-3.3.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4490/706/awesomedungeonocean-forge-1.19.2-3.3.0.jar",
             "disponible": true
         },
         {
             "name": "awesomedungeon",
-            "descripcion": "Sin Datos",
+            "descripcion": "Awesome dungeon",
             "file": "awesomedungeon-forge-1.19.2-3.2.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4494/359/awesomedungeon-forge-1.19.2-3.2.0.jar",
             "disponible": true
         },
         {
             "name": "DungeonCrawl",
-            "descripcion": "Sin Datos",
+            "descripcion": "Dungeon crawl",
             "file": "DungeonCrawl-1.19-2.3.12.jar",
             "url": "https://mediafilez.forgecdn.net/files/4437/208/DungeonCrawl-1.19-2.3.12.jar",
             "disponible": true
         },
         {
             "name": "elevatorid",
-            "descripcion": "Sin Datos",
+            "descripcion": "Openblocks elevator",
             "file": "elevatorid-1.19.2-1.8.10.jar",
             "url": "https://mediafilez.forgecdn.net/files/4859/577/elevatorid-1.19.2-1.8.10.jar",
             "disponible": true
@@ -561,77 +561,77 @@
         },
         {
             "name": "rechiseled",
-            "descripcion": "Sin Datos",
+            "descripcion": "Rechiseled",
             "file": "rechiseled-1.1.5c-forge-mc1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4872/816/rechiseled-1.1.5c-forge-mc1.19.2.jar",
             "disponible": false
         },
         {
             "name": "Repurposed_Structures",
-            "descripcion": "Sin Datos",
+            "descripcion": "x",
             "file": "Repurposed_Structures-Better_Strongholds_v4.zip",
             "url": "https://mediafilez.forgecdn.net/files/4031/688/Repurposed_Structures-Better_Strongholds_v4.zip",
             "disponible": false
         },
         {
             "name": "SkyVillages",
-            "descripcion": "Sin Datos",
+            "descripcion": "Sky villages",
             "file": "SkyVillages-1.0.3-1.19.2-1.20.x-forge-release.jar",
             "url": "https://mediafilez.forgecdn.net/files/4787/87/SkyVillages-1.0.3-1.19.2-1.20.x-forge-release.jar",
             "disponible": false
         },
         {
             "name": "Terralith_1",
-            "descripcion": "Sin Datos",
+            "descripcion": "Terralith",
             "file": "Terralith_1.19.3_v2.3.12.jar",
             "url": "https://mediafilez.forgecdn.net/files/4823/693/Terralith_1.19.3_v2.3.12.jar",
             "disponible": false
         },
         {
             "name": "toolleveling",
-            "descripcion": "Sin Datos",
+            "descripcion": "Tool leveling",
             "file": "toolleveling-forge-1.19.2-1.4.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4018/720/toolleveling-forge-1.19.2-1.4.1.jar",
             "disponible": false
         },
         {
             "name": "fusion",
-            "descripcion": "Sin Datos",
+            "descripcion": "Fusion (connected textures)",
             "file": "fusion-1.1.0c-forge-mc1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/5005/119/fusion-1.1.0c-forge-mc1.19.2.jar",
             "disponible": false
         },
         {
             "name": "supermartijn642configlib",
-            "descripcion": "Sin Datos",
+            "descripcion": "Super Martijn 642’s config lib",
             "file": "supermartijn642configlib-1.1.8-forge-mc1.19.jar",
             "url": "https://mediafilez.forgecdn.net/files/4715/406/supermartijn642configlib-1.1.8-forge-mc1.19.jar",
             "disponible": false
         },
         {
             "name": "supermartijn642corelib",
-            "descripcion": "Sin Datos",
+            "descripcion": "Super Martijn 642’s core lib",
             "file": "supermartijn642corelib-1.1.16-forge-mc1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4926/970/supermartijn642corelib-1.1.16-forge-mc1.19.2.jar",
             "disponible": false
         },
         {
             "name": "dropz",
-            "descripcion": "Sin Datos",
+            "descripcion": "Dropz",
             "file": "dropz-forge-2.2.0%2B1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4492/490/dropz-forge-2.2.0%2B1.19.2.jar",
             "disponible": true
         },
         {
             "name": "rayon",
-            "descripcion": "Sin Datos",
+            "descripcion": "Rayon",
             "file": "rayon-forge-1.7.1%2B1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4502/284/rayon-forge-1.7.1%2B1.19.2.jar",
             "disponible": true
         },
         {
             "name": "Dimensional",
-            "descripcion": "Sin Datos",
+            "descripcion": "Dimensional Paintings",
             "file": "Dimensional-Paintings-1.19.2-1.4.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4363/227/Dimensional-Paintings-1.19.2-1.4.1.jar",
             "disponible": false
@@ -645,154 +645,154 @@
         },
         {
             "name": "Kailand_Mod",
-            "descripcion": "Sin Datos",
+            "descripcion": "Kailand Mod",
             "file": "Kailand_Mod_1.19.2.jar",
             "url": "https://github.com/GatoArtStudios/kailand/raw/config/mods/Kailand_Mod_1.19.2.jar",
             "disponible": true
         },
         {
             "name": "thelostcities",
-            "descripcion": "Sin Datos",
+            "descripcion": "the lost cities",
             "file": "lostcities-1.19-6.0.23.jar",
             "url": "https://mediafilez.forgecdn.net/files/5188/637/lostcities-1.19-6.0.23.jar",
             "disponible": true
         },
         {
             "name": "SecurityCraft",
-            "descripcion": "Sin Datos",
+            "descripcion": "SecurityCraft",
             "file": "[1.19.2] SecurityCraft v1.9.6.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4531/283/%5B1.19.2%5D%20SecurityCraft%20v1.9.6.1.jar",
             "disponible": true
         },
         {
             "name": "marbledsarsenal",
-            "descripcion": "Sin Datos",
+            "descripcion": "Marbled’s Arsenal",
             "file": "marbledsarsenal-1.19.2-2.1.0bPATCH.jar",
             "url": "https://mediafilez.forgecdn.net/files/5096/678/marbledsarsenal-1.19.2-2.1.0bPATCH.jar",
             "disponible": true
         },
         {
             "name": "flashLight",
-            "descripcion": "Sin Datos",
+            "descripcion": "Simple flashlight port",
             "file": "flashLight-2.0.1.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4151/759/flashLight-2.0.1.1.jar",
             "disponible": true
         },
         {
             "name": "immersive_paintings",
-            "descripcion": "Sin Datos",
+            "descripcion": "Immersive paintings",
             "file": "immersive_paintings-0.6.7+1.19.2-forge.jar",
             "url": "https://mediafilez.forgecdn.net/files/4789/112/immersive_paintings-0.6.7%2B1.19.2-forge.jar",
             "disponible": true
         },
         {
             "name": "Horror_elements",
-            "descripcion": "Sin Datos",
+            "descripcion": "Horror elements",
             "file": "Horror_elements_mod_1.5.6_1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/5093/445/Horror_elements_mod_1.5.6_1.19.2.jar",
             "disponible": true
         },
         {
             "name": "Zombie Extreme",
-            "descripcion": "Sin Datos",
+            "descripcion": "Zombie extreme",
             "file": "Zombie Extreme 1.19.2 0.2.4.jar",
             "url": "https://mediafilez.forgecdn.net/files/4746/395/Zombie%20Extreme%201.19.2%200.2.4.jar",
             "disponible": true
         },
         {
             "name": "plasmovoice",
-            "descripcion":"Sin Datos",
+            "descripcion":"Plasmo voice:",
             "file": "plasmovoice-forge-1.19.2-2.0.8.jar",
             "url": "https://mediafilez.forgecdn.net/files/5028/633/plasmovoice-forge-1.19.2-2.0.8.jar",
             "disponible": true
         },
         {
             "name": "anti-xray",
-            "descripcion": "Sin Datos",
+            "descripcion": "AntiXray",
             "file": "anti-xray-1.3.0-Forge-1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4331/672/anti-xray-1.3.0-Forge-1.19.2.jar",
             "disponible": true
         },
         {
             "name": "Bongo",
-            "descripcion": "Sin Datos",
+            "descripcion": "Bongo",
             "file": "Bongo-1.19.2-3.2.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4046/533/Bongo-1.19.2-3.2.0.jar",
             "disponible": true
         },
         {
             "name": "KailandFinder",
-            "descripcion": "Sin Datos",
+            "descripcion": "Kailand finger",
             "file": "KailandFinder_v1.1.jar",
             "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/KailandFinder_v1.1.jar",
             "disponible": true
         },
         {
             "name": "VideoPlayer",
-            "descripcion": "Sin Datos",
+            "descripcion": "Video player",
             "file": "VideoPlayer-27.4-FORGE-1.19.2 (1).jar",
             "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/VideoPlayer-27.4-FORGE-1.19.2%20(1).jar",
             "disponible": true
         },
         {
             "name": "watermedia",
-            "descripcion": "Sin Datos",
+            "descripcion": "Watermedia multimedia API",
             "file": "watermedia-2.0.28.jar",
             "url": "https://mediafilez.forgecdn.net/files/5127/438/watermedia-2.0.28.jar",
             "disponible": true
         },
         {
             "name": "sculkhorde",
-            "descripcion": "Sin Datos",
+            "descripcion": "Sculk horde",
             "file": "sculkhorde-1.19.2-0.8.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/5011/383/sculkhorde-1.19.2-0.8.1.jar",
             "disponible": true
         },
         {
             "name": "dungeons-and-taverns",
-            "descripcion":"Sin Datos",
+            "descripcion":"Dungeons and tavens",
             "file": "dungeons-and-taverns-2.0.2 forge.jar",
             "url": "https://mediafilez.forgecdn.net/files/4506/854/dungeons-and-taverns-2.0.2%20forge.jar",
             "disponible": true
         },
         {
             "name": "structureessentials",
-            "descripcion":"Sin Datos",
+            "descripcion":"Structure essentials",
             "file": "structureessentials-1.19.2-3.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4882/269/structureessentials-1.19.2-3.2.jar",
             "disponible": true
         },
         {
             "name": "dungeons_plus",
-            "descripcion": "Sin Datos",
+            "descripcion": "Dungeons plus",
             "file": "dungeons_plus-1.19.2-1.3.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4489/759/dungeons_plus-1.19.2-1.3.1.jar",
             "disponible": true
         },
         {
             "name": "structure_gel",
-            "descripcion":"Sin Datos",
+            "descripcion":"Estructure gel API",
             "file": "structure_gel-1.19.2-2.7.3.jar",
             "url": "https://mediafilez.forgecdn.net/files/4765/558/structure_gel-1.19.2-2.7.3.jar",
             "disponible": true
         },
         {
             "name": "cupboard",
-            "descripcion": "Cupboard proporciona código, diferentes marcos y utilidades para modificaciones de Minecraft.",
+            "descripcion": "Cupboard proporciona código, diferentes marcos y utilidades para modificaciones de Minecraft. | Dependencia",
             "file": "cupboard-1.19.2-2.3.jar",
             "url": "https://mediafilez.forgecdn.net/files/5063/778/cupboard-1.19.2-2.3.jar",
             "disponible": true
         },
         {
             "name": "azurelib-forge-1.19.2-1.0.41.jar",
-            "descripcion": "Sin Datos",
+            "descripcion": "Dependencia",
             "file": "azurelib-forge-1.19.2-1.0.41.jar",
             "url": "https://mediafilez.forgecdn.net/files/5069/926/azurelib-forge-1.19.2-1.0.41.jar",
             "disponible": true
         },
         {
             "name": "LibX",
-            "descripcion": "Sin Datos",
+            "descripcion": "Dependencia",
             "file": "LibX-1.19.2-4.2.8.jar",
             "url": "https://mediafilez.forgecdn.net/files/4052/778/LibX-1.19.2-4.2.8.jar",
             "disponible": true
