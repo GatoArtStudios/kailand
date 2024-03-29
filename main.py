@@ -37,7 +37,7 @@ class Mc:
         self.data_nube = {}
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
-        self.launcherVersion = "1.0.19.0"
+        self.launcherVersion = "1.0.20.0"
         self.boton_jugar = "Iniciado"   
         self.mc_disponible = True
         self.minecraft_directory = f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand"
@@ -653,7 +653,54 @@ class DataWidget:
         self.buttom_ajustes = ft.ElevatedButton(text = "Ajustes",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=icons.SETTINGS, icon_color="white", on_click=self.ajustes_gui, animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
         self.buttom_jugar = ft.ElevatedButton(text = mc.boton_jugar, bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, top = 210, right = 1, left = 1, disabled = mc.mc_disponible, on_click=lambda e: mc.ejecuta_mc(e) if mc.options["username"] else (self.user_none_alert_show(e), self.animate_buttom(e)), animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
         self.div_mods = ft.Container(
-            content=ft.Text('En construnccion')
+            content=ft.Row(
+                [
+                    self.contMods(x['name'], x['descripcion'], x['doct']) for x in mc.data_nube['complementos']
+                ],
+                height=480,
+                width=1600,
+                scroll=ft.ScrollMode.ALWAYS,
+                # horizontal_alignment=CrossAxisAlignment.CENTER
+            ), 
+            height=480,
+            width=1600,
+        )
+    
+    def contMods(self, titulo = 'Sin datos', descripcion = 'Sin datos', url = 'http://example.com'):
+        '''
+        Crea el contendor que contendra la informacion de cada mod complementario.
+        '''
+        return ft.Container(
+            content=ft.Column(
+                {
+                    ft.Container(
+                        content=ft.Row(
+                            [
+                                ft.Text(titulo, width=200, size=20, weight=ft.FontWeight.W_900),
+                                ft.Switch(value=False)
+                            ],
+                        ),
+                        height=40,
+                    ),
+                    ft.Container(
+                        content=ft.Column(
+                            [
+                                ft.Text(descripcion, height=100),
+                                ft.Container(
+                                    content=ft.Text('Mas...', color='yellow'),
+                                    on_click=lambda e: webbrowser.open(url)
+                                )
+                            ]
+                        ),
+                        height=130,
+                    )
+                }
+            ),
+            bgcolor= ft.colors.with_opacity(0.3, 'black'),
+            width=300,
+            height=200,
+            border_radius=10,
+            padding=10
         )
         
     def close_launcher_update(e):
