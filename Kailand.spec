@@ -34,6 +34,6 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    version='C:\\Users\\Gatun\\AppData\\Local\\Temp\\b6a04456-5a6c-4a4f-81ef-2ba5b99aaf55',
+    version='C:\\Users\\Gatun\\AppData\\Local\\Temp\\49b7e60c-2856-4a0e-82b2-6b03fcfb5c7e',
     icon=['assets\\favicon.png'],
 )

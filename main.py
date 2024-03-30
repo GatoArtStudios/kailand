@@ -37,7 +37,7 @@ class Mc:
         self.data_nube = {}
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
-        self.launcherVersion = "1.0.20.0"
+        self.launcherVersion = "1.0.21.0"
         self.boton_jugar = "Iniciado"   
         self.mc_disponible = True
         self.minecraft_directory = f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand"
@@ -248,7 +248,33 @@ class Mc:
                     logging.info(f"Error al descargar el mod '{mod['name']}'. Código de estado: {response.status_code}")
             except Exception as e:
                 logging.info(f"Error durante la descarga del mod '{mod['name']}': {e}")
-                
+    
+    def download_comple(self, e, x):
+        '''
+        Descarga los complementos:
+        `
+        e: Evento
+        x: Objeto
+        `
+        '''
+        e.page.splash = ft.ProgressBar(tooltip=f"Configurando {x['name']}...", height=5)
+        data_widget.buttom_jugar.disabled = True
+        data_widget.buttom_jugar.text = 'Configurando'
+        e.page.update()
+        logging.info(f'Descargando el objeto {x}\nControl: {vars(e)}')
+        if e.data == 'true':
+            self.descargar_mod(x)
+            e.page.splash = None
+            data_widget.buttom_jugar.disabled = False
+            data_widget.buttom_jugar.text = 'Jugar'
+            e.page.update()
+        elif e.data == 'false':
+            self.eliminar_mod(os.path.join(self.ruta_mods, x['file']))
+            e.page.splash = None
+            data_widget.buttom_jugar.disabled = False
+            data_widget.buttom_jugar.text = 'Jugar'
+            e.page.update()
+           
     def eliminar_mod(self, archivo):
         '''
         Elimina mods, pasandole como argumento la ruta del archivo a remover
@@ -655,7 +681,7 @@ class DataWidget:
         self.div_mods = ft.Container(
             content=ft.Row(
                 [
-                    self.contMods(x['name'], x['descripcion'], x['doct']) for x in mc.data_nube['complementos']
+                    self.contMods(x['name'], x['descripcion'], x['doct'], x) for x in mc.data_nube['complementos']
                 ],
                 height=480,
                 width=1600,
@@ -666,23 +692,29 @@ class DataWidget:
             width=1600,
         )
     
-    def contMods(self, titulo = 'Sin datos', descripcion = 'Sin datos', url = 'http://example.com'):
+    def contMods(self, titulo = 'Sin datos', descripcion = 'Sin datos', url = 'http://example.com', x = None):
         '''
         Crea el contendor que contendra la informacion de cada mod complementario.
         '''
-        return ft.Container(
-            content=ft.Column(
-                {
-                    ft.Container(
+        if os.path.exists(os.path.join(mc.ruta_mods, x['file'])):
+            disponible = True
+        else:
+            disponible = False
+            
+        top_bar = ft.Container(
                         content=ft.Row(
                             [
                                 ft.Text(titulo, width=200, size=20, weight=ft.FontWeight.W_900),
-                                ft.Switch(value=False)
+                                ft.Switch(
+                                    value=disponible,
+                                    active_color='green',
+                                    on_change= lambda e: mc.download_comple(e, x)
+                                )
                             ],
                         ),
                         height=40,
-                    ),
-                    ft.Container(
+        )
+        bottom = ft.Container(
                         content=ft.Column(
                             [
                                 ft.Text(descripcion, height=100),
@@ -693,8 +725,13 @@ class DataWidget:
                             ]
                         ),
                         height=130,
-                    )
-                }
+        )
+        return ft.Container(
+            content=ft.Column(
+                [
+                    top_bar,
+                    bottom
+                ]
             ),
             bgcolor= ft.colors.with_opacity(0.3, 'black'),
             width=300,
@@ -1133,8 +1170,8 @@ class LauncherVentana:
         '''
         Abre alerta con opciones si faltan recursos ///// Se ejecuta al iniciar el launcher de forma automatica para comprodar datos
         '''
-        print('Chequeando actualizaciones del servidor')
-        print(self.__page)
+        # print('Chequeando actualizaciones del servidor')
+        # print(self.__page)
         logging.info('Chequeando actualizaciones del servidor')
         if mc.check_update_launcher():
             # page.window_visible = False # Vuelve invicible la ventana
