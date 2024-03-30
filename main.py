@@ -37,7 +37,7 @@ class Mc:
         self.data_nube = {}
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
-        self.launcherVersion = "1.0.21.0"
+        self.launcherVersion = "1.0.22.0"
         self.boton_jugar = "Iniciado"   
         self.mc_disponible = True
         self.minecraft_directory = f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand"
@@ -740,7 +740,7 @@ class DataWidget:
             padding=10
         )
         
-    def close_launcher_update(e):
+    def close_launcher_update(self, e):
         '''
         Cierra el launcher / programa
         '''
