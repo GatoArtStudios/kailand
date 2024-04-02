@@ -1,1 +1,1 @@
-flet pack main.py  --icon assets\favicon.png -n Kailand --add-data "assets\;assets" --file-version "1.0.22" --product-version "1.0.22" --product-name "Kailand V - Launcher" --copyright "Launcher de Kailand, by GatoArtStudio" --file-description "Launcher Oficial de Kailand V" --company-name "By GatoArtStudio X Kailand V"
+flet build windows --build-number 22 --build-version "1.0.22" --product "Kailand V - Launcher" --copyright "Launcher de Kailand, by GatoArtStudio" --description "Launcher Oficial de Kailand V" --company "By GatoArtStudio X Kailand V"
