@@ -34,7 +34,19 @@ class Mc:
         '''
         Almacena todos los datos del minecraft y metodos para el mismo funcionamiento, tambien se encarga de checar la integridad de los datos al inicial el launcher
         '''
-        self.data_nube = {}
+        self.data_nube = {
+            "complementos": 
+            [
+                {
+                    "name": "jei",
+                    "descripcion": "JEI es un mod de visualización de artículos y recetas para Minecraft, creado desde cero para brindar estabilidad y rendimiento.",
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/jei",
+                    "file": "jei-1.19.2-forge-11.6.0.1018.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4712/866/jei-1.19.2-forge-11.6.0.1018.jar",
+                    "disponible": True
+                }
+            ]
+        }
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
         self.launcherVersion = "1.0.22.0"
@@ -80,6 +92,10 @@ class Mc:
             with open(os.path.join(self.minecraft_directory, "mods_data.json"), "r") as read_data_mods:
                 temp_data_mods = json.load(read_data_mods)
                 self.data_nube.update(temp_data_mods)
+        else:
+            response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
+            self.data_nube = response.json()
+            print(self.data_nube)
     
     def ram_launcher(self):
         '''
