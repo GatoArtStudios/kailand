@@ -18,16 +18,9 @@ import minecraft_launcher_lib.forge as forgemc
 if not os.path.exists(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand"):
     os.mkdir(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand")
     os.chdir(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand")
-    response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
-    response = response.json()
-    print(response)
-    print('Ejecutado el upgrade de data_nube el primer')
+
 else:
     os.chdir(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand")
-    response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
-    response = response.json()
-    print(response)
-    print('Ejecutado el upgrade de data_nube el primer')
 
 logging.basicConfig(
     filename=os.path.join(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand", "launcher.log"),
@@ -42,7 +35,7 @@ class Mc:
         '''
         Almacena todos los datos del minecraft y metodos para el mismo funcionamiento, tambien se encarga de checar la integridad de los datos al inicial el launcher
         '''
-        self.data_nube = response
+        self.data_nube = {}
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
         self.launcherVersion = "1.0.22.0"
@@ -91,8 +84,8 @@ class Mc:
         else:
             response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
             self.data_nube.update(response.json())
-            print(self.data_nube)
-            print('Ejecutado el upgrade de data_nube')
+            # print(self.data_nube) # Imprime los datos del servidor.
+            # print('Ejecutado el upgrade de data_nube')
     
     def ram_launcher(self):
         '''
