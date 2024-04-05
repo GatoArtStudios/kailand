@@ -18,8 +18,16 @@ import minecraft_launcher_lib.forge as forgemc
 if not os.path.exists(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand"):
     os.mkdir(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand")
     os.chdir(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand")
+    response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
+    response = response.json()
+    print(response)
+    print('Ejecutado el upgrade de data_nube el primer')
 else:
     os.chdir(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand")
+    response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
+    response = response.json()
+    print(response)
+    print('Ejecutado el upgrade de data_nube el primer')
 
 logging.basicConfig(
     filename=os.path.join(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand", "launcher.log"),
@@ -34,19 +42,7 @@ class Mc:
         '''
         Almacena todos los datos del minecraft y metodos para el mismo funcionamiento, tambien se encarga de checar la integridad de los datos al inicial el launcher
         '''
-        self.data_nube = {
-            "complementos": 
-            [
-                {
-                    "name": "jei",
-                    "descripcion": "JEI es un mod de visualización de artículos y recetas para Minecraft, creado desde cero para brindar estabilidad y rendimiento.",
-                    "doct": "https://www.curseforge.com/minecraft/mc-mods/jei",
-                    "file": "jei-1.19.2-forge-11.6.0.1018.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/4712/866/jei-1.19.2-forge-11.6.0.1018.jar",
-                    "disponible": True
-                }
-            ]
-        }
+        self.data_nube = response
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
         self.launcherVersion = "1.0.22.0"
@@ -94,8 +90,9 @@ class Mc:
                 self.data_nube.update(temp_data_mods)
         else:
             response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
-            self.data_nube = response.json()
+            self.data_nube.update(response.json())
             print(self.data_nube)
+            print('Ejecutado el upgrade de data_nube')
     
     def ram_launcher(self):
         '''
@@ -697,7 +694,7 @@ class DataWidget:
         self.div_mods = ft.Container(
             content=ft.Row(
                 [
-                    self.contMods(x['name'], x['descripcion'], x['doct'], x) for x in mc.data_nube['complementos']
+                    self.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in mc.data_nube['complementos']
                 ],
                 height=480,
                 width=1600,
