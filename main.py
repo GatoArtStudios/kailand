@@ -9,10 +9,7 @@ import webbrowser
 from typing import Any
 import subprocess
 import flet as ft
-from flet import *
 import minecraft_launcher_lib
-from minecraft_launcher_lib import *
-import minecraft_launcher_lib.forge as forgemc
 
 # Crea el directorio de trabajo principal
 if not os.path.exists(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand"):
@@ -38,7 +35,7 @@ class Mc:
         self.data_nube = {}
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
-        self.launcherVersion = "1.0.22.0"
+        self.launcherVersion = "1.0.23.0"
         self.boton_jugar = "Iniciado"   
         self.mc_disponible = True
         self.minecraft_directory = f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand"
@@ -47,7 +44,7 @@ class Mc:
             "uuid": None,
             "token": "",
             "executablePath": "java",
-            "jvmArguments": ["-Xmx5G", "-Xms2G"],  # The jvmArguments
+            "jvmArguments": ["-Xmx5G", "-Xms2G"],
             "launcherName": "Kailand V - Launcher",
             "gameDirectory": self.minecraft_directory,
             "customResolution": True,
@@ -57,7 +54,7 @@ class Mc:
         }
         self.archivo_kailand = os.path.join(self.minecraft_directory, "kaliand.json")
         self.ruta_mods = os.path.join(self.minecraft_directory, "mods")
-        self.url_base_mods = 'https://github.com/DonGatun/kailand/raw/Gatun/mods'
+        self.url_base_mods = 'https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods'
         self.cheking()
         self.load_data_file_config()
         self.archivos_mods = []
@@ -84,8 +81,6 @@ class Mc:
         else:
             response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
             self.data_nube.update(response.json())
-            # print(self.data_nube) # Imprime los datos del servidor.
-            # print('Ejecutado el upgrade de data_nube')
     
     def ram_launcher(self):
         '''
@@ -280,7 +275,7 @@ class Mc:
             data_widget.buttom_jugar.disabled = False
             data_widget.buttom_jugar.text = 'Jugar'
             e.page.update()
-           
+
     def eliminar_mod(self, archivo):
         '''
         Elimina mods, pasandole como argumento la ruta del archivo a remover
@@ -382,13 +377,9 @@ class Mc:
             # Obtiene el comando para ejecutar Minecraft
             minecraft_command = minecraft_launcher_lib.command.get_minecraft_command("1.19.2-forge-43.3.8", self.minecraft_directory, self.options)
             # Agrega datos al logging
-            # minecraft_command.extend(['--skin','https://raw.githubusercontent.com/GatoArtStudios/kailand/config/skins/gato.png'])
-            # minecraft_command.extend(['--slim'])
-            # logging.info(minecraft_command)
-            # logging.info(type(minecraft_command))
             logging.info("Ejecutando Minecraft")
             e.control.bgcolor = ft.colors.with_opacity(0.1, "white")
-            e.control.icon = icons.PLAY_CIRCLE
+            e.control.icon = ft.icons.PLAY_CIRCLE
             e.control.color = ft.colors.with_opacity(0.5, "white")
             e.control.text = "Jugando"
             e.control.disabled = True
@@ -431,7 +422,6 @@ class Mc:
         if self.validate_directory():
             logging.info("Todos los recursos estan")
         else:
-            # minecraft_launcher_lib.install.install_minecraft_version("1.19.2", minecraft_directory)
             logging.info("Faltan algunos recursos necesarios")
             self.create_directory()
             self.consulta_nube(bt_play=True)
@@ -487,7 +477,7 @@ class DataWidget:
             content=ft.Text("Para seguir usando el launcher descarge la nueva version del launcher por favor"),
             on_dismiss=self.close_launcher_update,
             actions=[
-                ft.TextButton("Descargar", on_click=self.close_launcher_update, icon=icons.CLOUD_DOWNLOAD)
+                ft.TextButton("Descargar", on_click=self.close_launcher_update, icon=ft.icons.CLOUD_DOWNLOAD)
             ]
         )
         self.dlg_modal = ft.AlertDialog(
@@ -505,7 +495,7 @@ class DataWidget:
                 ft.Column(
                     [
                         ft.Text("Para jugar debes agregar tu cuenta primero"),
-                        ft.ElevatedButton("Ir a Perfil", on_click=lambda e: (self.accounts_gui(e), self.user_none_alert_close(e)), bgcolor=ft.colors.with_opacity(0.2, "black"), color="white", width=280, animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
+                        ft.ElevatedButton("Ir a Perfil", on_click=lambda e: (self.accounts_gui(e), self.user_none_alert_close(e)), bgcolor=ft.colors.with_opacity(0.2, "black"), color="white", width=280, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
                     ],
                     tight=True,
                 ),
@@ -517,10 +507,10 @@ class DataWidget:
         self.resolution_width = ft.TextField(label="Ancho", hint_text="Ancho (pixeles)", border_color="white", disabled=False, value=mc.options["resolutionWidth"], color="white")
         self.resolution_x = ft.Text("X", color="white")
         self.resolution_height = ft.TextField(label="Alto", hint_text="Alto (pixeles)", border_color="white", disabled=False, value=mc.options["resolutionHeight"], color="white")
-        self.buttom_mods = ft.ElevatedButton(text="Mods  ", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.mods_gui, icon=icons.FOLDER, icon_color="white", animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
-        self.buttom_shaders = ft.ElevatedButton(text="Shaders", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.open_folder_shaderpacks, icon=icons.FOLDER, icon_color="white", animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
-        self.buttom_textures = ft.ElevatedButton(text="Textures", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.open_folder_resourcepacks, icon=icons.FOLDER, icon_color="white", animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
-        self.buttom_login = ElevatedButton(text="Login", bgcolor = ft.colors.with_opacity(0.2, "white"), disabled=True, color="white")
+        self.buttom_mods = ft.ElevatedButton(text="Mods  ", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.mods_gui, icon=ft.icons.FOLDER, icon_color="white", animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
+        self.buttom_shaders = ft.ElevatedButton(text="Shaders", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.open_folder_shaderpacks, icon=ft.icons.FOLDER, icon_color="white", animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
+        self.buttom_textures = ft.ElevatedButton(text="Textures", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.open_folder_resourcepacks, icon=ft.icons.FOLDER, icon_color="white", animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
+        self.buttom_login = ft.ElevatedButton(text="Login", bgcolor = ft.colors.with_opacity(0.2, "white"), disabled=True, color="white")
         self.text_p = ft.TextField(label="Usuario (Offline)", label_style=ft.TextStyle(color="White"), hint_text="Coloca tu usuario y guarda de nuevo", hint_style=ft.TextStyle(color="white"), border_color="white", disabled=True, color="white", bgcolor=ft.colors.with_opacity(0.2, "black"), focused_color="white")
         self.input_offline_name = ft.Container(content=self.text_p)
         self.text_reglas = self.consulta_reglas()    
@@ -529,8 +519,8 @@ class DataWidget:
         self.info_execute_java = self.data_java_execute()   
         self.text_save_setting = ft.Text(top=260, color="white")
         self.t = ft.Text(color="white")
-        self.buttom_save = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_info(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
-        self.buttom_save_setting = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_setting(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), top=290, animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
+        self.buttom_save = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_info(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
+        self.buttom_save_setting = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_setting(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), top=290, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.type_login = ft.Dropdown(label="Tipo de cuenta", label_style=ft.TextStyle(color="white"), hint_text="Seleccione el tipo", hint_style=ft.TextStyle(color="white"), options=[ft.dropdown.Option("Offline"), ft.dropdown.Option("(Online) Microsoft")], border_color="white", width=300, on_change=self.save_info, color="white", bgcolor="black")
         self.select_bar_ram = ft.Slider(min=2, max=16, divisions=14, label="{value}Gb", value=mc.valor_xmx, on_change=lambda e: self.change_ram_text(e, self.text_ram), width=620)
         self.java_path = ft.TextField(label="Ejecutable de Java", read_only=True, border_color="white", width=500, value=self.info_execute_java, color="white")
@@ -539,8 +529,8 @@ class DataWidget:
             on_click=lambda _: (self.java_info.pick_files(allowed_extensions=["exe"], initial_directory="C:\Program Files\Java", dialog_title="Seleccione el archivo java.exe o javaw.exe"), self.animate_buttom(e=_)),
             color="white",
             bgcolor=ft.colors.with_opacity(0.2, "white"),
-            animate_scale=animation.Animation(duration=400, curve="bounceout"),
-            scale=transform.Scale(1)
+            animate_scale=ft.animation.Animation(duration=400, curve="bounceout"),
+            scale=ft.transform.Scale(1)
         )
         self.text_ram = ft.Text(f"Ram Actual: ({mc.valor_xmx} Gb)", color="white")
         self.ajustes_widget = ft.Container(
@@ -551,7 +541,6 @@ class DataWidget:
                         self.resolution_x,
                         self.resolution_width
                         ],
-                    #alignment=MainAxisAlignment.CENTER
                     ),
                     ft.Row(
                         [
@@ -573,16 +562,16 @@ class DataWidget:
                                         opacity=0.5,
                                         animate_opacity=300,
                                         on_hover=self.animation_colaboracion,
-                                        scale=transform.Scale(1),
-                                        animate_scale=animation.Animation(duration=300, curve="bounceout")
+                                        scale=ft.transform.Scale(1),
+                                        animate_scale=ft.animation.Animation(duration=300, curve="bounceout")
                                         ),
                                     ft.Container(
                                         content=ft.Text("X"),
                                         opacity=0.5,
                                         animate_opacity=300,
                                         on_hover=self.animation_colaboracion,
-                                        scale=transform.Scale(1),
-                                        animate_scale=animation.Animation(duration=300, curve="bounceout")
+                                        scale=ft.transform.Scale(1),
+                                        animate_scale=ft.animation.Animation(duration=300, curve="bounceout")
                                         ),
                                     ft.Container(
                                         content=ft.Text("SoyGato_Hcc", italic=True),
@@ -590,8 +579,8 @@ class DataWidget:
                                         opacity=0.5,
                                         animate_opacity=300,
                                         on_hover=self.animation_colaboracion,
-                                        scale=transform.Scale(1),
-                                        animate_scale=animation.Animation(duration=300, curve="bounceout")
+                                        scale=ft.transform.Scale(1),
+                                        animate_scale=ft.animation.Animation(duration=300, curve="bounceout")
                                     )
                                 ]
                             ),
@@ -601,7 +590,6 @@ class DataWidget:
                         ])
                     ],
                 spacing=15,
-                #horizontal_alignment=CrossAxisAlignment.CENTER
                 ),
             padding=30,
         )
@@ -610,17 +598,17 @@ class DataWidget:
                     ft.Text("Reglas de Kailand", color="white", size=50, weight=ft.FontWeight.W_900, selectable=True),
                     ft.Container(
                         content=ft.Column(
-                            [ft.Container(content=ft.Text(regla), padding=10, border_radius=5, bgcolor=ft.colors.with_opacity(0.3, "black"), width=900, scale=transform.Scale(1), animate_scale=animation.Animation(duration=400, curve="bounceout"), on_hover=lambda e: self.animation_scale_zoom(e)) for regla in self.text_reglas_list],
+                            [ft.Container(content=ft.Text(regla), padding=10, border_radius=5, bgcolor=ft.colors.with_opacity(0.3, "black"), width=900, scale=ft.transform.Scale(1), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), on_hover=lambda e: self.animation_scale_zoom(e)) for regla in self.text_reglas_list],
                             height=480,
                             width=1600,
                             scroll=ft.ScrollMode.ALWAYS,
-                            horizontal_alignment=CrossAxisAlignment.CENTER
+                            horizontal_alignment=ft.CrossAxisAlignment.CENTER
                         ),
-                        margin=margin.only(top=50)
+                        margin=ft.margin.only(top=50)
                     )
                     ],
                 spacing=15,
-                horizontal_alignment=CrossAxisAlignment.CENTER
+                horizontal_alignment=ft.CrossAxisAlignment.CENTER
                 ),
             padding=10
         )
@@ -668,7 +656,7 @@ class DataWidget:
                 ft.Column(
                     [
                         ft.Text("Para jugar debes agregar tu cuenta primero"),
-                        ft.ElevatedButton("Ir a Perfil", on_click=lambda e: (self.accounts_gui(e), self.user_none_alert_close(e)), bgcolor=ft.colors.with_opacity(0.2, "black"), color="white", width=280, animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
+                        ft.ElevatedButton("Ir a Perfil", on_click=lambda e: (self.accounts_gui(e), self.user_none_alert_close(e)), bgcolor=ft.colors.with_opacity(0.2, "black"), color="white", width=280, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
                     ],
                     tight=True,
                 ),
@@ -677,13 +665,13 @@ class DataWidget:
             open=False,
             bgcolor=ft.colors.with_opacity(0.2, "white"),
         )
-        self.buttom_horario = ft.ElevatedButton(text="Horario", bgcolor=ft.colors.with_opacity(0.2, "white"), color="white", width=200, icon=icons.CALENDAR_MONTH, icon_color="white", on_click=lambda e: (self.animate_buttom(e)), animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
-        self.buttom_console = ft.ElevatedButton(text="Consola", bgcolor=ft.colors.with_opacity(0.2, "white"), color="white", width=200, icon=icons.CODE, icon_color="white", on_click=lambda e: (self.console_gui(e)), animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))    
-        self.buttom_perfil = ft.ElevatedButton(text="Perfil", bgcolor=ft.colors.with_opacity(0.2, "white"), color="white", width=200, icon=icons.MANAGE_ACCOUNTS, icon_color="white", on_click=self.accounts_gui, animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
-        self.buttom_reglas = ft.ElevatedButton(text="Reglas", bgcolor=ft.colors.with_opacity(0.2, "white"), color="white", width=200, icon=icons.ADMIN_PANEL_SETTINGS, icon_color="white", on_click=lambda e:(self.reglas_gui(e), self.animate_buttom(e)), animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
-        self.buttom_discord = ft.ElevatedButton(text = "discord",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=icons.DISCORD, url = "https://discord.gg/chwAE86T6W", on_click=self.animate_buttom, animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
-        self.buttom_ajustes = ft.ElevatedButton(text = "Ajustes",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=icons.SETTINGS, icon_color="white", on_click=self.ajustes_gui, animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
-        self.buttom_jugar = ft.ElevatedButton(text = mc.boton_jugar, bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, top = 210, right = 1, left = 1, disabled = mc.mc_disponible, on_click=lambda e: mc.ejecuta_mc(e) if mc.options["username"] else (self.user_none_alert_show(e), self.animate_buttom(e)), animate_scale=animation.Animation(duration=400, curve="bounceout"), scale=transform.Scale(1))
+        self.buttom_horario = ft.ElevatedButton(text="Horario", bgcolor=ft.colors.with_opacity(0.2, "white"), color="white", width=200, icon=ft.icons.CALENDAR_MONTH, icon_color="white", on_click=lambda e: (self.animate_buttom(e)), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
+        self.buttom_console = ft.ElevatedButton(text="Consola", bgcolor=ft.colors.with_opacity(0.2, "white"), color="white", width=200, icon=ft.icons.CODE, icon_color="white", on_click=lambda e: (self.console_gui(e)), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))    
+        self.buttom_perfil = ft.ElevatedButton(text="Perfil", bgcolor=ft.colors.with_opacity(0.2, "white"), color="white", width=200, icon=ft.icons.MANAGE_ACCOUNTS, icon_color="white", on_click=self.accounts_gui, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
+        self.buttom_reglas = ft.ElevatedButton(text="Reglas", bgcolor=ft.colors.with_opacity(0.2, "white"), color="white", width=200, icon=ft.icons.ADMIN_PANEL_SETTINGS, icon_color="white", on_click=lambda e:(self.reglas_gui(e), self.animate_buttom(e)), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
+        self.buttom_discord = ft.ElevatedButton(text = "discord",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=ft.icons.DISCORD, url = "https://discord.gg/chwAE86T6W", on_click=self.animate_buttom, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
+        self.buttom_ajustes = ft.ElevatedButton(text = "Ajustes",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=ft.icons.SETTINGS, icon_color="white", on_click=self.ajustes_gui, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
+        self.buttom_jugar = ft.ElevatedButton(text = mc.boton_jugar, bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, top = 260, right = 1, left = 1, disabled = mc.mc_disponible, on_click=lambda e: mc.ejecuta_mc(e) if mc.options["username"] else (self.user_none_alert_show(e), self.animate_buttom(e)), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.div_mods = ft.Container(
             content=ft.Row(
                 [
@@ -692,7 +680,6 @@ class DataWidget:
                 height=480,
                 width=1600,
                 scroll=ft.ScrollMode.ALWAYS,
-                # horizontal_alignment=CrossAxisAlignment.CENTER
             ), 
             height=480,
             width=1600,
@@ -771,7 +758,6 @@ class DataWidget:
                 e.page.update()
         ```
         '''
-        # print(vars(e))
         if self.main_file.controls[0] == self.data_widget['texto']:
             self.main_file.controls[0] = self.data_widget['texto2']
             e.page.update()
@@ -783,10 +769,10 @@ class DataWidget:
         '''
         Anima los botones para darle dinamismo
         '''
-        e.control.scale = transform.Scale(0.75)
+        e.control.scale = ft.transform.Scale(0.75)
         e.control.update()
         time.sleep(0.3)      
-        e.control.scale = transform.Scale(1)
+        e.control.scale = ft.transform.Scale(1)
         e.control.update()
         
     def open_folder_mods(self, e):
@@ -979,11 +965,11 @@ class DataWidget:
         '''
         if e.data == "true":
             e.control.opacity = 1
-            e.control.scale = transform.Scale(1.3)
+            e.control.scale = ft.transform.Scale(1.3)
             e.control.update()
         elif e.data == "false":
             e.control.opacity = 0.5
-            e.control.scale = transform.Scale(1)
+            e.control.scale = ft.transform.Scale(1)
             e.control.update()
             
     def animation_scale_zoom(self, e):
@@ -991,10 +977,10 @@ class DataWidget:
         Contenedor que Tiene las reglas consultadas de la nube
         '''
         if e.data == "true":
-            e.control.scale = transform.Scale(1.1)
+            e.control.scale = ft.transform.Scale(1.1)
             e.control.update()
         else:
-            e.control.scale = transform.Scale(1)
+            e.control.scale = ft.transform.Scale(1)
             e.control.update()
             
     def blur_container(self, e):
@@ -1123,7 +1109,7 @@ class LauncherVentana:
                                 [
                                     data_widget.buttom_perfil,
                                     data_widget.buttom_reglas,
-                                    data_widget.buttom_horario,
+                                    # data_widget.buttom_horario,
                                     data_widget.buttom_mods,
                                     data_widget.buttom_shaders,
                                     data_widget.buttom_textures,
@@ -1145,13 +1131,6 @@ class LauncherVentana:
                             height = 650,
                             border_radius=10,
                             blur = 3,
-                            #shadow=ft.BoxShadow(
-                                #spread_radius=1,
-                                #blur_radius=5,
-                                #color = "black",
-                                #offset = ft.Offset(0, 0),
-                                #blur_style = ft.ShadowBlurStyle.OUTER,
-                            #),
                         ),
                         # Contenedor derecho que contiene la info segun el boton precionado por el usuario
                         data_widget.c_derecho,
@@ -1167,7 +1146,7 @@ class LauncherVentana:
                 ),
                 # Fondo del launcher
                 image_src="fondo.png",
-                image_fit=ImageFit.FILL,
+                image_fit=ft.ImageFit.FILL,
                 expand=True,
             )
         )
@@ -1176,20 +1155,15 @@ class LauncherVentana:
         '''
         Abre alerta con opciones si faltan recursos ///// Se ejecuta al iniciar el launcher de forma automatica para comprodar datos
         '''
-        # print('Chequeando actualizaciones del servidor')
-        # print(self.__page)
         logging.info('Chequeando actualizaciones del servidor')
         if mc.check_update_launcher():
-            # page.window_visible = False # Vuelve invicible la ventana
             response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
             if response.status_code == 200:
                 __temp_data_get = response.json()
                 mc.url_new_vercion = __temp_data_get["launcherUrl"]
                 data_widget.check_vercion_launcher.content = ft.Text(f"{__temp_data_get['updateDescription']}")
             self.__page.dialog = data_widget.check_vercion_launcher
-            # e.page.dialog = self.check_vercion_launcher
             data_widget.check_vercion_launcher.open = True
-            # e.page.update()
             self.__page.update()
             time.sleep(20)
             webbrowser.open(__temp_data_get["launcherUrl"])
@@ -1203,13 +1177,11 @@ class LauncherVentana:
         elif not mc.validate_directory():
             logging.info("Faltan Recursos necesarios, por favor verifica los recursos y acepta la instalacion de recursos")
             data_widget.buttom_jugar.text = "No instalado"
-            data_widget.buttom_jugar.icon = icons.DISABLED_BY_DEFAULT
+            data_widget.buttom_jugar.icon = ft.icons.DISABLED_BY_DEFAULT
             data_widget.buttom_jugar.disabled = True
             data_widget.buttom_jugar.bgcolor = ft.colors.with_opacity(0.2, "red")
-            # e.page.dialog = self.dlg_modal
             self.__page.dialog = data_widget.dlg_modal
             data_widget.dlg_modal.open = True
-            # e.page.update()
             self.__page.update()
         else:
             logging.info("Recursos necesarios estan instaldos correctamente")
@@ -1217,7 +1189,6 @@ class LauncherVentana:
             data_widget.buttom_jugar.icon = False
             data_widget.buttom_jugar.bgcolor = ft.colors.with_opacity(0.2, "white")
             data_widget.buttom_jugar.disabled = False
-            # e.page.update()
             self.__page.update()
             return True
     
