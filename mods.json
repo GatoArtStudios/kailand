@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.35",
+    "configVersion": "1.0.36",
     "launcherVersion": "1.0.23.0",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nAhora el launcher no sera un portable si no un instalador, tambien se a eliminado el apartado de horario.",
@@ -7,14 +7,14 @@
     "horario": "No disponible aun",
     "mods": [
         {
-            "name": "BadMobs",
+            "name": "Bad Mobs",
             "descripcion": "Bad mobs",
             "file": "BadMobs-1.19.2-16.1.3.jar",
             "url": "https://mediafilez.forgecdn.net/files/4057/652/BadMobs-1.19.2-16.1.3.jar",
             "disponible": false
         },
         {
-            "name": "bloodandgore",
+            "name": "Blood and Gore",
             "descripcion": "Blood and gore",
             "file": "bloodandgore1.19.2v1.1(beta).jar",
             "url": "https://mediafilez.forgecdn.net/files/4373/528/bloodandgore1.19.2v1.1%28beta%29.jar",
@@ -807,7 +807,7 @@
     ],
     "complementos": [
         {
-            "name": "jei",
+            "name": "Jei",
             "descripcion": "JEI es un mod de visualización de artículos y recetas para Minecraft, creado desde cero para brindar estabilidad y rendimiento.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/jei",
             "file": "jei-1.19.2-forge-11.6.0.1018.jar",
@@ -815,7 +815,7 @@
             "disponible": true
         },
         {
-            "name": "appleskin",
+            "name": "Apple Skin",
             "descripcion": "Agrega una visualización de saturación y agotamiento al HUD.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/appleskin",
             "file": "appleskin-forge-mc1.19-2.4.2.jar",
@@ -823,7 +823,7 @@
             "disponible": true
         },
         {
-            "name": "EnhancedVisuals",
+            "name": "Enhanced Visuals",
             "descripcion": "EnhancedVisuals proporciona una experiencia más inmersiva al agregar efectos de sangre o gore al HUD.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/enhancedvisuals",
             "file": "EnhancedVisuals_FORGE_v1.5.9_mc1.19.2.jar",
@@ -831,7 +831,7 @@
             "disponible": true
         },
         {
-            "name": "PresenceFootsteps",
+            "name": "Presence Footsteps",
             "descripcion":"Un mod de mejora del sonido de pasos demasiado complicado para Minecraft.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/presence-footsteps-forge",
             "file": "PresenceFootsteps-1.19.2-1.6.4.1-forge.jar",
@@ -839,7 +839,7 @@
             "disponible": true
         },
         {
-            "name": "soundphysics",
+            "name": "Sound Physics",
             "descripcion": "Un mod de Minecraft que proporciona atenuación, reverberación y absorción de sonido realistas a través de bloques.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered",
             "file": "soundphysics-forge-1.19.2-1.0.18.jar",
@@ -847,7 +847,7 @@
             "disponible": true
         },
         {
-            "name": "AmbientSounds",
+            "name": "Ambient Sounds",
             "descripcion": "Este mod es sólo del lado del cliente, lo que añade un ambiente más vibrante.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/ambientsounds",
             "file": "AmbientSounds_FORGE_v5.2.13_mc1.19.2.jar",
@@ -855,7 +855,7 @@
             "disponible": true
         },
         {
-            "name": "oculus-mc",
+            "name": "Oculus",
             "descripcion": "Oculus es una bifurcación no oficial de 'Iris', diseñada para funcionar con Forge Mod Loader.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/oculus",
             "file": "oculus-mc1.19.2-1.6.9.jar",
@@ -863,7 +863,7 @@
             "disponible": true
         },
         {
-            "name": "iris",
+            "name": "Iris",
             "descripcion": "Un mod de sombreadores de código abierto compatible con los paquetes de sombreadores OptiFine",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/irisshaders",
             "file": "iris-mc1.19.2-1.6.9.jar",
@@ -871,7 +871,7 @@
             "disponible": true
         },
         {
-            "name": "FpsReducer2",
+            "name": "Fps Reducer",
             "descripcion": "Reduzca FPS automáticamente bajo las siguientes condiciones.\n- Ninguna operación del usuario durante el tiempo especificado.\n- La ventana del juego está inactiva o minimizada.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/fps-reducer",
             "file": "FpsReducer2-forge-1.19.2-2.1.jar",
@@ -879,7 +879,7 @@
             "disponible": false
         },
         {
-            "name": "betterfpsdist",
+            "name": "Better fps",
             "descripcion": "Better FPS Render Distance es un mod que agrega algunas mejoras de rendimiento para aumentar los fps.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/better-fps-render-distance",
             "file": "betterfpsdist-1.19.2-4.0.jar",
