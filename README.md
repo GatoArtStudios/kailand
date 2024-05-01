@@ -1,6 +1,20 @@
 # Codigo de launcher de Kailand V
 
-Hola bienvenido a este repositorio en el cual tenemos todo el codigo del proyecto del launcher de Kailand V, aclaro que el codigo no es de libre uso, solo esta a disposicion del desarrollador [GatoArtStudio](https://linktr.ee/gatoartstudio) y los derechos reservados para [Kai](https://www.instagram.com/soyellioth/) quien es propietario del proyecto.
+Hola bienvenido a este repositorio en el cual tenemos todo el codigo del proyecto del launcher de Kailand V, aclaro que el codigo no es de libre uso, solo esta a disposicion del desarrollador [GatoArtStudio](https://linktr.ee/gatoartstudio) y los derechos reservados para [Kai](https://www.instagram.com/soyellioth/) quien es propietario del proyecto, el proyecto tiene como base python y flet que es flutter para el diseños de la interfaz de usuario `(ui/ux)`, el launcher es completamente automatico, instala el minecraft y el cliente que necesite como forge o fabric, la instalacion de mods es completamente automatica y tiene un apartado de mods opcionales, de igual forma la interfaz es limpia y sencilla de usar, lo mas amigable posible para el juegador.
+
+## Imagenes
+
+##### Instalacion de recursos o actualizacion de los mismos:
+![Update](https://raw.githubusercontent.com/GatoArtStudios/kailand/22a3e797291483d43245cff82d1dcb481e5791e6/previews/update.png)
+
+##### Apartado de Mods opcionales:
+![Opcional](https://raw.githubusercontent.com/GatoArtStudios/kailand/main/previews/opcional.png)
+
+##### Consola:
+![consola](https://raw.githubusercontent.com/GatoArtStudios/kailand/main/previews/console.png)
+
+##### Ajustes:
+![settings](https://raw.githubusercontent.com/GatoArtStudios/kailand/main/previews/settings.png)
 
 ## Redes:
 
