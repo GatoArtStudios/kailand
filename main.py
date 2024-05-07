@@ -3,6 +3,8 @@ import sys
 import uuid
 import json
 import time
+import asyncio
+import threading
 import logging
 import requests
 import webbrowser
@@ -10,6 +12,7 @@ from typing import Any
 import subprocess
 import flet as ft
 import minecraft_launcher_lib
+from logging import StreamHandler
 
 # Crea el directorio de trabajo principal
 if not os.path.exists(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand"):
@@ -19,13 +22,37 @@ if not os.path.exists(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.
 else:
     os.chdir(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand")
 
+log_console = '' # Variable que almacena el log para la consola
+log_available = False
+
 logging.basicConfig(
-    filename=os.path.join(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand", "launcher.log"),
     level=logging.INFO,
+    filename=os.path.join(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand", "launcher.log"),
+    encoding='utf-8',
     format='%(asctime)s - %(levelname)s - %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
+    datefmt='%Y-%m-%d %H:%M:%S',
     )
 
+logger = logging.getLogger(__name__)
+
+# Crea un manejador de transmisión para enviar los registros a una consola
+class ConsoleHandler(StreamHandler):
+    def emit(self, record):
+        global log_console
+        msg = self.format(record)
+        log_console += f'{msg}\n'
+        if log_available:
+            data_widget.console_log.value = log_console
+            app.page_update()
+        # print(msg) # Debug
+
+# Manejador de handler mostrado en consola
+logger = logging.getLogger(__name__)
+handler = ConsoleHandler()
+handler.setLevel(logging.INFO)
+formatter = logging.Formatter('[+] %(asctime)s [-] %(levelname)s -> %(message)s', datefmt='%H:%M')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
 
 class Mc:
     def __init__(self) -> None:
@@ -35,8 +62,8 @@ class Mc:
         self.data_nube = {}
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
-        self.launcherVersion = "1.0.23.0"
-        self.boton_jugar = "Iniciado"   
+        self.launcherVersion = "1.0.24.0"
+        self.boton_jugar = "Iniciado"
         self.mc_disponible = True
         self.minecraft_directory = f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand"
         self.options = {
@@ -63,8 +90,8 @@ class Mc:
         self.valor_xmx = self.ram_launcher()
         self.valor_xmx_temp = self.ram_launcher()
         self.changer_save_file_kailand()
+        self.download_optional = 0
 
-    
     def load_data_file_config(self):
         '''
         Carga los datos del archivo mods_data.json en la siguiente ruta:
@@ -81,7 +108,7 @@ class Mc:
         else:
             response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
             self.data_nube.update(response.json())
-    
+
     def ram_launcher(self):
         '''
         Verficia la cantidad de ram que tiene el usuario
@@ -117,7 +144,7 @@ class Mc:
             return 15
         elif ram_max == "-Xmx16G":
             return 16
-        
+
     def ram_launcher_changer(self, ram):
         '''
         Cambia la ram a usar por el usuario en el juego
@@ -172,7 +199,7 @@ class Mc:
             return True
         else:
             return False
-    
+
     def cheking(self):
         '''
         Chequea que todos los archivos y datos esten en orden y crea los directorios necesarios.
@@ -199,20 +226,15 @@ class Mc:
         else:
             pass
 
-        # Verifica si existe el archivo de log y si existe borra su contenido
-        if os.path.exists(os.path.join(self.minecraft_directory, "launcher.log")):
-            with open(os.path.join(self.minecraft_directory, "launcher.log"), "w"):
-                pass
-            
         # Comprueba si el archivo existe
         if os.path.exists(self.archivo_kailand):
             # Lee el contenido del archivo JSON y actualiza el diccionario de la variable options
             with open(self.archivo_kailand, 'r') as archivo:
                 contenido_json = json.load(archivo)
                 self.options.update(contenido_json)
-            logging.info(self.options)
-            
-    def list_files_directory_mods(self): 
+            logger.info(self.options)
+
+    def list_files_directory_mods(self):
         '''
         Carga una la lista de mods que tiene instalado el usuario y son almacenados en:
         ```
@@ -229,27 +251,27 @@ class Mc:
                 self.archivos_mods.append(name_file_mod)
                 self.path_files_mods.append(ruta_completa_mod)
         return True
-    
+
     def descargar_mod(self, mod):
         '''
         Descarga los mods y los almacena en el directorio de mods
         '''
         destino = os.path.join(self.ruta_mods, mod['file'])
         if os.path.exists(destino):
-            logging.info(f"El mod '{mod['name']}' ya está descargado.")
+            logger.info(f"El mod '{mod['name']}' ya está descargado.")
         else:
-            logging.info(f"Descargando el mod '{mod['name']}'...")
+            logger.info(f"Descargando el mod '{mod['name']}'...")
             try:
                 response = requests.get(mod["url"])
                 if response.status_code == 200:
                     with open(destino, 'wb') as archivo:
                         archivo.write(response.content)
-                    logging.info(f"Descarga exitosa: {destino}")
+                    logger.info(f"Descarga exitosa: {destino}")
                 else:
-                    logging.info(f"Error al descargar el mod '{mod['name']}'. Código de estado: {response.status_code}")
+                    logger.error(f"Error al descargar el mod '{mod['name']}'. Código de estado: {response.status_code}")
             except Exception as e:
-                logging.info(f"Error durante la descarga del mod '{mod['name']}': {e}")
-    
+                logger.error(f"Error durante la descarga del mod '{mod['name']}': {e}")
+
     def download_comple(self, e, x):
         '''
         Descarga los complementos:
@@ -258,22 +280,31 @@ class Mc:
         x: Objeto
         `
         '''
+        # Desabilita el control para evitar bugs
+        e.control.disabled = True
+        # Agrega proceso a la lista
+        mc.download_optional += 1
         e.page.splash = ft.ProgressBar(tooltip=f"Configurando {x['name']}...", height=5)
         data_widget.buttom_jugar.disabled = True
         data_widget.buttom_jugar.text = 'Configurando'
         e.page.update()
-        logging.info(f'Descargando el objeto {x}\nControl: {vars(e)}')
         if e.data == 'true':
             self.descargar_mod(x)
-            e.page.splash = None
-            data_widget.buttom_jugar.disabled = False
-            data_widget.buttom_jugar.text = 'Jugar'
+            mc.download_optional -= 1
+            if mc.download_optional == 0:
+                e.page.splash = None
+                data_widget.buttom_jugar.disabled = False
+                data_widget.buttom_jugar.text = 'Jugar'
+            e.control.disabled = False
             e.page.update()
         elif e.data == 'false':
             self.eliminar_mod(os.path.join(self.ruta_mods, x['file']))
-            e.page.splash = None
-            data_widget.buttom_jugar.disabled = False
-            data_widget.buttom_jugar.text = 'Jugar'
+            mc.download_optional -= 1
+            if mc.download_optional == 0:
+                e.page.splash = None
+                data_widget.buttom_jugar.disabled = False
+                data_widget.buttom_jugar.text = 'Jugar'
+            e.control.disabled = False
             e.page.update()
 
     def eliminar_mod(self, archivo):
@@ -282,10 +313,10 @@ class Mc:
         '''
         try:
             os.remove(archivo)
-            logging.info(f"Mod eliminado: {archivo}")
+            logger.info(f"Mod eliminado: {archivo}")
         except Exception as e:
-            logging.info(f"Error al eliminar el mod '{archivo}': {e}")
-            
+            logger.error(f"Error al eliminar el mod '{archivo}': {e}")
+
     def comprobar_mods(self):
         '''
         Comprueva si los mods estan de acuerdo a al archivo de configuracion
@@ -296,15 +327,15 @@ class Mc:
             elif mod['file'] in self.archivos_mods:
                 self.eliminar_mod(os.path.join(self.ruta_mods, mod['file']))
         return True
-    
+
     def changer_save_file_kailand(self):
         '''
         Guardar datos en un archivo JSON
         '''
         with open(os.path.join(self.minecraft_directory, "kaliand.json"), "w") as json_file:
             json.dump(self.options, json_file, indent=4)
-        logging.info("Guardo las optiones en el archivo de configuracion")
-        
+        logger.info("Guardo las optiones en el archivo de configuracion")
+
     def consulta_nube(self, bt_play = False):
         '''
         Consulta el archivo de configuracon en el servidor'
@@ -323,7 +354,7 @@ class Mc:
                         return True
                     else:
                         return False
-                    
+
             else:
                 self.data_nube.update(response.json())
                 with open(os.path.join(self.minecraft_directory, "mods_data.json"), "w") as save_data_mods:
@@ -331,7 +362,7 @@ class Mc:
                 return True
         else:
             return False
-        
+
     def validate_directory(self):
         '''
         Valida si los directorios y el minecraft esta instalado
@@ -346,38 +377,38 @@ class Mc:
                 return False
         else:
             return False
-        
+
     def create_directory(self):
         '''
         Crea los directorios que falten
         '''
         if not self.validate_directory():
-            logging.info("Creando directorios")
+            logger.info("Creando directorios")
             if not os.path.exists(os.path.join(self.minecraft_directory, "mods")):
                 os.mkdir(os.path.join(self.minecraft_directory, "mods"))
             if not os.path.exists(os.path.join(self.minecraft_directory, "resourcepacks")):
                 os.mkdir(os.path.join(self.minecraft_directory, "resourcepacks"))
             if not os.path.exists(os.path.join(self.minecraft_directory, "shaderpacks")):
                 os.mkdir(os.path.join(self.minecraft_directory, "shaderpacks"))
-            logging.info("Directorios creados")
+            logger.info("Directorios creados")
             return True
         else:
             return False
-        
+
     def ejecuta_mc(self, e):
         '''
         Ejecuta el minecrat.
         '''
         if minecraft_launcher_lib.utils.is_minecraft_installed(self.minecraft_directory):
-            logging.info("Minecraft si esta instalado")
+            logger.info("Minecraft si esta instalado")
             data_widget.animate_buttom(e)
             # Guardar datos en un archivo JSON
             with open(os.path.join(self.minecraft_directory, "kaliand.json"), "w") as json_file:
                 json.dump(self.options, json_file, indent=4)
             # Obtiene el comando para ejecutar Minecraft
             minecraft_command = minecraft_launcher_lib.command.get_minecraft_command("1.19.2-forge-43.3.8", self.minecraft_directory, self.options)
-            # Agrega datos al logging
-            logging.info("Ejecutando Minecraft")
+            # Agrega datos al logger
+            logger.info("Ejecutando Minecraft")
             e.control.bgcolor = ft.colors.with_opacity(0.1, "white")
             e.control.icon = ft.icons.PLAY_CIRCLE
             e.control.color = ft.colors.with_opacity(0.5, "white")
@@ -386,12 +417,16 @@ class Mc:
             e.control.update()
             # Ejecuta y alamcena el debug de minecraft java
             debug_minecraft_launch = subprocess.run(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW)
-            save_debug_minecraft = debug_minecraft_launch.stdout.decode('utf-8', errors='replace')
-            # Guarda el debug en el archivo launcher.log
-            with open(os.path.join(self.minecraft_directory, "launcher.log"), "a", encoding='utf-8') as __debug_mc:
-                __debug_mc.write(save_debug_minecraft)
-            # Agrega mensaje debug al logging
-            logging.info("Minecraft Detenido...")
+            # Registrar la salida estándar (stdout)
+            if debug_minecraft_launch.stdout:
+                logger.info(debug_minecraft_launch.stdout.decode("utf-8"))
+
+            # Registrar la salida de error (stderr)
+            if debug_minecraft_launch.stderr:
+                logger.error(debug_minecraft_launch.stderr.decode("utf-8"))
+
+            # Agrega mensaje debug al logger
+            logger.warning("Minecraft Detenido...")
             e.control.bgcolor = ft.colors.with_opacity(0.2, "white")
             e.control.icon = None
             e.control.color = "white"
@@ -399,8 +434,8 @@ class Mc:
             e.control.disabled = False
             e.control.update()
         else:
-            logging.info("Minecraft no instalado")
-            
+            logger.warning("Minecraft no instalado")
+
     def check_update_launcher(self):
         '''
         Chequea actualizaciones en el servidor
@@ -414,25 +449,25 @@ class Mc:
                 return False
         else:
             return False
-    
+
     def install_minecraft(self, e):
         '''
         Instala el minecraft
         '''
         if self.validate_directory():
-            logging.info("Todos los recursos estan")
+            logger.info("Todos los recursos estan")
         else:
-            logging.info("Faltan algunos recursos necesarios")
+            logger.warning("Faltan algunos recursos necesarios")
             self.create_directory()
             self.consulta_nube(bt_play=True)
             if not os.path.exists(os.path.join(self.minecraft_directory, "versions", "1.19.2")):
-                logging.info("Instalando Minecraft vanila")
+                logger.info("Instalando Minecraft vanila")
                 minecraft_launcher_lib.install.install_minecraft_version("1.19.2", self.minecraft_directory)
-                logging.info("Minecraft instalado")
+                logger.info("Minecraft instalado")
             if not os.path.exists(os.path.join(self.minecraft_directory, "versions", "1.19.2-forge-43.3.8")):
-                logging.info("Instalando Forge")
+                logger.info("Instalando Forge")
                 minecraft_launcher_lib.forge.install_forge_version("1.19.2-43.3.8", self.minecraft_directory)
-                logging.info("Forge Instalado")
+                logger.info("Forge Instalado")
             if self.comprobar_mods():
                 data_widget.buttom_jugar.disabled = False
                 data_widget.buttom_jugar.text = "Jugar"
@@ -441,11 +476,9 @@ class Mc:
                 e.page.splash = None
                 e.page.update()
                 data_widget.open_dlg(e)
-        
-    
 
 class DataWidget:
-    
+
     def __init__(self):
         '''
         Almacena todos los Widget de UI
@@ -513,10 +546,10 @@ class DataWidget:
         self.buttom_login = ft.ElevatedButton(text="Login", bgcolor = ft.colors.with_opacity(0.2, "white"), disabled=True, color="white")
         self.text_p = ft.TextField(label="Usuario (Offline)", label_style=ft.TextStyle(color="White"), hint_text="Coloca tu usuario y guarda de nuevo", hint_style=ft.TextStyle(color="white"), border_color="white", disabled=True, color="white", bgcolor=ft.colors.with_opacity(0.2, "black"), focused_color="white")
         self.input_offline_name = ft.Container(content=self.text_p)
-        self.text_reglas = self.consulta_reglas()    
+        self.text_reglas = self.consulta_reglas()
         self.text_reglas_list = self.text_reglas.split("\n")
-        self.java_info = ft.FilePicker(on_result= self.result_java_path)      
-        self.info_execute_java = self.data_java_execute()   
+        self.java_info = ft.FilePicker(on_result= self.result_java_path)
+        self.info_execute_java = self.data_java_execute()
         self.text_save_setting = ft.Text(top=260, color="white")
         self.t = ft.Text(color="white")
         self.buttom_save = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_info(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
@@ -635,7 +668,7 @@ class DataWidget:
                     ]),
             padding=30
         )
-        self.c_derecho_cont = ft.Text("ㅤ", scale=2)
+        self.c_derecho_cont = ft.Text("ㅤ")
         self.c_derecho = ft.Container(
                         content=self.c_derecho_cont,
                             margin = 0,
@@ -649,7 +682,8 @@ class DataWidget:
                             border_radius = 10,
                             opacity=0.3,
                             animate_opacity=300,
-                            disabled=True
+                            disabled=True,
+                            # border=ft.border.all(2, ft.colors.GREEN)
         )
         self.user_alert = ft.BottomSheet(
             ft.Container(
@@ -666,12 +700,21 @@ class DataWidget:
             bgcolor=ft.colors.with_opacity(0.2, "white"),
         )
         self.buttom_horario = ft.ElevatedButton(text="Horario", bgcolor=ft.colors.with_opacity(0.2, "white"), color="white", width=200, icon=ft.icons.CALENDAR_MONTH, icon_color="white", on_click=lambda e: (self.animate_buttom(e)), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
-        self.buttom_console = ft.ElevatedButton(text="Consola", bgcolor=ft.colors.with_opacity(0.2, "white"), color="white", width=200, icon=ft.icons.CODE, icon_color="white", on_click=lambda e: (self.console_gui(e)), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))    
+        self.buttom_console = ft.ElevatedButton(text="Consola", bgcolor=ft.colors.with_opacity(0.2, "white"), color="white", width=200, icon=ft.icons.CODE, icon_color="white", on_click=self.console_gui, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))    
         self.buttom_perfil = ft.ElevatedButton(text="Perfil", bgcolor=ft.colors.with_opacity(0.2, "white"), color="white", width=200, icon=ft.icons.MANAGE_ACCOUNTS, icon_color="white", on_click=self.accounts_gui, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.buttom_reglas = ft.ElevatedButton(text="Reglas", bgcolor=ft.colors.with_opacity(0.2, "white"), color="white", width=200, icon=ft.icons.ADMIN_PANEL_SETTINGS, icon_color="white", on_click=lambda e:(self.reglas_gui(e), self.animate_buttom(e)), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.buttom_discord = ft.ElevatedButton(text = "discord",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=ft.icons.DISCORD, url = "https://discord.gg/chwAE86T6W", on_click=self.animate_buttom, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.buttom_ajustes = ft.ElevatedButton(text = "Ajustes",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=ft.icons.SETTINGS, icon_color="white", on_click=self.ajustes_gui, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
-        self.buttom_jugar = ft.ElevatedButton(text = mc.boton_jugar, bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, top = 260, right = 1, left = 1, disabled = mc.mc_disponible, on_click=lambda e: mc.ejecuta_mc(e) if mc.options["username"] else (self.user_none_alert_show(e), self.animate_buttom(e)), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
+        self.buttom_jugar = ft.ElevatedButton(
+            text = mc.boton_jugar,
+            bgcolor = ft.colors.with_opacity(0.2, "white"),
+            color = "white",
+            width = 200,
+            disabled = mc.mc_disponible,
+            on_click=lambda e: mc.ejecuta_mc(e) if mc.options["username"] else (self.user_none_alert_show(e), self.animate_buttom(e)),
+            animate_scale=ft.animation.Animation(duration=400, curve="bounceout"),
+            scale=ft.transform.Scale(1)
+        )
         self.div_mods = ft.Container(
             content=ft.Row(
                 [
@@ -680,11 +723,11 @@ class DataWidget:
                 height=480,
                 width=1600,
                 scroll=ft.ScrollMode.ALWAYS,
-            ), 
+            ),
             height=480,
             width=1600,
         )
-    
+
     def contMods(self, titulo = 'Sin datos', descripcion = 'Sin datos', url = 'http://example.com', x = None):
         '''
         Crea el contendor que contendra la informacion de cada mod complementario.
@@ -693,7 +736,7 @@ class DataWidget:
             disponible = True
         else:
             disponible = False
-            
+
         top_bar = ft.Container(
                         content=ft.Row(
                             [
@@ -732,7 +775,7 @@ class DataWidget:
             border_radius=10,
             padding=10
         )
-        
+
     def close_launcher_update(self, e):
         '''
         Cierra el launcher / programa
@@ -744,7 +787,7 @@ class DataWidget:
             sys.exit(1)
         except SystemExit:
             os._exit(1)
-        
+
     def edit_main(self, e) -> None:
         '''
         Edita el texto y actualiza la pagina:
@@ -764,17 +807,17 @@ class DataWidget:
         else:
             self.main_file.controls[0] = self.data_widget['texto']
             e.page.update()
-            
+
     def animate_buttom(self, e):
         '''
         Anima los botones para darle dinamismo
         '''
         e.control.scale = ft.transform.Scale(0.75)
         e.control.update()
-        time.sleep(0.3)      
+        time.sleep(0.3)
         e.control.scale = ft.transform.Scale(1)
         e.control.update()
-        
+
     def open_folder_mods(self, e):
         '''
         Habre el directorio de mods
@@ -782,14 +825,14 @@ class DataWidget:
         self.animate_buttom(e)
         folder = os.path.join(mc.minecraft_directory, "mods")
         if os.path.exists(os.path.join(mc.minecraft_directory, "mods")):
-            logging.info(folder)
+            logger.info(folder)
             os.startfile(folder)
             return True
         else:
-            logging.info(f"El forder: {folder}, No existe, crando directorio")
+            logger.warning(f"El forder: {folder}, No existe, crando directorio")
             os.mkdir(folder)
             return False
-        
+
     def open_folder_resourcepacks(self, e):
         '''
         Abre directorio de Resource Packs
@@ -797,14 +840,14 @@ class DataWidget:
         self.animate_buttom(e)
         folder = os.path.join(mc.minecraft_directory, "resourcepacks")
         if os.path.exists(os.path.join(mc.minecraft_directory, "resourcepacks")):
-            logging.info(folder)
+            logger.info(folder)
             os.startfile(folder)
             return True
         else:
-            logging.info(f"El forder: {folder}, No existe, creando directorio")
+            logger.warning(f"El forder: {folder}, No existe, creando directorio")
             os.mkdir(folder)
             return False
-        
+
     def open_folder_shaderpacks(self, e):
         '''
         Abre el direcotrio de Shader Packs
@@ -812,13 +855,13 @@ class DataWidget:
         self.animate_buttom(e)
         folder = os.path.join(mc.minecraft_directory, "shaderpacks")
         if os.path.exists(os.path.join(mc.minecraft_directory, "shaderpacks")):
-            logging.info(folder)
+            logger.info(folder)
             os.startfile(folder)
             return True
         else:
-            logging.info(f"El forder: {folder}, No existe, creando directorio")
+            logger.warning(f"El forder: {folder}, No existe, creando directorio")
             os.mkdir(folder)
-            return False 
+            return False
 
     def open_dlg(self, e):
         '''
@@ -827,14 +870,14 @@ class DataWidget:
         e.page.dialog = self.dlg
         self.dlg.open = True
         e.page.update()
-        
+
     def close_dlg(self, e):
         '''
         Cierra alerta de instalacion de recursos necesarios
         '''
         self.dlg_modal.open = False
         e.page.update()
-        
+
     def close_dlg_exe(self, e):
         '''
         Instala recursos
@@ -843,21 +886,21 @@ class DataWidget:
         self.dlg_modal.open = False
         e.page.update()
         mc.install_minecraft(e)
-        
+
     def user_none_alert_show(self, e):
         '''
         Muestra alerta a usuario
         '''
         self.user_alert.open = True
         self.user_alert.update()
-    
+
     def user_none_alert_close(self, e):
         '''
         Cierra alerta a usuario
         '''
         self.user_alert.open = False
         self.user_alert.update()
-        
+
     def save_info(self, e):
         '''
         Funcion que se ejecuta al precionar el boton "Guardar"
@@ -893,7 +936,7 @@ class DataWidget:
                 self.text_p.disabled = True
                 self.t.value = f"Tipo de cuenta: {self.type_login.value} - (Por favor dele a Login para completar el proceso)"
                 e.page.update()
-    
+
     def save_setting(self, e):
         '''
         Funcion llamada por el boton de guardar ajustes, se encarga de guardar los respectivos ajustes
@@ -909,29 +952,29 @@ class DataWidget:
             if type(self.resolution_height.value) == int:
                 self.text_save_setting.value = "Guardado correctamente"
                 mc.options["resolutionHeight"] = f"{self.resolution_height.value}"
-                logging.info(f"Guardando los ajustes de resolucion: {self.resolution_height.value}")
+                logger.info(f"Guardando los ajustes de resolucion: {self.resolution_height.value}")
                 e.page.update()
         if not self.resolution_width.value == mc.options["resolutionWidth"]: # Guarda la resolucion el ancho elegido por el jugador (Resolucion)
             if type(self.resolution_width.value) == int:
                 self.text_save_setting.value = "Guardado correctamente"
                 mc.options["resolutionWidth"] = f"{self.resolution_width.value}"
-                logging.info(f"Guardando los ajustes de resolucion: {self.resolution_width.value}")
+                logger.info(f"Guardando los ajustes de resolucion: {self.resolution_width.value}")
                 e.page.update()
         if not self.select_bar_ram.value == mc.valor_xmx:
-            logging.info(f"Ejecutado changer ram {mc.valor_xmx_temp}")
+            logger.info(f"Ejecutado changer ram {mc.valor_xmx_temp}")
             mc.ram_launcher_changer(ram = mc.valor_xmx_temp)
-            logging.info(mc.options)
+            logger.info(mc.options)
             self.text_save_setting.value = "Guardado correctamente"
             e.page.update()
         if not self.java_path.value == "Por Defecto":
             mc.options["executablePath"] = self.java_path.value
         mc.changer_save_file_kailand()
-        
+
     def change_ram_text(self, e, text_data):
         text_data.value = f"Ram Seleccionada: ({int(e.control.value)} GB)"
         mc.valor_xmx_temp = int(e.control.value)
         e.page.update()
-        
+
     def result_java_path(self, e: ft.FilePickerResultEvent):
         if e.files and e.files[0].name == "java.exe" or e.files[0].name == "javaw.exe":
             self.java_path.value = e.files[0].path
@@ -939,13 +982,13 @@ class DataWidget:
         else:
             self.text_save_setting.value = "Solo puedes elegir (java.exe o javaw.exe) como ejecutable de java"
             self.text_save_setting.update()
-        
+
     def data_java_execute(e = None):
         if mc.options["executablePath"] == "java":
             return "Por Defecto"
         else:
             return mc.options["executablePath"]
-    
+
     def consulta_reglas(e = None):
         '''
         Consulta las reglas de la variable mc.data_nube -> Dict
@@ -958,7 +1001,7 @@ class DataWidget:
                 return "Aun no hay datos del servidor"
         except:
             return "Aun no hay reglas del servidor"
-        
+
     def animation_colaboracion(self, e):
         '''
         Animaciones de los textos de colaborazion.
@@ -971,7 +1014,7 @@ class DataWidget:
             e.control.opacity = 0.5
             e.control.scale = ft.transform.Scale(1)
             e.control.update()
-            
+
     def animation_scale_zoom(self, e):
         '''
         Contenedor que Tiene las reglas consultadas de la nube
@@ -982,7 +1025,7 @@ class DataWidget:
         else:
             e.control.scale = ft.transform.Scale(1)
             e.control.update()
-            
+
     def blur_container(self, e):
         '''
         Animacion del efecto Blur en contenedores.
@@ -994,7 +1037,7 @@ class DataWidget:
             self.c_derecho.blur = 4
             self.c_derecho.bgcolor = ft.colors.with_opacity(0.1, "black")
         e.page.update()
-        
+
     def animation_opacity(self, e):
         '''
         Realiza la animacion de opacidad con hover en contenedores.
@@ -1005,24 +1048,36 @@ class DataWidget:
         else:
             e.control.opacity = 0.3
             e.control.update()
-    
+
+    def load_text_console(self):
+        app.page_update()
+        self.console_log.value = ''
+        lines = log_console.split('\n')
+        for linea in lines:
+            self.console_log.value += f'{linea}\n'
+            app.page_update()
+
     def console_gui(self, e):
         '''
         Muestra el contenedor de Consola
         '''
+        global log_available
+
         if self.c_derecho.content == self.console_widget:
+            log_available = False
             self.c_derecho.content = self.c_derecho_cont
             self.c_derecho.disabled = True
+            self.animate_buttom(e)
         else:
+            log_available = True
             self.c_derecho.content = self.console_widget
             self.c_derecho.disabled = False
-            def read_file_debug():
-                with open(os.path.join(mc.minecraft_directory, "launcher.log"), "r") as read_debug:
-                    return read_debug.read()
-            self.console_log.value = read_file_debug()
+            e.page.update()
+            self.animate_buttom(e)
+            hilo = threading.Thread(target=self.load_text_console)
+            hilo.start()
         e.page.update()
-        self.animate_buttom(e)
-        
+
     def reglas_gui(self, e):
         '''
         Muestra el contenedor de reglas
@@ -1036,7 +1091,7 @@ class DataWidget:
             self.c_derecho.disabled = False
         e.page.update()
         self.animate_buttom(e)
-        
+
     def mods_gui(self, e):
         '''
         Muestra el contenedor de mods opcionales
@@ -1050,7 +1105,7 @@ class DataWidget:
             self.c_derecho.disabled = False
         e.page.update()
         self.animate_buttom(e)
-        
+
     def ajustes_gui(self, e):
         '''
         Muestra el contenedor de ajustes 
@@ -1063,7 +1118,7 @@ class DataWidget:
             self.c_derecho.disabled = False
         e.page.update()
         self.animate_buttom(e)
-        
+
     def accounts_gui(self, e):
         '''
         Muestra el contenedor de perfil
@@ -1076,132 +1131,189 @@ class DataWidget:
             self.c_derecho.disabled = False
         e.page.update()
         self.animate_buttom(e)
-        
+
 class LauncherVentana:
     def __init__(self):
-        self.__page = None
-        
-    
+        self._page = None
+
+
     def __call__(self, flet_page: ft.Page) -> Any:
-        self.__page = flet_page
-        self.__page.title = 'Kailand V'
-        self.__page.padding = 0
-        self.__page.vertical_alignment = ft.MainAxisAlignment.CENTER
-        self.__page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-        self.__page.bgcolor = "black"
-        self.__page.theme_mode = ft.ThemeMode.DARK
-        self.__page.window_max_height = 720
-        self.__page.window_min_height = 720
-        self.__page.window_max_width = 1277
-        self.__page.window_min_width = 1277
-        self.__page.window_resizable = False
-        self.__page.window_center = True
-        self.__page.overlay.append(data_widget.java_info)
-        self.__page.overlay.append(data_widget.user_alert)
-        self.__page.add(
+        self._page = flet_page
+        self._page.title = 'Kailand V'
+        self._page.padding = 0
+        self._page.bgcolor = ft.colors.TRANSPARENT
+        self._page.window_bgcolor = ft.colors.TRANSPARENT
+        self._page.vertical_alignment = ft.MainAxisAlignment.CENTER
+        self._page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+        self._page.theme_mode = ft.ThemeMode.DARK
+        self._page.window_height = 715
+        self._page.window_width = 1277
+        self._page.window_resizable = False
+        self._page.window_center = True
+        self._page.overlay.append(data_widget.java_info)
+        self._page.overlay.append(data_widget.user_alert)
+        self._page.window_title_bar_hidden = True
+        self._page.window_title_bar_buttons_hidden = True
+        self._page.add(
             # Contenedor Principal y donde se agrega el fondo de la ventana
             ft.Container(
-                content=ft.Row(
+                content=ft.Column(
                     [
-                        # Contenedor Izquierdo que contiene los botones
-                        ft.Container(
-                            content=ft.Column(
+                        ft.WindowDragArea(
+                            content=ft.Row(
                                 [
-                                    data_widget.buttom_perfil,
-                                    data_widget.buttom_reglas,
-                                    # data_widget.buttom_horario,
-                                    data_widget.buttom_mods,
-                                    data_widget.buttom_shaders,
-                                    data_widget.buttom_textures,
-                                    data_widget.buttom_discord,
-                                    data_widget.buttom_console,
-                                    data_widget.buttom_ajustes,
-                                    ft.Stack(
-                                        [
-                                            data_widget.buttom_jugar,
-                                        ]
+                                    ft.IconButton(
+                                        content=ft.Image(
+                                            src='minimizar.png',
+                                            width=20,
+                                            height=20,
+                                            fit=ft.ImageFit.CONTAIN
+                                        ),
+                                        on_click=self.minimized_windows,
+                                    ),
+                                    ft.IconButton(
+                                        content=ft.Image(
+                                            src='cerrar.png',
+                                            width=20,
+                                            height=20,
+                                            fit=ft.ImageFit.CONTAIN
+                                        ),
+                                        on_click=self.close_windows,
                                     )
-                                ]
+                                ],
+                                vertical_alignment=ft.CrossAxisAlignment.CENTER,
+                                alignment=ft.MainAxisAlignment.END
                             ),
-                            margin=10,
-                            padding=10,
-                            alignment=ft.alignment.center,
-                            bgcolor = ft.colors.with_opacity(0.2, "black"),
-                            width=200,
-                            height = 650,
-                            border_radius=10,
-                            blur = 3,
+                            maximizable=False,
+                            height=30,
                         ),
-                        # Contenedor derecho que contiene la info segun el boton precionado por el usuario
-                        data_widget.c_derecho,
-                        ft.Stack(
+                        ft.Row(
                             [
+                                # Contenedor Izquierdo
                                 ft.Container(
-                                    content = ft.Text(self.open_dlg_modal()),
-                                    top = 500,
+                                    content=ft.Column(
+                                        [
+                                            data_widget.buttom_perfil,
+                                            data_widget.buttom_reglas,
+                                            # data_widget.buttom_horario,
+                                            data_widget.buttom_mods,
+                                            data_widget.buttom_shaders,
+                                            data_widget.buttom_textures,
+                                            data_widget.buttom_discord,
+                                            data_widget.buttom_console,
+                                            data_widget.buttom_ajustes,
+                                            ft.Container(
+                                                content=data_widget.buttom_jugar,
+                                                margin=ft.margin.only(0, 260, 0 , 0)
+                                            )
+                                        ]
+                                    ),
+                                    margin=0,
+                                    padding=10,
+                                    bgcolor = ft.colors.with_opacity(0.2, "black"),
+                                    width=200,
+                                    height = 650,
+                                    border_radius=10,
+                                    blur = 3,
+                                    # border=ft.border.all(2, ft.colors.GREEN)
+                                ),
+                                # Contenedor derecho
+                                data_widget.c_derecho,
+                            ],
+                            vertical_alignment=ft.CrossAxisAlignment.START,
+                            alignment=ft.MainAxisAlignment.CENTER,
+                            spacing=15
+                        ),
+                        ft.Row(
+                            [
+                                ft.Stack(
+                                    [
+                                        ft.Container(
+                                            content = ft.Text(self.open_dlg_modal()),
+                                            top = 500,
+                                        )
+                                    ]
                                 )
                             ]
                         )
-                    ]
+                    ],
+                    spacing=1
                 ),
                 # Fondo del launcher
                 image_src="fondo.png",
                 image_fit=ft.ImageFit.FILL,
                 expand=True,
+                border_radius=ft.border_radius.all(10),
             )
         )
-    
+
+    def close_windows(self, e):
+        self._page.window_close()
+
+    def minimized_windows(self, e):
+        self._page.window_minimized = True
+        self._page.update()
+
+    def animacion_opacity(self, e):
+        print(vars(e))
+        if e.data == "true":
+            e.control.opacity = 1
+            e.control.update()
+        else:
+            e.control.opacity = 0.5
+            e.control.update()
+
     def open_dlg_modal(self):
         '''
         Abre alerta con opciones si faltan recursos ///// Se ejecuta al iniciar el launcher de forma automatica para comprodar datos
         '''
-        logging.info('Chequeando actualizaciones del servidor')
+        logger.info('Chequeando actualizaciones del servidor')
         if mc.check_update_launcher():
             response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
             if response.status_code == 200:
                 __temp_data_get = response.json()
                 mc.url_new_vercion = __temp_data_get["launcherUrl"]
                 data_widget.check_vercion_launcher.content = ft.Text(f"{__temp_data_get['updateDescription']}")
-            self.__page.dialog = data_widget.check_vercion_launcher
+            self._page.dialog = data_widget.check_vercion_launcher
             data_widget.check_vercion_launcher.open = True
-            self.__page.update()
+            self._page.update()
             time.sleep(20)
             webbrowser.open(__temp_data_get["launcherUrl"])
-            self.__page.window_destroy()
+            self._page.window_destroy()
             time.sleep(3)
             try:
                 sys.exit(1)
             except SystemExit:
                 os._exit(1)
-            
+
         elif not mc.validate_directory():
-            logging.info("Faltan Recursos necesarios, por favor verifica los recursos y acepta la instalacion de recursos")
+            logger.warning("Faltan Recursos necesarios, por favor verifica los recursos y acepta la instalacion de recursos")
             data_widget.buttom_jugar.text = "No instalado"
             data_widget.buttom_jugar.icon = ft.icons.DISABLED_BY_DEFAULT
             data_widget.buttom_jugar.disabled = True
             data_widget.buttom_jugar.bgcolor = ft.colors.with_opacity(0.2, "red")
-            self.__page.dialog = data_widget.dlg_modal
+            self._page.dialog = data_widget.dlg_modal
             data_widget.dlg_modal.open = True
-            self.__page.update()
+            self._page.update()
         else:
-            logging.info("Recursos necesarios estan instaldos correctamente")
+            logger.info("Recursos necesarios estan instaldos correctamente")
             data_widget.buttom_jugar.text = "Jugar"
             data_widget.buttom_jugar.icon = False
             data_widget.buttom_jugar.bgcolor = ft.colors.with_opacity(0.2, "white")
             data_widget.buttom_jugar.disabled = False
-            self.__page.update()
+            self._page.update()
             return True
-    
+
     def page_update(self):
         '''
         Actualiza la pagina web desde una funcion externa
         '''
-        self.__page.update()
-    
-        
+        self._page.update()
+
+
 if __name__ == "__main__":
     mc = Mc()
     data_widget = DataWidget()
     app = LauncherVentana()
-    logging.info("Debug del launcher iniciado")
+    logger.info("Debug del launcher iniciado")
     ft.app(target=app, assets_dir="assets")
