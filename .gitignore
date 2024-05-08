@@ -5,3 +5,6 @@ build/Kailand/EXE-00.toc
 /.vs
 /.vscode
 test.py
+/Lib
+pyvenv.cfg
+/Scripts

@@ -3,7 +3,6 @@ import sys
 import uuid
 import json
 import time
-import asyncio
 import threading
 import logging
 import requests
