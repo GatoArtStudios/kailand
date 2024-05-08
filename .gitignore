@@ -8,3 +8,5 @@ test.py
 /Lib
 pyvenv.cfg
 /Scripts
+/share
+Build-Kailand.iss
