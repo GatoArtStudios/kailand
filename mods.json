@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.36",
+    "configVersion": "1.0.37",
     "launcherVersion": "1.0.24.0",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nAhora el launcher no sera un portable si no un instalador, tambien se a eliminado el apartado de horario.",
@@ -270,7 +270,7 @@
             "descripcion": "Ai improvements",
             "file": "AI-Improvements-1.19.2-0.5.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4019/127/AI-Improvements-1.19.2-0.5.2.jar",
-            "disponible": true
+            "disponible": false
         },
         {
             "name": "trashslot",
@@ -291,7 +291,7 @@
             "descripcion": "The hordes",
             "file": "The-Hordes-1.19.2-1.2.1a.jar",
             "url": "https://mediafilez.forgecdn.net/files/4886/619/The-Hordes-1.19.2-1.2.1a.jar",
-            "disponible": false
+            "disponible": true
         },
         {
             "name": "immersive-portals",
