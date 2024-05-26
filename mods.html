@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mods de Kailand v</title>
+    <style>
+        body {
+            background-color: #0d0b18;
+            color: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #616161;
+            text-align: center;
+        }
+        th {
+            background-color: #5e5656;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mods</h1>
+    <table id="modsTable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Archivo</th>
+                <th>URL</th>
+                <th>Disponible</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aqui iran los datos de los mods -->
+        </tbody>
+    </table>
+    <script>
+        // ahora hay que mostrar la informacion de este json de forma organizada en una tabla
+        // https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json
+        document.addEventListener("DOMContentLoaded", function() {
+            const url = "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json";
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.getElementById("modsTable").getElementsByTagName("tbody")[0];
+                    data.mods.forEach(mod => {
+                        const row = tableBody.insertRow();
+                        const nameCell = row.insertCell(0);
+                        const descripcionCell = row.insertCell(1);
+                        const fileCell = row.insertCell(2);
+                        const urlCell = row.insertCell(3);
+                        const disponibleCell = row.insertCell(4);
+                        nameCell.innerHTML = mod.name;
+                        descripcionCell.innerHTML = mod.descripcion;
+                        fileCell.innerHTML = mod.file;
+                        urlCell.innerHTML = `<a href="${mod.url}" target="_blank" style="color: white; text-decoration: underline; ">Descargar</a>`;
+                        disponibleCell.innerHTML = mod.disponible ? 'Sí' : 'No';
+                        if (!mod.disponible) {
+                            row.style.color = 'red';
+                            row.style.backgroundColor = 'rgba(255, 0, 0, 0.2)';
+                        }
+                        if (mod.disponible) {
+                            row.style.color = 'green';
+                            row.style.backgroundColor = 'rgba(0, 255, 0, 0.2)';
+                            // ahora le agregamos resplandor al texto
+                            row.style.textShadow = '0 0 5px rgba(0, 255, 0, 0.3)';
+                        }
+                    })
+                })
+        })
+    </script>
+</body>
+</html>
