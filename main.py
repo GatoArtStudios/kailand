@@ -7,6 +7,7 @@ import threading
 import logging
 import requests
 import webbrowser
+import sqlite3
 from typing import Any
 import subprocess
 import flet as ft
@@ -52,6 +53,27 @@ handler.setLevel(logging.INFO)
 formatter = logging.Formatter('[+] %(asctime)s [-] %(levelname)s -> %(message)s', datefmt='%H:%M')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
+
+class DATABASE:
+    def __init__(self) -> None:
+        self.data_nube = {}
+        self.name_database = "kailand_database.db"
+
+    def build(self):
+        with sqlite3.connect(self.name_database) as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                            CREATE TABLE IF NOT EXISTS launcher(
+                                configVersion TEXT,
+                                launcherVersion TEXT,
+                                launcherUrl TEXT,
+                                updateDescription TEXT,
+                                reglas TEXT,
+                                horario TEXT,
+                                mods TEXT,
+                                complementos TEXT
+                            )
+            ''')
 
 class Mc:
     def __init__(self) -> None:
@@ -471,7 +493,6 @@ class Mc:
                 data_widget.buttom_jugar.disabled = False
                 data_widget.buttom_jugar.text = "Jugar"
                 data_widget.buttom_jugar.icon = False
-                data_widget.buttom_jugar.bgcolor = ft.colors.with_opacity(0.2, "white")
                 e.page.splash = None
                 e.page.update()
                 data_widget.open_dlg(e)
@@ -706,13 +727,16 @@ class DataWidget:
         self.buttom_ajustes = ft.ElevatedButton(text = "Ajustes",bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width = 200, icon=ft.icons.SETTINGS, icon_color="white", on_click=self.ajustes_gui, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.buttom_jugar = ft.ElevatedButton(
             text = mc.boton_jugar,
-            bgcolor = ft.colors.with_opacity(0.2, "white"),
-            color = "white",
+            bgcolor = ft.colors.with_opacity(1, '#00bd1c'),
+            color = "black",
             width = 200,
             disabled = mc.mc_disponible,
             on_click=lambda e: mc.ejecuta_mc(e) if mc.options["username"] else (self.user_none_alert_show(e), self.animate_buttom(e)),
             animate_scale=ft.animation.Animation(duration=400, curve="bounceout"),
-            scale=ft.transform.Scale(1)
+            scale=ft.transform.Scale(1),
+            style=ft.ButtonStyle(
+                shadow_color='green'
+            )
         )
         self.div_mods = ft.Container(
             content=ft.Row(
@@ -1290,7 +1314,6 @@ class LauncherVentana:
             data_widget.buttom_jugar.text = "No instalado"
             data_widget.buttom_jugar.icon = ft.icons.DISABLED_BY_DEFAULT
             data_widget.buttom_jugar.disabled = True
-            data_widget.buttom_jugar.bgcolor = ft.colors.with_opacity(0.2, "red")
             self._page.dialog = data_widget.dlg_modal
             data_widget.dlg_modal.open = True
             self._page.update()
@@ -1298,7 +1321,6 @@ class LauncherVentana:
             logger.info("Recursos necesarios estan instaldos correctamente")
             data_widget.buttom_jugar.text = "Jugar"
             data_widget.buttom_jugar.icon = False
-            data_widget.buttom_jugar.bgcolor = ft.colors.with_opacity(0.2, "white")
             data_widget.buttom_jugar.disabled = False
             self._page.update()
             return True
