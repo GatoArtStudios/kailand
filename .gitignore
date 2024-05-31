@@ -1,0 +1,8 @@
+
+/build
+/Lib
+/Scripts
+/share
+*.py
+*.cfg
+*.iss
