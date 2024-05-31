@@ -1,78 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <title>Mods de Kailand v</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol de Mods de Minecraft</title>
     <style>
         body {
-            background-color: #0d0b18;
-            color: white;
+            font-family: Arial, sans-serif;
+            background-color: #180935;
+            margin: 0;
+            padding: 20px;
+            color: #ffffff;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        #tree-container {
+            margin: 0 auto;
+            padding: 20px;
+            background: #4a0868;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        th, td {
-            padding: 8px;
-            border: 1px solid #616161;
-            text-align: center;
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
         }
-        th {
-            background-color: #5e5656;
+        li {
+            margin: 5px 0;
+        }
+        li::before {
+            content: '•';
+            margin-right: 8px;
+            color: #000;
+        }
+        .tree-branch {
+            margin-left: 20px;
+        }
+        .unavailable {
+            color: #ff6b6b;
         }
     </style>
 </head>
 <body>
-    <h1>Mods</h1>
-    <table id="modsTable">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripcion</th>
-                <th>Archivo</th>
-                <th>URL</th>
-                <th>Disponible</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Aqui iran los datos de los mods -->
-        </tbody>
-    </table>
+    <div id="tree-container">
+    </div>
     <script>
-        // ahora hay que mostrar la informacion de este json de forma organizada en una tabla
-        // https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json
-        document.addEventListener("DOMContentLoaded", function() {
-            const url = "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json";
+        document.addEventListener('DOMContentLoaded', function() {
+            const treeContainer = document.getElementById('tree-container');
 
-            fetch(url)
+            fetch('https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json')
                 .then(response => response.json())
                 .then(data => {
-                    const tableBody = document.getElementById("modsTable").getElementsByTagName("tbody")[0];
-                    data.mods.forEach(mod => {
-                        const row = tableBody.insertRow();
-                        const nameCell = row.insertCell(0);
-                        const descripcionCell = row.insertCell(1);
-                        const fileCell = row.insertCell(2);
-                        const urlCell = row.insertCell(3);
-                        const disponibleCell = row.insertCell(4);
-                        nameCell.innerHTML = mod.name;
-                        descripcionCell.innerHTML = mod.descripcion;
-                        fileCell.innerHTML = mod.file;
-                        urlCell.innerHTML = `<a href="${mod.url}" target="_blank" style="color: white; text-decoration: underline; ">Descargar</a>`;
-                        disponibleCell.innerHTML = mod.disponible ? 'Sí' : 'No';
-                        if (!mod.disponible) {
-                            row.style.color = 'red';
-                            row.style.backgroundColor = 'rgba(255, 0, 0, 0.2)';
-                        }
-                        if (mod.disponible) {
-                            row.style.color = 'green';
-                            row.style.backgroundColor = 'rgba(0, 255, 0, 0.2)';
-                            // ahora le agregamos resplandor al texto
-                            row.style.textShadow = '0 0 5px rgba(0, 255, 0, 0.3)';
-                        }
-                    })
+                    const tree = buildTree(data);
+                    treeContainer.appendChild(tree);
                 })
-        })
+                .catch(error => console.error('Error fetching the JSON:', error));
+
+            function buildTree(data) {
+                const root = document.createElement('div');
+                root.innerHTML = `<h2>Kailand V ${data.configVersion} | Launcher V ${data.launcherVersion}</h2> `;
+
+                const modsList = buildBranch('Mods', data.mods);
+                const complementosList = buildBranch('Complementos', data.complementos);
+
+                root.appendChild(modsList);
+                root.appendChild(complementosList);
+
+                return root;
+            }
+
+            function buildBranch(title, items) {
+                const container = document.createElement('div');
+                container.classList.add('tree-branch');
+
+                const titleElement = document.createElement('h3');
+                titleElement.textContent = title;
+                container.appendChild(titleElement);
+
+                const list = document.createElement('ul');
+                items.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = item.name;
+
+                    if (item.disponible) {
+                        listItem.classList.add('available');
+                    } else {
+                        listItem.classList.add('unavailable');
+                    }
+
+                    if (item.dependencia && item.dependencia.length > 0) {
+                        const dependencies = document.createElement('ul');
+                        item.dependencia.forEach(dependency => {
+                            const depItem = document.createElement('li');
+                            depItem.textContent = dependency.name;
+                            dependencies.appendChild(depItem);
+
+                            // Recursivamente agregar sub-dependencias si existen
+                            if (dependency.dependencia && dependency.dependencia.length > 0) {
+                                const subDependencies = buildBranch('', dependency.dependencia);
+                                depItem.appendChild(subDependencies);
+                            }
+                        });
+                        listItem.appendChild(dependencies);
+                    }
+
+                    list.appendChild(listItem);
+                });
+
+                container.appendChild(list);
+                return container;
+            }
+        });
     </script>
 </body>
 </html>
