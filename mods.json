@@ -796,14 +796,14 @@
             "descripcion": "Dropz",
             "file": "dropz-forge-2.2.0%2B1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4492/490/dropz-forge-2.2.0%2B1.19.2.jar",
-            "disponible": true,
+            "disponible": false,
             "dependencia": [
                 {
                     "name": "Rayon",
                     "descripcion": "Rayon",
                     "file": "rayon-forge-1.7.1%2B1.19.2.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4502/284/rayon-forge-1.7.1%2B1.19.2.jar",
-                    "disponible": true
+                    "disponible": false
                 }
             ]
         },
