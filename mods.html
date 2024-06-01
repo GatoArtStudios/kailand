@@ -383,6 +383,7 @@
                 container.appendChild(titleElement);
 
                 const list = document.createElement('ul');
+                items.sort((a, b) => a.name.localeCompare(b.name));
                 items.forEach(item => {
                     const listItem = document.createElement('li');
                     listItem.textContent = item.name;
