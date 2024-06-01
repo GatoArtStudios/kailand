@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.37",
+    "configVersion": "1.0.38",
     "launcherVersion": "1.0.24.0",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nAhora el launcher no sera un portable si no un instalador, tambien se a eliminado el apartado de horario.",
@@ -193,14 +193,14 @@
                     "descripcion": "Creative core",
                     "file": "CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
-                    "disponible": true
+                    "disponible": false
                 },
                 {
                     "name": "Architectury API",
                     "descripcion": "Architectury API",
                     "file": "architectury-6.5.85-forge.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4555/749/architectury-6.5.85-forge.jar",
-                    "disponible": true
+                    "disponible": false
                 }
             ]
         },
@@ -295,7 +295,7 @@
                     "descripcion": "Balm",
                     "file": "balm-forge-1.19.2-4.6.0.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4751/735/balm-forge-1.19.2-4.6.0.jar",
-                    "disponible": true
+                    "disponible": false
                 }
             ]
         },
@@ -304,7 +304,7 @@
             "descripcion": "Deeper and darker",
             "file": "deeperdarker-forge-1.1.6-forge.jar",
             "url": "https://mediafilez.forgecdn.net/files/4166/676/deeperdarker-forge-1.1.6-forge.jar",
-            "disponible": true,
+            "disponible": false,
             "dependencia": []
         },
         {
@@ -780,7 +780,7 @@
             "descripcion": "Terralith",
             "file": "Terralith_1.19.3_v2.3.12.jar",
             "url": "https://mediafilez.forgecdn.net/files/4823/693/Terralith_1.19.3_v2.3.12.jar",
-            "disponible": false,
+            "disponible": true,
             "dependencia": []
         },
         {
@@ -836,7 +836,7 @@
             "descripcion": "the lost cities",
             "file": "lostcities-1.19-6.0.23.jar",
             "url": "https://mediafilez.forgecdn.net/files/5188/637/lostcities-1.19-6.0.23.jar",
-            "disponible": false,
+            "disponible": true,
             "dependencia": []
         },
         {
@@ -896,10 +896,10 @@
             "dependencia": []
         },
         {
-            "name": "Zombie Extreme",
-            "descripcion": "Zombie extreme",
-            "file": "Zombie Extreme 1.19.2 0.2.4.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4746/395/Zombie%20Extreme%201.19.2%200.2.4.jar",
+            "name": "Zombie Extreme Modificado",
+            "descripcion": "Zombie extreme modificado",
+            "file": "Zombie_Extreme_1.19.2_0.2.4-Modificado.jar",
+            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/Zombie_Extreme_1.19.2_0.2.4-Modificado.jar",
             "disponible": true,
             "dependencia": []
         },
@@ -1007,18 +1007,51 @@
             ]
         },
         {
-            "name": "AzureLib",
-            "descripcion": "AzureLib | Dependencia",
-            "file": "azurelib-forge-1.19.2-1.0.41.jar",
-            "url": "https://mediafilez.forgecdn.net/files/5069/926/azurelib-forge-1.19.2-1.0.41.jar",
-            "disponible": true,
-            "dependencia": []
-        },
-        {
             "name": "Immersive Aircraft",
             "descripcion": "Immersive Aircraft",
             "file": "immersive_aircraft-0.7.9+1.19.2-forge.jar",
             "url": "https://mediafilez.forgecdn.net/files/5323/434/immersive_aircraft-0.7.9%2B1.19.2-forge.jar",
+            "disponible": true,
+            "dependencia": []
+        },
+        {
+            "name": "Dynamic Trees",
+            "descripcion": "Dynamic Trees",
+            "file": "DynamicTrees-1.19.2-1.2.0-BETA1.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4979/755/DynamicTrees-1.19.2-1.2.0-BETA1.jar",
+            "disponible": true,
+            "dependencia": []
+        },
+        {
+            "name": "FancyMenu",
+            "descripcion": "FancyMenu",
+            "file": "fancymenu_forge_3.2.3_MC_1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5340/218/fancymenu_forge_3.2.3_MC_1.19.2.jar",
+            "disponible": true,
+            "dependencia": [
+                {
+                    "name": "Konkrete",
+                    "descripcion": "Konkrete | Dependencia",
+                    "file": "konkrete_forge_1.8.0_MC_1.19-1.19.2.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/5028/409/konkrete_forge_1.8.0_MC_1.19-1.19.2.jar",
+                    "disponible": true,
+                    "dependencia": []
+                },
+                {
+                    "name": "Melody",
+                    "descripcion": "Melody | Dependencia",
+                    "file": "melody_forge_1.0.1_MC_1.19.2.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4983/999/melody_forge_1.0.1_MC_1.19.2.jar",
+                    "disponible": true,
+                    "dependencia": []
+                }
+            ]
+        },
+        {
+            "name": "Bloquear Trabajos by zParkk",
+            "descripcion": "Bloquear Trabajos by zParkk",
+            "file": "BloquearTrabajos-1.19.2.jar",
+            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/BloquearTrabajos-1.19.2.jar",
             "disponible": true,
             "dependencia": []
         }
