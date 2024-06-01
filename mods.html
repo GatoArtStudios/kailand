@@ -48,6 +48,16 @@
             position: relative;
             list-style: none;
         }
+        @keyframes animation-timeline {
+            0% {
+                padding: 0 0 0 0;
+            } 50% {
+                padding: 10px 0 10px 0;
+            }
+            100% {
+                padding: 0 0 0 0;
+            }
+        }
         ul .mods-item::before {
             content: "";
             position: absolute;
@@ -58,13 +68,7 @@
             background-color: var(--timeline-color-primary);
         }
         .mods-item:hover {
-            left: 13px;
-            scale: 1.1;
-            border: 2px solid rgb(245, 234, 234);
-            padding: 10px;
-            border-radius: 10px;
-            width: 30%;
-            animation: box-animation 2s ease-in-out infinite;
+            animation: animation-timeline 1s forwards;
         }
         ul .unavailable::before {
             content: "";
