@@ -31,6 +31,125 @@
             margin-right: 8px;
             color: #000;
         }
+        ul li {
+            position: relative;
+            list-style: none;
+            /* padding: 0; */
+        }
+        ul .mods-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -20px;
+            width: 3px;
+            height: 200%;
+            background-color: #ffffff;
+        }
+        ul .unavailable::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -20px;
+            width: 3px;
+            height: 200%;
+            background-color: #ff6b6b;
+        }
+        ul .mods-item::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -24px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ffffff;
+        }
+        ul .unavailable::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -24px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ff6b6b;
+        }
+        ul .dependency::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -40px;
+            width: 30px;
+            height: 3px;
+            background-color: #ffffff;
+        }
+        ul .dependency::after {
+            content: "";
+            position: absolute;
+            top: 1px;
+            left: -20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ffffff;
+        }
+        ul .dependency div ul li::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -77px;
+            width: 60px;
+            height: 3px;
+            background-color: #ffffff;
+        }
+        ul .dependency div ul li::after {
+            content: "";
+            position: absolute;
+            top: 1px;
+            left: -20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ffffff;
+        }
+        ul .unavailable .dependency div ul li::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -77px;
+            width: 60px;
+            height: 3px;
+            background-color: #ff6b6b;
+        }
+        ul .unavailable .dependency div ul li::after {
+            content: "";
+            position: absolute;
+            top: 1px;
+            left: -20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ff6b6b;
+        }
+        ul .unavailable .dependency::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -40px;
+            width: 30px;
+            height: 3px;
+            background-color: #ff6b6b;
+        }
+        ul .unavailable .dependency::after {
+            content: "";
+            position: absolute;
+            top: 1px;
+            left: -20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ff6b6b;
+        }
         .tree-branch {
             margin-left: 20px;
         }
@@ -79,6 +198,7 @@
                 items.forEach(item => {
                     const listItem = document.createElement('li');
                     listItem.textContent = item.name;
+                    listItem.classList.add('mods-item');
 
                     if (item.disponible) {
                         listItem.classList.add('available');
@@ -91,6 +211,7 @@
                         item.dependencia.forEach(dependency => {
                             const depItem = document.createElement('li');
                             depItem.textContent = dependency.name;
+                            depItem.classList.add('dependency');
                             dependencies.appendChild(depItem);
 
                             // Recursivamente agregar sub-dependencias si existen
