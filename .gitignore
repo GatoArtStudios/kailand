@@ -10,3 +10,4 @@ pyvenv.cfg
 /Scripts
 /share
 Build-Kailand.iss
+/__pycache__
