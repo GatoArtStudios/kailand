@@ -11,13 +11,14 @@ class Mc:
         '''
         Almacena todos los datos del minecraft y metodos para el mismo funcionamiento, tambien se encarga de checar la integridad de los datos al inicial el launcher
         '''
+        from config import direccion_trabajo
         self.data_nube = {}
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
         self.launcherVersion = "1.0.24.0"
         self.boton_jugar = "Iniciado"
         self.mc_disponible = True
-        self.minecraft_directory = f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand"
+        self.minecraft_directory = direccion_trabajo
         self.options = {
             "username": None,
             "uuid": None,

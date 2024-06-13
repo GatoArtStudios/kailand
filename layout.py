@@ -5,6 +5,7 @@ import time
 import threading
 import flet as ft
 import webbrowser
+import memory
 
 class DataWidget:
 
@@ -86,7 +87,7 @@ class DataWidget:
         self.buttom_save = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_info(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.buttom_save_setting = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_setting(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), top=290, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.type_login = ft.Dropdown(label="Tipo de cuenta", label_style=ft.TextStyle(color="white"), hint_text="Seleccione el tipo", hint_style=ft.TextStyle(color="white"), options=[ft.dropdown.Option("Offline"), ft.dropdown.Option("(Online) Microsoft")], border_color="white", width=300, on_change=self.save_info, color="white", bgcolor="black")
-        self.select_bar_ram = ft.Slider(min=2, max=16, divisions=14, label="{value}Gb", value=mc.valor_xmx, on_change=lambda e: self.change_ram_text(e, self.text_ram), width=620)
+        self.select_bar_ram = ft.Slider(min=2, max=memory.memory_total(), divisions=memory.memory_divide(), label="{value}Gb", value=mc.valor_xmx, on_change=lambda e: self.change_ram_text(e, self.text_ram), width=620)
         self.java_path = ft.TextField(label="Ejecutable de Java", read_only=True, border_color="white", width=500, value=self.info_execute_java, color="white")
         self.buttom_change_java = ft.ElevatedButton(
             text="Cambiar",
