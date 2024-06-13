@@ -228,37 +228,47 @@ class Mc:
 
     def download_comple(self, e, x):
         '''
-        Descarga los complementos:
-        `
-        e: Evento
-        x: Objeto
-        `
+        Descarga los complementos.
+
+        Args:
+            e (Evento): El evento que se disparó.
+            x (Objeto): El objeto asociado al complemento.
         '''
         from layout import data_widget
-        # Desabilita el control para evitar bugs
+        # Deshabilita el control para evitar errores
         e.control.disabled = True
-        # Agrega proceso a la lista
+        # Agrega el proceso a la lista
         mc.download_optional += 1
+        # Muestra el progreso de la configuración del complemento
         e.page.splash = ft.ProgressBar(tooltip=f"Configurando {x['name']}...", height=5)
+        # Deshabilita el botón para evitar errores
         data_widget.buttom_jugar.disabled = True
         data_widget.buttom_jugar.text = 'Configurando'
         e.page.update()
         if e.data == 'true':
+            # Si el evento es verdadero, descargar el complemento
             self.descargar_mod(x)
+            # Disminuye el contador de descargas opcionales
             mc.download_optional -= 1
             if mc.download_optional == 0:
+                # Si no hay más descargas opcionales, oculta la pantalla de progreso y habilita el botón
                 e.page.splash = None
                 data_widget.buttom_jugar.disabled = False
                 data_widget.buttom_jugar.text = 'Jugar'
+            # Habilita el control y actualiza la página
             e.control.disabled = False
             e.page.update()
         elif e.data == 'false':
+            # Si el evento es falso, elimina el complemento
             self.eliminar_mod(os.path.join(self.ruta_mods, x['file']))
+            # Disminuye el contador de descargas opcionales
             mc.download_optional -= 1
             if mc.download_optional == 0:
+                # Si no hay más descargas opcionales, oculta la pantalla de progreso y habilita el botón
                 e.page.splash = None
                 data_widget.buttom_jugar.disabled = False
                 data_widget.buttom_jugar.text = 'Jugar'
+            # Habilita el control y actualiza la página
             e.control.disabled = False
             e.page.update()
 
