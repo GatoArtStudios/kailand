@@ -9,15 +9,16 @@ def loger():
     """
     Configura el logger con la configuración básica necesaria para registrar mensajes.
 
-    Establece el nivel de registro en INFO, el archivo de registro en "C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand/launcher.log",
+    Establece el nivel de registro en INFO, el archivo de registro en "DIRECTORY_KAILAND",
     el formato de los mensajes de registro como "AAAA-MM-DD HH:MM:SS - NIVEL - MENSAJE" y devuelve el logger.
 
     :return: logger
     """
+    from config import DIRECTORY_KAILAND
     # Configura el logger con la configuración básica
     logging.basicConfig(
         level=logging.INFO,  # Nivel de registro
-        filename=os.path.join(f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand", "launcher.log"),  # Archivo de registro
+        filename=os.path.join(DIRECTORY_KAILAND, "launcher.log"),  # Archivo de registro
         encoding='utf-8',  # Codificación de los mensajes de registro
         format='%(asctime)s - %(levelname)s - %(message)s',  # Formato de los mensajes de registro
         datefmt='%Y-%m-%d %H:%M:%S',  # Formato de la fecha y hora en los mensajes de registro
