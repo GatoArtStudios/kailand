@@ -34,6 +34,7 @@ class Mc:
             "launcherVersion": "1.0",
         }
         self.archivo_kailand = os.path.join(self.minecraft_directory, "kaliand.json")
+        self.archivo_mods_data = os.path.join(self.minecraft_directory, "mods_data.json")
         self.ruta_mods = os.path.join(self.minecraft_directory, "mods")
         self.url_base_mods = 'https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods'
         self.cheking()
@@ -55,10 +56,9 @@ class Mc:
                 self.data_nube = {}
         ```
         '''
-        if os.path.exists(os.path.join(self.minecraft_directory, "mods_data.json")):
-            with open(os.path.join(self.minecraft_directory, "mods_data.json"), "r") as read_data_mods:
-                temp_data_mods = json.load(read_data_mods)
-                self.data_nube.update(temp_data_mods)
+        if os.path.exists(self.archivo_mods_data):
+            temp_data_mods = encryption.decrypt_message(self.archivo_mods_data)
+            self.data_nube.update(temp_data_mods)
         else:
             response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
             self.data_nube.update(response.json())
@@ -184,12 +184,11 @@ class Mc:
         if os.path.exists(self.archivo_kailand):
             from log import logger
             # Lee el contenido del archivo JSON y actualiza el diccionario de la variable options
-            with open(self.archivo_kailand, 'r') as archivo:
-                contenido_json = json.load(archivo)
-                self.options.update(contenido_json)
+            data_options = encryption.decrypt_message(file=self.archivo_kailand)
+            self.options.update(data_options)
             logger.info(self.options)
 
-    def list_files_directory_mods(self):
+    def list_files_directory_mods(self) -> bool:
         '''
         Carga una la lista de mods que tiene instalado el usuario y son almacenados en:
         ```
@@ -291,8 +290,7 @@ class Mc:
         Guardar datos en un archivo JSON
         '''
         from log import logger
-        with open(os.path.join(self.minecraft_directory, "kaliand.json"), "w") as json_file:
-            json.dump(self.options, json_file, indent=4)
+        encryption.encrypt_message(self.options, self.archivo_kailand)
         logger.info("Guardo las optiones en el archivo de configuracion")
 
     def consulta_nube(self, bt_play = False):
@@ -302,13 +300,12 @@ class Mc:
         response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
         if response.status_code == 200:
             temp_json = response.json()
-            if os.path.exists(os.path.join(self.minecraft_directory, "mods_data.json")):
+            if os.path.exists(self.archivo_mods_data):
                 if temp_json["configVersion"] == self.data_nube["configVersion"]:
                     return True
                 else:
                     if bt_play:
-                        with open(os.path.join(self.minecraft_directory, "mods_data.json"), "w") as save_data_mods:
-                            json.dump(temp_json, save_data_mods, indent=4)
+                        encryption.encrypt_message(temp_json, self.archivo_mods_data)
                         self.data_nube.update(temp_json)
                         return True
                     else:
@@ -316,8 +313,7 @@ class Mc:
 
             else:
                 self.data_nube.update(response.json())
-                with open(os.path.join(self.minecraft_directory, "mods_data.json"), "w") as save_data_mods:
-                    json.dump(self.data_nube, save_data_mods, indent=4)
+                encryption.encrypt_message(self.data_nube, self.archivo_mods_data)
                 return True
         else:
             return False
@@ -365,8 +361,7 @@ class Mc:
             logger.info("Minecraft si esta instalado")
             data_widget.animate_buttom(e)
             # Guardar datos en un archivo JSON
-            with open(os.path.join(self.minecraft_directory, "kaliand.json"), "w") as json_file:
-                json.dump(self.options, json_file, indent=4)
+            encryption.encrypt_message(self.options, self.archivo_kailand)
             # Obtiene el comando para ejecutar Minecraft
             minecraft_command = minecraft_launcher_lib.command.get_minecraft_command("1.19.2-forge-43.3.8", self.minecraft_directory, self.options)
             # Agrega datos al logger
