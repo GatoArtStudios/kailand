@@ -2,7 +2,10 @@ import os
 import platform
 
 # Obtener el nombre de usuario
-USERNAME = os.environ['USERNAME']
+if platform.system() == 'Windows':
+    USERNAME = os.environ['USERNAME']
+else:
+    USERNAME = os.environ.get('USER')
 
 def get_directory_kailand():
     # Definir la ruta del directorio de trabajo principal según el sistema operativo
@@ -15,6 +18,6 @@ def get_directory_kailand():
 
 DIRECTORY_KAILAND = get_directory_kailand()
 
-PRIVATE_KEY = '''clave privada RSA'''
+PRIVATE_KEY = ''''''
 
-PUBLIC_KEY = '''clave publica'''
+PUBLIC_KEY = ''''''
