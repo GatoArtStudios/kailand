@@ -2,3 +2,5 @@ flet>=0.20.2
 requests>=2.31.0
 minecraft-launcher-lib>=6.4
 Pillow>=10.2.0
+psutil>=5.9.8
+pycryptodome>=3.20.0
