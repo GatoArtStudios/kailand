@@ -16,7 +16,17 @@ def get_directory_kailand():
     else:  # Linux y otros sistemas UNIX-like
         return os.path.join("/home", USERNAME, ".kailand")
 
+def get_system():
+    if platform.system() == 'Windows':
+        return "Windows"
+    elif platform.system() == 'Darwin':  # macOS
+        return "macOS"
+    else:  # Linux y otros sistemas UNIX-like
+        return "Linux"
+
 DIRECTORY_KAILAND = get_directory_kailand()
+
+SYSTEM = get_system()
 
 PRIVATE_KEY = ''''''
 
