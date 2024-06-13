@@ -1,1 +1,11 @@
-flet build windows --build-number 24 --build-version "1.0.24" --product "Kailand V - Launcher" --copyright "Launcher de Kailand, by GatoArtStudio" --description "Launcher Oficial de Kailand V" --company "By GatoArtStudio X Kailand V"
+setlocal
+set BUILD=24
+set VERSION="1.0.%BUILD%.0"
+set PRODUCT="Kailand V - Launcher"
+set COPYRIGHT="Launcher de Kailand, by GatoArtStudio"
+set DESCRIPTION="Launcher Oficial de Kailand V"
+set COMPANY="By GatoArtStudio X Kailand V"
+
+flet build windows -v --build-number %BUILD% --build-version %VERSION% --product %PRODUCT% --copyright %COPYRIGHT% --description %DESCRIPTION% --company %COMPANY%
+flet build linux -v --build-number %BUILD% --build-version %VERSION% --product %PRODUCT% --copyright %COPYRIGHT% --description %DESCRIPTION% --company %COMPANY%
+flet build macos -v --build-number %BUILD% --build-version %VERSION% --product %PRODUCT% --copyright %COPYRIGHT% --description %DESCRIPTION% --company %COMPANY%

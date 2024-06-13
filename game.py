@@ -1,6 +1,5 @@
 import os
 import uuid
-import json
 import requests
 import flet as ft
 import subprocess

@@ -1,8 +1,20 @@
 import os
+import platform
 
-# Define la ruta del directorio de trabajo principal
-DIRECTORY_KAILAND = f"C://Users//{os.environ['USERNAME']}//AppData//Roaming//.kailand"
+# Obtener el nombre de usuario
+USERNAME = os.environ['USERNAME']
 
-PRIVATE_KEY = '''clave_privada'''
+def get_directory_kailand():
+    # Definir la ruta del directorio de trabajo principal según el sistema operativo
+    if platform.system() == 'Windows':
+        return f"C://Users//{USERNAME}//AppData//Roaming//.kailand"
+    elif platform.system() == 'Darwin':  # macOS
+        return os.path.join("Users", USERNAME, ".kailand")
+    else:  # Linux y otros sistemas UNIX-like
+        return os.path.join("/home", USERNAME, ".kailand")
 
-PUBLIC_KEY = '''clave_publica'''
+DIRECTORY_KAILAND = get_directory_kailand()
+
+PRIVATE_KEY = '''clave privada RSA'''
+
+PUBLIC_KEY = '''clave publica'''
