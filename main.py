@@ -1,7 +1,5 @@
 import os
 import flet as ft
-from ui import app
-from log import logger
 from config import DIRECTORY_KAILAND
 
 
@@ -21,6 +19,9 @@ else:
     # Si existe, cambia al directorio
     os.chdir(DIRECTORY_KAILAND)
 
+# se importan desde este punto para evitar que halla errores con la creacion de las carpetas
+from ui import app
+from log import logger
 
 # Condición para ejecutar el código solo si el archivo es el archivo principal
 # del programa, es decir, si se ejecuta directamente desde la línea de comandos.
