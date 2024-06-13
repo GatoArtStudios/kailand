@@ -357,6 +357,7 @@ class Mc:
         from log import logger
         from layout import data_widget
         if minecraft_launcher_lib.utils.is_minecraft_installed(self.minecraft_directory):
+            from config import SYSTEM
             logger.info("Minecraft si esta instalado")
             data_widget.animate_buttom(e)
             # Guardar datos en un archivo JSON
@@ -372,7 +373,12 @@ class Mc:
             e.control.disabled = True
             e.control.update()
             # Ejecuta y alamcena el debug de minecraft java
-            debug_minecraft_launch = subprocess.run(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW)
+            if SYSTEM == "Windows":
+                debug_minecraft_launch = subprocess.run(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW)
+            elif SYSTEM == "Linux":
+                debug_minecraft_launch = subprocess.run(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            else:
+                debug_minecraft_launch = subprocess.run(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             # Registrar la salida estándar (stdout)
             if debug_minecraft_launch.stdout:
                 logger.info(debug_minecraft_launch.stdout.decode("utf-8"))
