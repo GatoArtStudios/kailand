@@ -5,6 +5,7 @@ import requests
 import flet as ft
 import subprocess
 import minecraft_launcher_lib
+import encryption
 
 class Mc:
     def __init__(self) -> None:
