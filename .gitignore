@@ -12,3 +12,4 @@ pyvenv.cfg
 Build-Kailand.iss
 /__pycache__
 encrypted_data.json
+config.py
