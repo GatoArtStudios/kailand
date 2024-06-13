@@ -11,3 +11,4 @@ pyvenv.cfg
 /share
 Build-Kailand.iss
 /__pycache__
+encrypted_data.json

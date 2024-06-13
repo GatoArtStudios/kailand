@@ -2,7 +2,7 @@ import os
 import flet as ft
 from ui import app
 from log import logger
-from config import direccion_trabajo
+from config import DIRECTORY_KAILAND
 
 
 """
@@ -11,15 +11,15 @@ lo crea y se cambia al directorio creado.
 """
 
 # Verifica si el directorio de trabajo principal existe
-if not os.path.exists(direccion_trabajo):
+if not os.path.exists(DIRECTORY_KAILAND):
     # Si no existe, crea el directorio
-    os.mkdir(direccion_trabajo)
+    os.mkdir(DIRECTORY_KAILAND)
 
     # Cambia al directorio creado
-    os.chdir(direccion_trabajo)
+    os.chdir(DIRECTORY_KAILAND)
 else:
     # Si existe, cambia al directorio
-    os.chdir(direccion_trabajo)
+    os.chdir(DIRECTORY_KAILAND)
 
 
 # Condición para ejecutar el código solo si el archivo es el archivo principal

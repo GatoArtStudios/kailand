@@ -11,14 +11,14 @@ class Mc:
         '''
         Almacena todos los datos del minecraft y metodos para el mismo funcionamiento, tambien se encarga de checar la integridad de los datos al inicial el launcher
         '''
-        from config import direccion_trabajo
+        from config import DIRECTORY_KAILAND
         self.data_nube = {}
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
         self.launcherVersion = "1.0.24.0"
         self.boton_jugar = "Iniciado"
         self.mc_disponible = True
-        self.minecraft_directory = direccion_trabajo
+        self.minecraft_directory = DIRECTORY_KAILAND
         self.options = {
             "username": None,
             "uuid": None,
@@ -210,7 +210,7 @@ class Mc:
         '''
         Descarga los mods y los almacena en el directorio de mods
         '''
-        from log import logger 
+        from log import logger
         destino = os.path.join(self.ruta_mods, mod['file'])
         if os.path.exists(destino):
             logger.info(f"El mod '{mod['name']}' ya está descargado.")

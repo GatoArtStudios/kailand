@@ -22,10 +22,10 @@ def loger():
         format='%(asctime)s - %(levelname)s - %(message)s',  # Formato de los mensajes de registro
         datefmt='%Y-%m-%d %H:%M:%S',  # Formato de la fecha y hora en los mensajes de registro
         )
-    
+
     # Obtiene una instancia del logger
     logger = logging.getLogger(__name__)
-    
+
     return logger
 
 # Crea un manejador de transmisión para enviar los registros a una consola
@@ -71,7 +71,7 @@ def log_logger():
     """
     Crea una instancia del logger, configura un manejador de handler para mostrar los registros en la consola y
     devuelve el logger.
-    
+
     :return: logger
     """
     # Manejador de handler mostrado en consola
