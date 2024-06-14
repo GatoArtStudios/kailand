@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.39",
+    "configVersion": "1.0.40",
     "launcherVersion": "1.0.24.0",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nAhora el launcher no sera un portable si no un instalador, tambien se a eliminado el apartado de horario.",
@@ -1197,7 +1197,7 @@
                             "descripcion": "Embeddium | Dependencia",
                             "file": "embeddium-0.3.18+mc1.19.2.jar",
                             "url": "https://mediafilez.forgecdn.net/files/5322/303/embeddium-0.3.18%2Bmc1.19.2.jar",
-                            "disponible": true,
+                            "disponible": false,
                             "dependencia": []
                         }
                     ]
