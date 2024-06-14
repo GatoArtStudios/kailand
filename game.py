@@ -5,6 +5,7 @@ import flet as ft
 import subprocess
 import minecraft_launcher_lib
 import encryption
+import threading
 
 class Mc:
     def __init__(self) -> None:
@@ -205,14 +206,37 @@ class Mc:
                 self.path_files_mods.append(ruta_completa_mod)
         return True
 
+    def check_dependency_mods(self, x):
+        if x in self.data_nube:
+            if self.data_nube[x] > 0:
+                self.data_nube[x] -= 1
+            else:
+                self.data_nube.update({x: 0})
+        else:
+            return False
+
     def descargar_mod(self, mod):
         '''
         Descarga los mods y los almacena en el directorio de mods
         '''
         from log import logger
+        # Verifica si hay dependencias
+        def descargar_dependencias(x):
+            if len(x['dependencia']) > 0:
+                # if x['file'] in self.data_nube:
+                #     num = self.data_nube[x['file']] += 1
+                #     self.data_nube.update({x['file']: 1})
+                logger.info(f"Descargando dependencia: {len(x['dependencia'])}...")
+                for dep in x['dependencia']:
+                    self.descargar_mod(dep)
+                    if dep['dependencia']:
+                        if dep['dependencia'] > 0:
+                            for d in dep['dependencia']:
+                                self.descargar_mod(d)
         destino = os.path.join(self.ruta_mods, mod['file'])
         if os.path.exists(destino):
             logger.info(f"El mod '{mod['name']}' ya está descargado.")
+            descargar_dependencias(mod)
         else:
             logger.info(f"Descargando el mod '{mod['name']}'...")
             try:
@@ -221,6 +245,7 @@ class Mc:
                     with open(destino, 'wb') as archivo:
                         archivo.write(response.content)
                     logger.info(f"Descarga exitosa: {destino}")
+                    descargar_dependencias(mod)
                 else:
                     logger.error(f"Error al descargar el mod '{mod['name']}'. Código de estado: {response.status_code}")
             except Exception as e:
@@ -292,6 +317,12 @@ class Mc:
                 self.descargar_mod(mod)
             elif mod['file'] in self.archivos_mods:
                 self.eliminar_mod(os.path.join(self.ruta_mods, mod['file']))
+                if mod['dependencia'] > 0:
+                    for d in mod['dependencia']:
+                        self.eliminar_mod(os.path.join(self.ruta_mods, d['file']))
+                        if d['dependencia'] > 0:
+                            for dd in d['dependencia']:
+                                self.eliminar_mod(os.path.join(self.ruta_mods, dd['file']))
         return True
 
     def changer_save_file_kailand(self):

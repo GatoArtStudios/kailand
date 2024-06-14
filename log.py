@@ -3,7 +3,7 @@ import logging
 from logging import StreamHandler
 
 log_console = '' # Variable que almacena el log para la consola
-log_available = False
+LOG_AVAILABLE = False
 
 def loger():
     """
@@ -34,7 +34,6 @@ class ConsoleHandler(StreamHandler):
     """
     Manejador de la consola que se encarga de capturar los registros y mostrarlos en la consola.
     """
-
     def emit(self, record):
         """
         Método que se encarga de formatear el registro y actualizar la variable de log_console.
@@ -43,6 +42,7 @@ class ConsoleHandler(StreamHandler):
         :type record: dict
         """
         global log_console
+        print('Evento ejecutado')
 
         # Formatea el registro
         msg = self.format(record)
@@ -51,7 +51,8 @@ class ConsoleHandler(StreamHandler):
         log_console += f'{msg}\n'
 
         # Verifica si log_available es True
-        if log_available:
+        if LOG_AVAILABLE:
+            print('variable log_available es True')
             try:
                 # Importa los módulos necesarios
                 from layout import data_widget
@@ -64,9 +65,6 @@ class ConsoleHandler(StreamHandler):
                 app.page_update()
             except ImportError:
                 pass
-
-        # Descomenta la siguiente línea para imprimir en la consola los registros
-        # print(msg)
 
 def log_logger():
     """

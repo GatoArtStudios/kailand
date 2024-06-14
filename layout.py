@@ -613,15 +613,15 @@ class DataWidget:
         '''
         Muestra el contenedor de Consola
         '''
-        global log_available
+        import log
 
         if self.c_derecho.content == self.console_widget:
-            log_available = False
+            log.LOG_AVAILABLE = False
             self.c_derecho.content = self.c_derecho_cont
             self.c_derecho.disabled = True
             self.animate_buttom(e)
         else:
-            log_available = True
+            log.LOG_AVAILABLE = True
             self.c_derecho.content = self.console_widget
             self.c_derecho.disabled = False
             e.page.update()
