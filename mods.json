@@ -90,7 +90,8 @@
                     "descripcion": "Coro útil",
                     "file": "coroutil-forge-1.19.2-1.3.6.jar",
                     "url": "https://mediafilez.forgecdn.net/files/5010/127/coroutil-forge-1.19.2-1.3.6.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -138,7 +139,8 @@
                     "descripcion": "Sophisticated core",
                     "file": "sophisticatedcore-1.19.2-0.5.111.525.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4993/648/sophisticatedcore-1.19.2-0.5.111.525.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -154,14 +156,16 @@
                     "descripcion": "Curios API",
                     "file": "curios-forge-1.19.2-5.1.4.4.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4985/476/curios-forge-1.19.2-5.1.4.4.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 },
                 {
                     "name": "lionfish api",
                     "descripcion": "Lionfish API",
                     "file": "lionfishapi-1.8.jar",
                     "url": "https://mediafilez.forgecdn.net/files/5314/835/lionfishapi-1.8.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -177,7 +181,8 @@
                     "descripcion": "Yung’s API",
                     "file": "YungsApi-1.19.2-Forge-3.8.10.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4876/62/YungsApi-1.19.2-Forge-3.8.10.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -193,14 +198,16 @@
                     "descripcion": "Creative core",
                     "file": "CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
-                    "disponible": false
+                    "disponible": false,
+                    "dependencia": []
                 },
                 {
                     "name": "Architectury API",
                     "descripcion": "Architectury API",
                     "file": "architectury-6.5.85-forge.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4555/749/architectury-6.5.85-forge.jar",
-                    "disponible": false
+                    "disponible": false,
+                    "dependencia": []
                 }
             ]
         },
@@ -216,7 +223,8 @@
                     "descripcion": "Creative core",
                     "file": "CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -256,7 +264,8 @@
                     "descripcion": "Balm",
                     "file": "balm-forge-1.19.2-4.6.0.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4751/735/balm-forge-1.19.2-4.6.0.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -272,14 +281,16 @@
                     "descripcion": "Architectury API",
                     "file": "architectury-6.5.85-forge.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4555/749/architectury-6.5.85-forge.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 },
                 {
                     "name": "Cloth config API",
                     "descripcion": "Cloth config API",
                     "file": "cloth-config-8.3.115-forge.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4973/444/cloth-config-8.3.115-forge.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -295,7 +306,8 @@
                     "descripcion": "Balm",
                     "file": "balm-forge-1.19.2-4.6.0.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4751/735/balm-forge-1.19.2-4.6.0.jar",
-                    "disponible": false
+                    "disponible": false,
+                    "dependencia": []
                 }
             ]
         },
@@ -335,7 +347,8 @@
                     "descripcion": "Balm",
                     "file": "balm-forge-1.19.2-4.6.0.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4751/735/balm-forge-1.19.2-4.6.0.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -359,7 +372,8 @@
                     "descripcion": "Atlas lib",
                     "file": "Atlas-Lib-1.19.2-1.1.6.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4088/354/Atlas-Lib-1.19.2-1.1.6.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -383,7 +397,8 @@
                     "descripcion": "framework",
                     "file": "framework-forge-1.19.2-0.6.16.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4718/247/framework-forge-1.19.2-0.6.16.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -399,14 +414,16 @@
                     "descripcion": "framework",
                     "file": "framework-forge-1.19.2-0.6.16.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4718/247/framework-forge-1.19.2-0.6.16.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 },
                 {
                     "name": "MrCrayfish’s gun",
                     "descripcion": "MrCrayfish’s gun",
                     "file": "cgm-forge-1.19.2-1.3.7.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4718/583/cgm-forge-1.19.2-1.3.7.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -422,14 +439,16 @@
                     "descripcion": "framework",
                     "file": "framework-forge-1.19.2-0.6.16.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4718/247/framework-forge-1.19.2-0.6.16.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 },
                 {
                     "name": "MrCrayfish’s gun",
                     "descripcion": "MrCrayfish’s gun",
                     "file": "cgm-forge-1.19.2-1.3.7.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4718/583/cgm-forge-1.19.2-1.3.7.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -453,7 +472,8 @@
                     "descripcion": "Puzzles lib",
                     "file": "PuzzlesLib-v4.4.3-1.19.2-Forge.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4600/775/PuzzlesLib-v4.4.3-1.19.2-Forge.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -493,7 +513,8 @@
                     "descripcion": "Placebo",
                     "file": "Placebo-1.19.2-7.3.4.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4876/369/Placebo-1.19.2-7.3.4.jar",
-                    "disponible": false
+                    "disponible": false,
+                    "dependencia": []
                 }
             ]
         },
@@ -549,7 +570,8 @@
                     "descripcion": "Citadel",
                     "file": "citadel-2.1.4-1.19.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4556/677/citadel-2.1.4-1.19.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -573,7 +595,8 @@
                     "descripcion": "Yung’s API",
                     "file": "YungsApi-1.19.2-Forge-3.8.10.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4876/62/YungsApi-1.19.2-Forge-3.8.10.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -637,7 +660,8 @@
                     "descripcion": "Library ferret",
                     "file": "libraryferret-forge-1.19.2-4.0.0.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4435/523/libraryferret-forge-1.19.2-4.0.0.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -653,7 +677,8 @@
                     "descripcion": "Library ferret",
                     "file": "libraryferret-forge-1.19.2-4.0.0.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4435/523/libraryferret-forge-1.19.2-4.0.0.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -669,7 +694,8 @@
                     "descripcion": "Library ferret",
                     "file": "libraryferret-forge-1.19.2-4.0.0.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4435/523/libraryferret-forge-1.19.2-4.0.0.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -685,7 +711,8 @@
                     "descripcion": "Library ferret",
                     "file": "libraryferret-forge-1.19.2-4.0.0.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4435/523/libraryferret-forge-1.19.2-4.0.0.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -701,7 +728,8 @@
                     "descripcion": "Library ferret",
                     "file": "libraryferret-forge-1.19.2-4.0.0.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4435/523/libraryferret-forge-1.19.2-4.0.0.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -741,21 +769,24 @@
                     "descripcion": "Fusion (connected textures)",
                     "file": "fusion-1.1.0c-forge-mc1.19.2.jar",
                     "url": "https://mediafilez.forgecdn.net/files/5005/119/fusion-1.1.0c-forge-mc1.19.2.jar",
-                    "disponible": false
+                    "disponible": false,
+                    "dependencia": []
                 },
                 {
                     "name": "Super Martijn 642’s config lib",
                     "descripcion": "Super Martijn 642’s config lib",
                     "file": "supermartijn642configlib-1.1.8-forge-mc1.19.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4715/406/supermartijn642configlib-1.1.8-forge-mc1.19.jar",
-                    "disponible": false
+                    "disponible": false,
+                    "dependencia": []
                 },
                 {
                     "name": "Super Martijn 642’s core lib",
                     "descripcion": "Super Martijn 642’s core lib",
                     "file": "supermartijn642corelib-1.1.16-forge-mc1.19.2.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4926/970/supermartijn642corelib-1.1.16-forge-mc1.19.2.jar",
-                    "disponible": false
+                    "disponible": false,
+                    "dependencia": []
                 }
             ]
         },
@@ -803,7 +834,8 @@
                     "descripcion": "Rayon",
                     "file": "rayon-forge-1.7.1%2B1.19.2.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4502/284/rayon-forge-1.7.1%2B1.19.2.jar",
-                    "disponible": false
+                    "disponible": false,
+                    "dependencia": []
                 }
             ]
         },
@@ -867,7 +899,8 @@
                     "descripcion": "marbleds api | Dependencia",
                     "file": "marbledsapi-1.19.2-1.0.5.jar",
                     "url": "https://mediafilez.forgecdn.net/files/5136/623/marbledsapi-1.19.2-1.0.5.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -908,7 +941,8 @@
             "descripcion":"Plasmo voice",
             "file": "plasmovoice-forge-1.19.2-2.0.8.jar",
             "url": "https://mediafilez.forgecdn.net/files/5028/633/plasmovoice-forge-1.19.2-2.0.8.jar",
-            "disponible": true
+            "disponible": true,
+            "dependencia": []
         },
         {
             "name": "AntiXray",
@@ -930,7 +964,8 @@
                     "descripcion": "Dependencia",
                     "file": "LibX-1.19.2-4.2.8.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4052/778/LibX-1.19.2-4.2.8.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -954,7 +989,8 @@
                     "descripcion": "Watermedia multimedia API | Dependencia",
                     "file": "watermedia-2.0.28.jar",
                     "url": "https://mediafilez.forgecdn.net/files/5127/438/watermedia-2.0.28.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -986,7 +1022,8 @@
                     "descripcion": "Cupboard proporciona código, diferentes marcos y utilidades para modificaciones de Minecraft. | Dependencia",
                     "file": "cupboard-1.19.2-2.3.jar",
                     "url": "https://mediafilez.forgecdn.net/files/5063/778/cupboard-1.19.2-2.3.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -1002,7 +1039,8 @@
                     "descripcion":"Estructure gel API | Dependencia",
                     "file": "structure_gel-1.19.2-2.7.3.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4765/558/structure_gel-1.19.2-2.7.3.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -1088,7 +1126,8 @@
                     "descripcion": "Creative core",
                     "file": "CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -1123,7 +1162,8 @@
                     "descripcion": "Creative core",
                     "file": "CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 }
             ]
         },
@@ -1141,7 +1181,8 @@
                     "doct": "https://www.curseforge.com/minecraft/mc-mods/irisshaders",
                     "file": "iris-mc1.19.2-1.6.9.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4861/705/iris-mc1.19.2-1.6.9.jar",
-                    "disponible": true
+                    "disponible": true,
+                    "dependencia": []
                 },
                 {
                     "name": "Oculus",
@@ -1156,7 +1197,8 @@
                             "descripcion": "Embeddium | Dependencia",
                             "file": "embeddium-0.3.18+mc1.19.2.jar",
                             "url": "https://mediafilez.forgecdn.net/files/5322/303/embeddium-0.3.18%2Bmc1.19.2.jar",
-                            "disponible": true
+                            "disponible": true,
+                            "dependencia": []
                         }
                     ]
                 }
