@@ -29,5 +29,17 @@ Hola bienvenido a este repositorio en el cual tenemos todo el codigo del proyect
 
 [Web](https://gatoartstudios.github.io/kailand/)
 
+### Cambios en proceso:
+
+- Detecta memoria ram :white_check_mark: 
+- Agregando encriptado a archivos de configuracion :white_check_mark: 
+- Codigo por modulos :white_check_mark: 
+- Compatibilidad con linux, windows, MacOS :white_check_mark: 
+- AntiCheat :white_check_mark: 
+- Solucion de dependencias :white_check_mark: 
+- Colores en consola con opcion de desactivar en settings :arrows_counterclockwise: 
+- Rediseño del apartado de mods complementarios :arrows_counterclockwise: 
+- Tener complementos activos por defecto :arrows_counterclockwise: 
+
 > [!WARNING]
 > Se prohibe el uso del codigo sin autorizacion.
