@@ -432,14 +432,14 @@
             "descripcion": "Additional guns",
             "file": "additional-guns-0.8.2-1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4357/648/additional-guns-0.8.2-1.19.2.jar",
-            "disponible": true,
+            "disponible": false,
             "dependencia": [
                 {
                     "name": "framework",
                     "descripcion": "framework",
                     "file": "framework-forge-1.19.2-0.6.16.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4718/247/framework-forge-1.19.2-0.6.16.jar",
-                    "disponible": true,
+                    "disponible": false,
                     "dependencia": []
                 },
                 {
@@ -447,7 +447,7 @@
                     "descripcion": "MrCrayfish’s gun",
                     "file": "cgm-forge-1.19.2-1.3.7.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4718/583/cgm-forge-1.19.2-1.3.7.jar",
-                    "disponible": true,
+                    "disponible": false,
                     "dependencia": []
                 }
             ]
