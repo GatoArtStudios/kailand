@@ -516,6 +516,7 @@ class Mc:
             e.control.text = "Jugando"
             e.control.disabled = True
             e.control.update()
+            self.anticheat()
             # Ejecuta y alamcena el debug de minecraft java
             if SYSTEM == "Windows":
                 debug_minecraft_launch = subprocess.run(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW)
