@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.44",
+    "configVersion": "1.0.45",
     "launcherVersion": "1.0.24.0",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nAhora el launcher no sera un portable si no un instalador, tambien se a eliminado el apartado de horario.",
@@ -390,14 +390,14 @@
             "descripcion": "MrCrayfish’s gun",
             "file": "cgm-forge-1.19.2-1.3.7.jar",
             "url": "https://mediafilez.forgecdn.net/files/4718/583/cgm-forge-1.19.2-1.3.7.jar",
-            "disponible": true,
+            "disponible": false,
             "dependencia": [
                 {
                     "name": "framework",
                     "descripcion": "framework",
                     "file": "framework-forge-1.19.2-0.6.16.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4718/247/framework-forge-1.19.2-0.6.16.jar",
-                    "disponible": true,
+                    "disponible": false,
                     "dependencia": []
                 }
             ]
@@ -407,14 +407,14 @@
             "descripcion": "Project arsenal",
             "file": "projectarsenal-0.4.0-1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4981/253/projectarsenal-0.4.0-1.19.2.jar",
-            "disponible": true,
+            "disponible": false,
             "dependencia": [
                 {
                     "name": "framework",
                     "descripcion": "framework",
                     "file": "framework-forge-1.19.2-0.6.16.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4718/247/framework-forge-1.19.2-0.6.16.jar",
-                    "disponible": true,
+                    "disponible": false,
                     "dependencia": []
                 },
                 {
@@ -422,7 +422,7 @@
                     "descripcion": "MrCrayfish’s gun",
                     "file": "cgm-forge-1.19.2-1.3.7.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4718/583/cgm-forge-1.19.2-1.3.7.jar",
-                    "disponible": true,
+                    "disponible": false,
                     "dependencia": []
                 }
             ]
