@@ -242,6 +242,10 @@ class Mc:
             return False
 
     def anticheat(self):
+        '''
+        Anticheat de mods
+        '''
+        from log import logger
         list_avalid_mods = []
         for mod in self.data_nube['mods']:
             if mod['disponible']:
@@ -268,7 +272,8 @@ class Mc:
         for file in os.listdir(self.ruta_mods):
             if file not in list_avalid_mods:
                 self.eliminar_mod(os.path.join(self.ruta_mods, file), file)
-    
+                logger.warning(f"Se elimino el mod '{file}' por no estar disponible. (No puedes usar mods/archivos externos a kailand)")
+
     def descargar_mod(self, mod):
         '''
         Descarga los mods y los almacena en el directorio de mods
