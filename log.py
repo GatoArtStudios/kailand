@@ -42,8 +42,6 @@ class ConsoleHandler(StreamHandler):
         :type record: dict
         """
         global log_console
-        print('Evento ejecutado')
-
         # Formatea el registro
         msg = self.format(record)
 
@@ -52,7 +50,6 @@ class ConsoleHandler(StreamHandler):
 
         # Verifica si log_available es True
         if LOG_AVAILABLE:
-            print('variable log_available es True')
             try:
                 # Importa los módulos necesarios
                 from layout import data_widget

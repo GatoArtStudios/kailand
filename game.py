@@ -37,6 +37,7 @@ class Mc:
         self.archivo_mods_data = os.path.join(self.minecraft_directory, "mods_data.json")
         self.ruta_mods = os.path.join(self.minecraft_directory, "mods")
         self.url_base_mods = 'https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods'
+        self.dependencias_mods = {}
         self.cheking()
         self.load_data_file_config()
         self.archivos_mods = []
@@ -46,6 +47,7 @@ class Mc:
         self.valor_xmx_temp = self.ram_launcher()
         self.changer_save_file_kailand()
         self.download_optional = 0
+        self.anticheat()
 
     def load_data_file_config(self):
         '''
@@ -204,7 +206,31 @@ class Mc:
             if os.path.isfile(ruta_completa_mod):
                 self.archivos_mods.append(name_file_mod)
                 self.path_files_mods.append(ruta_completa_mod)
+        self.register_dependency_mods()
         return True
+
+    def register_dependency_mods(self):
+        # Itera sobre cada item de la lista de mods disponible en el directorio de mods
+        for file in os.listdir(self.ruta_mods):
+            # file es igual al nombre del archivo
+            # registra las dependencias de cada mod
+            for x in self.data_nube['mods']:
+                if x['file'] == file:
+                    if len(x['dependencia']) > 0:
+                        for d in x['dependencia']:
+                            if d['file'] in self.dependencias_mods:
+                                self.dependencias_mods.update({d['file']: self.dependencias_mods[d['file']] + 1}) # self.dependencias_mods[d['file']] += 1
+                            else:
+                                self.dependencias_mods.update({d['file']: 1})
+            # Registra las dependencias de cada complemento
+            for x in self.data_nube['complementos']:
+                if x['file'] == file:
+                    if len(x['dependencia']) > 0:
+                        for d in x['dependencia']:
+                            if d['file'] in self.dependencias_mods:
+                                self.dependencias_mods.update({d['file']: self.dependencias_mods[d['file']] + 1}) # self.dependencias_mods[d['file']] += 1
+                            else:
+                                self.dependencias_mods.update({d['file']: 1})
 
     def check_dependency_mods(self, x):
         if x in self.data_nube:
@@ -215,37 +241,94 @@ class Mc:
         else:
             return False
 
+    def anticheat(self):
+        list_avalid_mods = []
+        for mod in self.data_nube['mods']:
+            if mod['disponible']:
+                list_avalid_mods.append(mod['file'])
+                if len(mod['dependencia']) > 0:
+                    for dep in mod['dependencia']:
+                        if dep['disponible']:
+                            list_avalid_mods.append(dep['file'])
+                            if len(dep['dependencia']) > 0:
+                                for d in dep['dependencia']:
+                                    if d['disponible']:
+                                        list_avalid_mods.append(d['file'])
+        for dep in self.data_nube['complementos']:
+            if dep['disponible']:
+                list_avalid_mods.append(dep['file'])
+                if len(dep['dependencia']) > 0:
+                    for d in dep['dependencia']:
+                        if d['disponible']:
+                            list_avalid_mods.append(d['file'])
+                            if len(d['dependencia']) > 0:
+                                for dd in d['dependencia']:
+                                    if dd['disponible']:
+                                        list_avalid_mods.append(dd['file'])
+        for file in os.listdir(self.ruta_mods):
+            if file not in list_avalid_mods:
+                self.eliminar_mod(os.path.join(self.ruta_mods, file), file)
+    
     def descargar_mod(self, mod):
         '''
         Descarga los mods y los almacena en el directorio de mods
         '''
         from log import logger
-        # Verifica si hay dependencias
-        def descargar_dependencias(x):
-            if len(x['dependencia']) > 0:
-                # if x['file'] in self.data_nube:
-                #     num = self.data_nube[x['file']] += 1
-                #     self.data_nube.update({x['file']: 1})
-                logger.info(f"Descargando dependencia: {len(x['dependencia'])}...")
-                for dep in x['dependencia']:
-                    self.descargar_mod(dep)
-                    if dep['dependencia']:
-                        if dep['dependencia'] > 0:
-                            for d in dep['dependencia']:
-                                self.descargar_mod(d)
         destino = os.path.join(self.ruta_mods, mod['file'])
         if os.path.exists(destino):
             logger.info(f"El mod '{mod['name']}' ya está descargado.")
-            descargar_dependencias(mod)
         else:
             logger.info(f"Descargando el mod '{mod['name']}'...")
             try:
+                # -------------- Descarga el archivo ----------------
                 response = requests.get(mod["url"])
                 if response.status_code == 200:
                     with open(destino, 'wb') as archivo:
                         archivo.write(response.content)
                     logger.info(f"Descarga exitosa: {destino}")
-                    descargar_dependencias(mod)
+                    # -------------- Verifica dependencias ---------------
+                    # Verifica si hay dependencias y las descarga
+                    if len(mod['dependencia']) > 0:
+                        logger.info(f"Descargando dependencia: {len(mod['dependencia'])}...")
+                        for dep in mod['dependencia']:
+                            if dep['disponible']:
+                                try:
+                                    if not os.path.exists(os.path.join(self.ruta_mods, dep['file'])):
+                                        response = requests.get(dep["url"])
+                                        if response.status_code == 200:
+                                            with open(os.path.join(self.ruta_mods, dep['file']), 'wb') as archivo:
+                                                archivo.write(response.content)
+                                            if dep['file'] in self.dependencias_mods:
+                                                self.dependencias_mods.update({dep['file']: self.dependencias_mods[dep['file']] + 1})
+                                            else:
+                                                self.dependencias_mods.update({dep['file']: 1})
+                                            logger.info(f"Descarga exitosa: {os.path.join(self.ruta_mods, dep['file'])}")
+                                        else:
+                                            logger.error(f"Error al descargar el mod '{dep['name']}'. Código de estado: {response.status_code}")
+                                    else:
+                                        logger.info(f"El mod '{dep['name']}' ya está descargado.")
+                                except Exception as e:
+                                    logger.error(f"Error al descargar el mod '{dep['name']}': {e}")
+                                if len(dep['dependencia']) > 0:
+                                    for d in dep['dependencia']:
+                                        if d['disponible']:
+                                            try:
+                                                if not os.path.exists(os.path.join(self.ruta_mods, d['file'])):
+                                                    response = requests.get(d["url"])
+                                                    if response.status_code == 200:
+                                                        with open(os.path.join(self.ruta_mods, d['file']), 'wb') as archivo:
+                                                            archivo.write(response.content)
+                                                        if d['file'] in self.dependencias_mods:
+                                                            self.dependencias_mods.update({d['file']: self.dependencias_mods[d['file']] + 1})
+                                                        else:
+                                                            self.dependencias_mods.update({d['file']: 1})
+                                                        logger.info(f"Descarga exitosa: {os.path.join(self.ruta_mods, d['file'])}")
+                                                    else:
+                                                        logger.error(f"Error al descargar el mod '{d['name']}'. Código de estado: {response.status_code}")
+                                                else:
+                                                    logger.info(f"El mod '{d['name']}' ya está descargado.")
+                                            except Exception as e:
+                                                logger.error(f"Error al descargar el mod '{d['name']}': {e}")
                 else:
                     logger.error(f"Error al descargar el mod '{mod['name']}'. Código de estado: {response.status_code}")
             except Exception as e:
@@ -285,7 +368,13 @@ class Mc:
             e.page.update()
         elif e.data == 'false':
             # Si el evento es falso, elimina el complemento
-            self.eliminar_mod(os.path.join(self.ruta_mods, x['file']))
+            self.eliminar_mod(os.path.join(self.ruta_mods, x['file']), x['file'])
+            if len(x['dependencia']) > 0:
+                    for d in x['dependencia']:
+                        self.eliminar_mod(os.path.join(self.ruta_mods, d['file']), d['file'])
+                        if len(d['dependencia']) > 0:
+                            for dd in d['dependencia']:
+                                self.eliminar_mod(os.path.join(self.ruta_mods, dd['file']), dd['file'])
             # Disminuye el contador de descargas opcionales
             mc.download_optional -= 1
             if mc.download_optional == 0:
@@ -297,16 +386,25 @@ class Mc:
             e.control.disabled = False
             e.page.update()
 
-    def eliminar_mod(self, archivo):
+    def eliminar_mod(self, archivo, file):
         '''
         Elimina mods, pasandole como argumento la ruta del archivo a remover
         '''
         from log import logger
         try:
-            os.remove(archivo)
-            logger.info(f"Mod eliminado: {archivo}")
+            if file in self.dependencias_mods:
+                if self.dependencias_mods[file] == 1:
+                    os.remove(archivo)
+                    logger.info(f"Mod eliminado: {file}")
+                    self.dependencias_mods.pop(file)
+                elif self.dependencias_mods[file] > 1:
+                    self.dependencias_mods[file] -= 1
+                    logger.info(f"Dependencia requerida por otro mod: {file}")
+            else:
+                os.remove(archivo)
+                logger.info(f"Mod eliminado: {file}")
         except Exception as e:
-            logger.error(f"Error al eliminar el mod '{archivo}': {e}")
+            logger.error(f"Error al eliminar el mod '{file}': {e}")
 
     def comprobar_mods(self):
         '''
@@ -316,13 +414,13 @@ class Mc:
             if mod['disponible']:
                 self.descargar_mod(mod)
             elif mod['file'] in self.archivos_mods:
-                self.eliminar_mod(os.path.join(self.ruta_mods, mod['file']))
-                if mod['dependencia'] > 0:
+                self.eliminar_mod(os.path.join(self.ruta_mods, mod['file']), mod['file'])
+                if len(mod['dependencia']) > 0:
                     for d in mod['dependencia']:
-                        self.eliminar_mod(os.path.join(self.ruta_mods, d['file']))
-                        if d['dependencia'] > 0:
+                        self.eliminar_mod(os.path.join(self.ruta_mods, d['file']), d['file'])
+                        if len(d['dependencia']) > 0:
                             for dd in d['dependencia']:
-                                self.eliminar_mod(os.path.join(self.ruta_mods, dd['file']))
+                                self.eliminar_mod(os.path.join(self.ruta_mods, dd['file']), dd['file'])
         return True
 
     def changer_save_file_kailand(self):
