@@ -67,7 +67,7 @@
             "descripcion": "Simple voice chat",
             "file": "voicechat-forge-1.19.2-2.4.32.jar",
             "url": "https://mediafilez.forgecdn.net/files/4961/338/voicechat-forge-1.19.2-2.4.32.jar",
-            "disponible": true,
+            "disponible": false,
             "dependencia": []
         },
         {
