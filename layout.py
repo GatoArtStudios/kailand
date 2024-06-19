@@ -251,19 +251,40 @@ class DataWidget:
             )
         )
         self.div_mods = ft.Container(
-            content=ft.Row(
-                [
-                    self.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in mc.data_nube['complementos']
-                ],
-                height=480,
-                width=1600,
-                scroll=ft.ScrollMode.ALWAYS,
-            ),
-            height=480,
-            width=1600,
+            content=ft.Tabs(
+                selected_index=1,
+                animation_duration=300,
+                tabs=[
+                    ft.Tab(
+                        text="Predeterminados",
+                        content=ft.GridView(
+                            [
+                                self.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in mc.data_nube['complementos'] if x['active']
+                            ],
+                            runs_count=3,
+                            max_extent=400,
+                            child_aspect_ratio=1.5,
+                        )
+                    ),
+                    ft.Tab(
+                        text="Recomendados",
+                        content=ft.GridView(
+                            [
+                                self.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in mc.data_nube['complementos'] if not x['active']
+                            ],
+                            runs_count=3,
+                            max_extent=400,
+                            child_aspect_ratio=1.5,
+                        )
+                    )
+                ]
+            )
+            ,
+            height=630,
+            width=950,
         )
 
-    def contMods(self, titulo = 'Sin datos', descripcion = 'Sin datos', url = 'http://example.com', x = None):
+    def contMods(self, titulo = 'Sin datos', descripcion = 'Sin datos', url = 'http://example.com', x = None, active = False):
         '''
         Crea el contendor que contendra la informacion de cada mod complementario.
         '''
@@ -309,7 +330,8 @@ class DataWidget:
             width=300,
             height=200,
             border_radius=10,
-            padding=10
+            padding=10,
+            # col=1
         )
 
     def close_launcher_update(self, e):

@@ -5,7 +5,6 @@ import flet as ft
 import subprocess
 import minecraft_launcher_lib
 import encryption
-import threading
 
 class Mc:
     def __init__(self) -> None:
@@ -426,6 +425,9 @@ class Mc:
                         if len(d['dependencia']) > 0:
                             for dd in d['dependencia']:
                                 self.eliminar_mod(os.path.join(self.ruta_mods, dd['file']), dd['file'])
+        for dep in self.data_nube['complementos']:
+            if dep['active'] and dep['disponible']:
+                self.descargar_mod(dep)
         return True
 
     def changer_save_file_kailand(self):
@@ -563,6 +565,82 @@ class Mc:
         '''
         from log import logger
         from layout import data_widget
+        logger.info("Comprobando recursos")
+        data_widget.div_mods = ft.Container(
+                    content=ft.Tabs(
+                        selected_index=1,
+                        animation_duration=300,
+                        tabs=[
+                            ft.Tab(
+                                text="Predeterminados",
+                                content=ft.GridView(
+                                    [
+                                        ft.Text('Durante las descarga de los recursos no puedes editar este apartado')
+                                    ],
+                                    runs_count=3,
+                                    max_extent=400,
+                                    child_aspect_ratio=1.5,
+                                )
+                            ),
+                            ft.Tab(
+                                text="Recomendados",
+                                content=ft.GridView(
+                                    [
+                                        ft.Text('Durante las descarga de los recursos no puedes editar este apartado')
+                                    ],
+                                    runs_count=3,
+                                    max_extent=400,
+                                    child_aspect_ratio=1.5,
+                                )
+                            )
+                        ]
+                    )
+                    ,
+                    height=630,
+                    width=950,
+                )
+        e.page.update()
+        if self.comprobar_mods():
+                logger.info("Todos los mods estan")
+                data_widget.buttom_jugar.disabled = False
+                data_widget.buttom_jugar.text = "Jugar"
+                data_widget.buttom_jugar.icon = False
+                e.page.splash = None
+                data_widget.div_mods = ft.Container(
+                    content=ft.Tabs(
+                        selected_index=1,
+                        animation_duration=300,
+                        tabs=[
+                            ft.Tab(
+                                text="Predeterminados",
+                                content=ft.GridView(
+                                    [
+                                        data_widget.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in self.data_nube['complementos'] if x['active']
+                                    ],
+                                    runs_count=3,
+                                    max_extent=400,
+                                    child_aspect_ratio=1.5,
+                                )
+                            ),
+                            ft.Tab(
+                                text="Recomendados",
+                                content=ft.GridView(
+                                    [
+                                        data_widget.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in self.data_nube['complementos'] if not x['active']
+                                    ],
+                                    runs_count=3,
+                                    max_extent=400,
+                                    child_aspect_ratio=1.5,
+                                )
+                            )
+                        ]
+                    )
+                    ,
+                    height=630,
+                    width=950,
+                )
+                e.page.update()
+                data_widget.open_dlg(e)
         if self.validate_directory():
             logger.info("Todos los recursos estan")
         else:
@@ -582,6 +660,39 @@ class Mc:
                 data_widget.buttom_jugar.text = "Jugar"
                 data_widget.buttom_jugar.icon = False
                 e.page.splash = None
+                data_widget.div_mods = ft.Container(
+                    content=ft.Tabs(
+                        selected_index=1,
+                        animation_duration=300,
+                        tabs=[
+                            ft.Tab(
+                                text="Predeterminados",
+                                content=ft.GridView(
+                                    [
+                                        data_widget.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in self.data_nube['complementos'] if x['active']
+                                    ],
+                                    runs_count=3,
+                                    max_extent=400,
+                                    child_aspect_ratio=1.5,
+                                )
+                            ),
+                            ft.Tab(
+                                text="Recomendados",
+                                content=ft.GridView(
+                                    [
+                                        data_widget.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in self.data_nube['complementos'] if not x['active']
+                                    ],
+                                    runs_count=3,
+                                    max_extent=400,
+                                    child_aspect_ratio=1.5,
+                                )
+                            )
+                        ]
+                    )
+                    ,
+                    height=630,
+                    width=950,
+                )
                 e.page.update()
                 data_widget.open_dlg(e)
 
