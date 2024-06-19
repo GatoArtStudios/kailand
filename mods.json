@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.54",
+    "configVersion": "1.0.55",
     "launcherVersion": "1.0.24.0",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nAhora el launcher no sera un portable si no un instalador, tambien se a eliminado el apartado de horario.",
@@ -9,6 +9,7 @@
         {
             "name": "Fancy Menu",
             "file": "fancymenu.zip",
+            "directory": "fancymenu",
             "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/config/fancymenu.zip",
             "disponible": true
         }
