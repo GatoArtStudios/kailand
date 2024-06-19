@@ -1,12 +1,17 @@
 {
-    "configVersion": "1.0.53",
+    "configVersion": "1.0.54",
     "launcherVersion": "1.0.24.0",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nAhora el launcher no sera un portable si no un instalador, tambien se a eliminado el apartado de horario.",
     "reglas": "NO tocar por ningún motivo las tumbas ajenas.\nNO tener mas de 2 cofres dobles o cualquier tipo de mueble de almacenamiento con contraseña. Cada jugador decide si usar un solo tipo de cualquier mueble con contraseña (2 cofres dobles o 4 barriles con contraseña).\nNO comercializar ni regalar el huevo del dragón.\nNO hacerte pasar por otra persona, es decir, hacerte pasar por otro usuario, o tener MULTICUENTAS.\nNO hacer Spawn-Kill sin algún motivo del mismo peso (es decir matar a un jugador sin ningún móvil que justifique el asesinato constante).\nNO exceder el limite del nivel 40 de cualquier encantamiento.\nNO spawnear o invocar ningún tipo boss o mob a 1000 bloques de cada dirección del Spawn del Survival.\nEstá totalmente prohibido utilizar el 'Code Breaker'.\nNO tener cofres (normales o codificados), ni casa y/o base a más de 10000 de bloques empezando por el Lobby del Survival hacia cualquier dirección.\nEstá totalmente PROHIBIDO dupear (duplicar) items.",
     "horario": "No disponible aun",
     "config": [
-        
+        {
+            "name": "Fancy Menu",
+            "file": "fancymenu.zip",
+            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/config/fancymenu.zip",
+            "disponible": true
+        }
     ],
     "mods": [
         {
@@ -1208,14 +1213,42 @@
     ],
     "complementos": [
         {
-            "name": "Jei",
-            "descripcion": "JEI es un mod de visualización de artículos y recetas para Minecraft, creado desde cero para brindar estabilidad y rendimiento.",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/jei",
-            "file": "jei-1.19.2-forge-11.6.0.1018.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4712/866/jei-1.19.2-forge-11.6.0.1018.jar",
+            "name": "Advancement Plaques",
+            "descripcion": "Reemplaza la aburrida estética al momento de adquirir un logro. Al conseguir un logro, aparecerá un cartel en pantalla con el logro y du descripción.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/advancement-plaques",
+            "file": "AdvancementPlaques-1.19.2-1.4.7.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4029/209/AdvancementPlaques-1.19.2-1.4.7.jar",
             "disponible": true,
             "active": true,
-            "dependencia": []
+            "dependencia": [
+                {
+                    "name": "Iceberg",
+                    "descripcion": "Iceberg | Dependencia",
+                    "file": "Iceberg-1.19.2-forge-1.1.4.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4300/529/Iceberg-1.19.2-forge-1.1.4.jar",
+                    "disponible": true,
+                    "dependencia": []
+                }
+            ]
+        },
+        {
+            "name": "Ambient Sounds 6",
+            "descripcion": "Este mod es sólo del lado del cliente, lo que añade un ambiente más vibrante.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/ambientsounds",
+            "file": "AmbientSounds_FORGE_v5.2.13_mc1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4126/142/AmbientSounds_FORGE_v5.2.13_mc1.19.2.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": [
+                {
+                    "name": "Creative Core",
+                    "descripcion": "Creative core",
+                    "file": "CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
+                    "disponible": true,
+                    "dependencia": []
+                }
+            ]
         },
         {
             "name": "Apple Skin",
@@ -1226,6 +1259,25 @@
             "disponible": true,
             "active": true,
             "dependencia": []
+        },
+        {
+            "name": "Better fps",
+            "descripcion": "Better FPS Render Distance es un mod que agrega algunas mejoras de rendimiento para aumentar los fps.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/better-fps-render-distance",
+            "file": "betterfpsdist-1.19.2-4.0.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4818/278/betterfpsdist-1.19.2-4.0.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": [
+                {
+                    "name": "cupboard",
+                    "descripcion": "Cupboard proporciona código, diferentes marcos y utilidades para modificaciones de Minecraft. | Dependencia",
+                    "file": "cupboard-1.19.2-2.3.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/5063/778/cupboard-1.19.2-2.3.jar",
+                    "disponible": true,
+                    "dependencia": []
+                }
+            ]
         },
         {
             "name": "Enhanced Visuals",
@@ -1247,6 +1299,129 @@
             ]
         },
         {
+            "name": "Foot Print Particles",
+            "descripcion": "Al caminar por determinados bloques, dejas tus pisadas",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/footprintparticle",
+            "file": "footprintparticle-0.5.1-mc1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4962/988/footprintparticle-0.5.1-mc1.19.2.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": []
+        },
+        {
+            "name": "Fps Reducer",
+            "descripcion": "Reduzca FPS automáticamente bajo las siguientes condiciones.\n- Ninguna operación del usuario durante el tiempo especificado.\n- La ventana del juego está inactiva o minimizada.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/fps-reducer",
+            "file": "FpsReducer2-forge-1.19.2-2.1.jar",
+            "url": "https://mediafilez.forgecdn.net/files/3931/329/FpsReducer2-forge-1.19.2-2.1.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": []
+        },
+        {
+            "name": "Item Borders",
+            "descripcion": "Las rarezas de los items se ven representados por un marco de color, que corresponde a la rareza (puede ser amarillo, azul o violeta).",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/item-borders",
+            "file": "ItemBorders-1.19.1-1.2.0.jar",
+            "url": "https://mediafilez.forgecdn.net/files/3912/57/ItemBorders-1.19.1-1.2.0.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": [
+                {
+                    "name": "Prism",
+                    "descripcion": "Prism | Dependencia",
+                    "file": "Prism-1.19.1-1.0.2.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/3993/293/Prism-1.19.1-1.0.2.jar",
+                    "disponible": true,
+                    "dependencia": []
+                },
+                {
+                    "name": "Iceberg",
+                    "descripcion": "Iceberg | Dependencia",
+                    "file": "Iceberg-1.19.2-forge-1.1.4.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4300/529/Iceberg-1.19.2-forge-1.1.4.jar",
+                    "disponible": true,
+                    "dependencia": []
+                }
+            ]
+        },
+        {
+            "name": "Item Physic",
+            "descripcion": "Al tirar los items, estos ya no flotan, si que están tirados en el piso de forma realista",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/itemphysic",
+            "file": "",
+            "url": "",
+            "disponible": true,
+            "active": true,
+            "dependencia": [
+                {
+                    "name": "Creative core",
+                    "descripcion": "Creative core",
+                    "file": "CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
+                    "disponible": true,
+                    "dependencia": []
+                }
+            ]
+        },
+        {
+            "name": "Jei",
+            "descripcion": "JEI es un mod de visualización de artículos y recetas para Minecraft, creado desde cero para brindar estabilidad y rendimiento.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/jei",
+            "file": "jei-1.19.2-forge-11.6.0.1018.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4712/866/jei-1.19.2-forge-11.6.0.1018.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": []
+        },
+        {
+            "name": "Legendary Tooltips",
+            "descripcion": "Cambia la forma y diseño en que se ven los items al pasar el cursor por arriba en todas las interfaces (inventario, cofre, horno, etc). Dependiendo la calidad del item, el diseño será distinto.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/legendary-tooltips",
+            "file": "LegendaryTooltips-1.19.2-forge-1.4.0.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4278/509/LegendaryTooltips-1.19.2-forge-1.4.0.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": [
+                {
+                    "name": "Prism",
+                    "descripcion": "Prism | Dependencia",
+                    "file": "Prism-1.19.1-1.0.2.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/3993/293/Prism-1.19.1-1.0.2.jar",
+                    "disponible": true,
+                    "dependencia": []
+                },
+                {
+                    "name": "Iceberg",
+                    "descripcion": "Iceberg | Dependencia",
+                    "file": "Iceberg-1.19.2-forge-1.1.4.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4300/529/Iceberg-1.19.2-forge-1.1.4.jar",
+                    "disponible": true,
+                    "dependencia": []
+                }
+            ]
+        },
+        {
+            "name": "Loot Beams - Relooted!",
+            "descripcion": "Cuando un item está tirando en el piso muestra un destello de luz del color de la calidad del item",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/loot-beams",
+            "file": "lootbeams-1.19.2-1.0.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4667/868/lootbeams-1.19.2-1.0.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": []
+        },
+        {
+            "name": "Not enough animation",
+            "descripcion": "Agrega animaciones a distintas acciones que realiza el jugador (como remar en un bote, al subir una escalera, comer, beber, tener una antorcha en la mano, etc).",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/not-enough-animations",
+            "file": "notenoughanimations-forge-1.7.4-mc1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5429/253/notenoughanimations-forge-1.7.4-mc1.19.2.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": []
+        },
+        {
             "name": "Presence Footsteps",
             "descripcion":"Un mod de mejora del sonido de pasos demasiado complicado para Minecraft.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/presence-footsteps-forge",
@@ -1257,33 +1432,33 @@
             "dependencia": []
         },
         {
-            "name": "Sound Physics Remastered",
-            "descripcion": "Un mod de Minecraft que proporciona atenuación, reverberación y absorción de sonido realistas a través de bloques.",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered",
-            "file": "soundphysics-forge-1.19.2-1.0.18.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4199/798/soundphysics-forge-1.19.2-1.0.18.jar",
-            "disponible": true,
-            "active": true,
-            "dependencia": []
-        },
-        {
-            "name": "Ambient Sounds 6",
-            "descripcion": "Este mod es sólo del lado del cliente, lo que añade un ambiente más vibrante.",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/ambientsounds",
-            "file": "AmbientSounds_FORGE_v5.2.13_mc1.19.2.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4126/142/AmbientSounds_FORGE_v5.2.13_mc1.19.2.jar",
+            "name": "Quality Sounds",
+            "descripcion": "Agrega mas y distintos sonidos a distintos bloques al momento de romper o colocar.",
+            "doct": "https://modrinth.com/mod/quality-sounds/version/1.5.0",
+            "file": "qualitysounds-forge-1.5.0-1.19.2.jar",
+            "url": "https://cdn.modrinth.com/data/ZAfRfkTo/versions/JMmbd03t/qualitysounds-forge-1.5.0-1.19.2.jar",
             "disponible": true,
             "active": true,
             "dependencia": [
                 {
-                    "name": "Creative Core",
-                    "descripcion": "Creative core",
-                    "file": "CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
+                    "name": "Cloth config API",
+                    "descripcion": "Cloth config API",
+                    "file": "cloth-config-8.3.115-forge.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4973/444/cloth-config-8.3.115-forge.jar",
                     "disponible": true,
                     "dependencia": []
                 }
             ]
+        },
+        {
+            "name": "Re Blured",
+            "descripcion": "Agrega una difuminación de fondo al momento de estar en una interfaz.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/reblured",
+            "file": "Reblured-1.19.1-1.2.0.jar",
+            "url": "https://mediafilez.forgecdn.net/files/3953/81/Reblured-1.19.1-1.2.0.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": []
         },
         {
             "name": "Rubidium",
@@ -1324,113 +1499,31 @@
             ]
         },
         {
-            "name": "Fps Reducer",
-            "descripcion": "Reduzca FPS automáticamente bajo las siguientes condiciones.\n- Ninguna operación del usuario durante el tiempo especificado.\n- La ventana del juego está inactiva o minimizada.",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/fps-reducer",
-            "file": "FpsReducer2-forge-1.19.2-2.1.jar",
-            "url": "https://mediafilez.forgecdn.net/files/3931/329/FpsReducer2-forge-1.19.2-2.1.jar",
+            "name": "Skin Layer",
+            "descripcion": "Hace que la segunda capa de las skins sea 3D.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/skin-layers-3d",
+            "file": "skinlayers3d-forge-1.6.6-mc1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5429/194/skinlayers3d-forge-1.6.6-mc1.19.2.jar",
             "disponible": true,
             "active": true,
             "dependencia": []
         },
         {
-            "name": "Better fps",
-            "descripcion": "Better FPS Render Distance es un mod que agrega algunas mejoras de rendimiento para aumentar los fps.",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/better-fps-render-distance",
-            "file": "betterfpsdist-1.19.2-4.0.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4818/278/betterfpsdist-1.19.2-4.0.jar",
+            "name": "Sound Physics Remastered",
+            "descripcion": "Un mod de Minecraft que proporciona atenuación, reverberación y absorción de sonido realistas a través de bloques.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered",
+            "file": "soundphysics-forge-1.19.2-1.0.18.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4199/798/soundphysics-forge-1.19.2-1.0.18.jar",
             "disponible": true,
             "active": true,
-            "dependencia": [
-                {
-                    "name": "cupboard",
-                    "descripcion": "Cupboard proporciona código, diferentes marcos y utilidades para modificaciones de Minecraft. | Dependencia",
-                    "file": "cupboard-1.19.2-2.3.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/5063/778/cupboard-1.19.2-2.3.jar",
-                    "disponible": true,
-                    "dependencia": []
-                }
-            ]
+            "dependencia": []
         },
         {
-            "name": "Legendary Tooltips",
-            "descripcion": "Cambia la forma y diseño en que se ven los items al pasar el cursor por arriba en todas las interfaces (inventario, cofre, horno, etc). Dependiendo la calidad del item, el diseño será distinto.",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/legendary-tooltips",
-            "file": "LegendaryTooltips-1.19.2-forge-1.4.0.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4278/509/LegendaryTooltips-1.19.2-forge-1.4.0.jar",
-            "disponible": true,
-            "active": true,
-            "dependencia": [
-                {
-                    "name": "Prism",
-                    "descripcion": "Prism | Dependencia",
-                    "file": "Prism-1.19.1-1.0.2.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/3993/293/Prism-1.19.1-1.0.2.jar",
-                    "disponible": true,
-                    "dependencia": []
-                },
-                {
-                    "name": "Iceberg",
-                    "descripcion": "Iceberg | Dependencia",
-                    "file": "Iceberg-1.19.2-forge-1.1.4.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/4300/529/Iceberg-1.19.2-forge-1.1.4.jar",
-                    "disponible": true,
-                    "dependencia": []
-                }
-            ]
-        },
-        {
-            "name": "Item Borders",
-            "descripcion": "Las rarezas de los items se ven representados por un marco de color, que corresponde a la rareza (puede ser amarillo, azul o violeta).",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/item-borders",
-            "file": "ItemBorders-1.19.1-1.2.0.jar",
-            "url": "https://mediafilez.forgecdn.net/files/3912/57/ItemBorders-1.19.1-1.2.0.jar",
-            "disponible": true,
-            "active": true,
-            "dependencia": [
-                {
-                    "name": "Prism",
-                    "descripcion": "Prism | Dependencia",
-                    "file": "Prism-1.19.1-1.0.2.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/3993/293/Prism-1.19.1-1.0.2.jar",
-                    "disponible": true,
-                    "dependencia": []
-                },
-                {
-                    "name": "Iceberg",
-                    "descripcion": "Iceberg | Dependencia",
-                    "file": "Iceberg-1.19.2-forge-1.1.4.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/4300/529/Iceberg-1.19.2-forge-1.1.4.jar",
-                    "disponible": true,
-                    "dependencia": []
-                }
-            ]
-        },
-        {
-            "name": "Advancement Plaques",
-            "descripcion": "Reemplaza la aburrida estética al momento de adquirir un logro. Al conseguir un logro, aparecerá un cartel en pantalla con el logro y du descripción.",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/advancement-plaques",
-            "file": "AdvancementPlaques-1.19.2-1.4.7.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4029/209/AdvancementPlaques-1.19.2-1.4.7.jar",
-            "disponible": true,
-            "active": true,
-            "dependencia": [
-                {
-                    "name": "Iceberg",
-                    "descripcion": "Iceberg | Dependencia",
-                    "file": "Iceberg-1.19.2-forge-1.1.4.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/4300/529/Iceberg-1.19.2-forge-1.1.4.jar",
-                    "disponible": true,
-                    "dependencia": []
-                }
-            ]
-        },
-        {
-            "name": "Not enough animation",
-            "descripcion": "Agrega animaciones a distintas acciones que realiza el jugador (como remar en un bote, al subir una escalera, comer, beber, tener una antorcha en la mano, etc).",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/not-enough-animations",
-            "file": "notenoughanimations-forge-1.7.4-mc1.19.2.jar",
-            "url": "https://mediafilez.forgecdn.net/files/5429/253/notenoughanimations-forge-1.7.4-mc1.19.2.jar",
+            "name": "Visuality - Reforged",
+            "descripcion": "Proporciona varios efectos de particulas que ambientan el mundo (por ejemplo, cuando un slime salta, deja pequeñas particulas en el piso, o que cuando llueve, se ven las gotas que caen en el agua).",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/visuality-reforged",
+            "file": "visuality-forge-2.0.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4684/872/visuality-forge-2.0.2.jar",
             "disponible": true,
             "active": true,
             "dependencia": []
@@ -1453,94 +1546,6 @@
                     "dependencia": []
                 }
             ]
-        },
-        {
-            "name": "Foot Print Particles",
-            "descripcion": "Al caminar por determinados bloques, dejas tus pisadas",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/footprintparticle",
-            "file": "footprintparticle-0.5.1-mc1.19.2.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4962/988/footprintparticle-0.5.1-mc1.19.2.jar",
-            "disponible": true,
-            "active": true,
-            "dependencia": []
-        },
-        {
-            "name": "Loot Beams - Relooted!",
-            "descripcion": "Cuando un item está tirando en el piso muestra un destello de luz del color de la calidad del item",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/loot-beams",
-            "file": "lootbeams-1.19.2-1.0.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4667/868/lootbeams-1.19.2-1.0.jar",
-            "disponible": true,
-            "active": true,
-            "dependencia": []
-        },
-        {
-            "name": "Quality Sounds",
-            "descripcion": "Agrega mas y distintos sonidos a distintos bloques al momento de romper o colocar.",
-            "doct": "https://modrinth.com/mod/quality-sounds/version/1.5.0",
-            "file": "qualitysounds-forge-1.5.0-1.19.2.jar",
-            "url": "https://cdn.modrinth.com/data/ZAfRfkTo/versions/JMmbd03t/qualitysounds-forge-1.5.0-1.19.2.jar",
-            "disponible": true,
-            "active": true,
-            "dependencia": [
-                {
-                    "name": "Cloth config API",
-                    "descripcion": "Cloth config API",
-                    "file": "cloth-config-8.3.115-forge.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/4973/444/cloth-config-8.3.115-forge.jar",
-                    "disponible": true,
-                    "dependencia": []
-                }
-            ]
-        },
-        {
-            "name": "Item Physic",
-            "descripcion": "Al tirar los items, estos ya no flotan, si que están tirados en el piso de forma realista",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/itemphysic",
-            "file": "",
-            "url": "",
-            "disponible": true,
-            "active": true,
-            "dependencia": [
-                {
-                    "name": "Creative core",
-                    "descripcion": "Creative core",
-                    "file": "CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
-                    "disponible": true,
-                    "dependencia": []
-                }
-            ]
-        },
-        {
-            "name": "Skin Layer",
-            "descripcion": "Hace que la segunda capa de las skins sea 3D.",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/skin-layers-3d",
-            "file": "skinlayers3d-forge-1.6.6-mc1.19.2.jar",
-            "url": "https://mediafilez.forgecdn.net/files/5429/194/skinlayers3d-forge-1.6.6-mc1.19.2.jar",
-            "disponible": true,
-            "active": true,
-            "dependencia": []
-        },
-        {
-            "name": "Visuality - Reforged",
-            "descripcion": "Proporciona varios efectos de particulas que ambientan el mundo (por ejemplo, cuando un slime salta, deja pequeñas particulas en el piso, o que cuando llueve, se ven las gotas que caen en el agua).",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/visuality-reforged",
-            "file": "visuality-forge-2.0.2.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4684/872/visuality-forge-2.0.2.jar",
-            "disponible": true,
-            "active": true,
-            "dependencia": []
-        },
-        {
-            "name": "Re Blured",
-            "descripcion": "Agrega una difuminación de fondo al momento de estar en una interfaz.",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/reblured",
-            "file": "Reblured-1.19.1-1.2.0.jar",
-            "url": "https://mediafilez.forgecdn.net/files/3953/81/Reblured-1.19.1-1.2.0.jar",
-            "disponible": true,
-            "active": true,
-            "dependencia": []
         },
         {
             "name": "Camera Overhaul",
