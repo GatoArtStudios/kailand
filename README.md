@@ -34,12 +34,12 @@ Hola bienvenido a este repositorio en el cual tenemos todo el codigo del proyect
 - Detecta memoria ram :white_check_mark: 
 - Agregando encriptado a archivos de configuracion :white_check_mark: 
 - Codigo por modulos :white_check_mark: 
-- Compatibilidad con linux, windows, MacOS :white_check_mark: 
+- Compatibilidad con linux, windows, MacOS :white_check_mark:
 - AntiCheat :white_check_mark: 
 - Solucion de dependencias :white_check_mark: 
 - Colores en consola con opcion de desactivar en settings :arrows_counterclockwise: 
-- Rediseño del apartado de mods complementarios :arrows_counterclockwise: 
-- Tener complementos activos por defecto :arrows_counterclockwise: 
+- Rediseño del apartado de mods complementarios :white_check_mark:
+- Tener complementos activos por defecto :white_check_mark:
 - Configuraciones por defecto para el juego (Fancymenu, etc) :arrows_counterclockwise:
 
 > [!WARNING]
