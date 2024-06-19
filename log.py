@@ -1,9 +1,11 @@
 import os
 import logging
 from logging import StreamHandler
+import flet as ft
 
-log_console = '' # Variable que almacena el log para la consola
+log_console = [] # Variable que almacena el log para la consola
 LOG_AVAILABLE = False
+DEBUG_LINES = '100'
 
 def loger():
     """
@@ -46,7 +48,16 @@ class ConsoleHandler(StreamHandler):
         msg = self.format(record)
 
         # Agrega el registro a log_console
-        log_console += f'{msg}\n'
+        if record.levelname == 'INFO':
+            log_console.append(ft.Text(msg, color='green', selectable=True, font_family='FiraCode'))
+        elif record.levelname == 'WARNING':
+            log_console.append(ft.Text(msg, color='yellow', selectable=True, weight=ft.FontWeight.BOLD, font_family='FiraCode'))
+        elif record.levelname == 'ERROR':
+            log_console.append(ft.Text(msg, color='red', selectable=True, weight=ft.FontWeight.BOLD, font_family='FiraCode'))
+
+        # Elimina los registros antiguos para proteger el rendimiento
+        if len(log_console) > int(DEBUG_LINES):
+            log_console.pop(0)
 
         # Verifica si log_available es True
         if LOG_AVAILABLE:
@@ -56,8 +67,7 @@ class ConsoleHandler(StreamHandler):
                 from ui import app
 
                 # Actualiza el valor de console_log con log_console
-                data_widget.console_log.value = log_console
-
+                data_widget.console_log.controls = log_console
                 # Actualiza la página de app
                 app.page_update()
             except ImportError:

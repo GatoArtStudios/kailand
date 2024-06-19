@@ -37,7 +37,7 @@ Hola bienvenido a este repositorio en el cual tenemos todo el codigo del proyect
 - Compatibilidad con linux, windows, MacOS :white_check_mark:
 - AntiCheat :white_check_mark: 
 - Solucion de dependencias :white_check_mark: 
-- Colores en consola con opcion de desactivar en settings :arrows_counterclockwise: 
+- Colores en consola con opcion de desactivar en settings :white_check_mark:
 - Rediseño del apartado de mods complementarios :white_check_mark:
 - Tener complementos activos por defecto :white_check_mark:
 - Configuraciones por defecto para el juego (Fancymenu, etc) :white_check_mark:

@@ -29,6 +29,10 @@ class LauncherVentana:
         self._page.overlay.append(data_widget.user_alert)
         self._page.window_title_bar_hidden = True
         self._page.window_title_bar_buttons_hidden = True
+        self._page.fonts = {
+            'Minecraft': '/fonts/Minecrafter.Alt.ttf',
+            'FiraCode': '/fonts/FiraCodeNerdFont-SemiBold.ttf'
+        }
         self._page.add(
             # Contenedor Principal y donde se agrega el fondo de la ventana
             ft.Container(

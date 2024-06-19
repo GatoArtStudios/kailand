@@ -20,6 +20,7 @@ class DataWidget:
         ```
         '''
         from game import mc
+        from log import log_console
 
         self.data_widget = {
             'texto': ft.Text('Primer Texto'),
@@ -35,7 +36,7 @@ class DataWidget:
         self.main = ft.Container(
             content=self.main_file
         )
-        self.console_log = ft.Text("", selectable=True, color="white")
+        self.console_log = ft.Column(scroll=ft.ScrollMode.AUTO, controls=log_console, spacing=0)
         self.dlg = ft.AlertDialog(title=ft.Text("Resumen de instalacion"), content=ft.Text("Todos los recursos necesarios para jugar ya estan instalados."))
         self.check_vercion_launcher = ft.AlertDialog(
             title=ft.Text("Actualizacion disponible"),
@@ -82,10 +83,10 @@ class DataWidget:
         self.text_reglas_list = self.text_reglas.split("\n")
         self.java_info = ft.FilePicker(on_result= self.result_java_path)
         self.info_execute_java = self.data_java_execute()
-        self.text_save_setting = ft.Text(top=260, color="white")
+        self.text_save_setting = ft.Text(top=170, color="white")
         self.t = ft.Text(color="white")
         self.buttom_save = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_info(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
-        self.buttom_save_setting = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_setting(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), top=290, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
+        self.buttom_save_setting = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_setting(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), top=200, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.type_login = ft.Dropdown(label="Tipo de cuenta", label_style=ft.TextStyle(color="white"), hint_text="Seleccione el tipo", hint_style=ft.TextStyle(color="white"), options=[ft.dropdown.Option("Offline"), ft.dropdown.Option("(Online) Microsoft")], border_color="white", width=300, on_change=self.save_info, color="white", bgcolor="black")
         self.select_bar_ram = ft.Slider(min=2, max=memory.memory_total(), divisions=memory.memory_divide(), label="{value}Gb", value=mc.valor_xmx, on_change=lambda e: self.change_ram_text(e, self.text_ram), width=620)
         self.java_path = ft.TextField(label="Ejecutable de Java", read_only=True, border_color="white", width=500, value=self.info_execute_java, color="white")
@@ -98,6 +99,27 @@ class DataWidget:
             scale=ft.transform.Scale(1)
         )
         self.text_ram = ft.Text(f"Ram Actual: ({mc.valor_xmx} Gb)", color="white")
+        from log import DEBUG_LINES
+
+        self.lines_console = ft.Dropdown(
+                        label='Lines/Debug de consola',
+                        label_style=ft.TextStyle(color="white"),
+                        hint_text='Lineas a cargar',
+                        hint_style=ft.TextStyle(color="white"),
+                        options=[
+                            ft.dropdown.Option('100'),
+                            ft.dropdown.Option('300'),
+                            ft.dropdown.Option('500'),
+                            ft.dropdown.Option('700'),
+                            ft.dropdown.Option('1000'),
+                        ],
+                        border_color="white",
+                        width=300,
+                        on_change=self.change_lines_console,
+                        color="white",
+                        bgcolor="black",
+                        value=DEBUG_LINES
+                    )
         self.ajustes_widget = ft.Container(
             content=ft.Column([
                     ft.Text("Resolucion de Minecraft", color="white"),
@@ -112,9 +134,10 @@ class DataWidget:
                             self.java_path,
                             self.buttom_change_java
                         ]
-                        ),
+                    ),
                     self.text_ram,
                     self.select_bar_ram,
+                    self.lines_console,
                     ft.Stack([
                         self.text_save_setting,
                         self.buttom_save_setting,
@@ -149,7 +172,7 @@ class DataWidget:
                                     )
                                 ]
                             ),
-                            top=300,
+                            top=230,
                             left=760
                         )
                         ])
@@ -160,10 +183,10 @@ class DataWidget:
         )
         self.reglas_widget = ft.Container(
             content=ft.Column([
-                    ft.Text("Reglas de Kailand", color="white", size=50, weight=ft.FontWeight.W_900, selectable=True),
+                    ft.Text("Reglas de Kailand", color="white", size=50, weight=ft.FontWeight.W_900, selectable=True, font_family='Minecraft'),
                     ft.Container(
                         content=ft.Column(
-                            [ft.Container(content=ft.Text(regla), padding=10, border_radius=5, bgcolor=ft.colors.with_opacity(0.3, "black"), width=900, scale=ft.transform.Scale(1), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), on_hover=lambda e: self.animation_scale_zoom(e)) for regla in self.text_reglas_list],
+                            [ft.Container(content=ft.Text(regla, font_family='FiraCode'), padding=10, border_radius=5, bgcolor=ft.colors.with_opacity(0.3, "black"), width=900, scale=ft.transform.Scale(1), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), on_hover=lambda e: self.animation_scale_zoom(e)) for regla in self.text_reglas_list],
                             height=480,
                             width=1600,
                             scroll=ft.ScrollMode.ALWAYS,
@@ -333,6 +356,13 @@ class DataWidget:
             padding=10,
             # col=1
         )
+    def change_lines_console(self, e: ft.Dropdown):
+        from log import DEBUG_LINES, logger
+        try:
+            DEBUG_LINES = self.lines_console.value
+            logger.warn(f'Debug cambiado a {self.lines_console.value}, usar mas de 100 puede afectar el rendimiento')
+        except Exception as e:
+            logger.error(f'Error al cambiar el lines debug {e}')
 
     def close_launcher_update(self, e):
         '''
@@ -625,10 +655,9 @@ class DataWidget:
         from log import log_console
         from ui import app
         app.page_update()
-        self.console_log.value = ''
-        lines = log_console.split('\n')
-        for linea in lines:
-            self.console_log.value += f'{linea}\n'
+        self.console_log.controls = []
+        for linea in log_console:
+            self.console_log.controls.append(linea)
             app.page_update()
 
     def console_gui(self, e):

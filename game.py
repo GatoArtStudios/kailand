@@ -17,7 +17,7 @@ class Mc:
         self.data_nube = {}
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
-        self.launcherVersion = "1.0.24.0"
+        self.launcherVersion = "1.0.25.0"
         self.boton_jugar = "Iniciado"
         self.mc_disponible = True
         self.minecraft_directory = DIRECTORY_KAILAND
@@ -523,24 +523,56 @@ class Mc:
             self.anticheat()
             # Ejecuta y alamcena el debug de minecraft java
             if SYSTEM == "Windows":
-                debug_minecraft_launch = subprocess.run(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW)
+                debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW, text=True)
+                while True:
+                    output = debug_minecraft_launch.stdout.readline()
+                    if output == '' and debug_minecraft_launch.poll() is not None:
+                        break
+                    if output:
+                        if 'thread/INFO' in output or '/INFO' in output:
+                            logger.info(output.strip())
+                        elif 'thread/WARN' in output or '/WARN' in output:
+                            logger.warning(output.strip())
+                        elif 'thread/ERROR' in output or '/ERROR' in output:
+                            logger.error(output.strip())
+                        else:
+                            logger.info(output.strip())
             elif SYSTEM == "Linux":
-                debug_minecraft_launch = subprocess.run(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+                while True:
+                    output = debug_minecraft_launch.stdout.readline()
+                    if output == '' and debug_minecraft_launch.poll() is not None:
+                        break
+                    if output:
+                        if 'thread/INFO' in output or '/INFO' in output:
+                            logger.info(output.strip())
+                        elif 'thread/WARN' in output or '/WARN' in output:
+                            logger.warning(output.strip())
+                        elif 'thread/ERROR' in output or '/ERROR' in output:
+                            logger.error(output.strip())
+                        else:
+                            logger.info(output.strip())
             else:
-                debug_minecraft_launch = subprocess.run(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            # Registrar la salida estándar (stdout)
-            if debug_minecraft_launch.stdout:
-                logger.info(debug_minecraft_launch.stdout.decode("utf-8"))
-
-            # Registrar la salida de error (stderr)
-            if debug_minecraft_launch.stderr:
-                logger.error(debug_minecraft_launch.stderr.decode("utf-8"))
+                debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+                while True:
+                    output = debug_minecraft_launch.stdout.readline()
+                    if output == '' and debug_minecraft_launch.poll() is not None:
+                        break
+                    if output:
+                        if 'thread/INFO' in output or '/INFO' in output:
+                            logger.info(output.strip())
+                        elif 'thread/WARN' in output or '/WARN' in output:
+                            logger.warning(output.strip())
+                        elif 'thread/ERROR' in output or '/ERROR' in output:
+                            logger.error(output.strip())
+                        else:
+                            logger.info(output.strip())
 
             # Agrega mensaje debug al logger
             logger.warning("Minecraft Detenido...")
-            e.control.bgcolor = ft.colors.with_opacity(0.2, "white")
+            e.control.bgcolor = ft.colors.with_opacity(1, '#00bd1c')
             e.control.icon = None
-            e.control.color = "white"
+            e.control.color = "black"
             e.control.text = "Jugar"
             e.control.disabled = False
             e.control.update()

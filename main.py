@@ -1,5 +1,7 @@
 import os
 import flet as ft
+import subprocess
+import typing_extensions
 from config import DIRECTORY_KAILAND
 
 
@@ -27,6 +29,20 @@ if not os.path.exists(os.path.join(DIRECTORY_KAILAND, "config")):
 # se importan desde este punto para evitar que halla errores con la creacion de las carpetas
 from ui import app
 from log import logger
+
+try:
+    # Ejecuta el comando `java -version` y captura la salida
+    result = subprocess.run(['java', '-version'], capture_output=True, text=True, check=True)
+    # La salida del comando `java -version` se envía a stderr en lugar de stdout
+    version_info = result.stderr.split('\n')[0].split(' ')[2].split('"')[1].split('.')[0]
+    if int(version_info) >= 17:
+        logger.info(f"Java version: {version_info}")
+    else:
+        logger.error(f'La version actual {version_info} de java no es compatible, descarge una version reciente: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html')
+except subprocess.CalledProcessError as e:
+    logger.error(f"Error al otener la vercion de Java, descarge una version reciente: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html", exc_info=True)
+except FileNotFoundError:
+    logger.error("Java no está instalado o no está en el PATH del sistema, descarge una version reciente: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html", exc_info=True)
 
 # Condición para ejecutar el código solo si el archivo es el archivo principal
 # del programa, es decir, si se ejecuta directamente desde la línea de comandos.
