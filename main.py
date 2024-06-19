@@ -19,6 +19,11 @@ else:
     # Si existe, cambia al directorio
     os.chdir(DIRECTORY_KAILAND)
 
+# Verifica si el directorio de configuración existe
+if not os.path.exists(os.path.join(DIRECTORY_KAILAND, "config")):
+    # Si no existe, crea el directorio
+    os.mkdir(os.path.join(DIRECTORY_KAILAND, "config"))
+
 # se importan desde este punto para evitar que halla errores con la creacion de las carpetas
 from ui import app
 from log import logger

@@ -40,7 +40,7 @@ Hola bienvenido a este repositorio en el cual tenemos todo el codigo del proyect
 - Colores en consola con opcion de desactivar en settings :arrows_counterclockwise: 
 - Rediseño del apartado de mods complementarios :white_check_mark:
 - Tener complementos activos por defecto :white_check_mark:
-- Configuraciones por defecto para el juego (Fancymenu, etc) :arrows_counterclockwise:
+- Configuraciones por defecto para el juego (Fancymenu, etc) :white_check_mark:
 
 > [!WARNING]
 > Se prohibe el uso del codigo sin autorizacion.

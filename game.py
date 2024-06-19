@@ -1,10 +1,12 @@
 import os
 import uuid
+import shutil
+import zipfile
 import requests
-import flet as ft
 import subprocess
-import minecraft_launcher_lib
 import encryption
+import flet as ft
+import minecraft_launcher_lib
 
 class Mc:
     def __init__(self) -> None:
@@ -559,13 +561,51 @@ class Mc:
         else:
             return False
 
+    def download_and_unzip(self, config):
+        from log import logger
+        from config import DIRECTORY_KAILAND
+        directory = os.path.join(DIRECTORY_KAILAND, 'config', config['directory'])
+        name_zip = config['file']
+        try:
+            logger.info(f"Descargando configuración de {config['name']}")
+            response = requests.get(config['url'])
+            if response.status_code == 200:
+                with open(name_zip, 'wb') as f:
+                    f.write(response.content)
+
+                logger.info(f"Descomprimiendo configuración de {config['name']}")
+                if not os.path.exists(directory):
+                    os.mkdir(directory)
+
+                with zipfile.ZipFile(name_zip, 'r') as zip_ref:
+                    zip_ref.extractall(directory)
+
+                os.remove(name_zip)
+                logger.info(f"Se ha descargado la configuración de {config['name']} y se ha descomprimido correctamente")
+            else:
+                logger.error(f"Error al descargar configuración de {config['name']}: {e}")
+        except Exception as e:
+            logger.error(f"Error al descargar configuración de {config['name']}: {e}")
+
     def install_minecraft(self, e):
         '''
         Instala el minecraft
         '''
         from log import logger
         from layout import data_widget
+        from config import DIRECTORY_KAILAND
         logger.info("Comprobando recursos")
+        for config in self.data_nube['config']:
+            if config['disponible']:
+                if not os.path.exists(os.path.join(DIRECTORY_KAILAND, 'config', config['directory'])):
+                    self.download_and_unzip(config)
+            else:
+                try:
+                    shutil.rmtree(os.path.join(DIRECTORY_KAILAND, 'config', config['directory']))
+                    logger.info(f"Se ha eliminado la configuración de {config['name']}")
+                except Exception as e:
+                    logger.error(f"Error al eliminar la configuración de {config['name']}: {e}")
+
         data_widget.div_mods = ft.Container(
                     content=ft.Tabs(
                         selected_index=1,
