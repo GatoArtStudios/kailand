@@ -166,6 +166,7 @@ class LauncherVentana:
                 sys.exit(1)
             except SystemExit:
                 os._exit(1)
+            sys.exit(0)
 
         elif not mc.validate_directory():
             logger.warning("Faltan Recursos necesarios, por favor verifica los recursos y acepta la instalacion de recursos")
