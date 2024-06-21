@@ -20,7 +20,7 @@ class Mc:
         self.data_nube = {}
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
-        self.launcherVersion = "1.0.25.0"
+        self.launcherVersion = "1.0.25.1"
         self.boton_jugar = "Iniciado"
         self.mc_disponible = True
         self.minecraft_directory = DIRECTORY_KAILAND
