@@ -154,21 +154,19 @@ class LauncherVentana:
             if response.status_code == 200:
                 __temp_data_get = response.json()
                 mc.url_new_vercion = __temp_data_get["launcherUrl"]
-                data_widget.check_vercion_launcher.content = ft.Text(f"{__temp_data_get['updateDescription']}")
-            self._page.dialog = data_widget.check_vercion_launcher
-            data_widget.check_vercion_launcher.open = True
-            self._page.update()
-            time.sleep(20)
-            webbrowser.open(__temp_data_get["launcherUrl"])
-            self._page.window_destroy()
-            time.sleep(3)
-            try:
-                sys.exit(1)
-            except SystemExit:
-                os._exit(1)
+                data_widget.check_vercion_launcher.content = ft.Text(
+                    __temp_data_get["updateDescription"]
+                )
+                self._page.dialog = data_widget.check_vercion_launcher
+                data_widget.check_vercion_launcher.open = True
+                self._page.update()
+                time.sleep(20)
+                webbrowser.open(__temp_data_get["launcherUrl"])
+                self._page.window_destroy()
+                time.sleep(3)
             sys.exit(0)
 
-        elif not mc.validate_directory():
+        elif not mc.validate_directory(): # Ejecuta el bloque de condigo si el metodo retorna False
             logger.warning("Faltan Recursos necesarios, por favor verifica los recursos y acepta la instalacion de recursos")
             data_widget.buttom_jugar.text = "No instalado"
             data_widget.buttom_jugar.icon = ft.icons.DISABLED_BY_DEFAULT

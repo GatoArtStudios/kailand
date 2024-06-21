@@ -64,12 +64,24 @@ class Mc:
                 self.data_nube = {}
         ```
         '''
+        """
+        Carga los datos del archivo mods_data.json en la siguiente ruta:
+
+        Si el archivo existe, se decodifica y se actualiza `self.data_nube` con los datos.
+        De lo contrario, se realiza una solicitud GET a la URL de los datos en el servidor.
+        Si la solicitud es exitosa, `self.data_nube` se actualiza con los datos obtenidos.
+
+        """
         if os.path.exists(self.archivo_mods_data):
+            # Decodifica y actualiza los datos desde el archivo
             temp_data_mods = encryption.decrypt_message(self.archivo_mods_data)
             self.data_nube.update(temp_data_mods)
         else:
+            # Realiza una solicitud GET a la URL de los datos en el servidor
             response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
-            self.data_nube.update(response.json())
+            if response.status_code == 200:
+                # Actualiza los datos desde la respuesta obtenida
+                self.data_nube.update(response.json())
 
     def ram_launcher(self):
         '''
@@ -175,21 +187,20 @@ class Mc:
         # Crea el directorio de mods
         if not os.path.exists(os.path.join(self.minecraft_directory, "mods")):
             os.mkdir(os.path.join(self.minecraft_directory, "mods"))
-        else:
-            pass
         # Crea el directorio de Shader
         if not os.path.exists(os.path.join(self.minecraft_directory, "shaderpacks")):
             os.mkdir(os.path.join(self.minecraft_directory, "shaderpacks"))
-        else:
-            pass
         # Crea el directorio de Texturas
         if not os.path.exists(os.path.join(self.minecraft_directory, "resourcepacks")):
             os.mkdir(os.path.join(self.minecraft_directory, "resourcepacks"))
-        else:
-            pass
 
-        # Comprueba si el archivo existe
+        # Verifica si el archivo existe
         if os.path.exists(self.archivo_kailand):
+            """
+            Si el archivo existe, se lee el contenido del archivo JSON y se actualiza el diccionario de la variable options con los datos obtenidos.
+            El diccionario 'options' contiene las opciones de configuración del juego.
+            El log se actualiza con los datos obtenidos.
+            """
             from log import logger
             # Lee el contenido del archivo JSON y actualiza el diccionario de la variable options
             data_options = encryption.decrypt_message(file=self.archivo_kailand)
@@ -445,39 +456,58 @@ class Mc:
         encryption.encrypt_message(self.options, self.archivo_kailand)
         logger.info("Guardo las optiones en el archivo de configuracion")
 
-    def consulta_nube(self, bt_play = False):
-        '''
-        Consulta el archivo de configuracon en el servidor'
-        '''
-        response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
-        if response.status_code == 200:
+    def consulta_nube(self, bt_play: bool = False) -> bool:
+        """
+        Consulta el archivo de configuración en el servidor.
+
+        Args:
+            bt_play (bool): Indica si se debe actualizar la configuración si es necesario.
+
+        Retorna:
+            bool: True si la configuración coincide con la del servidor, False si no coincide o si hay un error de conexión.
+        """
+        try:
+            response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
+            response.raise_for_status()
             temp_json = response.json()
             if os.path.exists(self.archivo_mods_data):
-                if temp_json["configVersion"] == self.data_nube["configVersion"]:
-                    return True
-                else:
+                if temp_json["configVersion"] != self.data_nube["configVersion"]:
                     if bt_play:
                         encryption.encrypt_message(temp_json, self.archivo_mods_data)
                         self.data_nube.update(temp_json)
                         return True
-                    else:
-                        return False
-
+                    return False
             else:
-                self.data_nube.update(response.json())
+                self.data_nube.update(temp_json)
                 encryption.encrypt_message(self.data_nube, self.archivo_mods_data)
-                return True
-        else:
+            return True
+        except requests.exceptions.RequestException:
             return False
 
     def validate_directory(self):
-        '''
-        Valida si los directorios y el minecraft esta instalado
-        '''
+        """
+        Valida si los directorios y el minecraft están instalados.
+
+        Retorna True si los directorios y el minecraft están instalados,
+        False en caso contrario.
+        """
+        # Verifica si el directorio principal de Minecraft existe.
         if os.path.exists(self.minecraft_directory):
-            if os.path.exists(os.path.join(self.minecraft_directory, "mods")) and os.path.exists(os.path.join(self.minecraft_directory, "assets")) and os.path.exists(os.path.join(self.minecraft_directory, "libraries")) and os.path.exists(os.path.join(self.minecraft_directory, "runtime")) and os.path.exists(os.path.join(self.minecraft_directory, "versions"))  and os.path.exists(os.path.join(self.minecraft_directory, "shaderpacks")) and os.path.exists(os.path.join(self.minecraft_directory, "resourcepacks")) and os.path.exists(os.path.join(self.minecraft_directory, "versions","1.19.2")) and os.path.exists(os.path.join(self.minecraft_directory, "versions", "1.19.2-forge-43.4.0") and minecraft_launcher_lib.utils.is_version_valid('1.19.2', self.minecraft_directory)):
-                if self.consulta_nube():
-                    return True
+            # Verifica que todos los subdirectorios necesarios estén presentes.
+            if all([os.path.exists(os.path.join(self.minecraft_directory, directory)) for directory in [
+                    "mods", "assets", "libraries", "runtime", "versions",
+                    "shaderpacks", "resourcepacks",
+                    "versions/1.19.2",
+                    "versions/1.19.2-forge-43.4.0",
+                ]
+            ]):
+                # Verifica que la versión de Minecraft sea válida.
+                if minecraft_launcher_lib.utils.is_version_valid('1.19.2', self.minecraft_directory):
+                    # Verifica que la configuración de la nube sea válida.
+                    if self.consulta_nube():
+                        return True
+                    else:
+                        return False
                 else:
                     return False
             else:
@@ -529,7 +559,7 @@ class Mc:
             self.anticheat()
             # Ejecuta y alamcena el debug de minecraft java
             if SYSTEM == "Windows":
-                debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW, text=True)
+                debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW  | subprocess.DETACHED_PROCESS, text=True)
                 # Da notificación de que el launcher se ha cerrado y el juego a iniciado
                 logger.warning('Cerrando launcher, el juego iniciara en unos segundos...')
                 time.sleep(3)
@@ -578,17 +608,35 @@ class Mc:
 
     def check_update_launcher(self):
         '''
-        Chequea actualizaciones en el servidor
+        Chequea actualizaciones en el servidor y retorna el estado en boleano
+
+        Retorna True si hay una actualizacion disponible y False si no lo hay
+
+        Comprueba si la version del launcher actual es igual a la version del launcher en el servidor.
+        Si son diferentes retorna True, si son iguales retorna False.
         '''
-        response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
-        if response.status_code == 200:
-            __temp_data_get = response.json()
-            if not __temp_data_get["launcherVersion"] == self.launcherVersion: # Si la vercion no es la misma es valido
-                return True
-            else: # Si la vercion es la misma ignora el resto
+        # Obtiene la configuracion actual del servidor
+        try:
+            response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
+            if response.status_code == 200:
+                # Parsea el json obtenido
+                __temp_data_get = response.json()
+                if not __temp_data_get["launcherVersion"] == self.launcherVersion: # Si la vercion no es la misma es valido
+                    # Si hay una actualizacion disponible retorna True
+                    return True
+                else: # Si la vercion es la misma ignora el resto
+                    # No hay actualizaciones disponibles retorna False
+                    return False
+            else:
+                # Faltó obtener la respuesta del servidor retorna False
                 return False
-        else:
-            return False
+        except Exception as e:
+            # Faltó obtener la respuesta del servidor retorna False
+            try:
+                sys.exit(1)
+            except SystemExit:
+                os._exit(1)
+            sys.exit(0)
 
     def download_and_unzip(self, config):
         from log import logger

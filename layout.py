@@ -49,7 +49,7 @@ class DataWidget:
         self.dlg_modal = ft.AlertDialog(
             modal=True,
             title=ft.Text("Aviso"),
-            content=ft.Text("Quieres instalar los recursos necesarios para Kailand V? la instalacion dura unos cuantos minutos"),
+            content=ft.Text("¿Quieres instalar los recursos necesarios para Kailand V? la instalacion dura unos cuantos minutos"),
             actions=[
                 ft.TextButton("Si", on_click=self.close_dlg_exe),
                 ft.TextButton("No", on_click=self.close_dlg),

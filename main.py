@@ -31,8 +31,8 @@ from ui import app
 from log import logger
 
 try:
-    # Ejecuta el comando `java -version` y captura la salida
-    result = subprocess.run(['java', '-version'], capture_output=True, text=True, check=True)
+    # Ejecuta el comando `java -version` y captura la salida, sin mostrar la terminal
+    result = subprocess.run(['java', '-version'], text=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
     # La salida del comando `java -version` se envía a stderr en lugar de stdout
     version_info = result.stderr.split('\n')[0].split(' ')[2].split('"')[1].split('.')[0]
     if int(version_info) >= 17:
@@ -40,10 +40,9 @@ try:
     else:
         logger.error(f'La version actual {version_info} de java no es compatible, descarge una version reciente: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html')
 except subprocess.CalledProcessError as e:
-    logger.error(f"Error al otener la vercion de Java, descarge una version reciente: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html", exc_info=True)
+    logger.error(f"Error al obtener la versión de Java, descarga una versión reciente: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html", exc_info=True)
 except FileNotFoundError:
-    logger.error("Java no está instalado o no está en el PATH del sistema, descarge una version reciente: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html", exc_info=True)
-
+    logger.error("Java no está instalado o no está en el PATH del sistema, descarga una versión reciente: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html", exc_info=True)
 # Condición para ejecutar el código solo si el archivo es el archivo principal
 # del programa, es decir, si se ejecuta directamente desde la línea de comandos.
 if __name__ == "__main__":
