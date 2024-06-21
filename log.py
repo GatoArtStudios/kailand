@@ -5,7 +5,6 @@ import flet as ft
 
 log_console = [] # Variable que almacena el log para la consola
 LOG_AVAILABLE = False
-DEBUG_LINES = '100'
 
 def loger():
     """
@@ -36,6 +35,11 @@ class ConsoleHandler(StreamHandler):
     """
     Manejador de la consola que se encarga de capturar los registros y mostrarlos en la consola.
     """
+    @property
+    def update_lines_console(self):
+        from config import DEBUG_LINES
+        return int(DEBUG_LINES)
+    
     def emit(self, record):
         """
         Método que se encarga de formatear el registro y actualizar la variable de log_console.
@@ -56,7 +60,7 @@ class ConsoleHandler(StreamHandler):
             log_console.append(ft.Text(msg, color='red', selectable=True, weight=ft.FontWeight.BOLD, font_family='FiraCode'))
 
         # Elimina los registros antiguos para proteger el rendimiento
-        if len(log_console) > int(DEBUG_LINES):
+        if len(log_console) > self.update_lines_console:
             log_console.pop(0)
 
         # Verifica si log_available es True

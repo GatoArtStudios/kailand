@@ -134,7 +134,6 @@ class LauncherVentana:
         self._page.update()
 
     def animacion_opacity(self, e):
-        print(vars(e))
         if e.data == "true":
             e.control.opacity = 1
             e.control.update()

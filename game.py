@@ -1,8 +1,11 @@
 import os
+import sys
+import time
 import uuid
 import shutil
 import zipfile
 import requests
+import threading
 import subprocess
 import encryption
 import flet as ft
@@ -26,7 +29,7 @@ class Mc:
             "uuid": None,
             "token": "",
             "executablePath": "java",
-            "jvmArguments": ["-Xmx5G", "-Xms2G"],
+            "jvmArguments": ["-Xmx5G", "-Xms2G", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseG1GC", "-XX:G1NewSizePercent=20", "-XX:G1ReservePercent=20", "-XX:MaxGCPauseMillis=50", "-XX:G1HeapRegionSize=32M"],
             "launcherName": "Kailand V - Launcher",
             "gameDirectory": self.minecraft_directory,
             "customResolution": True,
@@ -34,6 +37,8 @@ class Mc:
             "resolutionWidth": "854",
             "launcherVersion": "1.0",
         }
+        self.setting_progress = 0
+        self.progress_time = 1
         self.archivo_kailand = os.path.join(self.minecraft_directory, "kaliand.json")
         self.archivo_mods_data = os.path.join(self.minecraft_directory, "mods_data.json")
         self.ruta_mods = os.path.join(self.minecraft_directory, "mods")
@@ -470,7 +475,7 @@ class Mc:
         Valida si los directorios y el minecraft esta instalado
         '''
         if os.path.exists(self.minecraft_directory):
-            if os.path.exists(os.path.join(self.minecraft_directory, "mods")) and os.path.exists(os.path.join(self.minecraft_directory, "assets")) and os.path.exists(os.path.join(self.minecraft_directory, "libraries")) and os.path.exists(os.path.join(self.minecraft_directory, "runtime")) and os.path.exists(os.path.join(self.minecraft_directory, "versions"))  and os.path.exists(os.path.join(self.minecraft_directory, "shaderpacks")) and os.path.exists(os.path.join(self.minecraft_directory, "resourcepacks")) and os.path.exists(os.path.join(self.minecraft_directory, "versions","1.19.2")) and os.path.exists(os.path.join(self.minecraft_directory, "versions", "1.19.2-forge-43.3.8")):
+            if os.path.exists(os.path.join(self.minecraft_directory, "mods")) and os.path.exists(os.path.join(self.minecraft_directory, "assets")) and os.path.exists(os.path.join(self.minecraft_directory, "libraries")) and os.path.exists(os.path.join(self.minecraft_directory, "runtime")) and os.path.exists(os.path.join(self.minecraft_directory, "versions"))  and os.path.exists(os.path.join(self.minecraft_directory, "shaderpacks")) and os.path.exists(os.path.join(self.minecraft_directory, "resourcepacks")) and os.path.exists(os.path.join(self.minecraft_directory, "versions","1.19.2")) and os.path.exists(os.path.join(self.minecraft_directory, "versions", "1.19.2-forge-43.4.0") and minecraft_launcher_lib.utils.is_version_valid('1.19.2', self.minecraft_directory)):
                 if self.consulta_nube():
                     return True
                 else:
@@ -504,6 +509,7 @@ class Mc:
         '''
         from log import logger
         from layout import data_widget
+        from ui import app
         if minecraft_launcher_lib.utils.is_minecraft_installed(self.minecraft_directory):
             from config import SYSTEM
             logger.info("Minecraft si esta instalado")
@@ -511,7 +517,7 @@ class Mc:
             # Guardar datos en un archivo JSON
             encryption.encrypt_message(self.options, self.archivo_kailand)
             # Obtiene el comando para ejecutar Minecraft
-            minecraft_command = minecraft_launcher_lib.command.get_minecraft_command("1.19.2-forge-43.3.8", self.minecraft_directory, self.options)
+            minecraft_command = minecraft_launcher_lib.command.get_minecraft_command("1.19.2-forge-43.4.0", self.minecraft_directory, self.options)
             # Agrega datos al logger
             logger.info("Ejecutando Minecraft")
             e.control.bgcolor = ft.colors.with_opacity(0.1, "white")
@@ -524,19 +530,15 @@ class Mc:
             # Ejecuta y alamcena el debug de minecraft java
             if SYSTEM == "Windows":
                 debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW, text=True)
-                while True:
-                    output = debug_minecraft_launch.stdout.readline()
-                    if output == '' and debug_minecraft_launch.poll() is not None:
-                        break
-                    if output:
-                        if 'thread/INFO' in output or '/INFO' in output:
-                            logger.info(output.strip())
-                        elif 'thread/WARN' in output or '/WARN' in output:
-                            logger.warning(output.strip())
-                        elif 'thread/ERROR' in output or '/ERROR' in output:
-                            logger.error(output.strip())
-                        else:
-                            logger.info(output.strip())
+                # Crear un hilo para leer la salida del proceso
+                logger.warning('Cerrando launcher, el juego iniciara en unos segundos...')
+                app._page.window_destroy()
+                time.sleep(3)
+                try:
+                    sys.exit(1)
+                except SystemExit:
+                    os._exit(1)
+                sys.exit(0)
             elif SYSTEM == "Linux":
                 debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                 while True:
@@ -626,7 +628,13 @@ class Mc:
         from log import logger
         from layout import data_widget
         from config import DIRECTORY_KAILAND
-        logger.info("Comprobando recursos")
+        from ui import app
+
+        logger.info("Comprobando recursos instalados, estos puede demorar.")
+        data_widget.progressbar_install.value = 0.05
+        data_widget.progressbar_install.tooltip = 'Instalando configuraciones: 5%'
+        app.page_update()
+        # Verifica si las configuraciones predeterminadas ya estan descargadas
         for config in self.data_nube['config']:
             if config['disponible']:
                 if not os.path.exists(os.path.join(DIRECTORY_KAILAND, 'config', config['directory'])):
@@ -637,7 +645,10 @@ class Mc:
                     logger.info(f"Se ha eliminado la configuración de {config['name']}")
                 except Exception as e:
                     logger.error(f"Error al eliminar la configuración de {config['name']}: {e}")
-
+        data_widget.progressbar_install.value = 0.1
+        data_widget.progressbar_install.tooltip = '10%'
+        app.page_update()
+        # Establece esta configuracion para el apartado de mods para evitar que los usuarios manipulen mods durante la instalacion
         data_widget.div_mods = ft.Container(
                     content=ft.Tabs(
                         selected_index=1,
@@ -671,101 +682,138 @@ class Mc:
                     height=630,
                     width=950,
                 )
-        e.page.update()
+        # Actualiza la pagina web para mostrar los cambios anteriores
+        app.page_update()
+        # realizamos una comprobacion de los mods, para saber si estan todos instalados
+        logger.info(f'Comprovando si los mods y dependecias estan instalados.')
+
+        data_widget.progressbar_install.value = 0.25
+        data_widget.progressbar_install.tooltip = 'Comprobando mods: 25%'
+        app.page_update()
         if self.comprobar_mods():
-                logger.info("Todos los mods estan")
-                data_widget.buttom_jugar.disabled = False
-                data_widget.buttom_jugar.text = "Jugar"
-                data_widget.buttom_jugar.icon = False
-                e.page.splash = None
-                data_widget.div_mods = ft.Container(
-                    content=ft.Tabs(
-                        selected_index=1,
-                        animation_duration=300,
-                        tabs=[
-                            ft.Tab(
-                                text="Predeterminados",
-                                content=ft.GridView(
-                                    [
-                                        data_widget.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in self.data_nube['complementos'] if x['active']
-                                    ],
-                                    runs_count=3,
-                                    max_extent=400,
-                                    child_aspect_ratio=1.5,
-                                )
-                            ),
-                            ft.Tab(
-                                text="Recomendados",
-                                content=ft.GridView(
-                                    [
-                                        data_widget.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in self.data_nube['complementos'] if not x['active']
-                                    ],
-                                    runs_count=3,
-                                    max_extent=400,
-                                    child_aspect_ratio=1.5,
-                                )
-                            )
-                        ]
-                    )
-                    ,
-                    height=630,
-                    width=950,
-                )
-                e.page.update()
-                data_widget.open_dlg(e)
+                logger.info("Todos los mods estan instalados correctamente")
+                # Actualizamos el UI para mostrar los cambios realizados
+                data_widget.progressbar_install.value = 0.3
+                data_widget.progressbar_install.tooltip = '30%'
+                app.page_update()
+
+        data_widget.progressbar_install.value = 0.35
+        data_widget.progressbar_install.tooltip = 'Validando directorios: 35%'
+        app.page_update()
         if self.validate_directory():
-            logger.info("Todos los recursos estan")
+            logger.info("Toda la estructura de directorios esta completa")
+            data_widget.progressbar_install.value = 1.0
+            data_widget.progressbar_install.tooltip = 'Instalacion terminada: 100%'
         else:
             logger.warning("Faltan algunos recursos necesarios")
+            # Ejemplo de funciones de callback
+            def set_status(text: str):
+                logger.info(f"Estado: {text}")
+
+            def set_progress(value: int):
+                self.setting_progress = round((value / self.progress_time) * 100, 1)
+                if self.setting_progress == 100.0:
+                    logger.info(f"Progreso: 100%")
+                    return
+                elif self.setting_progress == 90.0:
+                    logger.info(f"Progreso: 90%")
+                    return
+                elif self.setting_progress == 80.0:
+                    logger.info(f"Progreso: 80%")
+                    return
+                elif self.setting_progress == 70.0:
+                    logger.info(f"Progreso: 70%")
+                    return
+                elif self.setting_progress == 60.0:
+                    logger.info(f"Progreso: 60%")
+                    return
+                elif self.setting_progress == 50.0:
+                    logger.info(f"Progreso: 50%")
+                    return
+                elif self.setting_progress == 40.0:
+                    logger.info(f"Progreso: 40%")
+                    return
+                elif self.setting_progress == 30.0:
+                    logger.info(f"Progreso: 30%")
+                    return
+                elif self.setting_progress == 20.0:
+                    logger.info(f"Progreso: 20%")
+                    return
+                elif self.setting_progress == 10.0:
+                    logger.info(f"Progreso: 10%")
+                    return
+                elif self.setting_progress == 0.0:
+                    logger.info(f"Progreso: 0%")
+                    return
+
+            def set_max(value: int):
+                self.progress_time = value
+
+            data_widget.progressbar_install.value = 0.4
+            data_widget.progressbar_install.tooltip = 'Creando estructura de directorios: 40%'
+            app.page_update()
             self.create_directory()
+            data_widget.progressbar_install.value = 0.5
+            data_widget.progressbar_install.tooltip = 'Consultando servidor: 50%'
+            app.page_update()
             self.consulta_nube(bt_play=True)
+            data_widget.progressbar_install.value = 0.6
+            data_widget.progressbar_install.tooltip = 'Verificando Instalaciones de Minecraft: 60%'
+            app.page_update()
             if not os.path.exists(os.path.join(self.minecraft_directory, "versions", "1.19.2")):
-                logger.info("Instalando Minecraft vanila")
-                minecraft_launcher_lib.install.install_minecraft_version("1.19.2", self.minecraft_directory)
-                logger.info("Minecraft instalado")
-            if not os.path.exists(os.path.join(self.minecraft_directory, "versions", "1.19.2-forge-43.3.8")):
+                logger.info("Instalando Minecraft vanila, esto puede tardar unos minutos.")
+                minecraft_launcher_lib.install.install_minecraft_version("1.19.2", self.minecraft_directory, callback={'setStatus': set_status, 'setProgress': set_progress, 'setMax': set_max})
+                data_widget.progressbar_install.value = 0.8
+                data_widget.progressbar_install.tooltip = 'Minecraft instalado: 80%'
+                app.page_update()
+                logger.info("Minecraft instalado correctamente")
+            if not os.path.exists(os.path.join(self.minecraft_directory, "versions", "1.19.2-forge-43.4.0")):
                 logger.info("Instalando Forge")
-                minecraft_launcher_lib.forge.install_forge_version("1.19.2-43.3.8", self.minecraft_directory)
+                minecraft_launcher_lib.forge.install_forge_version("1.19.2-43.4.0", self.minecraft_directory, callback={'setStatus': set_status, 'setProgress': set_progress, 'setMax': set_max})
+                data_widget.progressbar_install.value = 1.0
+                data_widget.progressbar_install.tooltip = 'Forge instalado: 100%'
+                app.page_update()
                 logger.info("Forge Instalado")
-            if self.comprobar_mods():
-                data_widget.buttom_jugar.disabled = False
-                data_widget.buttom_jugar.text = "Jugar"
-                data_widget.buttom_jugar.icon = False
-                e.page.splash = None
-                data_widget.div_mods = ft.Container(
-                    content=ft.Tabs(
-                        selected_index=1,
-                        animation_duration=300,
-                        tabs=[
-                            ft.Tab(
-                                text="Predeterminados",
-                                content=ft.GridView(
-                                    [
-                                        data_widget.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in self.data_nube['complementos'] if x['active']
-                                    ],
-                                    runs_count=3,
-                                    max_extent=400,
-                                    child_aspect_ratio=1.5,
-                                )
-                            ),
-                            ft.Tab(
-                                text="Recomendados",
-                                content=ft.GridView(
-                                    [
-                                        data_widget.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in self.data_nube['complementos'] if not x['active']
-                                    ],
-                                    runs_count=3,
-                                    max_extent=400,
-                                    child_aspect_ratio=1.5,
-                                )
-                            )
-                        ]
+
+        # Actualiza la pagina con los cambios
+        data_widget.div_mods = ft.Container(
+            content=ft.Tabs(
+                selected_index=1,
+                animation_duration=300,
+                tabs=[
+                    ft.Tab(
+                        text="Predeterminados",
+                        content=ft.GridView(
+                            [
+                                data_widget.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in self.data_nube['complementos'] if x['active']
+                            ],
+                            runs_count=3,
+                            max_extent=400,
+                            child_aspect_ratio=1.5,
+                        )
+                    ),
+                    ft.Tab(
+                        text="Recomendados",
+                        content=ft.GridView(
+                            [
+                                data_widget.contMods(x['name'], x['descripcion'], x['doct'] if x['doct'] else 'http://example.com', x) for x in self.data_nube['complementos'] if not x['active']
+                            ],
+                            runs_count=3,
+                            max_extent=400,
+                            child_aspect_ratio=1.5,
+                        )
                     )
-                    ,
-                    height=630,
-                    width=950,
-                )
-                e.page.update()
-                data_widget.open_dlg(e)
+                ]
+            )
+            ,
+            height=630,
+            width=950,
+        )
+        data_widget.buttom_jugar.disabled = False
+        data_widget.buttom_jugar.text = "Jugar"
+        data_widget.buttom_jugar.icon = False
+        app._page.splash = None
+        app.page_update()
+        data_widget.open_dlg(e)
 
 mc = Mc()

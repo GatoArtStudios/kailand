@@ -83,10 +83,10 @@ class DataWidget:
         self.text_reglas_list = self.text_reglas.split("\n")
         self.java_info = ft.FilePicker(on_result= self.result_java_path)
         self.info_execute_java = self.data_java_execute()
-        self.text_save_setting = ft.Text(top=170, color="white")
+        self.text_save_setting = ft.Text(top=260, color="white")
         self.t = ft.Text(color="white")
         self.buttom_save = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_info(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
-        self.buttom_save_setting = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_setting(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), top=200, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
+        self.buttom_save_setting = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_setting(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), top=290, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.type_login = ft.Dropdown(label="Tipo de cuenta", label_style=ft.TextStyle(color="white"), hint_text="Seleccione el tipo", hint_style=ft.TextStyle(color="white"), options=[ft.dropdown.Option("Offline"), ft.dropdown.Option("(Online) Microsoft")], border_color="white", width=300, on_change=self.save_info, color="white", bgcolor="black")
         self.select_bar_ram = ft.Slider(min=2, max=memory.memory_total(), divisions=memory.memory_divide(), label="{value}Gb", value=mc.valor_xmx, on_change=lambda e: self.change_ram_text(e, self.text_ram), width=620)
         self.java_path = ft.TextField(label="Ejecutable de Java", read_only=True, border_color="white", width=500, value=self.info_execute_java, color="white")
@@ -99,27 +99,7 @@ class DataWidget:
             scale=ft.transform.Scale(1)
         )
         self.text_ram = ft.Text(f"Ram Actual: ({mc.valor_xmx} Gb)", color="white")
-        from log import DEBUG_LINES
 
-        self.lines_console = ft.Dropdown(
-                        label='Lines/Debug de consola',
-                        label_style=ft.TextStyle(color="white"),
-                        hint_text='Lineas a cargar',
-                        hint_style=ft.TextStyle(color="white"),
-                        options=[
-                            ft.dropdown.Option('100'),
-                            ft.dropdown.Option('300'),
-                            ft.dropdown.Option('500'),
-                            ft.dropdown.Option('700'),
-                            ft.dropdown.Option('1000'),
-                        ],
-                        border_color="white",
-                        width=300,
-                        on_change=self.change_lines_console,
-                        color="white",
-                        bgcolor="black",
-                        value=DEBUG_LINES
-                    )
         self.ajustes_widget = ft.Container(
             content=ft.Column([
                     ft.Text("Resolucion de Minecraft", color="white"),
@@ -137,7 +117,6 @@ class DataWidget:
                     ),
                     self.text_ram,
                     self.select_bar_ram,
-                    self.lines_console,
                     ft.Stack([
                         self.text_save_setting,
                         self.buttom_save_setting,
@@ -172,7 +151,7 @@ class DataWidget:
                                     )
                                 ]
                             ),
-                            top=230,
+                            top=300,
                             left=760
                         )
                         ])
@@ -306,6 +285,7 @@ class DataWidget:
             height=630,
             width=950,
         )
+        self.progressbar_install = ft.ProgressBar(tooltip="Instalando recursos necesarios...", height=5, value=0.0, color='white', bgcolor='black')
 
     def contMods(self, titulo = 'Sin datos', descripcion = 'Sin datos', url = 'http://example.com', x = None, active = False):
         '''
@@ -354,15 +334,7 @@ class DataWidget:
             height=200,
             border_radius=10,
             padding=10,
-            # col=1
         )
-    def change_lines_console(self, e: ft.Dropdown):
-        from log import DEBUG_LINES, logger
-        try:
-            DEBUG_LINES = self.lines_console.value
-            logger.warn(f'Debug cambiado a {self.lines_console.value}, usar mas de 100 puede afectar el rendimiento')
-        except Exception as e:
-            logger.error(f'Error al cambiar el lines debug {e}')
 
     def close_launcher_update(self, e):
         '''
@@ -376,6 +348,7 @@ class DataWidget:
             sys.exit(1)
         except SystemExit:
             os._exit(1)
+        sys.exit(0)
 
     def edit_main(self, e) -> None:
         '''
@@ -478,7 +451,7 @@ class DataWidget:
         Instala recursos
         '''
         from game import mc
-        e.page.splash = ft.ProgressBar(tooltip="Instalando recursos necesarios...", height=5)
+        e.page.splash = self.progressbar_install
         self.dlg_modal.open = False
         e.page.update()
         mc.install_minecraft(e)
@@ -665,6 +638,7 @@ class DataWidget:
         Muestra el contenedor de Consola
         '''
         import log
+        from ui import app
 
         if self.c_derecho.content == self.console_widget:
             log.LOG_AVAILABLE = False
@@ -675,10 +649,10 @@ class DataWidget:
             log.LOG_AVAILABLE = True
             self.c_derecho.content = self.console_widget
             self.c_derecho.disabled = False
-            e.page.update()
+            app.page_update()
             self.animate_buttom(e)
-            hilo = threading.Thread(target=self.load_text_console)
-            hilo.start()
+            self.console_log.controls = log.log_console
+            app.page_update()
         e.page.update()
 
     def reglas_gui(self, e):
