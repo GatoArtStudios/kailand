@@ -28,6 +28,8 @@ DIRECTORY_KAILAND = get_directory_kailand()
 
 SYSTEM = get_system()
 
+DEBUG_LINES = '300'
+
 PRIVATE_KEY = ''''''
 
 PUBLIC_KEY = ''''''

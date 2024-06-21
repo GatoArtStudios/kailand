@@ -530,8 +530,9 @@ class Mc:
             # Ejecuta y alamcena el debug de minecraft java
             if SYSTEM == "Windows":
                 debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW, text=True)
-                # Crear un hilo para leer la salida del proceso
+                # Da notificación de que el launcher se ha cerrado y el juego a iniciado
                 logger.warning('Cerrando launcher, el juego iniciara en unos segundos...')
+                time.sleep(3)
                 app._page.window_destroy()
                 time.sleep(3)
                 try:
@@ -541,34 +542,28 @@ class Mc:
                 sys.exit(0)
             elif SYSTEM == "Linux":
                 debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-                while True:
-                    output = debug_minecraft_launch.stdout.readline()
-                    if output == '' and debug_minecraft_launch.poll() is not None:
-                        break
-                    if output:
-                        if 'thread/INFO' in output or '/INFO' in output:
-                            logger.info(output.strip())
-                        elif 'thread/WARN' in output or '/WARN' in output:
-                            logger.warning(output.strip())
-                        elif 'thread/ERROR' in output or '/ERROR' in output:
-                            logger.error(output.strip())
-                        else:
-                            logger.info(output.strip())
+                # Da notificación de que el launcher se ha cerrado y el juego a iniciado
+                logger.warning('Cerrando launcher, el juego iniciara en unos segundos...')
+                time.sleep(3)
+                app._page.window_destroy()
+                time.sleep(3)
+                try:
+                    sys.exit(1)
+                except SystemExit:
+                    os._exit(1)
+                sys.exit(0)
             else:
                 debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-                while True:
-                    output = debug_minecraft_launch.stdout.readline()
-                    if output == '' and debug_minecraft_launch.poll() is not None:
-                        break
-                    if output:
-                        if 'thread/INFO' in output or '/INFO' in output:
-                            logger.info(output.strip())
-                        elif 'thread/WARN' in output or '/WARN' in output:
-                            logger.warning(output.strip())
-                        elif 'thread/ERROR' in output or '/ERROR' in output:
-                            logger.error(output.strip())
-                        else:
-                            logger.info(output.strip())
+                # Da notificación de que el launcher se ha cerrado y el juego a iniciado
+                logger.warning('Cerrando launcher, el juego iniciara en unos segundos...')
+                time.sleep(3)
+                app._page.window_destroy()
+                time.sleep(3)
+                try:
+                    sys.exit(1)
+                except SystemExit:
+                    os._exit(1)
+                sys.exit(0)
 
             # Agrega mensaje debug al logger
             logger.warning("Minecraft Detenido...")
