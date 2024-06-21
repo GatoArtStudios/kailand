@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.58",
+    "configVersion": "1.0.59",
     "launcherVersion": "1.0.25.1",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSe a solucionado el bug de la barra de progreso,\nSe agrego una barra que carga a medida de la instalcion,\nNuevos argumentos para correr el juego los cuales te daran mas rendimiento y estabilidad,\nAhora el launcher se cierra 6 segundos despues de iniciar el juego para evitar problemas con el fancymenu,\nEncriptado para proteger los datos del launcher.\nNuevo AntiCheat el cual evitara que los usuarios usen mods Cheat para jugar el servidor.",
@@ -51,7 +51,7 @@
             "name": "Silence's Turrets",
             "descripcion": "Silence’s turrets",
             "file": "Silence's Turrets.jar",
-            "url": "https://mediafilez.forgecdn.net/files/5030/766/Silence%27s%20Turrets.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5186/434/Silence%27s%20Turrets.jar",
             "disponible": true,
             "dependencia": []
         },
@@ -82,8 +82,8 @@
         {
             "name": "We got runners",
             "descripcion": "We got runners",
-            "file": "Wegotrunners0.5.1.20.1.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4945/216/Wegotrunners0.5.1.20.1.jar",
+            "file": "Wegotrunners0.5.1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4671/145/Wegotrunners0.5.1.19.2.jar",
             "disponible": false,
             "dependencia": []
         },
@@ -156,7 +156,7 @@
         {
             "name": "L_Enders_Cataclysm",
             "descripcion": "Cataclysm",
-            "file": "L_Enders_Cataclysm-1.89%20-1.19.2.jar",
+            "file": "L_Enders_Cataclysm-1.89 -1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/5039/717/L_Enders_Cataclysm-1.89%20-1.19.2.jar",
             "disponible": true,
             "dependencia": [
@@ -652,7 +652,7 @@
         {
             "name": "Butchersdelight Foods",
             "descripcion": "Butcher’s delight foods",
-            "file": "Butchersdelight%20Foods%20beta%201.19.2%201.0.2.jar",
+            "file": "Butchersdelight Foods beta 1.19.2 1.0.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/4813/851/Butchersdelight%20Foods%20beta%201.19.2%201.0.2.jar",
             "disponible": true,
             "dependencia": []
@@ -1214,8 +1214,8 @@
     ],
     "complementos": [
         {
-            "name": "Advancement Plaques",
-            "descripcion": "Reemplaza la aburrida estética al momento de adquirir un logro. Al conseguir un logro, aparecerá un cartel en pantalla con el logro y du descripción.",
+            "name": "Advancement P.",
+            "descripcion": "Advancement Plaques: Reemplaza la aburrida estética al momento de adquirir un logro. Al conseguir un logro, aparecerá un cartel en pantalla con el logro y du descripción.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/advancement-plaques",
             "file": "AdvancementPlaques-1.19.2-1.4.7.jar",
             "url": "https://mediafilez.forgecdn.net/files/4029/209/AdvancementPlaques-1.19.2-1.4.7.jar",
@@ -1350,8 +1350,8 @@
             "name": "Item Physic",
             "descripcion": "Al tirar los items, estos ya no flotan, si que están tirados en el piso de forma realista",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/itemphysic",
-            "file": "",
-            "url": "",
+            "file": "ItemPhysic_FORGE_v1.6.6_mc1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4061/326/ItemPhysic_FORGE_v1.6.6_mc1.19.2.jar",
             "disponible": true,
             "active": true,
             "dependencia": [
@@ -1403,8 +1403,8 @@
             ]
         },
         {
-            "name": "Loot Beams - Relooted!",
-            "descripcion": "Cuando un item está tirando en el piso muestra un destello de luz del color de la calidad del item",
+            "name": "Loot Beams",
+            "descripcion": "Loot Beams - Relooted!: Cuando un item está tirando en el piso muestra un destello de luz del color de la calidad del item",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/loot-beams",
             "file": "lootbeams-1.19.2-1.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4667/868/lootbeams-1.19.2-1.0.jar",
@@ -1413,8 +1413,8 @@
             "dependencia": []
         },
         {
-            "name": "Not enough animation",
-            "descripcion": "Agrega animaciones a distintas acciones que realiza el jugador (como remar en un bote, al subir una escalera, comer, beber, tener una antorcha en la mano, etc).",
+            "name": "Not enough",
+            "descripcion": "Not enough animation: Agrega animaciones a distintas acciones que realiza el jugador (como remar en un bote, al subir una escalera, comer, beber, tener una antorcha en la mano, etc).",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/not-enough-animations",
             "file": "notenoughanimations-forge-1.7.4-mc1.19.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/5429/253/notenoughanimations-forge-1.7.4-mc1.19.2.jar",
@@ -1510,8 +1510,8 @@
             "dependencia": []
         },
         {
-            "name": "Sound Physics Remastered",
-            "descripcion": "Un mod de Minecraft que proporciona atenuación, reverberación y absorción de sonido realistas a través de bloques.",
+            "name": "Sound Physics",
+            "descripcion": "Sound Physics Remastered: Un mod de Minecraft que proporciona atenuación, reverberación y absorción de sonido realistas a través de bloques.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered",
             "file": "soundphysics-forge-1.19.2-1.0.18.jar",
             "url": "https://mediafilez.forgecdn.net/files/4199/798/soundphysics-forge-1.19.2-1.0.18.jar",
@@ -1520,7 +1520,7 @@
             "dependencia": []
         },
         {
-            "name": "Visuality - Reforged",
+            "name": "Visuality: Reforged",
             "descripcion": "Proporciona varios efectos de particulas que ambientan el mundo (por ejemplo, cuando un slime salta, deja pequeñas particulas en el piso, o que cuando llueve, se ven las gotas que caen en el agua).",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/visuality-reforged",
             "file": "visuality-forge-2.0.2.jar",
@@ -1579,8 +1579,8 @@
             "dependencia": []
         },
         {
-            "name": "Enchantment Description",
-            "descripcion": "Muestras las descripciones de todos los encantamientos vanilla",
+            "name": "Enchantment D.",
+            "descripcion": "Enchantment Description: Muestras las descripciones de todos los encantamientos vanilla",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions",
             "file": "EnchantmentDescriptions-Forge-1.19.2-13.0.14.jar",
             "url": "https://mediafilez.forgecdn.net/files/4277/356/EnchantmentDescriptions-Forge-1.19.2-13.0.14.jar",
@@ -1618,8 +1618,8 @@
             "dependencia": []
         },
         {
-            "name": "Fancy Block Particles",
-            "descripcion": "modifica a TODAS las partículas, haciéndolas 3D",
+            "name": "Fancy Block",
+            "descripcion": "Fancy Block Particles: modifica a TODAS las partículas, haciéndolas 3D",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/fbp-renewed",
             "file": "FancyBlockParticles-1.19.2-forge-1.4.1.0-beta.jar",
             "url": "https://mediafilez.forgecdn.net/files/5209/137/FancyBlockParticles-1.19.2-forge-1.4.1.0-beta.jar",
@@ -1638,8 +1638,8 @@
             "dependencia": []
         },
         {
-            "name": "Dynamic light reforged",
-            "descripcion": "Introduce la configuración de Opfifine de las antorchas dinámicas.",
+            "name": "Dynamic light",
+            "descripcion": "Dynamic light Reforged: Introduce la configuración de Opfifine de las antorchas dinámicas.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/dynamiclights-reforged",
             "file": "dynamiclightsreforged-1.19.2_v1.4.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4285/414/dynamiclightsreforged-1.19.2_v1.4.0.jar",
@@ -1648,7 +1648,7 @@
             "dependencia": []
         },
         {
-            "name": "Embeddium/Rubidium Extras",
+            "name": "Rubidium Extras",
             "descripcion": "Magnesium Extras adds a lot of features to Magnesium or Rubidium (Forge Sodium) to improve the mod. It includes several features from other mods, packaged into one add-on that you'll want to install for the best experience.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/magnesium-extras",
             "file": "rubidium_extras-1.19.2_v1.4.3.jar",
