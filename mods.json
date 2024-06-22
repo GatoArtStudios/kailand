@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.60",
+    "configVersion": "1.0.61",
     "launcherVersion": "1.0.25.1",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSe a solucionado el bug de la barra de progreso,\nSe agrego una barra que carga a medida de la instalcion,\nNuevos argumentos para correr el juego los cuales te daran mas rendimiento y estabilidad,\nAhora el launcher se cierra 6 segundos despues de iniciar el juego para evitar problemas con el fancymenu,\nEncriptado para proteger los datos del launcher.\nNuevo AntiCheat el cual evitara que los usuarios usen mods Cheat para jugar el servidor.",
@@ -865,10 +865,18 @@
             "dependencia": []
         },
         {
-            "name": "Kailand Mod",
+            "name": "Kailand Mod | Deprecate",
             "descripcion": "Kailand Mod",
             "file": "Kailand_Mod_1.19.2.jar",
             "url": "https://github.com/GatoArtStudios/kailand/raw/config/mods/Kailand_Mod_1.19.2.jar",
+            "disponible": false,
+            "dependencia": []
+        },
+        {
+            "name": "Kailand Mod v1.0.2",
+            "descripcion": "Kailand Mod v1.0.2",
+            "file": "Kailand-1.19.2-1.0.2.jar",
+            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/Kailand-1.19.2-1.0.2.jar",
             "disponible": true,
             "dependencia": []
         },
@@ -987,7 +995,7 @@
             "dependencia": []
         },
         {
-            "name": "Video player",
+            "name": "Video player | Deprecate",
             "descripcion": "Video player",
             "file": "VideoPlayer-27.4-FORGE-1.19.2 (1).jar",
             "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/VideoPlayer-27.4-FORGE-1.19.2%20(1).jar",
