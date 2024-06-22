@@ -293,7 +293,7 @@ class Mc:
 
     def descargar_mod(self, mod):
         '''
-        Descarga los mods y los almacena en el directorio de mods
+        Descarga el mod que se le pasa por la variable mod, y los descarga si es necesario y tambien sus dependencias.
         '''
         from log import logger
         destino = os.path.join(self.ruta_mods, mod['file'])
@@ -432,6 +432,10 @@ class Mc:
         '''
         Comprueva si los mods estan de acuerdo a al archivo de configuracion
         '''
+        from layout import data_widget
+        # ----------------------- Cargar datos de la nube -----------------------
+        self.consulta_nube(bt_play=True)
+        # ----------------------- Descargar mods y complementos activos -----------------------
         for mod in self.data_nube['mods']:
             if mod['disponible']:
                 self.descargar_mod(mod)
@@ -446,6 +450,10 @@ class Mc:
         for dep in self.data_nube['complementos']:
             if dep['active'] and dep['disponible']:
                 self.descargar_mod(dep)
+        # ----------------------- Ejecuta el anticheat para limpiar mods no deceados -----------------------
+        self.anticheat()
+        # ----------------------- Actualiza las reglas -----------------------
+        data_widget.update_reglas_from_ui()
         return True
 
     def changer_save_file_kailand(self):
@@ -677,7 +685,7 @@ class Mc:
         data_widget.progressbar_install.value = 0.05
         data_widget.progressbar_install.tooltip = 'Instalando configuraciones: 5%'
         app.page_update()
-        # Verifica si las configuraciones predeterminadas ya estan descargadas
+        # ----------------- Descarga y descomprime las configuraciones -----------------
         for config in self.data_nube['config']:
             if config['disponible']:
                 if not os.path.exists(os.path.join(DIRECTORY_KAILAND, 'config', config['directory'])):
@@ -691,7 +699,7 @@ class Mc:
         data_widget.progressbar_install.value = 0.1
         data_widget.progressbar_install.tooltip = '10%'
         app.page_update()
-        # Establece esta configuracion para el apartado de mods para evitar que los usuarios manipulen mods durante la instalacion
+        # ----------------- Carga de mods -----------------
         data_widget.div_mods = ft.Container(
                     content=ft.Tabs(
                         selected_index=1,
@@ -733,6 +741,8 @@ class Mc:
         data_widget.progressbar_install.value = 0.25
         data_widget.progressbar_install.tooltip = 'Comprobando mods: 25%'
         app.page_update()
+
+        # ------------------ Comprobacion de mods -----------------
         if self.comprobar_mods():
                 logger.info("Todos los mods estan instalados correctamente")
                 # Actualizamos el UI para mostrar los cambios realizados

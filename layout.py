@@ -336,6 +336,30 @@ class DataWidget:
             padding=10,
         )
 
+    def update_reglas_from_ui(self):
+        from game import mc
+        if mc.data_nube['reglas']:
+            self.text_reglas_list = mc.data_nube['reglas'].split('\n')
+            self.reglas_widget = ft.Container(
+                content=ft.Column([
+                        ft.Text("Reglas de Kailand", color="white", size=50, weight=ft.FontWeight.W_900, selectable=True, font_family='Minecraft'),
+                        ft.Container(
+                            content=ft.Column(
+                                [ft.Container(content=ft.Text(regla, font_family='FiraCode'), padding=10, border_radius=5, bgcolor=ft.colors.with_opacity(0.3, "black"), width=900, scale=ft.transform.Scale(1), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), on_hover=lambda e: self.animation_scale_zoom(e)) for regla in self.text_reglas_list],
+                                height=480,
+                                width=1600,
+                                scroll=ft.ScrollMode.ALWAYS,
+                                horizontal_alignment=ft.CrossAxisAlignment.CENTER
+                            ),
+                            margin=ft.margin.only(top=50)
+                        )
+                        ],
+                    spacing=15,
+                    horizontal_alignment=ft.CrossAxisAlignment.CENTER
+                    ),
+                padding=10
+            )
+
     def close_launcher_update(self, e):
         '''
         Cierra el launcher / programa
