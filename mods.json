@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.71",
+    "configVersion": "1.0.72",
     "launcherVersion": "1.0.25.1",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSe a solucionado el bug de la barra de progreso,\nSe agrego una barra que carga a medida de la instalcion,\nNuevos argumentos para correr el juego los cuales te daran mas rendimiento y estabilidad,\nAhora el launcher se cierra 6 segundos despues de iniciar el juego para evitar problemas con el fancymenu,\nEncriptado para proteger los datos del launcher.\nNuevo AntiCheat el cual evitara que los usuarios usen mods Cheat para jugar el servidor.\nEl launcher detecta la cantidad de memoria ram del equipo donde se ejecuta para brindar fidelidad",
