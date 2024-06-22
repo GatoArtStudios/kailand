@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.69",
+    "configVersion": "1.0.70",
     "launcherVersion": "1.0.25.1",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSe a solucionado el bug de la barra de progreso,\nSe agrego una barra que carga a medida de la instalcion,\nNuevos argumentos para correr el juego los cuales te daran mas rendimiento y estabilidad,\nAhora el launcher se cierra 6 segundos despues de iniciar el juego para evitar problemas con el fancymenu,\nEncriptado para proteger los datos del launcher.\nNuevo AntiCheat el cual evitara que los usuarios usen mods Cheat para jugar el servidor.\nEl launcher detecta la cantidad de memoria ram del equipo donde se ejecuta para brindar fidelidad",
@@ -1630,6 +1630,16 @@
             "doct": "https://www.curseforge.com/minecraft/mc-mods/better-third-person",
             "file": "BetterThirdPerson-Forge-1.19-1.9.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4177/88/BetterThirdPerson-Forge-1.19-1.9.0.jar",
+            "disponible": true,
+            "active": false,
+            "dependencia": []
+        },
+        {
+            "name": "Borderless Window",
+            "descripcion": "Este mod de Forge reemplaza el modo de pantalla completa estándar de Minecraft con una pantalla completa sin bordes personalizada. Esto es especialmente útil cuando se utilizan varios monitores para cambiar a otro programa en un monitor diferente.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/borderless",
+            "file": "BorderlessWindow-1.19.1-1.5.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/3906/414/BorderlessWindow-1.19.1-1.5.2.jar",
             "disponible": true,
             "active": false,
             "dependencia": []
