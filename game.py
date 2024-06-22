@@ -757,6 +757,9 @@ class Mc:
             logger.info("Toda la estructura de directorios esta completa")
             data_widget.progressbar_install.value = 1.0
             data_widget.progressbar_install.tooltip = 'Instalacion terminada: 100%'
+            if app._page.splash != None:
+                app._page.splash = None
+            app.page_update()
         else:
             logger.warning("Faltan algunos recursos necesarios")
             # Ejemplo de funciones de callback
@@ -825,6 +828,8 @@ class Mc:
                 minecraft_launcher_lib.forge.install_forge_version("1.19.2-43.4.0", self.minecraft_directory, callback={'setStatus': set_status, 'setProgress': set_progress, 'setMax': set_max})
                 data_widget.progressbar_install.value = 1.0
                 data_widget.progressbar_install.tooltip = 'Forge instalado: 100%'
+                if app._page.splash != None:
+                    app._page.splash = None
                 app.page_update()
                 logger.info("Forge Instalado")
 

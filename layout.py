@@ -77,7 +77,7 @@ class DataWidget:
         self.buttom_shaders = ft.ElevatedButton(text="Shaders", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.open_folder_shaderpacks, icon=ft.icons.FOLDER, icon_color="white", animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.buttom_textures = ft.ElevatedButton(text="Textures", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.open_folder_resourcepacks, icon=ft.icons.FOLDER, icon_color="white", animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.buttom_login = ft.ElevatedButton(text="Login", bgcolor = ft.colors.with_opacity(0.2, "white"), disabled=True, color="white")
-        self.text_p = ft.TextField(label="Usuario (Offline)", label_style=ft.TextStyle(color="White"), hint_text="Coloca tu usuario y guarda de nuevo", hint_style=ft.TextStyle(color="white"), border_color="white", disabled=True, color="white", bgcolor=ft.colors.with_opacity(0.2, "black"), focused_color="white")
+        self.text_p = ft.TextField(label="Usuario (Offline)", label_style=ft.TextStyle(color="White"), hint_text="Coloca tu usuario y guarda de nuevo", hint_style=ft.TextStyle(color="white"), border_color="white", disabled=[True if not mc.options["username"] else False][0], color="white", bgcolor=ft.colors.with_opacity(0.2, "black"), focused_color="white", value=[None if not mc.options["username"] else mc.options["username"]][0])
         self.input_offline_name = ft.Container(content=self.text_p)
         self.text_reglas = self.consulta_reglas()
         self.text_reglas_list = self.text_reglas.split("\n")
@@ -87,7 +87,7 @@ class DataWidget:
         self.t = ft.Text(color="white")
         self.buttom_save = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_info(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.buttom_save_setting = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_setting(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), top=290, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
-        self.type_login = ft.Dropdown(label="Tipo de cuenta", label_style=ft.TextStyle(color="white"), hint_text="Seleccione el tipo", hint_style=ft.TextStyle(color="white"), options=[ft.dropdown.Option("Offline"), ft.dropdown.Option("(Online) Microsoft")], border_color="white", width=300, on_change=self.save_info, color="white", bgcolor="black")
+        self.type_login = ft.Dropdown(label="Tipo de cuenta", label_style=ft.TextStyle(color="white"), hint_text="Seleccione el tipo", hint_style=ft.TextStyle(color="white"), options=[ft.dropdown.Option("Offline"), ft.dropdown.Option("(Online) Microsoft")], border_color="white", width=300, on_change=self.save_info, color="white", bgcolor="black", value=[None if not mc.options["username"] else "Offline"][0])
         self.select_bar_ram = ft.Slider(min=2, max=memory.memory_total(), divisions=memory.memory_divide(), label="{value}Gb", value=mc.valor_xmx, on_change=lambda e: self.change_ram_text(e, self.text_ram), width=620)
         self.java_path = ft.TextField(label="Ejecutable de Java", read_only=True, border_color="white", width=500, value=self.info_execute_java, color="white")
         self.buttom_change_java = ft.ElevatedButton(
@@ -414,7 +414,11 @@ class DataWidget:
         folder = os.path.join(mc.minecraft_directory, "mods")
         if os.path.exists(os.path.join(mc.minecraft_directory, "mods")):
             logger.info(folder)
-            os.startfile(folder)
+            import subprocess
+            if sys.platform.startswith('linux'):
+                subprocess.call(["xdg-open", folder])
+            else:
+                os.startfile(folder)
             return True
         else:
             logger.warning(f"El forder: {folder}, No existe, crando directorio")
@@ -431,7 +435,11 @@ class DataWidget:
         folder = os.path.join(mc.minecraft_directory, "resourcepacks")
         if os.path.exists(os.path.join(mc.minecraft_directory, "resourcepacks")):
             logger.info(folder)
-            os.startfile(folder)
+            import subprocess
+            if sys.platform.startswith('linux'):
+                subprocess.call(["xdg-open", folder])
+            else:
+                os.startfile(folder)
             return True
         else:
             logger.warning(f"El forder: {folder}, No existe, creando directorio")
@@ -448,7 +456,11 @@ class DataWidget:
         folder = os.path.join(mc.minecraft_directory, "shaderpacks")
         if os.path.exists(os.path.join(mc.minecraft_directory, "shaderpacks")):
             logger.info(folder)
-            os.startfile(folder)
+            import subprocess
+            if sys.platform.startswith('linux'):
+                subprocess.call(["xdg-open", folder])
+            else:
+                os.startfile(folder)
             return True
         else:
             logger.warning(f"El forder: {folder}, No existe, creando directorio")
@@ -499,6 +511,7 @@ class DataWidget:
         Funcion que se ejecuta al precionar el boton "Guardar"
         '''
         from game import mc
+        from encryption import encrypt_message
         if not self.type_login.value:
             self.t.value = "Por favor seleccione un tipo de cuenta"
             e.page.update()
@@ -520,8 +533,7 @@ class DataWidget:
                         }
                     )
                     # Guardar datos de session en un archivo JSON que guarda las configuraciones del usuario
-                    with open(os.path.join(mc.minecraft_directory, "kaliand.json"), "w") as json_file:
-                        json.dump(mc.options, json_file, indent=4)
+                    encrypt_message(mc.options, mc.archivo_kailand)
                     self.t.value = f"Tipo de cuenta: {self.type_login.value}, Usuario: {self.text_p.value}"
                 e.page.update()
             else:
