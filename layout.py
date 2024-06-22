@@ -471,9 +471,12 @@ class DataWidget:
         '''
         Abre cuadro de dialogo
         '''
+        from ui import app
         e.page.dialog = self.dlg
         self.dlg.open = True
-        e.page.update()
+        if app._page.splash != None:
+            app._page.splash = None
+        app.page_update()
 
     def close_dlg(self, e):
         '''
