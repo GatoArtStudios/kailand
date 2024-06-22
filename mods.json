@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.67",
+    "configVersion": "1.0.68",
     "launcherVersion": "1.0.25.1",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSe a solucionado el bug de la barra de progreso,\nSe agrego una barra que carga a medida de la instalcion,\nNuevos argumentos para correr el juego los cuales te daran mas rendimiento y estabilidad,\nAhora el launcher se cierra 6 segundos despues de iniciar el juego para evitar problemas con el fancymenu,\nEncriptado para proteger los datos del launcher.\nNuevo AntiCheat el cual evitara que los usuarios usen mods Cheat para jugar el servidor.\nEl launcher detecta la cantidad de memoria ram del equipo donde se ejecuta para brindar fidelidad",
@@ -1104,31 +1104,6 @@
             "dependencia": []
         },
         {
-            "name": "FancyMenu",
-            "descripcion": "FancyMenu",
-            "file": "fancymenu_forge_3.2.3_MC_1.19.2.jar",
-            "url": "https://mediafilez.forgecdn.net/files/5340/218/fancymenu_forge_3.2.3_MC_1.19.2.jar",
-            "disponible": true,
-            "dependencia": [
-                {
-                    "name": "Konkrete",
-                    "descripcion": "Konkrete | Dependencia",
-                    "file": "konkrete_forge_1.8.0_MC_1.19-1.19.2.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/5028/409/konkrete_forge_1.8.0_MC_1.19-1.19.2.jar",
-                    "disponible": true,
-                    "dependencia": []
-                },
-                {
-                    "name": "Melody",
-                    "descripcion": "Melody | Dependencia",
-                    "file": "melody_forge_1.0.1_MC_1.19.2.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/4983/999/melody_forge_1.0.1_MC_1.19.2.jar",
-                    "disponible": true,
-                    "dependencia": []
-                }
-            ]
-        },
-        {
             "name": "Bloquear Trabajos by zParkk",
             "descripcion": "Bloquear Trabajos by zParkk",
             "file": "BloquearTrabajos-1.19.2.jar",
@@ -1319,6 +1294,33 @@
                     "descripcion": "Creative core",
                     "file": "CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
+                    "disponible": true,
+                    "dependencia": []
+                }
+            ]
+        },
+        {
+            "name": "FancyMenu",
+            "descripcion": "FancyMenu te permite personalizar los menús de Minecraft de una manera fácil de usar. Ya sea que esté buscando un estilo moderno y simple o esté buscando integrar funciones avanzadas como elementos animados o dinámicos en sus menús, ¡FancyMenu lo equipa con las herramientas adecuadas para hacer realidad su visión!",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/fancymenu",
+            "file": "fancymenu_forge_3.2.3_MC_1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5340/218/fancymenu_forge_3.2.3_MC_1.19.2.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": [
+                {
+                    "name": "Konkrete",
+                    "descripcion": "Konkrete | Dependencia",
+                    "file": "konkrete_forge_1.8.0_MC_1.19-1.19.2.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/5028/409/konkrete_forge_1.8.0_MC_1.19-1.19.2.jar",
+                    "disponible": true,
+                    "dependencia": []
+                },
+                {
+                    "name": "Melody",
+                    "descripcion": "Melody | Dependencia",
+                    "file": "melody_forge_1.0.1_MC_1.19.2.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4983/999/melody_forge_1.0.1_MC_1.19.2.jar",
                     "disponible": true,
                     "dependencia": []
                 }
