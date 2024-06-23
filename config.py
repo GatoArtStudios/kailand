@@ -24,6 +24,17 @@ def get_system():
     else:  # Linux y otros sistemas UNIX-like
         return "Linux"
 
+def get_path_java():
+    if platform.system() == 'Windows':
+        if os.path.exists('C:\\Program Files\\Java\jdk-17\\bin\\java.exe'):
+            return 'C:\\Program Files\\Java\\jdk-17\\bin\\java.exe'
+        else:
+            return 'java'
+    else:
+        return 'java'
+
+JAVA_PATH = get_path_java()
+
 DIRECTORY_KAILAND = get_directory_kailand()
 
 SYSTEM = get_system()
