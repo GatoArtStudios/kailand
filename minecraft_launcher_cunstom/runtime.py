@@ -8,6 +8,7 @@ import subprocess
 import datetime
 import requests
 import platform
+import platform
 import os
 
 _JVM_MANIFEST_URL = "https://launchermeta.mojang.com/v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json"
@@ -123,9 +124,10 @@ def install_jvm_runtime(jvm_version: str, minecraft_directory: Union[str, os.Pat
             # Make files executable on unix systems
             if value["executable"]:
                 try:
-                    startinfo = subprocess.STARTUPINFO() # agregamos el startupinfo para que no se muestre la terminal
-                    startinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-                    subprocess.run(["chmod", "+x", current_path], text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, startupinfo=startinfo)
+                    if platform.system() == "Windows":
+                        startinfo = subprocess.STARTUPINFO() # agregamos el startupinfo para que no se muestre la terminal
+                        startinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                    subprocess.run(["chmod", "+x", current_path], text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, startupinfo=startinfo if platform.system() == "Windows" else None)
                 except FileNotFoundError:
                     pass
             file_list.append(key)

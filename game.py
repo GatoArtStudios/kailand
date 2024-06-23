@@ -568,9 +568,9 @@ class Mc:
             e.control.update()
             self.anticheat()
             # Ejecuta y alamcena el debug de minecraft java
-            startinfo = subprocess.STARTUPINFO() # agregamos el startupinfo para que no se muestre la terminal
-            startinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
             if SYSTEM == "Windows":
+                startinfo = subprocess.STARTUPINFO() # agregamos el startupinfo para que no se muestre la terminal
+                startinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
                 debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW  | subprocess.DETACHED_PROCESS, text=True, startupinfo=startinfo)
                 # Da notificación de que el launcher se ha cerrado y el juego a iniciado
                 logger.warning('Cerrando launcher, el juego iniciara en unos segundos...')

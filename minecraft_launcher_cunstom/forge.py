@@ -19,6 +19,7 @@ from typing import List, Union, Optional
 from .exceptions import VersionNotFound
 from .types import CallbackDict
 import subprocess
+import platform
 import tempfile
 import random
 import zipfile
@@ -72,9 +73,10 @@ def forge_processors(data: ForgeInstallProfile, minecraft_directory: Union[str, 
             for argument_key, argument_value in argument_vars.items():
                 for pos in range(len(command)):
                     command[pos] = command[pos].replace(argument_key, argument_value)
-            startinfo = subprocess.STARTUPINFO() # agregamos el startupinfo para que no se muestre la terminal
-            startinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            subprocess.run(command, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, startupinfo=startinfo)
+            if platform.system() == "Windows":
+                startinfo = subprocess.STARTUPINFO() # agregamos el startupinfo para que no se muestre la terminal
+                startinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+            subprocess.run(command, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, startupinfo=startinfo if platform.system() == "Windows" else None)
             callback.get("setProgress", empty)(count)
 
 
@@ -177,9 +179,10 @@ def run_forge_installer(version: str, java: Optional[Union[str, os.PathLike]] = 
         raise VersionNotFound(version)
 
     try:
-        startinfo = subprocess.STARTUPINFO() # agregamos el startupinfo para que no se muestre la terminal
-        startinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-        subprocess.run(["java" if java is None else str(java), "-jar", temp_file_path], check=True, startupinfo=startinfo, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        if platform.system() == "Windows":
+            startinfo = subprocess.STARTUPINFO() # agregamos el startupinfo para que no se muestre la terminal
+            startinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        subprocess.run(["java" if java is None else str(java), "-jar", temp_file_path], check=True, startupinfo=startinfo if platform.system() == "Windows" else None, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     finally:
         os.remove(temp_file_path)
 
