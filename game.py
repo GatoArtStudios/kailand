@@ -356,7 +356,7 @@ class Mc:
             except Exception as e:
                 logger.error(f"Error durante la descarga del mod '{mod['name']}': {e}")
 
-    def download_comple(self, e, x):
+    def download_comple(self, e: ft.ElevatedButton, x):
         '''
         Descarga los complementos.
 
@@ -370,7 +370,9 @@ class Mc:
         # Agrega el proceso a la lista
         mc.download_optional += 1
         # Muestra el progreso de la configuración del complemento
-        e.page.splash = ft.ProgressBar(tooltip=f"Configurando {x['name']}...", height=5)
+        data_widget.progressbar_install.tooltip = f"Configurando {x['name']}..."
+        data_widget.progressbar_install.value = None
+        data_widget.progressbar_install.visible = True
         # Deshabilita el botón para evitar errores
         data_widget.buttom_jugar.disabled = True
         data_widget.buttom_jugar.text = 'Configurando'
@@ -382,7 +384,7 @@ class Mc:
             mc.download_optional -= 1
             if mc.download_optional == 0:
                 # Si no hay más descargas opcionales, oculta la pantalla de progreso y habilita el botón
-                e.page.splash = None
+                data_widget.progressbar_install.visible = False
                 data_widget.buttom_jugar.disabled = False
                 data_widget.buttom_jugar.text = 'Jugar'
             # Habilita el control y actualiza la página
@@ -401,7 +403,7 @@ class Mc:
             mc.download_optional -= 1
             if mc.download_optional == 0:
                 # Si no hay más descargas opcionales, oculta la pantalla de progreso y habilita el botón
-                e.page.splash = None
+                data_widget.progressbar_install.visible = False
                 data_widget.buttom_jugar.disabled = False
                 data_widget.buttom_jugar.text = 'Jugar'
             # Habilita el control y actualiza la página
@@ -757,8 +759,7 @@ class Mc:
             logger.info("Toda la estructura de directorios esta completa")
             data_widget.progressbar_install.value = 1.0
             data_widget.progressbar_install.tooltip = 'Instalacion terminada: 100%'
-            if app._page.splash != None:
-                app._page.splash = None
+            data_widget.progressbar_install.visible = False
             app.page_update()
         else:
             logger.warning("Faltan algunos recursos necesarios")
@@ -828,8 +829,7 @@ class Mc:
                 minecraft_launcher_lib.forge.install_forge_version("1.19.2-43.4.0", self.minecraft_directory, callback={'setStatus': set_status, 'setProgress': set_progress, 'setMax': set_max})
                 data_widget.progressbar_install.value = 1.0
                 data_widget.progressbar_install.tooltip = 'Forge instalado: 100%'
-                if app._page.splash != None:
-                    app._page.splash = None
+                data_widget.progressbar_install.visible = False
                 app.page_update()
                 logger.info("Forge Instalado")
 
@@ -870,7 +870,7 @@ class Mc:
         data_widget.buttom_jugar.disabled = False
         data_widget.buttom_jugar.text = "Jugar"
         data_widget.buttom_jugar.icon = False
-        app._page.splash = None
+        data_widget.progressbar_install.visible = False
         app.page_update()
         data_widget.open_dlg(e)
 

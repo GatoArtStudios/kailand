@@ -285,7 +285,7 @@ class DataWidget:
             height=630,
             width=950,
         )
-        self.progressbar_install = ft.ProgressBar(tooltip="Instalando recursos necesarios...", height=5, value=0.0, color='white', bgcolor='black')
+        self.progressbar_install = ft.ProgressBar(tooltip="Instalando recursos necesarios...", height = 5 , value=None, color='white', bgcolor='black', visible=False, border_radius=5)
 
     def contMods(self, titulo = 'Sin datos', descripcion = 'Sin datos', url = 'http://example.com', x = None, active = False):
         '''
@@ -474,8 +474,7 @@ class DataWidget:
         from ui import app
         e.page.dialog = self.dlg
         self.dlg.open = True
-        if app._page.splash != None:
-            app._page.splash = None
+        data_widget.progressbar_install.visible = False
         app.page_update()
 
     def close_dlg(self, e):
@@ -490,7 +489,7 @@ class DataWidget:
         Instala recursos
         '''
         from game import mc
-        e.page.splash = self.progressbar_install
+        self.progressbar_install.visible = True
         self.dlg_modal.open = False
         e.page.update()
         mc.install_minecraft(e)

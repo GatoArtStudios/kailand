@@ -15,6 +15,8 @@ class LauncherVentana:
         from layout import data_widget
         self._page = flet_page
         self._page.title = 'Kailand V'
+        self._page.window.center()
+        self._page.window.frameless = True
         self._page.padding = 0
         self._page.bgcolor = ft.colors.TRANSPARENT
         self._page.window_bgcolor = ft.colors.TRANSPARENT
@@ -24,7 +26,7 @@ class LauncherVentana:
         self._page.window_height = 715
         self._page.window_width = 1277
         self._page.window_resizable = False
-        self._page.window_center = True
+        self._page.overlay.append(data_widget.progressbar_install)
         self._page.overlay.append(data_widget.java_info)
         self._page.overlay.append(data_widget.user_alert)
         self._page.window_title_bar_hidden = True
@@ -103,6 +105,7 @@ class LauncherVentana:
                             alignment=ft.MainAxisAlignment.CENTER,
                             spacing=15
                         ),
+                        # data_widget.progressbar_install,
                         ft.Row(
                             [
                                 ft.Stack(
@@ -125,6 +128,7 @@ class LauncherVentana:
                 border_radius=ft.border_radius.all(10),
             )
         )
+        self._page.update()
 
     def close_windows(self, e):
         self._page.window_close()
