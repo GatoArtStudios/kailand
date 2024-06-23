@@ -9,14 +9,14 @@ import threading
 import subprocess
 import encryption
 import flet as ft
-import minecraft_launcher_lib
+import minecraft_launcher_cunstom as minecraft_launcher_lib
 
 class Mc:
     def __init__(self) -> None:
         '''
         Almacena todos los datos del minecraft y metodos para el mismo funcionamiento, tambien se encarga de checar la integridad de los datos al inicial el launcher
         '''
-        from config import DIRECTORY_KAILAND
+        from config import DIRECTORY_KAILAND, JAVA_PATH
         self.data_nube = {}
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
@@ -28,7 +28,7 @@ class Mc:
             "username": None,
             "uuid": None,
             "token": "",
-            "executablePath": "java",
+            "executablePath": JAVA_PATH,
             "jvmArguments": ["-Xmx5G", "-Xms2G", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseG1GC", "-XX:G1NewSizePercent=20", "-XX:G1ReservePercent=20", "-XX:MaxGCPauseMillis=50", "-XX:G1HeapRegionSize=32M"],
             "launcherName": "Kailand V - Launcher",
             "gameDirectory": self.minecraft_directory,
@@ -568,8 +568,10 @@ class Mc:
             e.control.update()
             self.anticheat()
             # Ejecuta y alamcena el debug de minecraft java
+            startinfo = subprocess.STARTUPINFO() # agregamos el startupinfo para que no se muestre la terminal
+            startinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
             if SYSTEM == "Windows":
-                debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW  | subprocess.DETACHED_PROCESS, text=True)
+                debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW  | subprocess.DETACHED_PROCESS, text=True, startupinfo=startinfo)
                 # Da notificación de que el launcher se ha cerrado y el juego a iniciado
                 logger.warning('Cerrando launcher, el juego iniciara en unos segundos...')
                 time.sleep(3)
@@ -680,7 +682,7 @@ class Mc:
         '''
         from log import logger
         from layout import data_widget
-        from config import DIRECTORY_KAILAND
+        from config import DIRECTORY_KAILAND, JAVA_PATH
         from ui import app
 
         logger.info("Comprobando recursos instalados, estos puede demorar.")
@@ -826,7 +828,7 @@ class Mc:
                 logger.info("Minecraft instalado correctamente")
             if not os.path.exists(os.path.join(self.minecraft_directory, "versions", "1.19.2-forge-43.4.0")):
                 logger.info("Instalando Forge")
-                minecraft_launcher_lib.forge.install_forge_version("1.19.2-43.4.0", self.minecraft_directory, callback={'setStatus': set_status, 'setProgress': set_progress, 'setMax': set_max})
+                minecraft_launcher_lib.forge.install_forge_version("1.19.2-43.4.0", self.minecraft_directory, callback={'setStatus': set_status, 'setProgress': set_progress, 'setMax': set_max}, java=None if JAVA_PATH == 'java' else JAVA_PATH)
                 data_widget.progressbar_install.value = 1.0
                 data_widget.progressbar_install.tooltip = 'Forge instalado: 100%'
                 data_widget.progressbar_install.visible = False

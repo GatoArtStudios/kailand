@@ -48,8 +48,8 @@ class DataWidget:
         )
         self.dlg_modal = ft.AlertDialog(
             modal=True,
-            title=ft.Text("Aviso"),
-            content=ft.Text("¿Quieres instalar los recursos necesarios para Kailand V? la instalacion dura unos cuantos minutos"),
+            title=ft.Text("¿Quieres instalar los recursos necesarios para Kailand V?"),
+            content=ft.Text("Si no acepta la instalacion de recursos no podras jugar. \nLa instalacion dura unos cuantos minutos, puedes ver los avances de la instalacion o comprobacion en la consola"),
             actions=[
                 ft.TextButton("Si", on_click=self.close_dlg_exe),
                 ft.TextButton("No", on_click=self.close_dlg),
@@ -89,7 +89,7 @@ class DataWidget:
         self.buttom_save_setting = ft.ElevatedButton(text="Guardar", on_click=lambda e: (self.save_setting(e), self.animate_buttom(e)), color="white", bgcolor=ft.colors.with_opacity(0.2, "white"), top=290, animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.type_login = ft.Dropdown(label="Tipo de cuenta", label_style=ft.TextStyle(color="white"), hint_text="Seleccione el tipo", hint_style=ft.TextStyle(color="white"), options=[ft.dropdown.Option("Offline"), ft.dropdown.Option("(Online) Microsoft")], border_color="white", width=300, on_change=self.save_info, color="white", bgcolor="black", value=[None if not mc.options["username"] else "Offline"][0])
         self.select_bar_ram = ft.Slider(min=2, max=memory.memory_total(), divisions=memory.memory_divide(), label="{value}Gb", value=mc.valor_xmx, on_change=lambda e: self.change_ram_text(e, self.text_ram), width=620)
-        self.java_path = ft.TextField(label="Ejecutable de Java", read_only=True, border_color="white", width=500, value=self.info_execute_java, color="white")
+        self.java_path = ft.TextField(label="Ejecutable de Java", read_only=True, border_color="white", width=500, value='Por Defecto' if mc.options['executablePath'] == 'java' else mc.options['executablePath'], color="white")
         self.buttom_change_java = ft.ElevatedButton(
             text="Cambiar",
             on_click=lambda _: (self.java_info.pick_files(allowed_extensions=["exe"], initial_directory="C:\Program Files\Java", dialog_title="Seleccione el archivo java.exe o javaw.exe"), self.animate_buttom(e=_)),

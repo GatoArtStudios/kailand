@@ -51,6 +51,7 @@ class LauncherVentana:
                                             fit=ft.ImageFit.CONTAIN
                                         ),
                                         on_click=self.minimized_windows,
+                                        tooltip='Minimizar',
                                     ),
                                     ft.IconButton(
                                         content=ft.Image(
@@ -60,6 +61,7 @@ class LauncherVentana:
                                             fit=ft.ImageFit.CONTAIN
                                         ),
                                         on_click=self.close_windows,
+                                        tooltip='Cerrar',
                                     )
                                 ],
                                 vertical_alignment=ft.CrossAxisAlignment.CENTER,
@@ -76,7 +78,6 @@ class LauncherVentana:
                                         [
                                             data_widget.buttom_perfil,
                                             data_widget.buttom_reglas,
-                                            # data_widget.buttom_horario,
                                             data_widget.buttom_mods,
                                             data_widget.buttom_shaders,
                                             data_widget.buttom_textures,
@@ -135,6 +136,9 @@ class LauncherVentana:
 
     def minimized_windows(self, e):
         self._page.window_minimized = True
+        self._page.update()
+    
+    def reload_windows(self, e):
         self._page.update()
 
     def animacion_opacity(self, e):

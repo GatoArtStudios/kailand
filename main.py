@@ -2,7 +2,7 @@ import os
 import flet as ft
 import subprocess
 import typing_extensions
-from config import DIRECTORY_KAILAND
+from config import DIRECTORY_KAILAND, JAVA_PATH
 
 
 """
@@ -32,7 +32,9 @@ from log import logger
 
 try:
     # Ejecuta el comando `java -version` y captura la salida, sin mostrar la terminal
-    result = subprocess.run(['java', '-version'], text=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+    startinfo = subprocess.STARTUPINFO() # agregamos el startupinfo para que no se muestre la terminal
+    startinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+    result = subprocess.run([JAVA_PATH, '-version'], text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True, startupinfo=startinfo)
     # La salida del comando `java -version` se envía a stderr en lugar de stdout
     version_info = result.stderr.split('\n')[0].split(' ')[2].split('"')[1].split('.')[0]
     if int(version_info) >= 17:
