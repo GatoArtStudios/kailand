@@ -16,6 +16,9 @@ Hola bienvenido a este repositorio en el cual tenemos todo el codigo del proyect
 ##### Ajustes:
 ![settings](https://raw.githubusercontent.com/GatoArtStudios/kailand/main/previews/settings.png)
 
+##### Reglas:
+![reglas](https://raw.githubusercontent.com/GatoArtStudios/kailand/main/previews/reglas.png)
+
 ## Redes:
 
 [Desarrollador](https://linktr.ee/gatoartstudio)
