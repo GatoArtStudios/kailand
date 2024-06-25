@@ -1210,23 +1210,6 @@
             "url": "https://mediafilez.forgecdn.net/files/5426/619/tacz-1.19.2-1.0.0-beta.jar",
             "disponible": true,
             "dependencia": []
-        },
-        {
-            "name": "Entity Model Features",
-            "descripcion": "mod",
-            "file": "entity_model_features_forge_1.19.2-2.0.2.jar",
-            "url": "https://mediafilez.forgecdn.net/files/5304/249/entity_model_features_forge_1.19.2-2.0.2.jar",
-            "disponible": true,
-            "dependencia": [
-                {
-                    "name": "Entity Texture Features",
-                    "descripcion": "mod",
-                    "file": "entity_texture_features_forge_1.19.2-6.0.1.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/5300/624/entity_texture_features_forge_1.19.2-6.0.1.jar",
-                    "disponible": true,
-                    "dependencia": []
-                }
-            ]
         }
     ],
     "complementos": [
@@ -1455,6 +1438,25 @@
             "disponible": true,
             "active": true,
             "dependencia": []
+        },
+        {
+            "name": "Entity Model",
+            "descripcion": "Entity Model Features: Este mod te permite tener animaciones si usas texture packs con animaciones.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/entity-model-features",
+            "file": "entity_model_features_forge_1.19.2-2.0.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5304/249/entity_model_features_forge_1.19.2-2.0.2.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": [
+                {
+                    "name": "Entity Texture Features",
+                    "descripcion": "mod",
+                    "file": "entity_texture_features_forge_1.19.2-6.0.1.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/5300/624/entity_texture_features_forge_1.19.2-6.0.1.jar",
+                    "disponible": true,
+                    "dependencia": []
+                }
+            ]
         },
         {
             "name": "Not enough",
