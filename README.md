@@ -5,7 +5,7 @@ Hola bienvenido a este repositorio en el cual tenemos todo el codigo del proyect
 ## Imagenes
 
 ##### Instalacion de recursos o actualizacion de los mismos:
-![Update](https://raw.githubusercontent.com/GatoArtStudios/kailand/22a3e797291483d43245cff82d1dcb481e5791e6/previews/update.png)
+![Update](https://raw.githubusercontent.com/GatoArtStudios/kailand/main/previews/update.png)
 
 ##### Apartado de Mods opcionales:
 ![Opcional](https://raw.githubusercontent.com/GatoArtStudios/kailand/main/previews/opcional.png)
