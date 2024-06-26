@@ -11,13 +11,15 @@ rm -vr $PWD/src/minecraft_launcher_cunstom/__pycache__ | echo -e "${GREEN}Elimin
 rm -vr $PWD/src/minecraft_launcher_cunstom/_internal_types/__pycache__ | echo -e "${GREEN}Eliminando carpeta de cache${NC}" || echo -e "${RED}No hay carpetas de cache${NC}"
 rm -vr $PWD/src/__pycache__ | echo -e "${GREEN}Eliminando carpeta de cache${NC}" || echo -e "${RED}No hay carpetas de cache${NC}"
 
+mkdir $PWD/build | echo -e "${GREEN}Carpeta de build creada${NC}" || echo -e "${RED}Ya existe una carpeta de build${NC}"
+
 BUILD=2
 VERSION="1.0.25"
 PRODUCT="Kailand"
 COPYRIGHT="Launcher de Kailand, by GatoArtStudio"
 DESCRIPTION="Launcher Oficial de Kailand V"
 COMPANY="By GatoArtStudio X Kailand V"
-OUTPUT="/home/${USER}/tools/kailand"
+OUTPUT="$PWD/build"
 
 echo -e "${GREEN}Argumentos de compilacion son $BUILD $VERSION $PRODUCT $COPYRIGHT $DESCRIPTION $COMPANY $OUTPUT${NC}"
 
