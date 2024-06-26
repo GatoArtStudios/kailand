@@ -12,6 +12,5 @@ pyvenv.cfg
 Build-Kailand.iss
 /__pycache__
 encrypted_data.json
-config.py
 /minecraft_launcher_cunstom/_internal_types/__pycache__
 /minecraft_launcher_cunstom/__pycache__
