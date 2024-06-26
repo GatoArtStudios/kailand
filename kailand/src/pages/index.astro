@@ -3,33 +3,28 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="kailand V">
+<Layout title="Zona de descargas">
 	<main>
-		<h1>Bienvenido a <span class="text-gradient">Kailand V</span></h1>
+		<h1>Zona de <span class="text-gradient">Descargas</span></h1>
 		<p class="instructions">
 			Pagina web para descargar el launcher oficial de<code>kaliand V</code>, gracias por preferirnos.<br />
-			<strong>Nota:</strong> El proyecto es beta y aun sigue en desarrollo, si eres usuario de linux, aca tenemos una version <strong><a href="https://github.com/GatoArtStudios/kailand/releases/tag/v1.0.25-alpha" style="color: white;" >linux</a></strong> del launcher.
+			<strong>Nota:</strong> El proyecto es beta y aun sigue en desarrollo, si tienes dudas sobre el proyecto, no dudes en contactarnos en nuestro servidor de discord.
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://discord.com/invite/chwAE86T6W"
-				title="Discord"
-				body="Servidor oficial de Kailand, Unete y vive una experiencia inolvidable."
+				title="Kailand-Installer.exe"
+				body="Descarga el launcher oficial de kailand V🚀, en su version instalador."
 			/>
 			<Card
 				href="https://github.com/GatoArtStudios/kailand/releases/download/v1.0.25-alpha/Kailand-Installer-alpha.exe"
-				title="Download"
-				body="Descarga aqui el launcher oficial de kailand V🚀."
+				title="Kailand-windows-64.zip"
+				body="Descarga aqui el launcher oficial de kailand V🚀, en su version zip. No es instalador, es el ejecutable del launcher. "
 			/>
 			<Card
 				href='https://linktr.ee/gatoartstudio'
-				title='Developer'
-				body='Aca encontraras todas las redes sociales y contactos del desarrollador del proyecto.'
-			/>
-			<Card
-				href='https://www.instagram.com/soyellioth/'
-				title='Owner'
-				body='Redes sociales del dueño del proyecto, creador de Kailand V.'
+				title='Kailand-Linux.tar.gz'
+				body='Esta es la version para linux de 64 bits, no es instalador, es descargar y ejecutar.'
 			/>
 		</ul>
 	</main>
@@ -60,6 +55,7 @@ import Card from '../components/Card.astro';
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
+		text-shadow: 0 0 50px rgba(0, 255, 0, 0.5);
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
