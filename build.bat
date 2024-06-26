@@ -1,7 +1,7 @@
 cd src
 setlocal
-set BUILD=25
-set VERSION="1.0.%BUILD%.1"
+set BUILD=26
+set VERSION="1.0.0"
 set PRODUCT="Kailand"
 set COPYRIGHT="Launcher de Kailand, by GatoArtStudio"
 set DESCRIPTION="Launcher Oficial de Kailand V"
