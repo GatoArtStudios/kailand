@@ -54,6 +54,7 @@ const { href, title, body } = Astro.props;
 	.link-card:is(:hover, :focus-within) {
 		background-position: 0;
 		background-image: var(--accent-gradient);
+		box-shadow: 0 0 20px rgba(0, 140, 0, 0.5);
 	}
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent-light));
