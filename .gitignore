@@ -10,7 +10,7 @@ pyvenv.cfg
 /Scripts
 /share
 Build-Kailand.iss
-/__pycache__
 encrypted_data.json
-/minecraft_launcher_cunstom/_internal_types/__pycache__
-/minecraft_launcher_cunstom/__pycache__
+src/__pycache__/
+src/minecraft_launcher_cunstom/__pycache__/
+src/minecraft_launcher_cunstom/_internal_types/__pycache__/
