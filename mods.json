@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.80",
+    "configVersion": "1.0.81",
     "launcherVersion": "1.0.25.1",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSe a solucionado el bug de la barra de progreso,\nSe agrego una barra que carga a medida de la instalcion,\nNuevos argumentos para correr el juego los cuales te daran mas rendimiento y estabilidad,\nAhora el launcher se cierra 6 segundos despues de iniciar el juego para evitar problemas con el fancymenu,\nEncriptado para proteger los datos del launcher.\nNuevo AntiCheat el cual evitara que los usuarios usen mods Cheat para jugar el servidor.\nEl launcher detecta la cantidad de memoria ram del equipo donde se ejecuta para brindar fidelidad",
@@ -872,18 +872,10 @@
             "dependencia": []
         },
         {
-            "name": "Kailand Mod | Deprecate",
+            "name": "Kailand Mod V2.0.7",
             "descripcion": "Kailand Mod",
-            "file": "Kailand_Mod_1.19.2.jar",
-            "url": "https://github.com/GatoArtStudios/kailand/raw/config/mods/Kailand_Mod_1.19.2.jar",
-            "disponible": false,
-            "dependencia": []
-        },
-        {
-            "name": "Kailand Mod v1.0.2",
-            "descripcion": "Kailand Mod v1.0.2",
-            "file": "Kailand-1.19.2-1.0.2.jar",
-            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/Kailand-1.19.2-1.0.2.jar",
+            "file": "Kailand-1.19.2-2.0.7.jar",
+            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/Kailand-1.19.2-2.0.7.jar",
             "disponible": true,
             "dependencia": []
         },
