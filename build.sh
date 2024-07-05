@@ -13,7 +13,7 @@ rm -vr $PWD/src/__pycache__ | echo -e "${GREEN}Eliminando carpeta de cache${NC}"
 
 mkdir $PWD/build | echo -e "${GREEN}Carpeta de build creada${NC}" || echo -e "${RED}Ya existe una carpeta de build${NC}"
 
-BUILD=2
+BUILD=4
 VERSION="1.0.25"
 PRODUCT="Kailand"
 COPYRIGHT="Launcher de Kailand, by GatoArtStudio"

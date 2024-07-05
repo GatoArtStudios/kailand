@@ -20,7 +20,7 @@ class Mc:
         self.data_nube = {}
         self.ID = uuid.uuid4().hex
         self.url_new_vercion = None
-        self.launcherVersion = "1.0.25.1"
+        self.launcherVersion = "1.0.25.4"
         self.boton_jugar = "Iniciado"
         self.mc_disponible = True
         self.minecraft_directory = DIRECTORY_KAILAND
@@ -566,7 +566,6 @@ class Mc:
             e.control.text = "Jugando"
             e.control.disabled = True
             e.control.update()
-            self.anticheat()
             # Ejecuta y alamcena el debug de minecraft java
             if SYSTEM == "Windows":
                 startinfo = subprocess.STARTUPINFO() # agregamos el startupinfo para que no se muestre la terminal
@@ -575,6 +574,7 @@ class Mc:
                 # Da notificación de que el launcher se ha cerrado y el juego a iniciado
                 logger.warning('Cerrando launcher, el juego iniciara en unos segundos...')
                 time.sleep(3)
+                self.anticheat() # Ejecutamos el AntiCheat antes de que el juego inicie para soluciona el bug de que se podian colocar mods antes de iniciar el juego
                 app._page.window_destroy()
                 time.sleep(3)
                 try:
@@ -694,6 +694,13 @@ class Mc:
             if config['disponible']:
                 if not os.path.exists(os.path.join(DIRECTORY_KAILAND, 'config', config['directory'])):
                     self.download_and_unzip(config)
+                else:
+                    try:
+                        shutil.rmtree(os.path.join(DIRECTORY_KAILAND, 'config', config['directory']))
+                        logger.info(f"Se ha eliminado la configuración de {config['name']}")
+                        self.download_and_unzip(config)
+                    except Exception as e:
+                        logger.error(f"Error al eliminar la configuración de {config['name']}: {e}")
             else:
                 try:
                     shutil.rmtree(os.path.join(DIRECTORY_KAILAND, 'config', config['directory']))

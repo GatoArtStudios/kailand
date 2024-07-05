@@ -31,7 +31,7 @@ if %errorlevel% neq 0 (
 
 REM Definir variables de entorno
 setlocal
-set BUILD=2
+set BUILD=4
 set VERSION="1.0.25"
 set PRODUCT="Kailand"
 set COPYRIGHT="Launcher de Kailand, by GatoArtStudio"
