@@ -141,8 +141,8 @@ class DataWidget:
                                         animate_scale=ft.animation.Animation(duration=300, curve="bounceout")
                                         ),
                                     ft.Container(
-                                        content=ft.Text("SoyGato_Hcc", italic=True),
-                                        url="https://linktr.ee/soygato_hcc",
+                                        content=ft.Text("GatoArtStudio", italic=True),
+                                        url="https://linktr.ee/gatoartstudio",
                                         opacity=0.5,
                                         animate_opacity=300,
                                         on_hover=self.animation_colaboracion,
