@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.82",
+    "configVersion": "1.0.83",
     "launcherVersion": "1.0.25.4",
     "launcherUrl": "https://gatoartstudios.github.io/kailand/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSe a solucionado el bug de las configuraciones por defecto del launcher,\nSe cambio el logo del launcher,\nSolucion del bug para hacerle bypass al antiCheat.",
@@ -1209,6 +1209,23 @@
             "url": "https://mediafilez.forgecdn.net/files/5426/619/tacz-1.19.2-1.0.0-beta.jar",
             "disponible": true,
             "dependencia": []
+        },
+        {
+            "name": "What they up to",
+            "descripcion": "Muestra cuando un jugador está en un interfaz o en el chat. También posee una animacion que se da cuando un jugador está escribiendo en el chat.",
+            "file": "watut-forge-1.19.2-1.0.14.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5010/131/watut-forge-1.19.2-1.0.14.jar",
+            "disponible": true,
+            "dependencia": [
+                {
+                    "name": "Coro útil",
+                    "descripcion": "Coro útil",
+                    "file": "coroutil-forge-1.19.2-1.3.6.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/5010/127/coroutil-forge-1.19.2-1.3.6.jar",
+                    "disponible": true,
+                    "dependencia": []
+                }
+            ]
         }
     ],
     "complementos": [
@@ -1573,25 +1590,6 @@
             "disponible": true,
             "active": true,
             "dependencia": []
-        },
-        {
-            "name": "What they up to",
-            "descripcion": "Muestra cuando un jugador está en un interfaz o en el chat. También posee una animacion que se da cuando un jugador está escribiendo en el chat.",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/what-are-they-up-to",
-            "file": "watut-forge-1.19.2-1.0.14.jar",
-            "url": "https://mediafilez.forgecdn.net/files/5010/131/watut-forge-1.19.2-1.0.14.jar",
-            "disponible": true,
-            "active": true,
-            "dependencia": [
-                {
-                    "name": "Coro útil",
-                    "descripcion": "Coro útil",
-                    "file": "coroutil-forge-1.19.2-1.3.6.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/5010/127/coroutil-forge-1.19.2-1.3.6.jar",
-                    "disponible": true,
-                    "dependencia": []
-                }
-            ]
         },
         {
             "name": "Camera Overhaul",
