@@ -9,17 +9,41 @@
 Inside of your Astro project, you'll see the following folders and files:
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+.
+├── astro.config.mjs
+├── dist
+│   ├── _astro
+│   │   ├── hoisted.TOV5KKkp.js
+│   │   ├── hoisted.Z0YVwTgx.js
+│   │   └── index.CiM1GAXz.css
+│   ├── CNAME
+│   ├── downloads
+│   │   └── index.html
+│   ├── favicon.png
+│   ├── index.html
+│   ├── KLZ.gif
+│   └── mods.html
+├── LICENSE
+├── package.json
+├── package-lock.json
+├── public
+│   ├── CNAME
+│   ├── favicon.png
+│   ├── KLZ.gif
+│   └── mods.html
+├── README.md
+├── src
+│   ├── components
+│   │   └── Card.astro
+│   ├── env.d.ts
+│   ├── js
+│   │   └── main.js
+│   ├── layouts
+│   │   └── Layout.astro
+│   └── pages
+│       ├── downloads.astro
+│       └── index.astro
+└── tsconfig.json
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
