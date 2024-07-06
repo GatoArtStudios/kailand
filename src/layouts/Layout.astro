@@ -1,0 +1,71 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta property="og:title" content="Descubre Kailand: Tu Aventura Definitiva en Minecraft">
+		<meta property="og:description" content="Únete a Kailand, un servidor público de Minecraft desarrollado profesionalmente para ofrecerte una experiencia única y emocionante.">
+		<meta property="og:image" content="https://raw.githubusercontent.com/GatoArtStudios/kailand/web/KLZ.gif">
+		<meta property="og:url" content="https://www.kailand.es">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GatoArtStudios/kailand/web/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+	</head>
+	<body>
+		<slot />
+		<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<!-- <script src="../js/main.js"> </script> -->
+		<script is:inline>
+			import AOS from 'aos';
+
+			document.addEventListener('DOMContentLoaded', () => {
+				// const AOS = require('aos');
+				AOS.init(
+					{
+						duration: 1000,
+						once: true
+					}
+				);
+			})
+		</script>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 0, 255, 0;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 0, 130, 0;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>

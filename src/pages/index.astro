@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import 'aos/dist/aos.css';
+---
+
+<Layout title="Kailand V">
+	<main>
+		<h1 data-aos="fade-zoom-in" data-aos-delay="200">Bienvenido a <span class="text-gradient animation-parpadeo">Kailand V</span></h1>
+		<p class="instructions" data-aos="fade-right">
+			¡Bienvenido a <code>Kailand V!</code>, Sumérgete en nuestro servidor público de Minecraft, diseñado y desarrollado profesionalmente para ofrecerte una experiencia única. En Kailand, cada bloque y cada aventura están pensados para brindarte el máximo entretenimiento y desafíos épicos.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://discord.com/invite/chwAE86T6W"
+				title="Discord"
+				body="Servidor oficial de Kailand, Unete y vive una experiencia inolvidable."
+				animation='fade-right'
+			/>
+			<Card
+				href="/downloads"
+				title="Downloads"
+				body="Descarga aqui las diferentes versiones del launcher oficial de kailand V🚀."
+				animation='fade-left'
+			/>
+			<Card
+				href='https://linktr.ee/gatoartstudio'
+				title='Developer'
+				body='Aca encontraras todas las redes sociales y contactos del desarrollador del proyecto.'
+				animation='fade-right'
+			/>
+			<Card
+				href='https://www.instagram.com/soyellioth/'
+				title='Owner'
+				body='Redes sociales del dueño del proyecto, creador de Kailand V.'
+				animation='fade-left'
+			/>
+		</ul>
+		<p class="descripcion" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" style="margin-top: 40px">
+			Explora vastos mundos llenos de misterios, construye tu imperio y enfréntate a desafíos emocionantes con jugadores de todo el mundo. Nuestro servidor ofrece un entorno seguro, con actualizaciones constantes y una comunidad amigable y apasionada. ¡Únete a nosotros y conviértete en parte de esta increíble aventura!<br />
+			<strong>Nota:</strong> El proyecto es beta y aun sigue en desarrollo, si eres usuario de linux, claro que en la zona de descargas puedes encontrar el launcher para linux de 64 bits.
+		</p>
+		<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<!-- <script src="../js/main.js"> </script> -->
+		<script is:inline>
+			import AOS from 'aos';
+
+			document.addEventListener('DOMContentLoaded', () => {
+				// const AOS = require('aos');
+				AOS.init(
+					{
+						duration: 1000,
+						once: true
+					}
+				);
+			})
+		</script>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	@keyframes parpadeo {
+		0%, 50%, 100% {
+			opacity: 1;
+		}
+		25%, 75% {
+			opacity: 0.5;
+		}
+	}
+	.animation-parpadeo {
+		animation: parpadeo 3s infinite;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+		text-shadow: 0 0 50px rgba(0, 255, 0, 0.5);
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.descripcion {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.descripcion code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.descripcion strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
