@@ -4,13 +4,14 @@ interface Props {
 	body: string;
 	href: string;
 	animation: string;
+	typetarget: string;
 }
 
-const { href, title, body, animation } = Astro.props;
+const { href, title, body, animation, typetarget } = Astro.props;
 ---
 
 <li class="link-card" data-aos={animation}>
-	<a href={href} target="_blank" data-aos={animation}>
+	<a href={href} target={typetarget} data-aos={animation}>
 		<h2>
 			{title}
 			<span>&rarr;</span>
