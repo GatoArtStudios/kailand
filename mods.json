@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.83",
+    "configVersion": "1.0.84",
     "launcherVersion": "1.0.25.4",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSe a solucionado el bug de las configuraciones por defecto del launcher,\nSe cambio el logo del launcher,\nSolucion del bug para hacerle bypass al antiCheat.",
@@ -163,8 +163,8 @@
         {
             "name": "L_Enders_Cataclysm",
             "descripcion": "Cataclysm",
-            "file": "L_Enders_Cataclysm-1.89 -1.19.2.jar",
-            "url": "https://mediafilez.forgecdn.net/files/5039/717/L_Enders_Cataclysm-1.89%20-1.19.2.jar",
+            "file": "L_Enders_Cataclysm-1.99.6-1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5474/800/L_Enders_Cataclysm-1.99.6-1.19.2.jar",
             "disponible": true,
             "dependencia": [
                 {
@@ -180,6 +180,22 @@
                     "descripcion": "Lionfish API",
                     "file": "lionfishapi-1.8.jar",
                     "url": "https://mediafilez.forgecdn.net/files/5314/835/lionfishapi-1.8.jar",
+                    "disponible": true,
+                    "dependencia": []
+                },
+                {
+                    "name": "Citadel",
+                    "descripcion": "Citadel",
+                    "file": "citadel-2.1.4-1.19.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4556/677/citadel-2.1.4-1.19.jar",
+                    "disponible": true,
+                    "dependencia": []
+                },
+                {
+                    "name": "Archaeology Api",
+                    "descripcion": "Archaeology Api | Dependencia",
+                    "file": "archaeology-api-1.19.2-1.0.0.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/5141/973/archaeology-api-1.19.2-1.0.0.jar",
                     "disponible": true,
                     "dependencia": []
                 }
