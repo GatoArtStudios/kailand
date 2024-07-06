@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Kailand V - Zona de descargas">
+	<main>
+		<h1 data-aos="fade-zoom-in" data-aos-delay="200">Zona de <span class="text-gradient">Descargas</span></h1>
+		<p class="instructions" data-aos="fade-right">
+			Pagina web para descargar el launcher oficial de<code>kailand V</code>, gracias por preferirnos.<br />
+			<strong>Nota:</strong> El proyecto es beta y aun sigue en desarrollo, si tienes dudas sobre el proyecto, no dudes en contactarnos en nuestro servidor de discord.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://github.com/GatoArtStudios/kailand/releases/download/v1.0.25.4/Kailand-Installer.exe"
+				title="Instalador"
+				body="Descarga el launcher oficial de kailand V🚀, en su version instalador."
+                animation='fade-right'
+			/>
+			<Card
+				href="https://github.com/GatoArtStudios/kailand/releases/download/v1.0.25.4/Kailand-Windows-64.zip"
+				title="Comprimido"
+				body="Descarga aqui el launcher oficial de kailand V🚀, en su version zip. No es instalador, es el ejecutable del launcher para windows."
+                animation='fade-left'
+			/>
+			<Card
+				href='https://github.com/GatoArtStudios/kailand/releases/download/v1.0.25.4/kailand-linux-1-0-25-4.tar.gz'
+				title='Linux'
+				body='Esta es la version para linux de 64 bits, no es instalador, es descargar y ejecutar.'
+                animation='fade-up'
+			/>
+		</ul>
+        <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="../js/main.js"> </script>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+		text-shadow: 0 0 50px rgba(0, 255, 0, 0.5);
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
