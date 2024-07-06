@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Agregar descripción a la página -->
+    <meta name="description" content="Árbol de Mods de Kailand V">
+    <!-- Codificación de caracteres -->
+    <meta charset="UTF-8">
+    <!-- Diseño responsivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título -->
+    <title>Árbol de Mods de Kailand V</title>
+    <!-- Estilos -->
+    <style>
+        :root {
+            --text-color-primary: #ffffff;
+            --timeline-color-primary: #ffffff;
+            --timeline-color-dependency-unavailable: #ff6b6b;
+            --timeline-color-dependency: #6bff6b;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #180935;
+            margin: 0;
+            padding: 20px;
+            color: var(--text-color-primary);
+        }
+        #tree-container {
+            margin: 0 auto;
+            padding: 20px;
+            background: #4a0868;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        li::before {
+            content: '•';
+            margin-right: 8px;
+            color: #000;
+        }
+        ul li {
+            position: relative;
+            list-style: none;
+        }
+        @keyframes animation-timeline {
+            0% {
+                padding: 0 0 0 0;
+            } 50% {
+                padding: 10px 0 10px 0;
+            }
+            100% {
+                padding: 0 0 0 0;
+            }
+        }
+        ul .mods-item::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: -20px;
+            width: 3px;
+            height: 200%;
+            background-color: var(--timeline-color-primary);
+        }
+        .mods-item:hover {
+            animation: animation-timeline 1s forwards;
+        }
+        ul .unavailable::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: -20px;
+            width: 3px;
+            height: 200%;
+            background-color: var(--timeline-color-dependency-unavailable);
+        }
+        /* Agrega el circulo */
+        ul .mods-item::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -24px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--timeline-color-primary);
+        }
+        ul .unavailable::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -24px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--timeline-color-dependency-unavailable);
+        }
+        /* Agrega el color verde a las dependencias */
+        ul .dependency {
+            color: var(--timeline-color-dependency);
+        }
+        /* Agrega el color rojo a las dependencias no disponibles */
+        ul .unavailable .dependency {
+            color: var(--timeline-color-dependency-unavailable);
+        }
+        /* Agraga la barra horizontal de las dependencias */
+        ul .dependency::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -40px;
+            width: 30px;
+            height: 3px;
+            background-color: var(--timeline-color-dependency);
+        }
+        /* Agrega el punto de las dependencias */
+        ul .dependency::after {
+            content: "";
+            position: absolute;
+            top: 1px;
+            left: -20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--timeline-color-dependency);
+        }
+        /* Agrega la barra vertical de las dependencias de las dependencias */
+        ul .dependency div ul li::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -77px;
+            width: 60px;
+            height: 3px;
+            background-color: var(--timeline-color-dependency);
+        }
+        /* Agrega el punto de las dependencias de las dependencias */
+        ul .dependency div ul li::after {
+            content: "";
+            position: absolute;
+            top: 1px;
+            left: -20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--timeline-color-dependency);
+        }
+        /* Agrega el color rojo a las dependencias no disponibles de las dependencias */
+        ul .unavailable .dependency div ul li::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -77px;
+            width: 60px;
+            height: 3px;
+            background-color: var(--timeline-color-dependency-unavailable);
+        }
+        /* Agrega el punto de las dependencias no disponibles de las dependencias */
+        ul .unavailable .dependency div ul li::after {
+            content: "";
+            position: absolute;
+            top: 1px;
+            left: -20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--timeline-color-dependency-unavailable);
+        }
+        ul .unavailable .dependency::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -40px;
+            width: 30px;
+            height: 3px;
+            background-color: var(--timeline-color-dependency-unavailable);
+        }
+        ul .unavailable .dependency::after {
+            content: "";
+            position: absolute;
+            top: 1px;
+            left: -20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--timeline-color-dependency-unavailable);
+        }
+        .tree-branch {
+            margin-left: 20px;
+        }
+        .unavailable {
+            color: var(--timeline-color-dependency-unavailable);
+        }
+        .complementos-title {
+            left: 20px;
+            position: relative;
+            border: 2px solid rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 7px;
+            width: 30%;
+        }
+        .complementos-title:hover {
+            animation: box-animation 2s ease-in-out infinite;
+        }
+        .complementos-title::after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: -28px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--timeline-color-primary);
+        }
+        .complementos-title-extra::after {
+            content: "";
+            position: absolute;
+            top: 21px;
+            left: -23px;
+            width: 22px;
+            height: 3px;
+            background-color: var(--timeline-color-primary);
+        }
+        .complementos-title::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: -22px;
+            width: 3px;
+            height: 60px;
+            background-color: var(--timeline-color-primary);
+        }
+        .mods-title {
+            left: 20px;
+            position: relative;
+            border: 2px solid rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 7px;
+            width: 30%;
+        }
+        .mods-title:hover {
+            animation: box-animation 2s ease-in-out infinite;
+        }
+        .mods-title::after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: -28px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--timeline-color-primary);
+        }
+        .mods-title-extra::after {
+            content: "";
+            position: absolute;
+            top: 21px;
+            left: -23px;
+            width: 22px;
+            height: 3px;
+            background-color: var(--timeline-color-primary);
+        }
+        .mods-title::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: -22px;
+            width: 3px;
+            height: 50px;
+            background-color: var(--timeline-color-primary);
+        }
+        @keyframes box-animation {
+            0% {
+                box-shadow: 0 0 10px rgb(245, 234, 234);
+            } 50% {
+                box-shadow: 0 0 0px rgb(245, 234, 234);
+            } 100% {
+                box-shadow: 0 0 10px rgb(245, 234, 234);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="tree-container">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const treeContainer = document.getElementById('tree-container');
+            let textTitle = '';
+            let textComplementos = '';
+            let totalMods = 0;
+            let totalModsDependientes = new Set();
+            let totalComplementosDependientes = new Set();
+            var totalModsComplementos = 0;
+            var totalComplementos = 0;
+
+            fetch('https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json')
+                .then(response => response.json())
+                .then(data => {
+                    /* Muestra la cantidad de mods registrados */
+                    data.mods.forEach(mod => {
+                        if (mod.disponible) {
+                            totalMods++;
+                            if (mod.dependencia && mod.dependencia.length > 0) {
+                                mod.dependencia.forEach(dependencia => {
+                                    totalModsDependientes.add(dependencia.name);
+                                })
+                            }
+                        }
+                    })
+                    /* Muestra la cantidad de complementos registrados */
+                    data.complementos.forEach(complemento => {
+                        if (complemento.disponible) {
+                            totalComplementos++;
+                            if (complemento.dependencia && complemento.dependencia.length > 0) {
+                                complemento.dependencia.forEach(dependencia => {
+                                    totalComplementosDependientes.add(dependencia.name);
+                                    if (dependencia.dependencia && dependencia.dependencia.length > 0) {
+                                        dependencia.dependencia.forEach(dependencia2 => {
+                                            totalComplementosDependientes.add(dependencia2.name);
+                                        })
+                                    }
+                                })
+                            }
+                        }
+                    })
+                    console.log('Total mods:', totalMods);
+                    console.log('Total mods:', totalModsDependientes);
+                    /* Muestra la cantidad de mods totales */
+                    totalModsComplementos = totalMods + totalModsDependientes.size;
+                    const tree = buildTree(data);
+                    treeContainer.appendChild(tree);
+                })
+                .catch(error => console.error('Error fetching the JSON:', error));
+
+            function buildTree(data) {
+                const root = document.createElement('div');
+                root.innerHTML = `<h2>Kailand V ${data.configVersion} | Launcher V ${data.launcherVersion}</h2> `;
+                textTitle = `Mods ${totalMods} <span style="color: var(--timeline-color-dependency)">+${totalModsDependientes.size}</span>`;
+                textComplementos = `Complementos ${totalComplementos} <span style="color: var(--timeline-color-dependency)">+${totalComplementosDependientes.size}</span> `;
+                const modsList = buildBranch(textTitle, data.mods);
+                const complementosList = buildBranch(textComplementos, data.complementos);
+
+                root.appendChild(modsList);
+                root.appendChild(complementosList);
+
+                return root;
+            }
+
+            function buildBranch(title, items) {
+                const container = document.createElement('div');
+                container.classList.add('tree-branch');
+
+                const titleElement = document.createElement('h3');
+                if (title === textTitle) {
+                    titleElement.classList.add('mods-title');
+                    /* Cambia el texto de Title al pasar el mouse */
+                    titleElement.addEventListener('mouseover', function() {
+                        titleElement.innerHTML = `Mods ${totalModsComplementos} <span class="mods-title-extra"></span>`;
+                    })
+                    /* Regresa el texto original al quitar el mouse */
+                    titleElement.addEventListener('mouseout', function() {
+                        titleElement.innerHTML = textTitle;
+                    })
+
+                } else if (title === textComplementos) {
+                    titleElement.classList.add('complementos-title');
+                    /* Cambia el texto de Title al pasar el mouse */
+                    titleElement.addEventListener('mouseover', function() {
+                        titleElement.innerHTML = `Complementos ${totalComplementos + totalComplementosDependientes.size}<span class="complementos-title-extra"></span>`;
+                    })
+                    /* Regresa el texto original al quitar el mouse */
+                    titleElement.addEventListener('mouseout', function() {
+                        titleElement.innerHTML = textComplementos;
+                    })
+                }
+                titleElement.innerHTML = title;
+                container.appendChild(titleElement);
+
+                const list = document.createElement('ul');
+                items.sort((a, b) => a.name.localeCompare(b.name));
+                items.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = item.name;
+                    listItem.classList.add('mods-item');
+
+                    if (item.disponible) {
+                        listItem.classList.add('available');
+                    } else {
+                        listItem.classList.add('unavailable');
+                    }
+
+                    if (item.dependencia && item.dependencia.length > 0) {
+                        const dependencies = document.createElement('ul');
+                        item.dependencia.forEach(dependency => {
+                            const depItem = document.createElement('li');
+                            depItem.textContent = dependency.name;
+                            depItem.classList.add('dependency');
+                            dependencies.appendChild(depItem);
+
+                            // Recursivamente agregar sub-dependencias si existen
+                            if (dependency.dependencia && dependency.dependencia.length > 0) {
+                                const subDependencies = buildBranch('', dependency.dependencia);
+                                depItem.appendChild(subDependencies);
+                            }
+                        });
+                        listItem.appendChild(dependencies);
+                    }
+
+                    list.appendChild(listItem);
+                });
+
+                container.appendChild(list);
+                return container;
+            }
+        });
+    </script>
+</body>
+</html>
