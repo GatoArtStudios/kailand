@@ -2,7 +2,9 @@ import json
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP, AES
 from Crypto.Random import get_random_bytes
+import utils
 
+@utils.handle_exception('Error al encryptar los datos, por favor contactar con soporte.')
 def encrypt_message(data: dict, file: str = 'encrypted_data.json') -> bool:
     '''
     Guardar un mensaje encriptado en un archivo JSON
@@ -15,7 +17,7 @@ def encrypt_message(data: dict, file: str = 'encrypted_data.json') -> bool:
     from config import PUBLIC_KEY
     public_key = RSA.import_key(PUBLIC_KEY)
     cipher_rsa = PKCS1_OAEP.new(public_key)
-    
+
     # Convertir el diccionario a JSON y luego a bytes
     json_data = json.dumps(data).encode('utf-8')
 
@@ -42,6 +44,7 @@ def encrypt_message(data: dict, file: str = 'encrypted_data.json') -> bool:
 
     return True
 
+@utils.handle_exception('Error al desencriptar los datos, por favor contacte a soporte.')
 def decrypt_message(file: str = 'encrypted_data.json') -> dict:
     '''
     Desencriptar un mensaje y lo retorna como un diccionario
@@ -55,7 +58,7 @@ def decrypt_message(file: str = 'encrypted_data.json') -> dict:
     # Leer los datos cifrados desde el archivo JSON
     with open(file, "r") as json_file:
         encrypted_data = json.load(json_file)
-    
+
     ciphertext = bytes.fromhex(encrypted_data["ciphertext"])
     tag = bytes.fromhex(encrypted_data["tag"])
     nonce = bytes.fromhex(encrypted_data["nonce"])
@@ -68,16 +71,7 @@ def decrypt_message(file: str = 'encrypted_data.json') -> dict:
     # Desencriptar los datos JSON con AES
     cipher_aes = AES.new(aes_key, AES.MODE_EAX, nonce=nonce)
     decrypted_json_data = cipher_aes.decrypt_and_verify(ciphertext, tag).decode('utf-8')
-    
+
     decrypted_data = json.loads(decrypted_json_data)
-    
+
     return decrypted_data
-
-# Ejemplo de uso:
-# encrypt_message(data={
-#         "message": "Hello, World!",
-#     },
-#     file='config.json')
-
-# print(decrypt_message(file='config.json'))
-# print(type(decrypt_message(file='config.json')))
