@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import utils
 import requests
 import webbrowser
 import flet as ft
@@ -13,28 +14,50 @@ class LauncherVentana:
 
     def __call__(self, flet_page: ft.Page) -> Any:
         from layout import data_widget
+        self.data_widget = data_widget
         self._page = flet_page
         self._page.title = 'Kailand V'
         self._page.window.center()
         self._page.window.frameless = True
-        self._page.padding = 0
         self._page.bgcolor = ft.colors.TRANSPARENT
-        self._page.window_bgcolor = ft.colors.TRANSPARENT
+        self._page.window.bgcolor = ft.colors.TRANSPARENT
+        self._page.window.height = 715
+        self._page.window.width = 1277
+        self._page.window.resizable = False
+        self._page.window.title_bar_hidden = True
+        self._page.window.title_bar_buttons_hidden = True
+        self._page.padding = 0
         self._page.vertical_alignment = ft.MainAxisAlignment.CENTER
         self._page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
         self._page.theme_mode = ft.ThemeMode.DARK
-        self._page.window_height = 715
-        self._page.window_width = 1277
-        self._page.window_resizable = False
         self._page.overlay.append(data_widget.progressbar_install)
         self._page.overlay.append(data_widget.java_info)
         self._page.overlay.append(data_widget.user_alert)
-        self._page.window_title_bar_hidden = True
-        self._page.window_title_bar_buttons_hidden = True
         self._page.fonts = {
             'Minecraft': '/fonts/Minecrafter.Alt.ttf',
             'FiraCode': '/fonts/FiraCodeNerdFont-SemiBold.ttf'
         }
+        self._page.add(
+            ft.Container(
+                content=ft.WindowDragArea(
+                    content=ft.Text(
+                    'Cargando Launcher de Kailand V, por favor espere...',
+                    animate_scale=ft.animation.Animation(duration=300, curve="bounceout"),
+                    scale=ft.transform.Scale(1),
+                    )
+                ),
+                # Fondo del launcher
+                bgcolor=ft.colors.with_opacity(0.3, 'black'),
+                padding=20,
+                border_radius=ft.border_radius.all(10),
+            )
+        )
+        self.page_update()
+        self.load_ui_final()
+
+    def load_ui_final(self):
+        import utils
+        self._page.controls.pop(0)
         self._page.add(
             # Contenedor Principal y donde se agrega el fondo de la ventana
             ft.Container(
@@ -76,16 +99,16 @@ class LauncherVentana:
                                 ft.Container(
                                     content=ft.Column(
                                         [
-                                            data_widget.buttom_perfil,
-                                            data_widget.buttom_reglas,
-                                            data_widget.buttom_mods,
-                                            data_widget.buttom_shaders,
-                                            data_widget.buttom_textures,
-                                            data_widget.buttom_discord,
-                                            data_widget.buttom_console,
-                                            data_widget.buttom_ajustes,
+                                            self.data_widget.buttom_perfil,
+                                            self.data_widget.buttom_reglas,
+                                            self.data_widget.buttom_mods,
+                                            self.data_widget.buttom_shaders,
+                                            self.data_widget.buttom_textures,
+                                            self.data_widget.buttom_discord,
+                                            self.data_widget.buttom_console,
+                                            self.data_widget.buttom_ajustes,
                                             ft.Container(
-                                                content=data_widget.buttom_jugar,
+                                                content=self.data_widget.buttom_jugar,
                                                 margin=ft.margin.only(0, 260, 0 , 0)
                                             )
                                         ]
@@ -100,7 +123,7 @@ class LauncherVentana:
                                     # border=ft.border.all(2, ft.colors.GREEN)
                                 ),
                                 # Contenedor derecho
-                                data_widget.c_derecho,
+                                self.data_widget.c_derecho,
                             ],
                             vertical_alignment=ft.CrossAxisAlignment.START,
                             alignment=ft.MainAxisAlignment.CENTER,
@@ -148,7 +171,7 @@ class LauncherVentana:
         else:
             e.control.opacity = 0.5
             e.control.update()
-
+    @utils.handle_exception('Error al conectar con el servidor, por favor verifique su conexion.')
     def open_dlg_modal(self):
         '''
         Abre alerta con opciones si faltan recursos ///// Se ejecuta al iniciar el launcher de forma automatica para comprodar datos
@@ -156,9 +179,10 @@ class LauncherVentana:
         from log import logger
         from layout import data_widget
         from game import mc
+        import utils
         logger.info('Chequeando actualizaciones del servidor')
         if mc.check_update_launcher():
-            response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
+            response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json", timeout=5)
             if response.status_code == 200:
                 __temp_data_get = response.json()
                 mc.url_new_vercion = __temp_data_get["launcherUrl"]
@@ -194,6 +218,9 @@ class LauncherVentana:
         '''
         Actualiza la pagina web desde una funcion externa
         '''
-        self._page.update()
+        try:
+            self._page.update()
+        except Exception as e:
+            pass
 
 app = LauncherVentana()
