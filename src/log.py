@@ -18,7 +18,7 @@ def loger():
     from config import DIRECTORY_KAILAND
     # Configura el logger con la configuración básica
     logging.basicConfig(
-        level=logging.INFO,  # Nivel de registro
+        level=logging.DEBUG,  # Nivel de registro
         filename=os.path.join(DIRECTORY_KAILAND, "launcher.log"),  # Archivo de registro
         encoding='utf-8',  # Codificación de los mensajes de registro
         format='%(asctime)s - %(levelname)s - %(message)s',  # Formato de los mensajes de registro
