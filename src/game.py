@@ -2,6 +2,7 @@ import os
 import sys
 import time
 import uuid
+import utils
 import shutil
 import zipfile
 import requests
@@ -55,6 +56,7 @@ class Mc:
         self.download_optional = 0
         self.anticheat()
 
+    @utils.handle_exception('Error al conectar con el servidor, reinicie el launcher.')
     def load_data_file_config(self):
         '''
         Carga los datos del archivo mods_data.json en la siguiente ruta:
@@ -466,6 +468,7 @@ class Mc:
         encryption.encrypt_message(self.options, self.archivo_kailand)
         logger.info("Guardo las optiones en el archivo de configuracion")
 
+    @utils.handle_exception('Error al consultar al servidor, reinicia el launcher y comprueba tu conexion a internet.')
     def consulta_nube(self, bt_play: bool = False) -> bool:
         """
         Consulta el archivo de configuración en el servidor.
@@ -476,23 +479,20 @@ class Mc:
         Retorna:
             bool: True si la configuración coincide con la del servidor, False si no coincide o si hay un error de conexión.
         """
-        try:
-            response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
-            response.raise_for_status()
-            temp_json = response.json()
-            if os.path.exists(self.archivo_mods_data):
-                if temp_json["configVersion"] != self.data_nube["configVersion"]:
-                    if bt_play:
-                        encryption.encrypt_message(temp_json, self.archivo_mods_data)
-                        self.data_nube.update(temp_json)
-                        return True
-                    return False
-            else:
-                self.data_nube.update(temp_json)
-                encryption.encrypt_message(self.data_nube, self.archivo_mods_data)
-            return True
-        except requests.exceptions.RequestException:
-            return False
+        response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
+
+        temp_json = response.json()
+        if os.path.exists(self.archivo_mods_data):
+            if temp_json["configVersion"] != self.data_nube["configVersion"]:
+                if bt_play:
+                    encryption.encrypt_message(temp_json, self.archivo_mods_data)
+                    self.data_nube.update(temp_json)
+                    return True
+                return False
+        else:
+            self.data_nube.update(temp_json)
+            encryption.encrypt_message(self.data_nube, self.archivo_mods_data)
+        return True
 
     def validate_directory(self):
         """
@@ -573,39 +573,22 @@ class Mc:
                 debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NO_WINDOW  | subprocess.DETACHED_PROCESS, text=True, startupinfo=startinfo)
                 # Da notificación de que el launcher se ha cerrado y el juego a iniciado
                 logger.warning('Cerrando launcher, el juego iniciara en unos segundos...')
-                time.sleep(3)
+                utils.ms_notify(message='Juego iniciado, el launcher se cerrara.')
+                time.sleep(2)
                 self.anticheat() # Ejecutamos el AntiCheat antes de que el juego inicie para soluciona el bug de que se podian colocar mods antes de iniciar el juego
-                app._page.window_destroy()
-                time.sleep(3)
-                try:
-                    sys.exit(1)
-                except SystemExit:
-                    os._exit(1)
-                sys.exit(0)
+                utils.exit_app()
             elif SYSTEM == "Linux":
                 debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                 # Da notificación de que el launcher se ha cerrado y el juego a iniciado
                 logger.warning('Cerrando launcher, el juego iniciara en unos segundos...')
                 time.sleep(3)
-                app._page.window_destroy()
-                time.sleep(3)
-                try:
-                    sys.exit(1)
-                except SystemExit:
-                    os._exit(1)
-                sys.exit(0)
+                utils.exit_app()
             else:
                 debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                 # Da notificación de que el launcher se ha cerrado y el juego a iniciado
                 logger.warning('Cerrando launcher, el juego iniciara en unos segundos...')
                 time.sleep(3)
-                app._page.window_destroy()
-                time.sleep(3)
-                try:
-                    sys.exit(1)
-                except SystemExit:
-                    os._exit(1)
-                sys.exit(0)
+                utils.exit_app()
 
             # Agrega mensaje debug al logger
             logger.warning("Minecraft Detenido...")
@@ -618,6 +601,7 @@ class Mc:
         else:
             logger.warning("Minecraft no instalado")
 
+    @utils.handle_exception('Error al comprovar actualizaciones, reinicie el laucher.')
     def check_update_launcher(self):
         '''
         Chequea actualizaciones en el servidor y retorna el estado en boleano
@@ -627,28 +611,19 @@ class Mc:
         Comprueba si la version del launcher actual es igual a la version del launcher en el servidor.
         Si son diferentes retorna True, si son iguales retorna False.
         '''
-        # Obtiene la configuracion actual del servidor
-        try:
-            response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
-            if response.status_code == 200:
-                # Parsea el json obtenido
-                __temp_data_get = response.json()
-                if not __temp_data_get["launcherVersion"] == self.launcherVersion: # Si la vercion no es la misma es valido
-                    # Si hay una actualizacion disponible retorna True
-                    return True
-                else: # Si la vercion es la misma ignora el resto
-                    # No hay actualizaciones disponibles retorna False
-                    return False
-            else:
-                # Faltó obtener la respuesta del servidor retorna False
+        response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
+        if response.status_code == 200:
+            # Parsea el json obtenido
+            __temp_data_get = response.json()
+            if not __temp_data_get["launcherVersion"] == self.launcherVersion: # Si la vercion no es la misma es valido
+                # Si hay una actualizacion disponible retorna True
+                return True
+            else: # Si la vercion es la misma ignora el resto
+                # No hay actualizaciones disponibles retorna False
                 return False
-        except Exception as e:
+        else:
             # Faltó obtener la respuesta del servidor retorna False
-            try:
-                sys.exit(1)
-            except SystemExit:
-                os._exit(1)
-            sys.exit(0)
+            return False
 
     def download_and_unzip(self, config):
         from log import logger
