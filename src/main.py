@@ -1,6 +1,7 @@
 import os
 import flet as ft
 import utils
+utils.ms_notify(message='Cargando Launcher de Kailand V, por favor espere...')
 import subprocess
 import typing_extensions
 from ui import app
