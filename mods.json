@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.84",
+    "configVersion": "1.0.85",
     "launcherVersion": "1.0.26.1",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSe a solucionado el bug de las configuraciones por defecto del launcher,\nSe cambio el logo del launcher,\nSolucion del bug para hacerle bypass al antiCheat.",
@@ -15,9 +15,9 @@
         },
         {
             "name": "Fancy Menu",
-            "file": "fancymenu-1.0.2.zip",
+            "file": "fancymenu-1.0.3.zip",
             "directory": "fancymenu",
-            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/config/fancymenu-1.0.2.zip",
+            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/config/fancymenu-1.0.3.zip",
             "disponible": true
         }
     ],
