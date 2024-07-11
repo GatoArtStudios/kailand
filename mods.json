@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.85",
+    "configVersion": "1.0.86",
     "launcherVersion": "1.0.26.1",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSe a solucionado el bug de las configuraciones por defecto del launcher,\nSe cambio el logo del launcher,\nSolucion del bug para hacerle bypass al antiCheat.",
@@ -35,7 +35,7 @@
             "descripcion": "Blood and gore",
             "file": "bloodandgore1.19.2v1.1(beta).jar",
             "url": "https://mediafilez.forgecdn.net/files/4373/528/bloodandgore1.19.2v1.1%28beta%29.jar",
-            "disponible": true,
+            "disponible": false,
             "dependencia": []
         },
         {
@@ -67,7 +67,7 @@
             "descripcion": "Mine traps",
             "file": "MineTraps-1.19.x-(v.2.2.4).jar",
             "url": "https://mediafilez.forgecdn.net/files/4086/827/MineTraps-1.19.x-%28v.2.2.4%29.jar",
-            "disponible": true,
+            "disponible": false,
             "dependencia": []
         },
         {
@@ -522,7 +522,7 @@
             "descripcion": "Tac craft tactical armor pack",
             "file": "TacCraft [Forge 1.19.2] 0.1.jar",
             "url": "https://mediafilez.forgecdn.net/files/4544/813/TacCraft%20%5BForge%201.19.2%5D%200.1.jar",
-            "disponible": true,
+            "disponible": false,
             "dependencia": []
         },
         {
@@ -770,7 +770,7 @@
             "descripcion": "Dungeon crawl",
             "file": "DungeonCrawl-1.19-2.3.12.jar",
             "url": "https://mediafilez.forgecdn.net/files/4437/208/DungeonCrawl-1.19-2.3.12.jar",
-            "disponible": true,
+            "disponible": false,
             "dependencia": []
         },
         {
@@ -1002,7 +1002,7 @@
             ]
         },
         {
-            "name": "Kailand finger",
+            "name": "Kailand finder",
             "descripcion": "Kailand finger",
             "file": "KailandFinder_v1.1.jar",
             "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/KailandFinder_v1.1.jar",
@@ -1215,7 +1215,7 @@
             "descripcion": "mod",
             "file": "Philips-Ruins1.19.2-9.2.jar",
             "url": "https://mediafilez.forgecdn.net/files/5407/359/Philips-Ruins1.19.2-9.2.jar",
-            "disponible": true,
+            "disponible": false,
             "dependencia": []
         },
         {
