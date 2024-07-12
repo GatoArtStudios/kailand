@@ -92,7 +92,7 @@ class DataWidget:
         self.java_path = ft.TextField(label="Ejecutable de Java", read_only=True, border_color="white", width=500, value='Por Defecto' if mc.options['executablePath'] == 'java' else mc.options['executablePath'], color="white")
         self.buttom_change_java = ft.ElevatedButton(
             text="Cambiar",
-            on_click=lambda _: (self.java_info.pick_files(allowed_extensions=["exe"], initial_directory="C:\Program Files\Java", dialog_title="Seleccione el archivo java.exe o javaw.exe"), self.animate_buttom(e=_)),
+            on_click=lambda _: (self.java_info.pick_files(allowed_extensions=["exe"], initial_directory="C:\\Program Files\\Java", dialog_title="Seleccione el archivo java.exe o javaw.exe"), self.animate_buttom(e=_)),
             color="white",
             bgcolor=ft.colors.with_opacity(0.2, "white"),
             animate_scale=ft.animation.Animation(duration=400, curve="bounceout"),
