@@ -2,12 +2,14 @@ import sys
 import os
 import time
 from plyer import notification
+from config import APP_PATH
 
 def ms_notify(title: str = 'Kailand V', message: str = None) -> None:
     notification.notify(
         title=title,
         message=message,
         app_name="Kailand V",
+        app_icon=os.path.join(APP_PATH, 'icon.ico'),
     )
 
 
