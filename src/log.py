@@ -1,8 +1,8 @@
 import os
 import logging
+from config import DIRECTORY_KAILAND
 from logging import StreamHandler
 import flet as ft
-from config import DIRECTORY_KAILAND
 import utils
 
 # Verifica si el directorio de trabajo principal existe
