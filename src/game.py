@@ -807,10 +807,12 @@ class Mc:
                 minecraft_launcher_lib.install.install_minecraft_version("1.19.2", self.minecraft_directory, callback={'setStatus': set_status, 'setProgress': set_progress, 'setMax': set_max})
                 data_widget.progressbar_install.value = 0.8
                 data_widget.progressbar_install.tooltip = 'Minecraft instalado: 80%'
-                app.page_update()
                 from config import JAVA_PATH, get_path_java
                 JAVA_PATH = get_path_java()
                 self.options['executablePath'] = JAVA_PATH
+                from layout import data_widget
+                data_widget.java_path.value = JAVA_PATH
+                app.page_update()
                 logger.info(f'Java path configurado: {JAVA_PATH}')
                 logger.info("Minecraft instalado correctamente")
             if not os.path.exists(os.path.join(self.minecraft_directory, "versions", "1.19.2-forge-43.4.0")):
