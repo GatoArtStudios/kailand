@@ -639,7 +639,8 @@ class Mc:
 
                 logger.info(f"Descomprimiendo configuración de {config['name']}")
                 if not os.path.exists(directory):
-                    os.mkdir(directory)
+                    logger.info(f"Creando directorio {directory}")
+                    os.makedirs(directory)
 
                 with zipfile.ZipFile(name_zip, 'r') as zip_ref:
                     zip_ref.extractall(directory)

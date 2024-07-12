@@ -2,6 +2,14 @@ import os
 import logging
 from logging import StreamHandler
 import flet as ft
+from config import DIRECTORY_KAILAND
+import utils
+
+# Verifica si el directorio de trabajo principal existe
+if not os.path.exists(DIRECTORY_KAILAND):
+    # Si no existe, crea el directorio
+    utils.ms_notify(message='Estamos configurando todo, esto puede tomar unos segundos...')
+    os.mkdir(DIRECTORY_KAILAND)
 
 log_console = [] # Variable que almacena el log para la consola
 LOG_AVAILABLE = False
