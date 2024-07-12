@@ -204,8 +204,10 @@ class Mc:
             El log se actualiza con los datos obtenidos.
             """
             from log import logger
+            from config import JAVA_PATH
             # Lee el contenido del archivo JSON y actualiza el diccionario de la variable options
             data_options = encryption.decrypt_message(file=self.archivo_kailand)
+            data_options['executablePath'] = JAVA_PATH
             self.options.update(data_options)
             logger.info(self.options)
 
