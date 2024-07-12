@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.86",
+    "configVersion": "1.0.87",
     "launcherVersion": "1.0.26.1",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSe a solucionado el bug de las configuraciones por defecto del launcher,\nSe cambio el logo del launcher,\nSolucion del bug para hacerle bypass al antiCheat.",
@@ -14,10 +14,10 @@
             "disponible": false
         },
         {
-            "name": "Fancy Menu",
-            "file": "fancymenu-1.0.3.zip",
+            "name": "Fancy Menu v1.0.4",
+            "file": "fancymenu-1.0.4.zip",
             "directory": "fancymenu",
-            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/config/fancymenu-1.0.3.zip",
+            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/config/fancymenu-1.0.4.zip",
             "disponible": true
         }
     ],
@@ -1313,6 +1313,25 @@
             ]
         },
         {
+            "name": "Better F3",
+            "descripcion": "BetterF3 es un mod que reemplaza el HUD de depuración original de Minecraft con un HUD altamente personalizable y más legible por humanos.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/betterf3",
+            "file": "BetterF3-4.0.1-Forge-1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4863/555/BetterF3-4.0.1-Forge-1.19.2.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": [
+                {
+                    "name": "Cloth config API",
+                    "descripcion": "Cloth config API",
+                    "file": "cloth-config-8.3.115-forge.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4973/444/cloth-config-8.3.115-forge.jar",
+                    "disponible": true,
+                    "dependencia": []
+                }
+            ]
+        },
+        {
             "name": "Enhanced Visuals",
             "descripcion": "EnhancedVisuals proporciona una experiencia más inmersiva al agregar efectos de sangre o gore al HUD.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/enhancedvisuals",
@@ -1735,6 +1754,65 @@
             "disponible": true,
             "active": false,
             "dependencia": []
+        },
+        {
+            "name": "Clear Despawm",
+            "descripcion": "Clear Despawn es un mod que hace que los elementos caídos parpadeen cuando están a punto de desaparecer. De forma predeterminada, esto sucede cuando al elemento le quedan unos 20 segundos hasta que desaparezca y el parpadeo se vuelve gradualmente más rápido a medida que avanza el cronómetro. Ambos elementos tienen opciones de configuración.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/clear-despawn",
+            "file": "ClearDespawn-forge-1.19.2-1.1.11.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4651/265/ClearDespawn-forge-1.19.2-1.1.11.jar",
+            "disponible": true,
+            "active": false,
+            "dependencia": []
+        },
+        {
+            "name": "Chat Heads",
+            "descripcion": "Este mod del lado del cliente agrega cabezas de jugadores junto a los mensajes de chat.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/chat-heads",
+            "file": "chat_heads-0.12.8-forge-1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5513/301/chat_heads-0.12.8-forge-1.19.2.jar",
+            "disponible": true,
+            "active": false,
+            "dependencia": []
+        },
+        {
+            "name": "Detail Armor Bar",
+            "descripcion": "La barra de armadura detallada agrega más información a la barra de armadura.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/detail-armor-bar-forge",
+            "file": "DetailArmorBar-2.6.4+1.19.2-forge.jar",
+            "url": "https://mediafilez.forgecdn.net/files/3920/487/DetailArmorBar-2.6.4%2B1.19.2-forge.jar",
+            "disponible": true,
+            "active": false,
+            "dependencia": []
+        },
+        {
+            "name": "Shoulder Surfing Reloaded",
+            "descripcion": "Shoulder Surfing Reloaded es un mod de cámara en tercera persona altamente configurable para Minecraft.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/shoulder-surfing-reloaded",
+            "file": "ShoulderSurfing-Forge-1.19.2-4.1.5.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5455/949/ShoulderSurfing-Forge-1.19.2-4.1.5.jar",
+            "disponible": true,
+            "active": false,
+            "dependencia": []
+        },
+        {
+            "name": "Forgematica",
+            "descripcion": "Puerto de forja no oficial de Litematica. Un mod esquemático moderno del lado del cliente para Minecraft.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/forgematica",
+            "file": "Forgematica-0.1.9-mc1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5381/680/Forgematica-0.1.9-mc1.19.2.jar",
+            "disponible": true,
+            "active": false,
+            "dependencia": [
+                {
+                    "name": "MaFgLib",
+                    "descripcion": "MaFgLib | Dependencia de Forgematica",
+                    "file": "MaFgLib-0.1.12-mc1.19.2.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/5366/347/MaFgLib-0.1.12-mc1.19.2.jar",
+                    "disponible": true,
+                    "dependencia": []
+                }
+            ]
         }
     ]
 }
