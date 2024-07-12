@@ -26,16 +26,25 @@ def get_system():
 
 def get_path_java():
     if platform.system() == 'Windows':
-        if os.path.exists('C:\\Program Files\\Java\jdk-17\\bin\\java.exe'):
-            return 'C:\\Program Files\\Java\\jdk-17\\bin\\java.exe'
+        if os.path.exists(os.path.join(DIRECTORY_KAILAND, 'runtime', 'java-runtime-gamma', 'windows-x64', 'java-runtime-gamma', 'bin', 'javaw.exe')):
+            return os.path.join(DIRECTORY_KAILAND, 'runtime', 'java-runtime-gamma', 'windows-x64', 'java-runtime-gamma', 'bin', 'javaw.exe')
+        if os.path.exists('C:\\Program Files\\Java\jdk-17\\bin\\javaw.exe'):
+            return 'C:\\Program Files\\Java\\jdk-17\\bin\\javaw.exe'
+        else:
+            return 'java'
+    elif platform.system() == 'Linux':
+        if os.path.exists(os.path.join(DIRECTORY_KAILAND, 'runtime', 'java-runtime-gamma', 'linux', 'java-runtime-gamma', 'bin', 'java')):
+            return os.path.join(DIRECTORY_KAILAND, 'runtime', 'java-runtime-gamma', 'linux', 'java-runtime-gamma', 'bin', 'java')
         else:
             return 'java'
     else:
         return 'java'
 
+DIRECTORY_KAILAND = get_directory_kailand()
+
 JAVA_PATH = get_path_java()
 
-DIRECTORY_KAILAND = get_directory_kailand()
+APP_PATH = os.getcwd()
 
 SYSTEM = get_system()
 
