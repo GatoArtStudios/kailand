@@ -10,7 +10,7 @@ else:
 def get_directory_kailand():
     # Definir la ruta del directorio de trabajo principal según el sistema operativo
     if platform.system() == 'Windows':
-        return f"C://Users//{USERNAME}//AppData//Roaming//.kailand"
+        return os.sep.join(["C:", "Users", USERNAME, "AppData", "Roaming", ".kailand"])
     elif platform.system() == 'Darwin':  # macOS
         return os.path.join("Users", USERNAME, ".kailand")
     else:  # Linux y otros sistemas UNIX-like
@@ -27,9 +27,9 @@ def get_system():
 def get_path_java():
     if platform.system() == 'Windows':
         if os.path.exists(os.path.join(DIRECTORY_KAILAND, 'runtime', 'java-runtime-gamma', 'windows-x64', 'java-runtime-gamma', 'bin', 'javaw.exe')):
-            return os.path.join(DIRECTORY_KAILAND, 'runtime', 'java-runtime-gamma', 'windows-x64', 'java-runtime-gamma', 'bin', 'javaw.exe')
+            return os.sep.join([DIRECTORY_KAILAND, 'runtime', 'java-runtime-gamma', 'windows-x64', 'java-runtime-gamma', 'bin', 'javaw.exe'])
         if os.path.exists('C:\\Program Files\\Java\\jdk-17\\bin\\javaw.exe'):
-            return 'C:\\Program Files\\Java\\jdk-17\\bin\\javaw.exe'
+            return os.sep.join(['C:', 'Program Files', 'Java', 'jdk-17', 'bin', 'javaw.exe'])
         else:
             return 'java'
     elif platform.system() == 'Linux':

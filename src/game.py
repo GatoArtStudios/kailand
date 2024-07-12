@@ -42,7 +42,7 @@ class Mc:
         self.progress_time = 1
         self.archivo_kailand = os.path.join(self.minecraft_directory, "kaliand.json")
         self.archivo_mods_data = os.path.join(self.minecraft_directory, "mods_data.json")
-        self.ruta_mods = os.path.join(self.minecraft_directory, "mods")
+        self.ruta_mods = os.sep.join([self.minecraft_directory, "mods"])
         self.url_base_mods = 'https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods'
         self.dependencias_mods = {}
         self.cheking()
@@ -262,6 +262,16 @@ class Mc:
         else:
             return False
 
+    def checkin_file(self, x: dict) -> bool:
+        '''
+        Verifica si un archivo del apartadode mods esta instalado.
+        '''
+        from config import DIRECTORY_KAILAND
+        if os.path.exists(os.path.join(DIRECTORY_KAILAND, 'mods', x['file'])):
+            return True
+        else:
+            return False
+
     def anticheat(self):
         '''
         Anticheat de mods
@@ -295,7 +305,25 @@ class Mc:
                 self.eliminar_mod(os.path.join(self.ruta_mods, file), file)
                 logger.warning(f"Se elimino el mod '{file}' por no estar disponible. (No puedes usar mods/archivos externos a kailand)")
 
-    def descargar_mod(self, mod):
+            for fil in self.data_nube['mods']: # Iteramos sobre todos los mods en la base de datos
+                if self.checkin_file(fil): # Verifica si el mod esta instalado
+                    if len(fil['dependencia']) > 0: # Verifica si hay dependencias
+                        for d in fil['dependencia']: # Iteramos sobre las dependencias
+                            if d['disponible']: # Verifica si la dependencia es disponible
+                                if not self.checkin_file(d): # Verifica si la dependencia no esta instalada y si no esta instalada la descarga
+                                    logger.warning(f'La dependencia {d["name"]} no esta instalada, instalando dependencia.')
+                                    self.descargar_mod(d) # Descarga la dependencia
+
+            for fil in self.data_nube['complementos']: # Iteramos sobre todos los mods en la base de datos
+                if self.checkin_file(fil): # Verifica si el mod esta instalado
+                    if len(fil['dependencia']) > 0: # Verifica si hay dependencias
+                        for d in fil['dependencia']: # Iteramos sobre las dependencias
+                            if d['disponible']: # Verifica si la dependencia es disponible
+                                if not self.checkin_file(d): # Verifica si la dependencia no esta instalada y si no esta instalada la descarga
+                                    logger.warning(f'La dependencia {d["name"]} no esta instalada, instalando dependencia.')
+                                    self.descargar_mod(d) # Descarga la dependencia
+
+    def descargar_mod(self, mod: dict):
         '''
         Descarga el mod que se le pasa por la variable mod, y los descarga si es necesario y tambien sus dependencias.
         '''
