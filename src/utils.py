@@ -3,13 +3,14 @@ import os
 import time
 from plyer import notification
 from config import APP_PATH
+import platform
 
 def ms_notify(title: str = 'Kailand V', message: str = None) -> None:
     notification.notify(
         title=title,
         message=message,
         app_name="Kailand V",
-        app_icon=os.path.join(APP_PATH, 'icon.ico'),
+        app_icon=os.path.join(APP_PATH, 'icon.ico') if platform.system() == 'Windows' else os.path.join(APP_PATH, 'assets', 'icon.png'),
     )
 
 
