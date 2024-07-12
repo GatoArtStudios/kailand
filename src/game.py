@@ -808,6 +808,10 @@ class Mc:
                 data_widget.progressbar_install.value = 0.8
                 data_widget.progressbar_install.tooltip = 'Minecraft instalado: 80%'
                 app.page_update()
+                from config import JAVA_PATH, get_path_java
+                JAVA_PATH = get_path_java()
+                self.options['executablePath'] = JAVA_PATH
+                logger.info(f'Java path configurado: {JAVA_PATH}')
                 logger.info("Minecraft instalado correctamente")
             if not os.path.exists(os.path.join(self.minecraft_directory, "versions", "1.19.2-forge-43.4.0")):
                 logger.info("Instalando Forge")
