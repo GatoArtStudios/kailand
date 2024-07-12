@@ -28,7 +28,7 @@ def get_path_java():
     if platform.system() == 'Windows':
         if os.path.exists(os.path.join(DIRECTORY_KAILAND, 'runtime', 'java-runtime-gamma', 'windows-x64', 'java-runtime-gamma', 'bin', 'javaw.exe')):
             return os.path.join(DIRECTORY_KAILAND, 'runtime', 'java-runtime-gamma', 'windows-x64', 'java-runtime-gamma', 'bin', 'javaw.exe')
-        if os.path.exists('C:\\Program Files\\Java\jdk-17\\bin\\javaw.exe'):
+        if os.path.exists('C:\\Program Files\\Java\\jdk-17\\bin\\javaw.exe'):
             return 'C:\\Program Files\\Java\\jdk-17\\bin\\javaw.exe'
         else:
             return 'java'
