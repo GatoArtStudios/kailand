@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.87",
+    "configVersion": "1.0.88",
     "launcherVersion": "1.0.27.1",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSe a solucionado el bug de las configuraciones por defecto del launcher,\nSe cambio el logo del launcher,\nSolucion del bug para hacerle bypass al antiCheat.",
@@ -395,8 +395,8 @@
         {
             "name": "The Hordes",
             "descripcion": "The hordes",
-            "file": "The-Hordes-1.19.2-1.2.1a.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4886/619/The-Hordes-1.19.2-1.2.1a.jar",
+            "file": "The-Hordes-1.19.2-1.5.4.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5516/432/The-Hordes-1.19.2-1.5.4.jar",
             "disponible": true,
             "dependencia": [
                 {
@@ -1238,6 +1238,23 @@
                     "descripcion": "Coro útil",
                     "file": "coroutil-forge-1.19.2-1.3.6.jar",
                     "url": "https://mediafilez.forgecdn.net/files/5010/127/coroutil-forge-1.19.2-1.3.6.jar",
+                    "disponible": true,
+                    "dependencia": []
+                }
+            ]
+        },
+        {
+            "name": "Enhanced AI",
+            "descripcion": "mod",
+            "file": "EnhancedAI-1.8.7-mc1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5336/906/EnhancedAI-1.8.7-mc1.19.2.jar",
+            "disponible": true,
+            "dependencia": [
+                {
+                    "name": "InsaneLib",
+                    "descripcion": "InsaneLib",
+                    "file": "InsaneLib-1.7.5-mc1.19.2.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4362/859/InsaneLib-1.7.5-mc1.19.2.jar",
                     "disponible": true,
                     "dependencia": []
                 }
