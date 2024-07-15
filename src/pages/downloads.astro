@@ -34,6 +34,62 @@ import 'aos/dist/aos.css';
 				typetarget='_blank'
 			/>
 		</ul>
+		<h3 data-aos="fade-right" data-aos-delay="200" style="margin-top: 100px">
+			¿Por qué aparece una advertencia de SmartScreen al instalar nuestro Launcher de Minecraft?
+		</h3>
+		<p data-aos="fade-zoom-in" data-aos-delay="200">
+
+			Al intentar instalar nuestro Launcher de Minecraft en Windows,
+			es posible que veas una advertencia de SmartScreen. Esto sucede
+			porque nuestro software no está firmado con un certificado de firma
+			de código EV emitido por una autoridad de certificación reconocida,
+			dado los elevados precios para obtener un certificado EV, por el
+			momento solo tenemos certificado autofirmado el cual garantiza la
+			integridad del codigo y te aseguras que estas descargando el software
+			oficial de kailand V. Sin embargo, queremos asegurarte que nuestro
+			software es completamente seguro y de codigo abierto por si quieres
+			ver el codigo en <a href="https://github.com/GatoArtStudios/kailand" class="no-decorect"> github </a>.
+		</p>
+		<h3 data-aos="fade-right" data-aos-delay="200">
+			¿Qué es SmartScreen?
+		</h3>
+		<p data-aos="fade-zoom-in" data-aos-delay="200">
+			SmartScreen es una función de seguridad en Windows que ayuda a proteger tu PC
+			de aplicaciones no reconocidas, lo cual aplicaciones con certificado de código
+			EV son las unicas aplicaciones que no les saltara la advertencia de SmartScreen.
+			Como nuestro Launcher es un software de código abierto y autofirmado, Windows no lo
+			reconoce automáticamente, lo que genera esta advertencia.
+		</p>
+		<h3 data-aos="fade-right" data-aos-delay="200">
+			¿Cómo puedo proceder con la instalación de manera segura?
+		</h3>
+		<p>
+			<li data-aos="fade-zoom-in" data-aos-delay="200">
+				<b>Descargar el archivo:</b> Descarga el archivo de instalación desde nuestro sitio <a href="https://www.kailand.es" class="no-decorect">web</a>.
+			</li>
+			<li data-aos="fade-zoom-in" data-aos-delay="200">
+				<b>Ir a Downloads:</b> una ves dentro del apartado de descarga, si eres usuario de windows debes descargar el Instalado.
+			</li>
+			<li data-aos="fade-zoom-in" data-aos-delay="200">
+				<b>Ejecutar el instalador:</b> Haz doble clic en el archivo descargado para iniciar el instalador.
+			</li>
+			<li data-aos="fade-zoom-in" data-aos-delay="200">
+				<b>Superar la advertencia de SmartScreen:</b>
+				<ul>
+					<li>Aparecerá una advertencia diciendo "Windows protegió tu PC".</li>
+					<li>Haz clic en "Más información".</li>
+					<li>Luego, haz clic en "Ejecutar de todas formas".</li>
+				</ul>
+			</li>
+		</p>
+		<h3 data-aos="fade-right" data-aos-delay="200">
+			¿Es seguro proceder?
+		</h3>
+		<p data-aos="fade-zoom-in" data-aos-delay="200">
+			Sí, es seguro proceder si descargaste el archivo desde nuestro sitio web oficial. Nuestro software ha sido verificado.
+			Si tienes alguna duda o pregunta, no dudes en contactarnos a través de nuestra servidor de
+			<a href="https://www.kailand.es/discord" class="no-decorect">discord</a> para soporte.
+		</p>
         <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script src="../js/main.js"> </script>
 	</main>
@@ -96,5 +152,9 @@ import 'aos/dist/aos.css';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	.no-decorect {
+		text-decoration: none;
+		color: rgb(0, 247, 255);
 	}
 </style>
