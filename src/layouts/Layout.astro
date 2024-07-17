@@ -18,14 +18,14 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GatoArtStudios/kailand/web/public/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
 	</head>
 	<body>
 		<img src="https://raw.githubusercontent.com/GatoArtStudios/kailand/web/public/background_web%202.gif" alt="" class="photo_bg" data-aos="fade-zoom-in" data-aos-delay="200">
 		<slot />
 		<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<div style="text-align: center">
-			<span class="logo">
+			<span class="logo my-9">
 				© 2024 Kailand. All rights reserved
 			</span>
 		</div>
