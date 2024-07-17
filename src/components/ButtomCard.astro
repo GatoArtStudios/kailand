@@ -14,11 +14,27 @@ const { href, title, img, animation, animation_time } = Astro.props;
 <a
     href={href}
     target='_blank'
-    class="button mx-6 hover:-translate-x-1 hover:-translate-y-1 font-bold px-4 my-3 w-1/3 h-16 flex items-center justify-center"
+    class="
+      button 
+      mx-6 
+      hover:-translate-x-1 
+      hover:-translate-y-1 
+      font-bold 
+      px-4 
+      my-3 
+      w-1/3 
+      md:w-1/2 
+      sm:w-96 
+      h-16 
+      flex 
+      items-center 
+      justify-center
+      min-[200px]:w-4/5
+      "
     data-aos={animation}
     data-aos-delay={animation_time}
     >
-    <img src={img} alt="" class="w-10 h-10 text-white" style="filter: invert();">
+    <img src={img} alt="" class="w-10 md:w-7 sm:w-7 sm:h-7 h-10 text-white" style="filter: invert();">
     <h2 class="text-white inline w-full text-center text-lg -translate-x-5">
         {title}
     </h2>

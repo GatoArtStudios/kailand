@@ -16,11 +16,15 @@ import GmailIcon from '../icons/brand-gmail.svg';
     <main>
 		<div class="h-20"></div>
         <div class="flex flex-col items-center">
-            <div class="card w-1/3 mb-6">
+            <div 
+              class="card w-1/3 mb-6
+                    md:w-1/2 sm:w-96
+                    min-[200px]:w-4/5"
+              >
                 <div class='content'>
                     <div class='back'>
                         <div class='back-content'>
-                            <img src="https://raw.githubusercontent.com/GatoArtStudios/kailand/web/public/favicon.png" alt="" class="w-40">
+                            <img src="https://raw.githubusercontent.com/GatoArtStudios/kailand/web/public/favicon.png" alt="" class="w-40 md:w-30">
                             <strong>Kailand V</strong>
                             <p class='text-gray-500'>
                                 Servidor de Minecraft Publico.
@@ -94,7 +98,7 @@ import GmailIcon from '../icons/brand-gmail.svg';
   content: ' ';
   display: block;
   width: 160px;
-  height: 160%;
+  height: 560%;
   background: linear-gradient(90deg, transparent, #80ff66, #6bff66, #80ff66, #78ff66, transparent);
   animation: rotation_481 5000ms infinite linear;
 }
