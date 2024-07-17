@@ -1,11 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import NavBar from '../components/NavBar.astro';
+
 import 'aos/dist/aos.css';
 ---
 
 <Layout title="Kailand V - Zona de descargas">
+	<NavBar />
 	<main>
+		<div class="h-20"></div>
 		<h1 data-aos="fade-zoom-in" data-aos-delay="200">Zona de <span class="text-gradient">Descargas</span></h1>
 		<p class="instructions" data-aos="fade-right">
 			Pagina web para descargar el launcher oficial de<code>kailand V</code>, gracias por preferirnos.<br />
@@ -34,7 +38,7 @@ import 'aos/dist/aos.css';
 				typetarget='_blank'
 			/>
 		</ul>
-		<h3 data-aos="fade-right" data-aos-delay="200" style="margin-top: 100px">
+		<h3 data-aos="fade-right" data-aos-delay="200" style="margin-top: 100px" class="font-bold text-2xl my-6">
 			¿Por qué aparece una advertencia de SmartScreen al instalar nuestro Launcher de Minecraft?
 		</h3>
 		<p data-aos="fade-zoom-in" data-aos-delay="200">
@@ -50,7 +54,7 @@ import 'aos/dist/aos.css';
 			software es completamente seguro y de codigo abierto por si quieres
 			ver el codigo en <a href="https://github.com/GatoArtStudios/kailand" class="no-decorect"> github </a>.
 		</p>
-		<h3 data-aos="fade-right" data-aos-delay="200">
+		<h3 data-aos="fade-right" data-aos-delay="200" class="font-bold text-2xl my-6">
 			¿Qué es SmartScreen?
 		</h3>
 		<p data-aos="fade-zoom-in" data-aos-delay="200">
@@ -60,7 +64,7 @@ import 'aos/dist/aos.css';
 			Como nuestro Launcher es un software de código abierto y autofirmado, Windows no lo
 			reconoce automáticamente, lo que genera esta advertencia.
 		</p>
-		<h3 data-aos="fade-right" data-aos-delay="200">
+		<h3 data-aos="fade-right" data-aos-delay="200" class="font-bold text-2xl my-6">
 			¿Cómo puedo proceder con la instalación de manera segura?
 		</h3>
 		<p>
@@ -82,7 +86,7 @@ import 'aos/dist/aos.css';
 				</ul>
 			</li>
 		</p>
-		<h3 data-aos="fade-right" data-aos-delay="200">
+		<h3 data-aos="fade-right" data-aos-delay="200" class="font-bold text-2xl my-6">
 			¿Es seguro proceder?
 		</h3>
 		<p data-aos="fade-zoom-in" data-aos-delay="200">

@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Contact.astro';
+import NavBar from '../components/NavBar.astro';
+import ButtomCard from '../components/ButtomCard.astro';
+import YouTubeIcon from '../icons/brand-youtube.svg';
+import TiktokIcon from '../icons/brand-tiktok.svg';
+import InstagramIcon from '../icons/brand-instagram.svg';
+import DiscordIcon from '../icons/brand-discord.svg';
+import WebIcon from '../icons/brand-web.svg';
+import GmailIcon from '../icons/brand-gmail.svg';
+
+---
+
+<Layout>
+    <NavBar />
+    <main>
+		<div class="h-20"></div>
+        <div class="flex flex-col items-center">
+            <div  class="w-40 rounded-xl border-4 border-green-400 border-dashed hover:border-dotted overflow-hidden">
+                <img src="https://raw.githubusercontent.com/GatoArtStudios/kailand/web/public/favicon.png" alt="" class="w-40">
+            </div>
+            <p class="w-1/3 text-white font-light my-5">
+                Sumérgete en nuestro servidor público de Minecraft, diseñado y desarrollado 
+                profesionalmente para ofrecerte una experiencia única. En Kailand, cada bloque y 
+                cada aventura están pensados para brindarte el máximo entretenimiento y desafíos épicos.
+            </p>
+            <ButtomCard title="Pagina Web" href="https://www.kailand.es/" img={WebIcon.src} animation='fade-zoom-in' animation_time='200' />
+            <ButtomCard title="YouTube" href="https://www.youtube.com/@Kailandserver" img={YouTubeIcon.src} animation='fade-zoom-in' animation_time='250' />
+            <ButtomCard title="Tiktok" href="https://www.tiktok.com/@kailandclips" img={TiktokIcon.src}  animation='fade-zoom-in' animation_time='300' />
+            <ButtomCard title="Instagram" href="https://www.instagram.com/kailandclips/"  img={InstagramIcon.src} animation='fade-zoom-in' animation_time='350' />
+            <ButtomCard title="Discord" href="https://www.kailand.es/discord"  img={DiscordIcon.src} animation='fade-zoom-in' animation_time='400' />
+            <ButtomCard title="Correo" href="mailto:kailandservidor@gmail.com"  img={GmailIcon.src} animation='fade-zoom-in' animation_time='450' />
+        </div>
+        <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="../js/main.js"> </script>
+    </main>
+</Layout>
