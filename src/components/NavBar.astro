@@ -2,7 +2,60 @@
 ---
 
 <div class="bg-green-500 bg-transparent h-14 w-full text-end content-center fixed top-0 left-0 mr-52">
-    <a href="/" class="text-white no-underline mr-5 font-bold">Inicio</a>
-    <a href="/redes" class="text-white no-underline mr-5 font-bold">Redes</a>
-    <a href="/downloads" class="text-white no-underline mr-5 font-bold">Downloads</a>
+    <a href="/" class="text-white no-underline mr-1 font-bold btn">Inicio</a>
+    <a href="/redes" class="text-white no-underline mr-1 font-bold btn">Redes</a>
+    <a href="/downloads" class="text-white no-underline mr-1 font-bold btn">Downloads</a>
 </div>
+
+<style>
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffedd3;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #1bff06;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  color: #1e1e2b;
+  transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #1bff06;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+</style>
