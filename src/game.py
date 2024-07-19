@@ -634,13 +634,15 @@ class Mc:
                 debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                 # Da notificación de que el launcher se ha cerrado y el juego a iniciado
                 logger.warning('Cerrando launcher, el juego iniciara en unos segundos...')
-                time.sleep(3)
+                time.sleep(2)
+                self.anticheat() # Ejecutamos el AntiCheat antes de que el juego inicie para soluciona el bug de que se podian colocar mods antes de iniciar el juego
                 utils.exit_app()
             else:
                 debug_minecraft_launch = subprocess.Popen(minecraft_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                 # Da notificación de que el launcher se ha cerrado y el juego a iniciado
                 logger.warning('Cerrando launcher, el juego iniciara en unos segundos...')
-                time.sleep(3)
+                time.sleep(2)
+                self.anticheat() # Ejecutamos el AntiCheat antes de que el juego inicie para soluciona el bug de que se podian colocar mods antes de iniciar el juego
                 utils.exit_app()
 
             # Agrega mensaje debug al logger
