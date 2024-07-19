@@ -5,6 +5,7 @@ import uuid
 import utils
 import shutil
 import zipfile
+import hashlib
 import requests
 import threading
 import subprocess
@@ -43,6 +44,7 @@ class Mc:
         self.archivo_kailand = os.path.join(self.minecraft_directory, "kaliand.json")
         self.archivo_mods_data = os.path.join(self.minecraft_directory, "mods_data.json")
         self.ruta_mods = os.sep.join([self.minecraft_directory, "mods"])
+        self.ruta_texture_packs = os.sep.join([self.minecraft_directory, "resourcepacks"])
         self.url_base_mods = 'https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods'
         self.dependencias_mods = {}
         self.cheking()
@@ -262,6 +264,13 @@ class Mc:
         else:
             return False
 
+    def hash_file(self, path: str) -> str:
+        sha256_hash = hashlib.sha256()
+        with open(path, "rb") as f:
+            for byte_block in iter(lambda: f.read(4096), b""):
+                sha256_hash.update(byte_block)
+        return sha256_hash.hexdigest()
+
     def checkin_file(self, x: dict) -> bool:
         '''
         Verifica si un archivo del apartadode mods esta instalado.
@@ -277,51 +286,65 @@ class Mc:
         Anticheat de mods
         '''
         from log import logger
-        list_avalid_mods = []
+        
+        # Carga la lista de mods validos
+        list_mods = {}
         for mod in self.data_nube['mods']:
             if mod['disponible']:
-                list_avalid_mods.append(mod['file'])
+                list_mods[mod['file']] = mod['hash']
                 if len(mod['dependencia']) > 0:
                     for dep in mod['dependencia']:
                         if dep['disponible']:
-                            list_avalid_mods.append(dep['file'])
+                            list_mods[dep['file']] = dep['hash']
                             if len(dep['dependencia']) > 0:
                                 for d in dep['dependencia']:
                                     if d['disponible']:
-                                        list_avalid_mods.append(d['file'])
-        for dep in self.data_nube['complementos']:
-            if dep['disponible']:
-                list_avalid_mods.append(dep['file'])
-                if len(dep['dependencia']) > 0:
-                    for d in dep['dependencia']:
-                        if d['disponible']:
-                            list_avalid_mods.append(d['file'])
-                            if len(d['dependencia']) > 0:
-                                for dd in d['dependencia']:
-                                    if dd['disponible']:
-                                        list_avalid_mods.append(dd['file'])
+                                        list_mods[d['file']] = d['hash']
+        # Cargamos la lista de complementos validos
+        for mod in self.data_nube['complementos']:
+            if mod['disponible']:
+                list_mods[mod['file']] = mod['hash']
+                if len(mod['dependencia']) > 0:
+                    for dep in mod['dependencia']:
+                        if dep['disponible']:
+                            list_mods[dep['file']] = dep['hash']
+                            if len(dep['dependencia']) > 0:
+                                for d in dep['dependencia']:
+                                    if d['disponible']:
+                                        list_mods[d['file']] = d['hash']
+        # Verfica si los mods, dependencias, complementos no han sido alterados
         for file in os.listdir(self.ruta_mods):
-            if file not in list_avalid_mods:
+            hash_file = self.hash_file(os.path.join(self.ruta_mods, file))
+            if file in list_mods and list_mods[file] == hash_file:
+                pass
+            else:
                 self.eliminar_mod(os.path.join(self.ruta_mods, file), file)
-                logger.warning(f"Se elimino el mod '{file}' por no estar disponible. (No puedes usar mods/archivos externos a kailand)")
+                logger.warning(f'Anticheat: Mod {file} no valido, prohibido el uso de Cheats o mod no validos para kailand.')
 
-            for fil in self.data_nube['mods']: # Iteramos sobre todos los mods en la base de datos
-                if self.checkin_file(fil): # Verifica si el mod esta instalado
-                    if len(fil['dependencia']) > 0: # Verifica si hay dependencias
-                        for d in fil['dependencia']: # Iteramos sobre las dependencias
-                            if d['disponible']: # Verifica si la dependencia es disponible
-                                if not self.checkin_file(d): # Verifica si la dependencia no esta instalada y si no esta instalada la descarga
-                                    logger.warning(f'La dependencia {d["name"]} no esta instalada, instalando dependencia.')
-                                    self.descargar_mod(d) # Descarga la dependencia
+        # Verifica si hay texture packs no validos
+        for file in os.listdir(self.ruta_texture_packs):
+            hash_file = self.hash_file(os.path.join(self.ruta_texture_packs, file))
+            if hash_file in self.data_nube['textureBlackList']:
+                os.remove(os.path.join(self.ruta_texture_packs, file))
+                logger.warning(f'Anticheat: Texture pack {file} no valido, prohibido el uso de Cheats.')
 
-            for fil in self.data_nube['complementos']: # Iteramos sobre todos los mods en la base de datos
-                if self.checkin_file(fil): # Verifica si el mod esta instalado
-                    if len(fil['dependencia']) > 0: # Verifica si hay dependencias
-                        for d in fil['dependencia']: # Iteramos sobre las dependencias
-                            if d['disponible']: # Verifica si la dependencia es disponible
-                                if not self.checkin_file(d): # Verifica si la dependencia no esta instalada y si no esta instalada la descarga
-                                    logger.warning(f'La dependencia {d["name"]} no esta instalada, instalando dependencia.')
-                                    self.descargar_mod(d) # Descarga la dependencia
+        for fil in self.data_nube['mods']: # Iteramos sobre todos los mods en la base de datos
+            if self.checkin_file(fil): # Verifica si el mod esta instalado
+                if len(fil['dependencia']) > 0: # Verifica si hay dependencias
+                    for d in fil['dependencia']: # Iteramos sobre las dependencias
+                        if d['disponible']: # Verifica si la dependencia es disponible
+                            if not self.checkin_file(d): # Verifica si la dependencia no esta instalada y si no esta instalada la descarga
+                                logger.warning(f'La dependencia {d["name"]} no esta instalada, instalando dependencia.')
+                                self.descargar_mod(d) # Descarga la dependencia
+
+        for fil in self.data_nube['complementos']: # Iteramos sobre todos los mods en la base de datos
+            if self.checkin_file(fil): # Verifica si el mod esta instalado
+                if len(fil['dependencia']) > 0: # Verifica si hay dependencias
+                    for d in fil['dependencia']: # Iteramos sobre las dependencias
+                        if d['disponible']: # Verifica si la dependencia es disponible
+                            if not self.checkin_file(d): # Verifica si la dependencia no esta instalada y si no esta instalada la descarga
+                                logger.warning(f'La dependencia {d["name"]} no esta instalada, instalando dependencia.')
+                                self.descargar_mod(d) # Descarga la dependencia
 
     def descargar_mod(self, mod: dict):
         '''
@@ -696,7 +719,13 @@ class Mc:
         data_widget.progressbar_install.tooltip = 'Instalando configuraciones: 5%'
         app.page_update()
         # ----------------- Descarga y descomprime las configuraciones -----------------
-        for config in self.data_nube['config']:
+        try:
+            response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
+            if response.status_code != 200:
+                response = self.data_nube
+        except Exception as e:
+            response = self.data_nube
+        for config in response['config']:
             if config['disponible']:
                 if not os.path.exists(os.path.join(DIRECTORY_KAILAND, 'config', config['directory'])):
                     self.download_and_unzip(config)
