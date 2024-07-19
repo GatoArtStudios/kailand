@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.90",
+    "configVersion": "1.0.91",
     "launcherVersion": "1.0.27.1",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSe a solucionado el bug de las configuraciones por defecto del launcher,\nSe cambio el logo del launcher,\nSolucion del bug para hacerle bypass al antiCheat.",
