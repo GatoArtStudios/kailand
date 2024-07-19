@@ -721,7 +721,9 @@ class Mc:
         # ----------------- Descarga y descomprime las configuraciones -----------------
         try:
             response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
-            if response.status_code != 200:
+            if response.status_code == 200:
+                pass
+            else:
                 response = self.data_nube
         except Exception as e:
             response = self.data_nube
