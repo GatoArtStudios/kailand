@@ -14,3 +14,4 @@ encrypted_data.json
 src/__pycache__/
 src/minecraft_launcher_cunstom/__pycache__/
 src/minecraft_launcher_cunstom/_internal_types/__pycache__/
+node_modules
