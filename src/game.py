@@ -719,6 +719,7 @@ class Mc:
         data_widget.progressbar_install.tooltip = 'Instalando configuraciones: 5%'
         app.page_update()
         # ----------------- Descarga y descomprime las configuraciones -----------------
+        responde = self.data_nube
         try:
             response = requests.get("https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods.json")
             if response.status_code == 200:
