@@ -1416,6 +1416,15 @@
                 }
             ],
             "hash": "055b731181771aa4880303cb29e590f1bf90f07ae7ff17cb1484f376fa189678"
+        },
+        {
+            "name": "In Control",
+            "descripcion": "mod",
+            "file": "incontrol-1.19-7.1.15.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5430/108/incontrol-1.19-7.1.15.jar",
+            "disponible": true,
+            "dependencia": [],
+            "hash": "975b93e999333ea7e8715136ed134f55da0270f542a38b3424ba428597fd81c7"
         }
     ],
     "complementos": [
