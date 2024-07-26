@@ -2,12 +2,14 @@
 import Layout from '../../layouts/Contact.astro';
 import NavBar from '../../components/NavBar.astro';
 import Wiki from '../../components/Wiki.jsx';
+import type { slide } from 'astro:transitions';
+import type Slug from './[slug].astro';
 ---
 
 <Layout>
     <NavBar />
     <main>
         <div class="h-10"></div>
-        <Wiki client:load />
+        <Wiki client:load slug="inicio" />
     </main>
 </Layout>

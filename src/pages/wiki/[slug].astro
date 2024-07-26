@@ -3,6 +3,18 @@ import Layout from '../../layouts/Contact.astro';
 import NavBar from '../../components/NavBar.astro';
 import Wiki from '../../components/Wiki.jsx';
 
+export function getStaticPaths() {
+    return [
+        { params: { slug: 'inicio' } },
+        { params: { slug: 'mods' } },
+        { params: { slug: 'ingreso' } },
+        { params: { slug: 'crafteos' } },
+        { params: { slug: 'bugs' } },
+        { params: { slug: 'juego' } },
+        { params: { slug: 'launcher' } },
+    ]
+}
+
 const { slug } = Astro.params;
 ---
 
@@ -10,6 +22,6 @@ const { slug } = Astro.params;
     <NavBar />
     <main>
         <div class="h-10"></div>
-        <Wiki client:load />
+        <Wiki client:load slug={slug} />
     </main>
 </Layout>

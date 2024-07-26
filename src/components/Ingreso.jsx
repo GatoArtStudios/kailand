@@ -9,7 +9,7 @@ export default function Ingreso() {
         <div className="flex flex-col justify-center items-center">
             <TitleWiki text="Guía de Ingreso" />
             <ParCenter>
-            ¡Si tienes pensado ingresar al server, por favor, léete todas las Reglas del Servidor para evitar futuras sanciones y malentendidos!
+            Si descargaste el archivo “zip” solo tienes que seleccionar la opción que dice “Extraer aquí” y ya tendrás el ejecutable para abrir el Launcher :D.
             </ParCenter>
             <ParLeft>
                 <b>Paso 1:</b> Entra a nuestro servidor de <Link href="https://kailand.es/discord" text="Discord" /> o ingresa a nuestra <Link href="https://kailand.es" text="página web." />
@@ -20,6 +20,9 @@ export default function Ingreso() {
             <ParLeft>
                 <b>Paso 3:</b> Escoge la versión de tu sistema operativo. Para Windows es recomendado el <b>“Instalador”</b>.
             </ParLeft>
+            <Nota>
+            Si por casualidad de la vida porque eres medio pendejo descargaste el que dice “comprimido” y no sabes para qué sirve, ni que hacer después, ¡NO TE PREOCUPES! Estàs solo. Por lo que deberías ir a checarte con un psicólogo y luego solo tienes que seleccionar la opción que dice “Extraer aquí” y ya tendrás el ejecutable ;D.
+            </Nota>
             <ParLeft>
                 <b>Paso 4:</b> Abre o ejecuta el Launcher e instala los recursos necesarios que te pide (Estos recursos son: Mods, Java, configuraciones, Forge, entre otros).
             </ParLeft>

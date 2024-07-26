@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Inicio from "./Inicio.jsx";
 import ButtomWiki from "./ButtomWiki.jsx";
 import Ingreso from "./Ingreso.jsx";
@@ -9,8 +9,14 @@ import Bugs from "./Bugs.jsx";
 import Juego from "./Juego.jsx";
 import "../styles/hidden_scroll.css";
 
-const App = () => {
-    const [page, setPage] = useState('inicio');
+const App = ({ slug }) => {
+    const [page, setPage] = useState( slug || 'inicio');
+
+    useEffect(() => {
+        if (slug && slug !== page) {
+            setPage(slug);
+        }
+    }, [slug]);
 
     const renderPage = () => {
         switch (page) {
