@@ -44,6 +44,9 @@ export default function Ingreso() {
             <ParLeft>
             A partir de ahí, las siguientes veces que ingreses al servidor deberàs usar el comando: /login Contraseña
             </ParLeft>
+            <ParLeft>
+                <b>Paso 10:</b> ¡DISFRUTA! 😎
+            </ParLeft>
         </div>
     );
 }

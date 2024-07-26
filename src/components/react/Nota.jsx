@@ -15,7 +15,7 @@ export default function Nota({ children }) {
                     stroke-linecap="round"
                 ></path>
             </svg>
-            <p className="text-xs font-semibold">
+            <p className="text-sm font-semibold">
                 Nota: {children}
             </p>
         </div>
