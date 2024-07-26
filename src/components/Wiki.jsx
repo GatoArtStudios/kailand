@@ -7,6 +7,7 @@ import Launcher from "./Launcher.jsx";
 import Crafteos from "./Crafteos.jsx";
 import Bugs from "./Bugs.jsx";
 import Juego from "./Juego.jsx";
+import Comunicados from "./Comunicados.jsx";
 import "../styles/hidden_scroll.css";
 
 const App = ({ slug }) => {
@@ -34,6 +35,8 @@ const App = ({ slug }) => {
                 return <Bugs />;
             case 'juego':
                 return <Juego />;
+            case 'comunicados':
+                return <Comunicados />;
             default:
                 return <Inicio />;
         }
