@@ -20,9 +20,6 @@ export default function Ingreso() {
             <ParLeft>
                 <b>Paso 3:</b> Escoge la versión de tu sistema operativo. Para Windows es recomendado el <b>“Instalador”</b>.
             </ParLeft>
-            <Nota>
-            Si por casualidad de la vida porque eres medio pendejo descargaste el que dice “comprimido” y no sabes para qué sirve, ni que hacer después, ¡NO TE PREOCUPES! Estàs solo. Por lo que deberías ir a checarte con un psicólogo y luego solo tienes que seleccionar la opción que dice “Extraer aquí” y ya tendrás el ejecutable ;D.
-            </Nota>
             <ParLeft>
                 <b>Paso 4:</b> Abre o ejecuta el Launcher e instala los recursos necesarios que te pide (Estos recursos son: Mods, Java, configuraciones, Forge, entre otros).
             </ParLeft>
