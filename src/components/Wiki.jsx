@@ -7,6 +7,7 @@ import Launcher from "./Launcher.jsx";
 import Crafteos from "./Crafteos.jsx";
 import Bugs from "./Bugs.jsx";
 import Juego from "./Juego.jsx";
+import "../styles/hidden_scroll.css";
 
 const App = () => {
     const [page, setPage] = useState('inicio');
@@ -43,7 +44,7 @@ const App = () => {
                 <ButtomWiki text='Bugs' onClick={() => setPage('bugs')} />
                 <ButtomWiki text='Juego' onClick={() => setPage('juego')} />
             </div>
-            <div className="w-4/5 p-9 bg-black rounded-xl">{renderPage()}</div>
+            <div className="w-4/5 p-9 bg-black rounded-xl overflow-auto hide-scrollbar">{renderPage()}</div>
         </div>
     );
 }

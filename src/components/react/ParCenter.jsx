@@ -1,7 +1,7 @@
-export default function ParCenter({ text }) {
+export default function ParCenter({ children }) {
     return (
         <p className="text-lg mb-8 text-center">
-            {text}
+            {children}
         </p>
     );
 }
