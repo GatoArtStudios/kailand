@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Contact.astro';
+import NavBar from '../../components/NavBar.astro';
+import Wiki from '../../components/Wiki.jsx';
+---
+
+<Layout>
+    <NavBar />
+    <main>
+        <div class="h-10"></div>
+        <!-- <h1 class="w-full text-center text-3xl text-white font-bold">WIKI</h1> -->
+        <Wiki client:load />
+    </main>
+</Layout>
