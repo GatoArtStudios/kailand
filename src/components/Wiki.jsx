@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Inicio from "./Inicio.jsx";
-import ButtomWiki from "./ButtomWiki.jsx";
+import ButtomWiki from "./react/ButtomWiki.jsx";
 import Guia from "./Guia.jsx";
 import Mods from "./Mods.jsx";
 import Launcher from "./Launcher.jsx";
-import Crafteos from "./Crafteos.jsx";
 import Bugs from "./Bugs.jsx";
 import Juego from "./Juego.jsx";
 import Comunicados from "./Comunicados.jsx";
@@ -29,8 +28,6 @@ const App = ({ slug }) => {
                 return <Mods />;
             case 'launcher':
                 return <Launcher />;
-            case 'crafteos':
-                return <Crafteos />;
             case 'bugs':
                 return <Bugs />;
             case 'juego':
@@ -49,7 +46,6 @@ const App = ({ slug }) => {
                 <ButtomWiki text='Guía' onClick={() => setPage('guia')} />
                 <ButtomWiki text='Mods' onClick={() => setPage('mods')} />
                 <ButtomWiki text='Launcher' onClick={() => setPage('launcher')} />
-                <ButtomWiki text='Crafteos' onClick={() => setPage('crafteos')} />
                 <ButtomWiki text='Bugs' onClick={() => setPage('bugs')} />
                 <ButtomWiki text='Juego' onClick={() => setPage('juego')} />
                 <ButtomWiki text='Comunicados' onClick={() => setPage('comunicados')} />

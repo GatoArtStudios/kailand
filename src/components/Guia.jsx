@@ -1,5 +1,4 @@
 import TitleWiki from "./react/TitleWiki";
-import ParCenter from "./react/ParCenter";
 import ParLeft from "./react/ParLeft";
 import Link from "./react/Link";
 import Nota from "./react/Nota";
