@@ -8,9 +8,9 @@ export default function Ingreso() {
     return (
         <div className="flex flex-col justify-center items-center">
             <TitleWiki text="Guía de Ingreso" />
-            <ParCenter>
+            <ParLeft>
             ¡Si tienes pensado ingresar al server, por favor, léete todas las Reglas del Servidor para evitar futuras sanciones y malentendidos!
-            </ParCenter>
+            </ParLeft>
             <ParLeft>
                 <b>Paso 1:</b> Entra a nuestro servidor de <Link href="https://kailand.es/discord" text="Discord" /> o ingresa a nuestra <Link href="https://kailand.es" text="página web." />
             </ParLeft>
