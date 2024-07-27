@@ -44,7 +44,7 @@ export default function Ingreso() {
             A partir de ahí, las siguientes veces que ingreses al servidor deberàs usar el comando: /login Contraseña
             </ParLeft>
             <ParLeft>
-                <b>Paso 10:</b> ¡DISFRUTA! 😎
+                <b>Paso 10:</b> ¡DISFRUTA! 😎 <img src="https://cdn.discordapp.com/emojis/822805054620172298.gif" className="inline-block h-5 -translate-y-1"/>.
             </ParLeft>
         </div>
     );

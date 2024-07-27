@@ -50,7 +50,7 @@ const App = ({ slug }) => {
                 <ButtomWiki text='Juego' onClick={() => setPage('juego')} />
                 <ButtomWiki text='Comunicados' onClick={() => setPage('comunicados')} />
             </div>
-            <div className="w-4/5 p-9 backdrop-blur-md bg-black/30 rounded-xl overflow-auto hide-scrollbar">{renderPage()}</div>
+            <div className="w-4/5 py-9 px-14 backdrop-blur-md bg-black/30 rounded-xl overflow-auto hide-scrollbar">{renderPage()}</div>
         </div>
     );
 }
