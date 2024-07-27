@@ -6,7 +6,7 @@ import Nota from "./react/Nota";
 export default function Ingreso() {
     return (
         <div className="flex flex-col justify-center items-center">
-            <TitleWiki text="Guía de Ingreso" />
+            <TitleWiki text="Guía de Ingreso 📝" />
             <ParLeft>
             ¡Si tienes pensado ingresar al server, por favor, léete todas las Reglas del Servidor para evitar futuras sanciones y malentendidos!
             </ParLeft>

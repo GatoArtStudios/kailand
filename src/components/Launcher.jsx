@@ -1,16 +1,52 @@
 import TitleWiki from "./react/TitleWiki";
+import SubTitleWiki from "./react/SubTitleWiki";
 import ParLeft from "./react/ParLeft";
+import Link from "./react/Link";
+import Spam from "./react/Spam";
 
 export default function Launcher() {
     return (
         <div className="flex flex-col justify-center items-center">
-            <TitleWiki text="Sobre el Launcher" />
+            <TitleWiki text="Sobre el Launcher 🚀" />
             <ParLeft>
+            Este es el instalador oficial del <Link href="https://kailand.es/downloads" text="Launcher" />. El Launcher de Kailand V, en esta versión se a modificado completamente el código para agregarle encriptado al 
+            Launcher y así proteger los archivos de configuración y evitar bypass en el AntiCheat, 
+            resulta en mucha mas automatización pero a su vez mas tiempo de carga al abrir el Launcher, si presenta un error al abrir el launcher, solo tienes 
+            que eliminar la carpeta <Spam text="'versions'" /> en el directorio de <Spam text="%appdata%/Roaming/.kailand"/>, en esta versión del Launcher, tenemos versión del launcher tanto 
+            como para windows como para linux, el archivo de windows es un instalador, y el de linux es un ejecutable, es solo descargar, descomprimir y 
+            ejecutar <Spam text="./kailand" /> y listo a disfrutar del juego, muchas gracias por ser parte de este proyecto.
+            </ParLeft>
+            <SubTitleWiki text="Uso en Windows 🖥️" />
+            <ParLeft>
+            La instalación en Windows, es muy sencillo. Descargar el instalador y ejecutar el mismo. Si tienes una versión anterior del Launcher, cuando descargues la última, automáticamente se actualiza, por lo que no tienes que eliminar nada (solamente el instalador si deseas). Si presentas algún bug, puedes reportarlo a los Staff del servidor de discord.
+            </ParLeft>
+            <SubTitleWiki text="Uso en Linux 👨‍💻" />
+            <ParLeft>
+            Por el lado de Linux tenemos un archivo comprimido, aclaro que la versión fue compilada para 64 bits (por el momento no contamos con una versión 
+            compilada para 32 bits). Requieres tener la herramienta de tar para extraer el contenido del comprimido, si no lo tiene instalado es solo usar el 
+            comando <Spam text="sudo apt install tar" /> para distribuciones <Spam text="Debian/Ubuntu/Otros" />, puede usar <Spam text="sudo pacman -S tar" />, para descomprimir el archivo 
+            comprimido, usa el comando <Spam text="tar -xvf kailand-linux-2-0-1-1.tar.gz" /> y te dejara una carpeta llamada linux ingresas a ella con cd linux y debes darle 
+            permisos de ejecucion con <Spam text="chmod +x Kailand" /> y luego ejecutarlo con <Spam text="./Kailand" /> y listo, a disfrutar del servidor de Kailand.
+            </ParLeft>
+            <SubTitleWiki text="Solución a bugs 🪲" />
+            <ParLeft>
+                <ul className="list-disc list-outside">
+                    <li className="my-5">
+                    El launcher de Kailand tiene un Anticheat, por lo que, en la carpeta de “mods” (dentro de la carpeta de “.kailand”) no podrán modificar, ni cambiar nada con relación al paquete de mods original de Kailand. Lo mismo pasa con la carpeta “resourcepacks”, pero de una manera menos estricta, para permitir que los usuarios usen sus Packs de Texturas preferidos.Si presenta problemas al abrir el Launcher, ya sea en Linux o Windows, la solución es eliminar la carpeta versions , en Windows se encuentra en la ruta %APPDATA%\.kailand\versions. Por el lado de Linux se encuentra en $HOME/.kailand/versions, si presentas problemas, solo debes eliminar esa carpeta, luego debe cerrar el Launcher y abrirlo nuevamente, aceptar la notificación para instalar y reparar los recursos del Launcher y del juego. Por favor, NO eliminar ningún otro archivo, lo cual puede generar inestabilidades o futuros bugs en el juego, si no logra solucionar el problema con el Launcher o el juego, recuerda comunicarte con un miembro nuestro Staff del servidor de discord.
+                    </li>
+                    <li className="my-5">
+                    El mod de Rubidium y sus dos dependientes, no son compatibles con todos los equipos que usan Windows, es poco probable pero, en algunos equipos donde se hacen los testeos correspondientes, ese mod no es compatible en 1/50 equipos. La solución, si un usuario presenta el problema es, ir al apartado de mods "Predeterminados" y desactivarlo. Una forma rápida de identificar el problema de Rubidium, se ve reflejado cuando el juego solo carga un 10% y se queda colgado o no responde. Por otro lado, en equipos con Linux no presentan ningún problema de los 50 equipos probados, esto quiere decir que, tiene 100% de compatibilidad con Linux en cuanto a ese mod.
+                    </li>
+                    <li className="my-5">
+                    En cuanto al mod Fancymenu y sus dependientes, en sistemas operativos con Windows Managers Customs personalizados, el mod bloqueara la carga del juego cuando va a un 70% (los Windows Managers Customs se encuentran presentes en derivados de Windows, es decir, versiones de Windows personalizadas o distribuciones Linux). La forma de detectar este problema es que, la pantalla de carga del juego se queda al 70% de la carga, y la única solución en este caso es ir al apartado de "Mods" y en la opción de "Predeterminados" desactivar el FancyMenu.
+                    </li>
+                </ul>
+            </ParLeft>
+            <SubTitleWiki text="Notas📔" />
+            <ParLeft>
+            <ul className="list-disc list-outside">
                 <li className="my-5">
                 El launcher de Kailand tiene un Anticheat, por lo que, en la carpeta de “mods” (dentro de la carpeta de “.kailand”) no podrán modificar, ni cambiar nada con relación al paquete de mods original de Kailand. Lo mismo pasa con la carpeta “resourcepacks”, pero de una manera menos estricta, para permitir que los usuarios usen sus Packs de Texturas preferidos.
-                </li>
-                <li className="my-5">
-                Los jugadores que tengan el mínimo de RAM (8 GB DRR3) se les recomienda usar todos los mods de rendimiento del Launcher en la sección de “Predeterminados”: Rubidium, FPS Reducer, Better FPS y el Rubidium Extras que se encuentra “Recomendados”.
                 </li>
                 <li className="my-5">
                 NO cambiar la versión de Java que viene configurada, ya que es la versión específica recomendada que te instala Mojang por defecto. Por lo que NO se necesita instalar ninguna otra versión de java.
@@ -21,6 +57,7 @@ export default function Launcher() {
                 <li className="my-5">
                 En el apartado de “Perfil” y en la opción “Tipo de cuenta” NO está disponible la alternativa “(Online) Microsoft”. Debido a que, hasta el momento no ha habido integración con la API de Mojang, por el momento…
                 </li>
+            </ul>
             </ParLeft>
         </div>
     );

@@ -7,6 +7,7 @@ export default function Comunicados() {
         <div className="flex flex-col justify-center items-center">
             <TitleWiki text="Sobre el servidor de Minecraft" />
             <ParLeft>
+            <ul className="list-disc list-outside">
                 <li className="my-5">
                 El servidor de Minecraft (Kailand), es un juego. Por lo tanto, las peleas, disputas y discusiones dentro del servidor, se quedan dentro del servidor. No se tolerará toxicidad ni faltas de respeto, por motivos relacionados al juego.
                 </li>
@@ -37,6 +38,7 @@ export default function Comunicados() {
                 <li className="my-5">
                 Las personas podrán crear un equipo de máximo 4 personas con el comando “/team create 'nombre del equipo'”. Tener un equipo tiene varios beneficios, como por ejemplo: el daño entre los miembros del equipo está desactivado, nombre del equipo visible a todos los jugadores, disponibilidad administrar el team a la disposición del creador, etc.
                 </li>
+            </ul>
             </ParLeft>
         </div>
     );
