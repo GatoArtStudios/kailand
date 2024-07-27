@@ -4,7 +4,7 @@ import ParLeft from "./react/ParLeft";
 export default function Launcher() {
     return (
         <div className="flex flex-col justify-center items-center">
-            <TitleWiki text="Launcher" />
+            <TitleWiki text="Sobre el Launcher" />
             <ParLeft>
                 <li className="my-5">
                 El launcher de Kailand tiene un Anticheat, por lo que, en la carpeta de “mods” (dentro de la carpeta de “.kailand”) no podrán modificar, ni cambiar nada con relación al paquete de mods original de Kailand. Lo mismo pasa con la carpeta “resourcepacks”, pero de una manera menos estricta, para permitir que los usuarios usen sus Packs de Texturas preferidos.
