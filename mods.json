@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.0.96",
+    "configVersion": "1.0.97",
     "launcherVersion": "2.0.1.1",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nfancymenu se Auto Actualiza sin notificar al usuario.\nzParkk Soluciona problema de escalado en fancymenu.\nAhora el AntiCheat utiliza hash256 para verfiicar que los mods no hallan sido alterados,\nAntiCheat en el apartado de ResourcePacks para evitar el uso de texture packs que les de ventajas de Cheat a los jugadores.",
@@ -13,6 +13,13 @@
         "95bb10e59689f76d8a7da3d67f1dd7d37eb07112a78d1441dbe67b02440884cf"
     ],
     "config": [
+        {
+            "name": "Fancy Menu",
+            "file": "fancymenu.zip",
+            "directory": "fancymenu",
+            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/config/fancymenu.zip",
+            "disponible": false
+        },
         {
             "name": "Fancy Menu v1.0.8",
             "file": "fancymenu-1.0.8.zip",
