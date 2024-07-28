@@ -4,7 +4,6 @@ import ButtomWiki from "./react/ButtomWiki.jsx";
 import Guia from "./Guia.jsx";
 import Mods from "./Mods.jsx";
 import Launcher from "./Launcher.jsx";
-import Bugs from "./Bugs.jsx";
 import Juego from "./Juego.jsx";
 import Comunicados from "./Comunicados.jsx";
 import "../styles/hidden_scroll.css";
@@ -28,8 +27,6 @@ const App = ({ slug }) => {
                 return <Mods />;
             case 'launcher':
                 return <Launcher />;
-            case 'bugs':
-                return <Bugs />;
             case 'juego':
                 return <Juego />;
             case 'comunicados':
@@ -46,7 +43,6 @@ const App = ({ slug }) => {
                 <ButtomWiki text='Guía' onClick={() => setPage('guia')} />
                 <ButtomWiki text='Mods' onClick={() => setPage('mods')} />
                 <ButtomWiki text='Launcher' onClick={() => setPage('launcher')} />
-                <ButtomWiki text='Bugs' onClick={() => setPage('bugs')} />
                 <ButtomWiki text='Juego' onClick={() => setPage('juego')} />
                 <ButtomWiki text='Comunicados' onClick={() => setPage('comunicados')} />
             </div>
