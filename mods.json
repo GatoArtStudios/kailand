@@ -36,7 +36,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4057/652/BadMobs-1.19.2-16.1.3.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Blood and Gore",
@@ -45,7 +46,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4373/528/bloodandgore1.19.2v1.1%28beta%29.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "carry on",
@@ -54,7 +56,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4882/496/carryon-forge-1.19.2-2.1.1.22.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "05fcb56ccb47865abe136adaf8a03c3c8660685d2d6d3e47ca8fa0908ea4c3f4"
+            "hash": "05fcb56ccb47865abe136adaf8a03c3c8660685d2d6d3e47ca8fa0908ea4c3f4",
+            "doct": "None"
         },
         {
             "name": "First aid",
@@ -63,7 +66,8 @@
             "url": "https://github.com/GatoArtStudios/kailand/raw/config/mods/firstaid-1.12.0.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Silence's Turrets",
@@ -72,7 +76,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5186/434/Silence%27s%20Turrets.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "7a5819627caebeedb974cce686c56639d10d4b3985074a8911b6904085cc8553"
+            "hash": "7a5819627caebeedb974cce686c56639d10d4b3985074a8911b6904085cc8553",
+            "doct": "None"
         },
         {
             "name": "Mine traps",
@@ -81,7 +86,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4086/827/MineTraps-1.19.x-%28v.2.2.4%29.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Satako library",
@@ -90,7 +96,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4777/150/Satako-6.0.16-1.19.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "498fa82d2e75f82c299b1d32733fde84504684c3f83880b808614f95309d7cdd"
+            "hash": "498fa82d2e75f82c299b1d32733fde84504684c3f83880b808614f95309d7cdd",
+            "doct": "None"
         },
         {
             "name": "Simple voice chat",
@@ -99,7 +106,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4961/338/voicechat-forge-1.19.2-2.4.32.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "We got runners",
@@ -108,7 +116,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4671/145/Wegotrunners0.5.1.19.2.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Zombie awareness",
@@ -124,10 +133,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/5010/127/coroutil-forge-1.19.2-1.3.6.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "96b7e5854a24b56cbe68c163ee9db2fc84cff0acd27f0da05951fea37da0b4f0"
+                    "hash": "96b7e5854a24b56cbe68c163ee9db2fc84cff0acd27f0da05951fea37da0b4f0",
+                    "doct": "None"
                 }
             ],
-            "hash": "b8aa38a1ba44e1a217d7ac25cdf218b4dfa005ddeaac723ef4a8ee3df2ec8c05"
+            "hash": "b8aa38a1ba44e1a217d7ac25cdf218b4dfa005ddeaac723ef4a8ee3df2ec8c05",
+            "doct": "None"
         },
         {
             "name": "corpse",
@@ -136,7 +147,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4913/868/corpse-1.19.2-1.0.9.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "48237fe120831f5f26d2a3836770b93be5e176874adcd8f294a5576e6511df13"
+            "hash": "48237fe120831f5f26d2a3836770b93be5e176874adcd8f294a5576e6511df13",
+            "doct": "None"
         },
         {
             "name": "The twilight forest",
@@ -145,7 +157,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4389/567/twilightforest-1.19.2-4.2.1518-universal.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Jade",
@@ -154,7 +167,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4800/904/Jade-1.19.1-forge-8.9.1.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "a2dfefef7ed90d71ca448e6a78e54c5f87791d856074c7b629def897943fd008"
+            "hash": "a2dfefef7ed90d71ca448e6a78e54c5f87791d856074c7b629def897943fd008",
+            "doct": "None"
         },
         {
             "name": "Cosmetic armor reworked",
@@ -163,7 +177,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4016/732/CosmeticArmorReworked-1.19.2-v1a.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "b4f072dd8a7fc3fce83c11b6a67e4ba2946af4a2946fc1b2041d708c96c08b5e"
+            "hash": "b4f072dd8a7fc3fce83c11b6a67e4ba2946af4a2946fc1b2041d708c96c08b5e",
+            "doct": "None"
         },
         {
             "name": "Sophisticated backpacks",
@@ -179,10 +194,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4993/648/sophisticatedcore-1.19.2-0.5.111.525.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "37b9931f9c8a61973f1e0cd22ac0362743985f0e2b5a1996b63da07404ca5a22"
+                    "hash": "37b9931f9c8a61973f1e0cd22ac0362743985f0e2b5a1996b63da07404ca5a22",
+                    "doct": "None"
                 }
             ],
-            "hash": "2d8ef5d36cdb1fd4252f0aff78718c24d7a013a8b962fc9ce3f50ecc4a59e9da"
+            "hash": "2d8ef5d36cdb1fd4252f0aff78718c24d7a013a8b962fc9ce3f50ecc4a59e9da",
+            "doct": "None"
         },
         {
             "name": "L_Enders_Cataclysm",
@@ -198,7 +215,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4985/476/curios-forge-1.19.2-5.1.4.4.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "c4699fdb0c3ee6a1dddb1b65479ed0db5e3ab308f7204ce7044a0390c4eb8469"
+                    "hash": "c4699fdb0c3ee6a1dddb1b65479ed0db5e3ab308f7204ce7044a0390c4eb8469",
+                    "doct": "None"
                 },
                 {
                     "name": "lionfish api",
@@ -207,7 +225,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/5314/835/lionfishapi-1.8.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "9b866047472b7e31210b78cdb671d940271d29a7865e499f7ef1b5543054e3d4"
+                    "hash": "9b866047472b7e31210b78cdb671d940271d29a7865e499f7ef1b5543054e3d4",
+                    "doct": "None"
                 },
                 {
                     "name": "Citadel",
@@ -216,7 +235,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4556/677/citadel-2.1.4-1.19.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "3f733191150aefbd5c73e18127d8d9df81e714c05b87adf2eab3559f2907ea5d"
+                    "hash": "3f733191150aefbd5c73e18127d8d9df81e714c05b87adf2eab3559f2907ea5d",
+                    "doct": "None"
                 },
                 {
                     "name": "Archaeology Api",
@@ -225,10 +245,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/5141/973/archaeology-api-1.19.2-1.0.0.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "3f30a48e329eafc8b534da081cef1fd96c8bc914533bafda4535753a2a74cd4d"
+                    "hash": "3f30a48e329eafc8b534da081cef1fd96c8bc914533bafda4535753a2a74cd4d",
+                    "doct": "None"
                 }
             ],
-            "hash": "77f865610cf499fe890b78a961f23ef1ef25f83d9ec7bbb8ece0eb1b755ad9f1"
+            "hash": "77f865610cf499fe890b78a961f23ef1ef25f83d9ec7bbb8ece0eb1b755ad9f1",
+            "doct": "None"
         },
         {
             "name": "Yung’s better end island",
@@ -244,10 +266,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4876/62/YungsApi-1.19.2-Forge-3.8.10.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "da0e8682b0be608c2df0758bb188a4eafb138f308ff62e94ec6335ba6fadeb51"
+                    "hash": "da0e8682b0be608c2df0758bb188a4eafb138f308ff62e94ec6335ba6fadeb51",
+                    "doct": "None"
                 }
             ],
-            "hash": "549adae7a5306b6e7b416089d5d6713afde6dfdb26b1536d767f6ceed7465d05"
+            "hash": "549adae7a5306b6e7b416089d5d6713afde6dfdb26b1536d767f6ceed7465d05",
+            "doct": "None"
         },
         {
             "name": "Modern online picture frame",
@@ -263,7 +287,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef"
+                    "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef",
+                    "doct": "None"
                 },
                 {
                     "name": "Architectury API",
@@ -272,10 +297,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4555/749/architectury-6.5.85-forge.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "c480cb342a5226f7ff863752349752a71f93c7496918b1585ee92d063cd94648"
+                    "hash": "c480cb342a5226f7ff863752349752a71f93c7496918b1585ee92d063cd94648",
+                    "doct": "None"
                 }
             ],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Player revive",
@@ -291,10 +318,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef"
+                    "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef",
+                    "doct": "None"
                 }
             ],
-            "hash": "693f48e737d18e55a48a46190f43045e706fa96353ba02b96956873d1182fe6f"
+            "hash": "693f48e737d18e55a48a46190f43045e706fa96353ba02b96956873d1182fe6f",
+            "doct": "None"
         },
         {
             "name": "MrCrayfish’s furniture",
@@ -303,7 +332,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4374/996/cfm-7.0.0-pre35-1.19.2.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "bd2ed09872890f3407b9ae64cdf9057c096a47caa3393092c14b5abb18eed4c3"
+            "hash": "bd2ed09872890f3407b9ae64cdf9057c096a47caa3393092c14b5abb18eed4c3",
+            "doct": "None"
         },
         {
             "name": "Journey map",
@@ -312,7 +342,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4532/924/journeymap-1.19.2-5.9.7-forge.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "e297f63205e3fe3649abc0dde0476e6003cf62d7605652fbaccf359c98ae37ce"
+            "hash": "e297f63205e3fe3649abc0dde0476e6003cf62d7605652fbaccf359c98ae37ce",
+            "doct": "None"
         },
         {
             "name": "The one probe",
@@ -321,7 +352,8 @@
             "url": "https://mediafilez.forgecdn.net/files/3965/693/theoneprobe-1.19-6.2.2.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Forgiving void",
@@ -337,10 +369,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4751/735/balm-forge-1.19.2-4.6.0.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "b35e87c6a8c5f0053afe2a5006072e9322e8747d4e980580cb1de34ca4b926c2"
+                    "hash": "b35e87c6a8c5f0053afe2a5006072e9322e8747d4e980580cb1de34ca4b926c2",
+                    "doct": "None"
                 }
             ],
-            "hash": "a5af51d9a67a6fe38b1fd228a0f91b07e4c99022bca832a657a37a7ccbbe1999"
+            "hash": "a5af51d9a67a6fe38b1fd228a0f91b07e4c99022bca832a657a37a7ccbbe1999",
+            "doct": "None"
         },
         {
             "name": "Simple swords",
@@ -356,7 +390,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4555/749/architectury-6.5.85-forge.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "c480cb342a5226f7ff863752349752a71f93c7496918b1585ee92d063cd94648"
+                    "hash": "c480cb342a5226f7ff863752349752a71f93c7496918b1585ee92d063cd94648",
+                    "doct": "None"
                 },
                 {
                     "name": "Cloth config API",
@@ -365,10 +400,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4973/444/cloth-config-8.3.115-forge.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f"
+                    "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f",
+                    "doct": "None"
                 }
             ],
-            "hash": "fdcb87370c7ee33fe656b026345e99b685cbfa5730ee43761737b458e43daf1d"
+            "hash": "fdcb87370c7ee33fe656b026345e99b685cbfa5730ee43761737b458e43daf1d",
+            "doct": "None"
         },
         {
             "name": "Nether portal fix",
@@ -384,10 +421,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4751/735/balm-forge-1.19.2-4.6.0.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "b35e87c6a8c5f0053afe2a5006072e9322e8747d4e980580cb1de34ca4b926c2"
+                    "hash": "b35e87c6a8c5f0053afe2a5006072e9322e8747d4e980580cb1de34ca4b926c2",
+                    "doct": "None"
                 }
             ],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Deeper and darker",
@@ -396,7 +435,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4166/676/deeperdarker-forge-1.1.6-forge.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Falling tree",
@@ -405,7 +445,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4821/386/FallingTree-1.19.2-3.10.1.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "9c9dfc59e8023a217eb996d0e959839e3f6c9bc118a71f10fbfc22a6c4fab836"
+            "hash": "9c9dfc59e8023a217eb996d0e959839e3f6c9bc118a71f10fbfc22a6c4fab836",
+            "doct": "None"
         },
         {
             "name": "AI Improvements",
@@ -414,7 +455,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4019/127/AI-Improvements-1.19.2-0.5.2.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Trash slot",
@@ -430,10 +472,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4751/735/balm-forge-1.19.2-4.6.0.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "b35e87c6a8c5f0053afe2a5006072e9322e8747d4e980580cb1de34ca4b926c2"
+                    "hash": "b35e87c6a8c5f0053afe2a5006072e9322e8747d4e980580cb1de34ca4b926c2",
+                    "doct": "None"
                 }
             ],
-            "hash": "2556243dff0cd92f1b259a91c1b09765f5519390cff6dd9a4dc2383d8aa9f157"
+            "hash": "2556243dff0cd92f1b259a91c1b09765f5519390cff6dd9a4dc2383d8aa9f157",
+            "doct": "None"
         },
         {
             "name": "Easy npc",
@@ -442,7 +486,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5014/506/easy_npc_1.19.2-3.7.3.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "e7e8e7660047fbe6851b57915826f7e0087c3523cbe701d527b52e1d4e364eb0"
+            "hash": "e7e8e7660047fbe6851b57915826f7e0087c3523cbe701d527b52e1d4e364eb0",
+            "doct": "None"
         },
         {
             "name": "The Hordes",
@@ -458,10 +503,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4088/354/Atlas-Lib-1.19.2-1.1.6.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "ad4d4414606aa59873ec3d7e4a0b6dbaa687a7325e81b7327138a1c011042299"
+                    "hash": "ad4d4414606aa59873ec3d7e4a0b6dbaa687a7325e81b7327138a1c011042299",
+                    "doct": "None"
                 }
             ],
-            "hash": "a1827f173dda494b9abd165e987f03660e206625e1087a4e1826a46a93b7ee8c"
+            "hash": "a1827f173dda494b9abd165e987f03660e206625e1087a4e1826a46a93b7ee8c",
+            "doct": "None"
         },
         {
             "name": "Immersive portals",
@@ -470,7 +517,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5093/111/immersive-portals-2.3.7-mc1.19.2-forge.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "MrCrayfish’s gun",
@@ -486,10 +534,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4718/247/framework-forge-1.19.2-0.6.16.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "not found"
+                    "hash": "not found",
+                    "doct": "None"
                 }
             ],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Project arsenal",
@@ -505,7 +555,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4718/247/framework-forge-1.19.2-0.6.16.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "not found"
+                    "hash": "not found",
+                    "doct": "None"
                 },
                 {
                     "name": "MrCrayfish’s gun",
@@ -514,10 +565,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4718/583/cgm-forge-1.19.2-1.3.7.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "not found"
+                    "hash": "not found",
+                    "doct": "None"
                 }
             ],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Additional guns",
@@ -533,7 +586,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4718/247/framework-forge-1.19.2-0.6.16.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "not found"
+                    "hash": "not found",
+                    "doct": "None"
                 },
                 {
                     "name": "MrCrayfish’s gun",
@@ -542,10 +596,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4718/583/cgm-forge-1.19.2-1.3.7.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "not found"
+                    "hash": "not found",
+                    "doct": "None"
                 }
             ],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Simple planes",
@@ -554,7 +610,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4417/286/simpleplanes-1.19.2-5.2.2.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Mutant monsters",
@@ -570,10 +627,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4600/775/PuzzlesLib-v4.4.3-1.19.2-Forge.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "bb95c2854dd24d60f0bf93c7f3e45e79661067920618ed590e140000cc67210d"
+                    "hash": "bb95c2854dd24d60f0bf93c7f3e45e79661067920618ed590e140000cc67210d",
+                    "doct": "None"
                 }
             ],
-            "hash": "ffde6529fd50f6a7acd29f2bfa13537fb3d72ada4013f6e2aa3b327a2915a0d1"
+            "hash": "ffde6529fd50f6a7acd29f2bfa13537fb3d72ada4013f6e2aa3b327a2915a0d1",
+            "doct": "None"
         },
         {
             "name": "Fallout inspired power armor",
@@ -582,7 +641,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4626/636/%28NoStructures%29FalloutInspiredPA%281.19.2%29.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "TacCraft",
@@ -591,7 +651,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4544/813/TacCraft%20%5BForge%201.19.2%5D%200.1.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Torchmaster",
@@ -600,7 +661,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4669/791/torchmaster-19.2.93.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Wither Skeleton Tweaks",
@@ -616,10 +678,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4876/369/Placebo-1.19.2-7.3.4.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "not found"
+                    "hash": "not found",
+                    "doct": "None"
                 }
             ],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "JeremySeq’s damage indicator",
@@ -628,7 +692,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4612/733/damageindicator-1.0.0-1.19.2.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "180173b8685a90fe7b5eee20348e054173a4fd04ba9c97ae55101883df34e851"
+            "hash": "180173b8685a90fe7b5eee20348e054173a4fd04ba9c97ae55101883df34e851",
+            "doct": "None"
         },
         {
             "name": "Damage tilt",
@@ -637,7 +702,8 @@
             "url": "https://mediafilez.forgecdn.net/files/3937/119/DamageTilt-1.19-forge-0.1.2.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Hunting delight",
@@ -646,7 +712,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4088/225/Hunting_Delight%20Forge%201.19.2%202.9.9.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Butcher’s delight",
@@ -655,7 +722,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5054/559/Butchersdelight%20beta%201.19.2%202.0.9f.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "a1a0c5fd4917523ef0fdec43b239fd787837fd989d4d06ec1fd575e10ce4237f"
+            "hash": "a1a0c5fd4917523ef0fdec43b239fd787837fd989d4d06ec1fd575e10ce4237f",
+            "doct": "None"
         },
         {
             "name": "Enhanced Hordes",
@@ -664,7 +732,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4705/367/eh1.1-1.19.2.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "fe9eddbcb5ab794406900f6daeaeaa4c617dc13d149c351ddfa1d1f76f1d3e22"
+            "hash": "fe9eddbcb5ab794406900f6daeaeaa4c617dc13d149c351ddfa1d1f76f1d3e22",
+            "doct": "None"
         },
         {
             "name": "Alex’s Mobs",
@@ -680,10 +749,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4556/677/citadel-2.1.4-1.19.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "3f733191150aefbd5c73e18127d8d9df81e714c05b87adf2eab3559f2907ea5d"
+                    "hash": "3f733191150aefbd5c73e18127d8d9df81e714c05b87adf2eab3559f2907ea5d",
+                    "doct": "None"
                 }
             ],
-            "hash": "dd772255576069a82bee3f01da16f17fb19d77fe4145758a3ae88280200947c5"
+            "hash": "dd772255576069a82bee3f01da16f17fb19d77fe4145758a3ae88280200947c5",
+            "doct": "None"
         },
         {
             "name": "Camera mod",
@@ -692,7 +763,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4814/527/camera-1.19.2-1.0.6.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "1513ce3664f68924a6b17130254e1248cf7082ecfb7b238d702fcf34de65e339"
+            "hash": "1513ce3664f68924a6b17130254e1248cf7082ecfb7b238d702fcf34de65e339",
+            "doct": "None"
         },
         {
             "name": "Yung’s better nether fortresses",
@@ -708,10 +780,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4876/62/YungsApi-1.19.2-Forge-3.8.10.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "da0e8682b0be608c2df0758bb188a4eafb138f308ff62e94ec6335ba6fadeb51"
+                    "hash": "da0e8682b0be608c2df0758bb188a4eafb138f308ff62e94ec6335ba6fadeb51",
+                    "doct": "None"
                 }
             ],
-            "hash": "3740a27ff72b5aed2f7a9839f469d20e8d7214bec661eb9f2bcf50ed6c4d4828"
+            "hash": "3740a27ff72b5aed2f7a9839f469d20e8d7214bec661eb9f2bcf50ed6c4d4828",
+            "doct": "None"
         },
         {
             "name": "When dungeons Arise",
@@ -720,7 +794,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4599/706/DungeonsArise-1.19.2-2.1.56-beta.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "769e3ff215032fc6ab265d58dcafc496f3d751a8f38e97fc4a363d17dfe4ce27"
+            "hash": "769e3ff215032fc6ab265d58dcafc496f3d751a8f38e97fc4a363d17dfe4ce27",
+            "doct": "None"
         },
         {
             "name": "Illage and spillage",
@@ -729,7 +804,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4263/798/illageandspillage-1.19.2-1.2.4.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "174f6a7ad29b4bb36925c25c0f5691da38be18db2a76b81f006be2214ba2b6e8"
+            "hash": "174f6a7ad29b4bb36925c25c0f5691da38be18db2a76b81f006be2214ba2b6e8",
+            "doct": "None"
         },
         {
             "name": "Advanced Netherite",
@@ -738,7 +814,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4438/333/advancednetherite-1.14.7-1.19.2.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "ee976e6f07524e67d5c894f5cb11702eb384f0bf63d78b921936ec73b6caa998"
+            "hash": "ee976e6f07524e67d5c894f5cb11702eb384f0bf63d78b921936ec73b6caa998",
+            "doct": "None"
         },
         {
             "name": "ParCool",
@@ -747,7 +824,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5323/143/ParCool-1.19.2-3.2.1.2-R.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "edc3abf5c4af5488e6e0bc15242524cbe28def3491379eaa3dc6ebc885606b86"
+            "hash": "edc3abf5c4af5488e6e0bc15242524cbe28def3491379eaa3dc6ebc885606b86",
+            "doct": "None"
         },
         {
             "name": "Farmer’s delight",
@@ -756,7 +834,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5051/241/FarmersDelight-1.19.2-1.2.4.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "a766849a5f61b9520c1c2aba86a9652a392c9e276faf5bb388b989bd65477f5f"
+            "hash": "a766849a5f61b9520c1c2aba86a9652a392c9e276faf5bb388b989bd65477f5f",
+            "doct": "None"
         },
         {
             "name": "Butchersdelight Foods",
@@ -765,7 +844,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4813/851/Butchersdelight%20Foods%20beta%201.19.2%201.0.2.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "ef2d10d257624102dd4bdd901c93b13e3190f2a49bdf7537a8529df801a65142"
+            "hash": "ef2d10d257624102dd4bdd901c93b13e3190f2a49bdf7537a8529df801a65142",
+            "doct": "None"
         },
         {
             "name": "Better villages",
@@ -781,10 +861,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4435/523/libraryferret-forge-1.19.2-4.0.0.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2"
+                    "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2",
+                    "doct": "None"
                 }
             ],
-            "hash": "5d205906afc52d6d50a746fbffcb175ba1562700e76ef64818580d14a32a354d"
+            "hash": "5d205906afc52d6d50a746fbffcb175ba1562700e76ef64818580d14a32a354d",
+            "doct": "None"
         },
         {
             "name": "Awesome dungeon nether",
@@ -800,10 +882,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4435/523/libraryferret-forge-1.19.2-4.0.0.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2"
+                    "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2",
+                    "doct": "None"
                 }
             ],
-            "hash": "5428c8b570cb1ad6dff6e737ac305a4e21e991578ebc4e7eb90f77f094b6950d"
+            "hash": "5428c8b570cb1ad6dff6e737ac305a4e21e991578ebc4e7eb90f77f094b6950d",
+            "doct": "None"
         },
         {
             "name": "Awesome dungeon the end",
@@ -819,10 +903,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4435/523/libraryferret-forge-1.19.2-4.0.0.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2"
+                    "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2",
+                    "doct": "None"
                 }
             ],
-            "hash": "42fe62b6c9410151086b63f969fc0e2e41a79455ac22b5b8de54b243417cbbd3"
+            "hash": "42fe62b6c9410151086b63f969fc0e2e41a79455ac22b5b8de54b243417cbbd3",
+            "doct": "None"
         },
         {
             "name": "Awesome dungeon the ocean",
@@ -838,10 +924,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4435/523/libraryferret-forge-1.19.2-4.0.0.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2"
+                    "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2",
+                    "doct": "None"
                 }
             ],
-            "hash": "5de9acd1df4ba1340c34a2ec658f24ebea9af70b833810b086366455eff5f271"
+            "hash": "5de9acd1df4ba1340c34a2ec658f24ebea9af70b833810b086366455eff5f271",
+            "doct": "None"
         },
         {
             "name": "Awesome dungeon",
@@ -857,10 +945,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4435/523/libraryferret-forge-1.19.2-4.0.0.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2"
+                    "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2",
+                    "doct": "None"
                 }
             ],
-            "hash": "359bdb04c041d5f4abb843adcbbca3ffcd4ffbb37ad9520c4f752042a60f6632"
+            "hash": "359bdb04c041d5f4abb843adcbbca3ffcd4ffbb37ad9520c4f752042a60f6632",
+            "doct": "None"
         },
         {
             "name": "Dungeon crawl",
@@ -869,7 +959,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4437/208/DungeonCrawl-1.19-2.3.12.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Openblocks elevator",
@@ -878,7 +969,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4859/577/elevatorid-1.19.2-1.8.10.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "0081143bb83e2d9a13d1920ce7c9a42d63c7dddcec74e03b9e3a6da9ff12582e"
+            "hash": "0081143bb83e2d9a13d1920ce7c9a42d63c7dddcec74e03b9e3a6da9ff12582e",
+            "doct": "None"
         },
         {
             "name": "Nyf’s spider",
@@ -887,7 +979,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4139/288/spiderstpo-1.19.2-2.0.4.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "6a9c4fe15894750ecb5a9670fc4b545145f3bbb6accd7cddff51165c17d7fac2"
+            "hash": "6a9c4fe15894750ecb5a9670fc4b545145f3bbb6accd7cddff51165c17d7fac2",
+            "doct": "None"
         },
         {
             "name": "Rechiseled",
@@ -903,7 +996,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/5005/119/fusion-1.1.0c-forge-mc1.19.2.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "not found"
+                    "hash": "not found",
+                    "doct": "None"
                 },
                 {
                     "name": "Super Martijn 642’s config lib",
@@ -912,7 +1006,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4715/406/supermartijn642configlib-1.1.8-forge-mc1.19.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "not found"
+                    "hash": "not found",
+                    "doct": "None"
                 },
                 {
                     "name": "Super Martijn 642’s core lib",
@@ -921,10 +1016,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4926/970/supermartijn642corelib-1.1.16-forge-mc1.19.2.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "not found"
+                    "hash": "not found",
+                    "doct": "None"
                 }
             ],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Repurposed Structures",
@@ -933,7 +1030,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4031/688/Repurposed_Structures-Better_Strongholds_v4.zip",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Sky villages",
@@ -942,7 +1040,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4787/87/SkyVillages-1.0.3-1.19.2-1.20.x-forge-release.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Terralith",
@@ -951,7 +1050,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4823/693/Terralith_1.19.3_v2.3.12.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "4f74497c92b224a12be231b32c50e55db41e6051ebba5d87ce63aad78204b663"
+            "hash": "4f74497c92b224a12be231b32c50e55db41e6051ebba5d87ce63aad78204b663",
+            "doct": "None"
         },
         {
             "name": "Tool leveling",
@@ -960,7 +1060,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4018/720/toolleveling-forge-1.19.2-1.4.1.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Dropz",
@@ -976,10 +1077,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4502/284/rayon-forge-1.7.1%2B1.19.2.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "not found"
+                    "hash": "not found",
+                    "doct": "None"
                 }
             ],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Dimensional Paintings",
@@ -988,7 +1091,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4363/227/Dimensional-Paintings-1.19.2-1.4.1.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "The abyss II",
@@ -997,7 +1101,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4558/60/TA-0.9.5-1.19.2.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "8a5b052c93a33842c8032d3509d4398d7769905de89fcc0c775c9cbc1d9c67f6"
+            "hash": "8a5b052c93a33842c8032d3509d4398d7769905de89fcc0c775c9cbc1d9c67f6",
+            "doct": "None"
         },
         {
             "name": "Kailand Mod V2.9",
@@ -1006,7 +1111,8 @@
             "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/Kailand-1.19.2-2.9.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "38eff49244db18928c87bd6726d07fc4ec84108bdb80cd7da1955a0b3142ffeb"
+            "hash": "38eff49244db18928c87bd6726d07fc4ec84108bdb80cd7da1955a0b3142ffeb",
+            "doct": "None"
         },
         {
             "name": "the lost cities",
@@ -1015,7 +1121,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5188/637/lostcities-1.19-6.0.23.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "10d9050f4e40df1c8929fdfcae70e5e7fc8864f7d4196857a8c281a8b81df90a"
+            "hash": "10d9050f4e40df1c8929fdfcae70e5e7fc8864f7d4196857a8c281a8b81df90a",
+            "doct": "None"
         },
         {
             "name": "SecurityCraft",
@@ -1024,7 +1131,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4531/283/%5B1.19.2%5D%20SecurityCraft%20v1.9.6.1.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "a3fec0ee63613303d821b80cdd82a92e5a07dc167ba9afa93f7556396e7cece8"
+            "hash": "a3fec0ee63613303d821b80cdd82a92e5a07dc167ba9afa93f7556396e7cece8",
+            "doct": "None"
         },
         {
             "name": "Marbled’s Arsenal",
@@ -1040,7 +1148,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4407/241/geckolib-forge-1.19-3.1.40.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "b4fd4aba01943d4cc62bba9e2d0fb41d85c871a95fad972fbb2248d3d826ea02"
+                    "hash": "b4fd4aba01943d4cc62bba9e2d0fb41d85c871a95fad972fbb2248d3d826ea02",
+                    "doct": "None"
                 },
                 {
                     "name": "marbleds api",
@@ -1049,10 +1158,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/5136/623/marbledsapi-1.19.2-1.0.5.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "edaf930b2901ea303b4e99e2a7ed301dd6372b473c8d0940d17ca360292cac28"
+                    "hash": "edaf930b2901ea303b4e99e2a7ed301dd6372b473c8d0940d17ca360292cac28",
+                    "doct": "None"
                 }
             ],
-            "hash": "b01eafaaacde4382e9ef1cc5dc6521368438bd6156ac25edc512e6032e64c0de"
+            "hash": "b01eafaaacde4382e9ef1cc5dc6521368438bd6156ac25edc512e6032e64c0de",
+            "doct": "None"
         },
         {
             "name": "Simple flashlight port",
@@ -1061,7 +1172,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4151/759/flashLight-2.0.1.1.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "82d28b6708c60538785dd81ce83ddcb1d092d45e0f8ae4edfccd7093c15b0b08"
+            "hash": "82d28b6708c60538785dd81ce83ddcb1d092d45e0f8ae4edfccd7093c15b0b08",
+            "doct": "None"
         },
         {
             "name": "Immersive paintings",
@@ -1070,7 +1182,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4789/112/immersive_paintings-0.6.7%2B1.19.2-forge.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "29abfda0058f1ec2bf5195ecd9689f9bf8d8c883959eca5175e5b55ae2712cbd"
+            "hash": "29abfda0058f1ec2bf5195ecd9689f9bf8d8c883959eca5175e5b55ae2712cbd",
+            "doct": "None"
         },
         {
             "name": "Horror elements",
@@ -1079,7 +1192,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5093/445/Horror_elements_mod_1.5.6_1.19.2.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "a3e5be7a67eac462e6b92378176fcaeb3eec096ab1b6620face579fc62af7a67"
+            "hash": "a3e5be7a67eac462e6b92378176fcaeb3eec096ab1b6620face579fc62af7a67",
+            "doct": "None"
         },
         {
             "name": "Zombie Extreme Modificado",
@@ -1088,7 +1202,8 @@
             "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/Zombie_Extreme_1.19.2_0.2.4-Modificado.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "15855cc604bca67075777d58b6bccfba4382b429738aaac469f2293fe1cf8a8a"
+            "hash": "15855cc604bca67075777d58b6bccfba4382b429738aaac469f2293fe1cf8a8a",
+            "doct": "None"
         },
         {
             "name": "Plasmo voice",
@@ -1097,7 +1212,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5028/633/plasmovoice-forge-1.19.2-2.0.8.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "4d4ca891aed64eb5739245bedab88533e6a672b58de12a5ce525ee775ba39af4"
+            "hash": "4d4ca891aed64eb5739245bedab88533e6a672b58de12a5ce525ee775ba39af4",
+            "doct": "None"
         },
         {
             "name": "AntiXray",
@@ -1106,7 +1222,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4331/672/anti-xray-1.3.0-Forge-1.19.2.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "0faa537e7b3bc134e4703c604fb9c54e9336c5d66195baedc9380751055c3975"
+            "hash": "0faa537e7b3bc134e4703c604fb9c54e9336c5d66195baedc9380751055c3975",
+            "doct": "None"
         },
         {
             "name": "Bongo",
@@ -1122,10 +1239,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4052/778/LibX-1.19.2-4.2.8.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "3fcde1a118a6f2c8d175af5934fa020abad0efe9ca2abab17bf0899f0f5951eb"
+                    "hash": "3fcde1a118a6f2c8d175af5934fa020abad0efe9ca2abab17bf0899f0f5951eb",
+                    "doct": "None"
                 }
             ],
-            "hash": "5c326bc9d0f050a933753218a87e1cf7fd368cf9c2e10656e13f1ed8d9e6d71d"
+            "hash": "5c326bc9d0f050a933753218a87e1cf7fd368cf9c2e10656e13f1ed8d9e6d71d",
+            "doct": "None"
         },
         {
             "name": "Kailand finder",
@@ -1134,7 +1253,8 @@
             "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/KailandFinder_v1.1.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "9bcd5aa5faad4a1e5c9b0d39303aeca42aecc6b8a894fb8f28bdc1ac71bc94ed"
+            "hash": "9bcd5aa5faad4a1e5c9b0d39303aeca42aecc6b8a894fb8f28bdc1ac71bc94ed",
+            "doct": "None"
         },
         {
             "name": "Video player | Deprecate",
@@ -1150,10 +1270,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/5127/438/watermedia-2.0.28.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "not found"
+                    "hash": "not found",
+                    "doct": "None"
                 }
             ],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Video player",
@@ -1169,10 +1291,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/5127/438/watermedia-2.0.28.jar",
                     "disponible": false,
                     "dependencia": [],
-                    "hash": "not found"
+                    "hash": "not found",
+                    "doct": "None"
                 }
             ],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Sculk horde",
@@ -1188,10 +1312,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4930/993/azurelib-forge-1.19.2-1.0.38.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "dd85649c502fc95c60eb47c58643d7e649c08866aad359c92ec44dfba2a23289"
+                    "hash": "dd85649c502fc95c60eb47c58643d7e649c08866aad359c92ec44dfba2a23289",
+                    "doct": "None"
                 }
             ],
-            "hash": "fb936cca1b1abd099001b690ee918df2ea5196eea41b235519af6d1553805a93"
+            "hash": "fb936cca1b1abd099001b690ee918df2ea5196eea41b235519af6d1553805a93",
+            "doct": "None"
         },
         {
             "name": "Dungeons and tavens",
@@ -1200,7 +1326,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4506/854/dungeons-and-taverns-2.0.2%20forge.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "b90796e42eb28afb4963700ff0d1f6675a23379e2e6e3a2e7ea3c9a36094c94b"
+            "hash": "b90796e42eb28afb4963700ff0d1f6675a23379e2e6e3a2e7ea3c9a36094c94b",
+            "doct": "None"
         },
         {
             "name": "Structure essentials",
@@ -1216,10 +1343,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/5063/778/cupboard-1.19.2-2.3.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "6b37c19ff73ffe5d899fdb6757a83aaf173f287ebfedf0733326cdcd63aa631a"
+                    "hash": "6b37c19ff73ffe5d899fdb6757a83aaf173f287ebfedf0733326cdcd63aa631a",
+                    "doct": "None"
                 }
             ],
-            "hash": "f7d8fec0538fab24adbdf48c350c47f54ee3f08b142a271521498eeab89d5fb5"
+            "hash": "f7d8fec0538fab24adbdf48c350c47f54ee3f08b142a271521498eeab89d5fb5",
+            "doct": "None"
         },
         {
             "name": "Dungeons plus",
@@ -1235,10 +1364,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4765/558/structure_gel-1.19.2-2.7.3.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "966afabbc2bb82c2262aad4e1ff1d162e2804433ec7605bf8df961fa7492a327"
+                    "hash": "966afabbc2bb82c2262aad4e1ff1d162e2804433ec7605bf8df961fa7492a327",
+                    "doct": "None"
                 }
             ],
-            "hash": "ffe06aee709c60ab6b515fa17e1f7df5b043bc3755957333556f4e0559e29e2d"
+            "hash": "ffe06aee709c60ab6b515fa17e1f7df5b043bc3755957333556f4e0559e29e2d",
+            "doct": "None"
         },
         {
             "name": "Immersive Aircraft",
@@ -1247,7 +1378,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5323/434/immersive_aircraft-0.7.9%2B1.19.2-forge.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "8ae788453e765257783673783cfbc3ba44257f24c3997578bee06c6ba54b9ddf"
+            "hash": "8ae788453e765257783673783cfbc3ba44257f24c3997578bee06c6ba54b9ddf",
+            "doct": "None"
         },
         {
             "name": "Dynamic Trees",
@@ -1256,7 +1388,8 @@
             "url": "https://mediafilez.forgecdn.net/files/4979/755/DynamicTrees-1.19.2-1.2.0-BETA1.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "aba7713886560d4356ba14da3994226ad9a238cd77ebacbc2b2994ccbab739a7"
+            "hash": "aba7713886560d4356ba14da3994226ad9a238cd77ebacbc2b2994ccbab739a7",
+            "doct": "None"
         },
         {
             "name": "Bloquear Trabajos by zParkk",
@@ -1265,7 +1398,8 @@
             "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/BloquearTrabajos-1.19.2.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "c8f1d8bd935e7f13928bd831da524105c970715a634087fac49b1652eb6c3b26"
+            "hash": "c8f1d8bd935e7f13928bd831da524105c970715a634087fac49b1652eb6c3b26",
+            "doct": "None"
         },
         {
             "name": "Customizable player models",
@@ -1274,7 +1408,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5392/707/CustomPlayerModels-1.19-0.6.17a.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "cffcd7b54dd067a27e62e1e4a2e627c28150bb2fa5dc4c2e8c9a98121a0510dd"
+            "hash": "cffcd7b54dd067a27e62e1e4a2e627c28150bb2fa5dc4c2e8c9a98121a0510dd",
+            "doct": "None"
         },
         {
             "name": "Pehkui",
@@ -1283,7 +1418,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5393/90/Pehkui-3.8.2%2B1.19.2-forge.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "d339a56bcde96e8decd0935a0f83ea41dbc1f1df529fc18a8e63d683630596bb"
+            "hash": "d339a56bcde96e8decd0935a0f83ea41dbc1f1df529fc18a8e63d683630596bb",
+            "doct": "None"
         },
         {
             "name": "InvMove",
@@ -1299,10 +1435,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4973/444/cloth-config-8.3.115-forge.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f"
+                    "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f",
+                    "doct": "None"
                 }
             ],
-            "hash": "06b476d939f1ef000b09c0aec944853bf3c1ef58cbeed7d66a38db0c52ed24e3"
+            "hash": "06b476d939f1ef000b09c0aec944853bf3c1ef58cbeed7d66a38db0c52ed24e3",
+            "doct": "None"
         },
         {
             "name": "Unearthed",
@@ -1318,10 +1456,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4672/46/Hyle-1.0.0-1.19.2-forge-all.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "05cf768fd34867855e56ebcbe160e87c415d0e3190a26a6ecd12631bd593434b"
+                    "hash": "05cf768fd34867855e56ebcbe160e87c415d0e3190a26a6ecd12631bd593434b",
+                    "doct": "None"
                 }
             ],
-            "hash": "058f4608afb55de4957c6129e3eee12f1d27c29ba22865814fdf80d8749f9868"
+            "hash": "058f4608afb55de4957c6129e3eee12f1d27c29ba22865814fdf80d8749f9868",
+            "doct": "None"
         },
         {
             "name": "Enhanced celestials",
@@ -1337,10 +1477,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4554/111/CorgiLib-forge-1.19.2-1.0.0.34.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "47e89d59aa28b49239d0f5d18b8532527eb487fd99d2b49bca3e2fd129e676ea"
+                    "hash": "47e89d59aa28b49239d0f5d18b8532527eb487fd99d2b49bca3e2fd129e676ea",
+                    "doct": "None"
                 }
             ],
-            "hash": "689f67d3f5b2a30cfdbe501b7f8bdf58a8a85f42ace3a02fa92c6a4f502ffd42"
+            "hash": "689f67d3f5b2a30cfdbe501b7f8bdf58a8a85f42ace3a02fa92c6a4f502ffd42",
+            "doct": "None"
         },
         {
             "name": "Handcrafted",
@@ -1356,10 +1498,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4477/753/resourcefullib-forge-1.19.2-1.1.24.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "4f83a8dfa91ad381f2708293ecda6c705039a0dabb774ed429c84c86eb158e56"
+                    "hash": "4f83a8dfa91ad381f2708293ecda6c705039a0dabb774ed429c84c86eb158e56",
+                    "doct": "None"
                 }
             ],
-            "hash": "2180d20142ed82e954c2a8b0b7a9a1ec4b2a0361efb081dccd75c76699f1bfc0"
+            "hash": "2180d20142ed82e954c2a8b0b7a9a1ec4b2a0361efb081dccd75c76699f1bfc0",
+            "doct": "None"
         },
         {
             "name": "Philip’s Ruins",
@@ -1368,7 +1512,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5407/359/Philips-Ruins1.19.2-9.2.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "not found"
+            "hash": "not found",
+            "doct": "None"
         },
         {
             "name": "Timeless and classics zero",
@@ -1377,7 +1522,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5426/619/tacz-1.19.2-1.0.0-beta.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "93e48e0ad2f0ca8e7c4cb0e5c0631e0b351ffc2c61c71296d86c3d3e87d2ded1"
+            "hash": "93e48e0ad2f0ca8e7c4cb0e5c0631e0b351ffc2c61c71296d86c3d3e87d2ded1",
+            "doct": "None"
         },
         {
             "name": "What they up to",
@@ -1393,10 +1539,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/5010/127/coroutil-forge-1.19.2-1.3.6.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "96b7e5854a24b56cbe68c163ee9db2fc84cff0acd27f0da05951fea37da0b4f0"
+                    "hash": "96b7e5854a24b56cbe68c163ee9db2fc84cff0acd27f0da05951fea37da0b4f0",
+                    "doct": "None"
                 }
             ],
-            "hash": "0b4b95c7be644c251ebfb845b7d0b6faf56c6a58473c6c4f8040e613c8e8d841"
+            "hash": "0b4b95c7be644c251ebfb845b7d0b6faf56c6a58473c6c4f8040e613c8e8d841",
+            "doct": "None"
         },
         {
             "name": "Enhanced AI",
@@ -1412,10 +1560,12 @@
                     "url": "https://mediafilez.forgecdn.net/files/4362/859/InsaneLib-1.7.5-mc1.19.2.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "730748b425ecd698a09dae2c1faf2a91165a9729efedbc0d0640868975c1c805"
+                    "hash": "730748b425ecd698a09dae2c1faf2a91165a9729efedbc0d0640868975c1c805",
+                    "doct": "None"
                 }
             ],
-            "hash": "055b731181771aa4880303cb29e590f1bf90f07ae7ff17cb1484f376fa189678"
+            "hash": "055b731181771aa4880303cb29e590f1bf90f07ae7ff17cb1484f376fa189678",
+            "doct": "None"
         },
         {
             "name": "In Control",
@@ -1424,7 +1574,8 @@
             "url": "https://mediafilez.forgecdn.net/files/5430/108/incontrol-1.19-7.1.15.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "975b93e999333ea7e8715136ed134f55da0270f542a38b3424ba428597fd81c7"
+            "hash": "975b93e999333ea7e8715136ed134f55da0270f542a38b3424ba428597fd81c7",
+            "doct": "None"
         }
     ],
     "complementos": [
@@ -1444,7 +1595,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4300/529/Iceberg-1.19.2-forge-1.1.4.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "b9c1ebdf11e7538761aa30f229fb6ce3890057a2af13f11be93c299da9125d1c"
+                    "hash": "b9c1ebdf11e7538761aa30f229fb6ce3890057a2af13f11be93c299da9125d1c",
+                    "doct": "None"
                 }
             ],
             "hash": "9c4fce5a147c1210ee66568c9cd124c49970d1d3c4ffa9a7b8ea5d2e72c576b9"
@@ -1465,7 +1617,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef"
+                    "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef",
+                    "doct": "None"
                 }
             ],
             "hash": "be0e3bd2c23c9f5c74f479a125e00ae724ed08070a97d3f6273037df436509b5"
@@ -1497,7 +1650,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/5063/778/cupboard-1.19.2-2.3.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "6b37c19ff73ffe5d899fdb6757a83aaf173f287ebfedf0733326cdcd63aa631a"
+                    "hash": "6b37c19ff73ffe5d899fdb6757a83aaf173f287ebfedf0733326cdcd63aa631a",
+                    "doct": "None"
                 }
             ],
             "hash": "5501b1108750b1485b70d6b71e4272405d821940da80704536df1fbd29f18f2f"
@@ -1518,7 +1672,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4973/444/cloth-config-8.3.115-forge.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f"
+                    "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f",
+                    "doct": "None"
                 }
             ],
             "hash": "7d8cd9c929180a4b97c9b07a57f5601d0799a6ae8aa95e43d97d277e5fb236e3"
@@ -1539,7 +1694,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef"
+                    "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef",
+                    "doct": "None"
                 }
             ],
             "hash": "5bcf42d9ef88ed06001c7c62a5563a9dd23700a4c4cc6e3478e9b8bb21eef0a3"
@@ -1560,7 +1716,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/5028/409/konkrete_forge_1.8.0_MC_1.19-1.19.2.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "2c1902deb1587f28a35874b0e9c4a367111ebb3ea7e39838dd0050b37b483832"
+                    "hash": "2c1902deb1587f28a35874b0e9c4a367111ebb3ea7e39838dd0050b37b483832",
+                    "doct": "None"
                 },
                 {
                     "name": "Melody",
@@ -1569,7 +1726,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4983/999/melody_forge_1.0.1_MC_1.19.2.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "c9ce1a75bf33ff10bd1dd6074a7b39ed49fc7e03173e7ea9dc7d61715bd3d11b"
+                    "hash": "c9ce1a75bf33ff10bd1dd6074a7b39ed49fc7e03173e7ea9dc7d61715bd3d11b",
+                    "doct": "None"
                 }
             ],
             "hash": "99f0b0f9baa104a9c90e14a8e15adbca9f2bdc8dbdce48e7485eb26efad7b894"
@@ -1612,7 +1770,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/3993/293/Prism-1.19.1-1.0.2.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "47687bf19654b0d5b30170ee7138fb3f10622b54671b1f2fb452a5ae4309d6f8"
+                    "hash": "47687bf19654b0d5b30170ee7138fb3f10622b54671b1f2fb452a5ae4309d6f8",
+                    "doct": "None"
                 },
                 {
                     "name": "Iceberg",
@@ -1621,7 +1780,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4300/529/Iceberg-1.19.2-forge-1.1.4.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "b9c1ebdf11e7538761aa30f229fb6ce3890057a2af13f11be93c299da9125d1c"
+                    "hash": "b9c1ebdf11e7538761aa30f229fb6ce3890057a2af13f11be93c299da9125d1c",
+                    "doct": "None"
                 }
             ],
             "hash": "cfd6d994210f8ed3e3e3cc1976a5947fe37bbecf81766b843f03bf8d6d705566"
@@ -1642,7 +1802,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4584/615/CreativeCore_FORGE_v2.9.4_mc1.19.2.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef"
+                    "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef",
+                    "doct": "None"
                 }
             ],
             "hash": "76e58ad38bf3c275c4a9dfb360acbdf67d21e1fe7cb44d72100d86f021b8178c"
@@ -1674,7 +1835,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/3993/293/Prism-1.19.1-1.0.2.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "47687bf19654b0d5b30170ee7138fb3f10622b54671b1f2fb452a5ae4309d6f8"
+                    "hash": "47687bf19654b0d5b30170ee7138fb3f10622b54671b1f2fb452a5ae4309d6f8",
+                    "doct": "None"
                 },
                 {
                     "name": "Iceberg",
@@ -1683,7 +1845,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4300/529/Iceberg-1.19.2-forge-1.1.4.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "b9c1ebdf11e7538761aa30f229fb6ce3890057a2af13f11be93c299da9125d1c"
+                    "hash": "b9c1ebdf11e7538761aa30f229fb6ce3890057a2af13f11be93c299da9125d1c",
+                    "doct": "None"
                 }
             ],
             "hash": "866f0773f15a085896652d7db9f92101ca83ba156ae99687f03d2ee0868b3d5d"
@@ -1715,7 +1878,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/5300/624/entity_texture_features_forge_1.19.2-6.0.1.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "bc3bfef0bf4a41da99832275eae121b9950aefcabf676e13f108961269e6b77e"
+                    "hash": "bc3bfef0bf4a41da99832275eae121b9950aefcabf676e13f108961269e6b77e",
+                    "doct": "None"
                 }
             ],
             "hash": "de8852f577e62340eab34248067c61c5c66c47a857238455f935e68a5306d0f7"
@@ -1758,7 +1922,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4973/444/cloth-config-8.3.115-forge.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f"
+                    "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f",
+                    "doct": "None"
                 }
             ],
             "hash": "58ccde589bf1a4bd94c40168ea12a8a3ca75eede847abdd9d059a1ee05fb1d6f"
@@ -1800,17 +1965,7 @@
                     "file": "oculus-mc1.19.2-1.6.4.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4578/731/oculus-mc1.19.2-1.6.4.jar",
                     "disponible": true,
-                    "dependencia": [
-                        {
-                            "name": "Embeddium",
-                            "descripcion": "Embeddium | Dependencia",
-                            "file": "embeddium-0.3.18+mc1.19.2.jar",
-                            "url": "https://mediafilez.forgecdn.net/files/5322/303/embeddium-0.3.18%2Bmc1.19.2.jar",
-                            "disponible": false,
-                            "dependencia": [],
-                            "hash": "not found"
-                        }
-                    ],
+                    "dependencia": [],
                     "hash": "f12a11c66565bc7867c964fa2d87b2c62867c841fb8b285699d3f8088037f549"
                 }
             ],
@@ -1898,7 +2053,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/4556/697/Bookshelf-Forge-1.19.2-16.3.20.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "b10fed11104b70aea4ed06eec144e3630447f6bedbd3f8b1f26476bb0430d903"
+                    "hash": "b10fed11104b70aea4ed06eec144e3630447f6bedbd3f8b1f26476bb0430d903",
+                    "doct": "None"
                 }
             ],
             "hash": "12939c1c14242268c8e15c4f93c961ef602ee48ce05e39e4046dc98a1728888b"
@@ -2051,7 +2207,8 @@
                     "url": "https://mediafilez.forgecdn.net/files/5366/347/MaFgLib-0.1.12-mc1.19.2.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "e68009a714cd3f57c6625c8c48b9345efd856153de3d591e96297caa9cf37256"
+                    "hash": "e68009a714cd3f57c6625c8c48b9345efd856153de3d591e96297caa9cf37256",
+                    "doct": "None"
                 }
             ],
             "hash": "a8fa34d3bd7321c9f8c78bb97055fa4393b24bf1f7226f341d712c37c5dabf89"
