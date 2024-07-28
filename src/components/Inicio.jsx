@@ -9,11 +9,11 @@ export default function Inicio() {
         <div className="flex flex-col justify-center items-center">
             <TitleWiki text="Bienvenido sobreviviente" />
             <ParLeft>
-            ¡Espero que esta Wiki de KAILAND V pueda resolver todas tus dudas y otorgarte la información que necesites!
+            ¡Espero que esta Wiki de Kailand V pueda resolver todas tus dudas y otorgarte la información que necesites!
             </ParLeft>
             <SubTitleWiki text="¿Qué es Kailand V? 🤔" />
             <ParLeft>
-                KAILAND es un servidor/serie de Minecraft. Esta temporada semi-anárquica es apocalíptica, por lo que deberás sobrevivir en un mundo peligroso y destructivo, protegiendo a los tuyos con todo el contenido que ofrecemos para ti.
+            Kailand es un servidor/serie de Minecraft. Esta temporada semi-anárquica es apocalíptica, por lo que deberás sobrevivir en un mundo peligroso y destructivo, protegiendo a los tuyos con todo el contenido que ofrecemos para ti.
             </ParLeft>
             <ParLeft>
             De cualquier manera, puedes abrir un ticket o escribir por el canal de general en nuestro servidor de <Link text="Discord" href="https://kailand.es/discord" /> cualquier duda que tengas. Intenta leerte toda la wiki o solo los apartados donde tu creas que puede estar la información que estés buscando. 
