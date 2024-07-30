@@ -38,7 +38,7 @@ export default function Launcher() {
                     <li className="my-5">
                     El launcher de Kailand tiene un Anticheat, por lo que, en la carpeta de <Spam text="'mods'" /> (dentro de la carpeta de <Spam text="'.kailand'" /> ) no podrán modificar, 
                     ni cambiar nada con relación al paquete de mods original de Kailand. Lo mismo pasa con la carpeta <Spam text="'resourcepacks'" />, pero de una manera 
-                    menos estricta, para permitir que los usuarios usen sus Packs de Texturas preferidos.Si presenta problemas al abrir el Launcher, ya sea 
+                    menos estricta, para permitir que los usuarios usen sus Packs de Texturas preferidos. Si presenta problemas al abrir el Launcher, ya sea 
                     en Linux o Windows, la solución es eliminar la carpeta <Spam text="'versions'" /> , en Windows se encuentra en la ruta <Spam text="%APPDATA%/Roaming/.kailand/versions" />. Por el 
                     lado de Linux se encuentra en <Spam text="$HOME/.kailand/versions" />, si presentas problemas, solo debes eliminar esa carpeta, luego debe cerrar el Launcher 
                     y abrirlo nuevamente, aceptar la notificación para instalar y reparar los recursos del Launcher y del juego. Por favor, NO eliminar 
