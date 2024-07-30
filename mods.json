@@ -1733,6 +1733,17 @@
             "hash": "99f0b0f9baa104a9c90e14a8e15adbca9f2bdc8dbdce48e7485eb26efad7b894"
         },
         {
+            "name": "Farsight",
+            "descripcion": "Mod que te permitira renderizar la distancia de chunks que desees, esto para los chunks ya cargados por tu usuario dentro del servidor.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/farsight",
+            "file": "farsight-1.19.2-3.6.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4871/16/farsight-1.19.2-3.6.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": [],
+            "hash": "b86e07d9d2060f5681e893eb48b1254cef370cb2960c2c241db800e3e11485f3"
+        },
+        {
             "name": "Foot Print Particles",
             "descripcion": "Al caminar por determinados bloques, dejas tus pisadas",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/footprintparticle",
