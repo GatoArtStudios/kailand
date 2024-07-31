@@ -1,0 +1,22 @@
+@keyframes rotateYInfinite {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* .rotate-y-infinite {
+    animation: rotateYInfinite 5s linear infinite;
+} */
+
+img {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+.group:hover .rotate-y-infinite {
+    animation: rotateYInfinite 5s linear infinite;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
