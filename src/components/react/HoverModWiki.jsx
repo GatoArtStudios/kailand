@@ -30,7 +30,6 @@ export default function HoverModWiki({ name, href, description, disponible, file
                         </AdvertNota>
                     )}
                 </div>
-                {disponible ? "✅" : "❌"}
             </span>
         </div>
     )

@@ -89,20 +89,23 @@ export default function ListMods() {
                     <SubTitleWiki text={title} />
                 <ul className="translate-x-4">
                     {
-                        data.sort((a, b) => a.name.localeCompare(b.name)).map(data => (
-                            <li key={data.name} className="list-disc text-left w-full">
-                                <HoverModWiki name={data.name} href={data.doct} disponible={data.disponible} description={data.descripcion} file={data.file} />
-                                {data.dependencia && data.dependencia.length > 0 && (
-                                    <ul className="flex flex-col ml-4">
-                                        {data.dependencia.map(dependencia => (
-                                            <li key={dependencia.name}>
-                                                <HoverModWiki href={dependencia.doct} name={dependencia.name} disponible={dependencia.disponible} description={dependencia.descripcion} file={dependencia.file} />
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </li>
-                        ))
+                        data
+                            .filter(mod => mod.disponible)
+                            .sort((a, b) => a.name.localeCompare(b.name))
+                            .map(data => (
+                                <li key={data.name} className="list-disc text-left w-full">
+                                    <HoverModWiki name={data.name} href={data.doct} disponible={data.disponible} description={data.descripcion} file={data.file} />
+                                    {data.dependencia && data.dependencia.length > 0 && (
+                                        <ul className="flex flex-col ml-4">
+                                            {data.dependencia.map(dependencia => (
+                                                <li key={dependencia.name}>
+                                                    <HoverModWiki href={dependencia.doct} name={dependencia.name} disponible={dependencia.disponible} description={dependencia.descripcion} file={dependencia.file} />
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </li>
+                            ))
                     }
                 </ul>
             </div>
