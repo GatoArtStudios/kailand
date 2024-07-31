@@ -15,13 +15,13 @@ import Cuchilla from "../assets/img/attack_on_titan_sword.png"
 import Mjolnir from "../assets/img/mjonlirlanzar.png";
 import EspadaVampirica from "../assets/img/vampire_blade.png";
 import Guadana from "../assets/img/clownpierce_s_axe_texture_pack.png";
-import MazoHeroico from "../assets/img/acha_pascua.png";
+import MazoHeroico from "../assets/img/obsidian_hammer.png";
 import EspadaSonica from "../assets/img/warden_sword.png";
-import Antidisturbios from "../assets/img/antidisturbios.png";
-import EspadaMistica from "../assets/img/espada_mistica.png";
-import MartilloGravedad from "../assets/img/acha_ender.png";
+import Antidisturbios from "../assets/img/shiel.png";
+import EspadaMistica from "../assets/img/mistsplitter_reforged.png";
+import MartilloGravedad from "../assets/img/martillogravedad.png";
 import EspadaShulker from "../assets/img/shulker_sword.png";
-import VaraDictado from "../assets/img/vara_infernal.png";
+import VaraDictado from "../assets/img/voidstaff.png";
 
 export default function InfoMods() {
     return (

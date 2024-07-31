@@ -15,7 +15,7 @@ export default function CardItem({ children, itemSrc }) {
                 <div className="rounded-md p-1 bg-gradient-to-tr from-blue-900 to-violet-800 group relative transition-transform ease-in-out duration-300 hover:transform hover:-translate-x-2 hover:scale-125 max-h-24 w-24">
                     <div className="bg-black/60 backdrop-blur-md rounded-md p-1 justify-center flex">
                         <img
-                            className="h-20 rotate-y-infinite"
+                            className="h-20 w-auto rotate-y-infinite"
                             src={itemSrc}
                         />
                     </div>
