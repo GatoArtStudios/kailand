@@ -46,6 +46,7 @@ export default function InfoMods() {
             <CardItem itemSrc={MonedaRed.src}>
                 <Spam text="Moneda Rubí:"/> Esta moneda se consigue ganando cualquier evento organizado por Kailand o intercambiándola por 4 Monedas Amatistas. Esta sirve para reclamar objetos muy exclusivos en la tienda.
             </CardItem>
+            <SubTitleWiki text="Armas de combate ⚔️" />
             <CardItem itemSrc={HachaNordica.src}>
                 <Spam text="Hacha nórdica:"/> Es un hacha de las mitologías griegas. Tiene todas las funciones de cualquier hacha del Minecraft Vanilla y muchas más, ya que tiene más daño y posibilidad de mejorarla con la Esencia de Ragnarök. La Hacha nórdica tiene 12.5 de daño, 1 de velocidad de ataque y 1500 de durabilidad. Esta se obtiene comprándola en la tienda.
             </CardItem>
