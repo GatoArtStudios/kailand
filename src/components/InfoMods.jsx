@@ -54,7 +54,7 @@ export default function InfoMods() {
                 <Spam text="Hacha Leviatán:"/> Es la mejora del Hacha nórdica. Esta se obtiene combinando el Hacha nórdica y la Esencia de Ragnarök en la mesa de herrería, esto da como resultado el Hacha Leviatán, cuya habilidad es proporcionar efectos positivos después de lanzar rayos a las entidades de alrededor: Fuerza 2 (30 segundos), Absorción 2 (45 segundos), Regeneración 1(45 segundos) y Vida mejorada 2 (45 segundos). Además, el Hacha Leviatán tiene 20 de daño, 1 de velocidad de ataque y 2300 de durabilidad.
             </CardItem>
             <CardItem itemSrc={Katana.src}>
-                <Spam text="Katana:"/> Es una Katana que te permite utilizar un dash (empuje) hacia adelante cada 3 segundos, permitiéndote cortar todo a tu paso. Además, la Katana tiene 16.4 de daño, 1.4 de Velocidad de ataque y 2100 de durabilidad. Esta se obtiene comprándola en la tienda.
+                <Spam text="Katana:"/> Es una Katana del antiguo Japón que fue forjada con la bendición de Fujin, el dios del viento. Esta Katana te permite utilizar un dash (impulso) hacia adelante cada 3 segundos, permitiéndote cortar todo a tu paso. Además, la Katana tiene 16.4 de daño, 1.4 de Velocidad de ataque y 2100 de durabilidad. Esta se obtiene comprándola en la tienda.
             </CardItem>
             <CardItem itemSrc={Tsuke.src}>
                 <Spam text="Tsuke:"/> Esta espada es capaz de desatar un ataque de mil golpes mágicos a todas las entidades de alrededor del portador, en un rango de 8 bloques. La Tsuke tiene 16 de daño, 1.2 de velocidad de ataque y 2100 de durabilidad. Esta se obtiene comprándola en la tienda.
