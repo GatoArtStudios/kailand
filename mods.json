@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.1.1",
+    "configVersion": "1.1.2",
     "launcherVersion": "2.0.1.1",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nfancymenu se Auto Actualiza sin notificar al usuario.\nzParkk Soluciona problema de escalado en fancymenu.\nAhora el AntiCheat utiliza hash256 para verfiicar que los mods no hallan sido alterados,\nAntiCheat en el apartado de ResourcePacks para evitar el uso de texture packs que les de ventajas de Cheat a los jugadores.",
@@ -1106,13 +1106,13 @@
             "doct": "None"
         },
         {
-            "name": "Kailand Mod V3.4",
+            "name": "Kailand Mod V3.8",
             "descripcion": "Kailand Mod",
-            "file": "Kailand-1.19.2-3.4.jar",
-            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/Kailand-1.19.2-3.4.jar",
+            "file": "Kailand-1.19.2-3.8.jar",
+            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/Kailand-1.19.2-3.8.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "7531f16d9468a6a936b6b05116db302e5d0eb1b4490562ed0c9f4d510726859d",
+            "hash": "1de15acfc9f21b1ca917410078ba8b7638a100f8840a8d54033a3af3cf9dd785",
             "doct": "None"
         },
         {
