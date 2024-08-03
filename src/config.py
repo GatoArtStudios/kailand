@@ -48,6 +48,8 @@ APP_PATH = os.getcwd()
 
 SYSTEM = get_system()
 
+KEY_API = ''
+
 DEBUG_LINES = '300'
 
 PRIVATE_KEY = ''''''

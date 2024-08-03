@@ -510,7 +510,7 @@ class DataWidget:
 
     def save_info(self, e):
         '''
-        Funcion que se ejecuta al precionar el boton "Guardar"
+        Funcion que se ejecuta al precionar el boton "Guardar" en perfil
         '''
         from game import mc
         from encryption import encrypt_message

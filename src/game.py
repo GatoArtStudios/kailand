@@ -20,7 +20,7 @@ class Mc:
         '''
         from config import DIRECTORY_KAILAND, JAVA_PATH
         self.data_nube = {}
-        self.ID = uuid.uuid4().hex
+        self.ID = str(uuid.uuid4())
         self.url_new_vercion = None
         self.launcherVersion = "2.0.1.1"
         self.boton_jugar = "Iniciado"
