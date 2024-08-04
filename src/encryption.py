@@ -3,6 +3,8 @@ from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP, AES
 from Crypto.Random import get_random_bytes
 import utils
+import jwt
+import datetime
 
 @utils.handle_exception('Error al encryptar los datos, por favor contactar con soporte.')
 def encrypt_message(data: dict, file: str = 'encrypted_data.json') -> bool:
@@ -75,3 +77,10 @@ def decrypt_message(file: str = 'encrypted_data.json') -> dict:
     decrypted_data = json.loads(decrypted_json_data)
 
     return decrypted_data
+
+@utils.handle_exception('Error al encryptar los datos, por favor contactar con soporte (JWT).')
+def create_jwt(data: dict):
+    from config import KEY_API
+    data['exp'] = datetime.datetime.utcnow() + datetime.timedelta(minutes=3)
+    token = jwt.encode(data, KEY_API, algorithm='HS256')
+    return token

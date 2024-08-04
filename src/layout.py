@@ -2,6 +2,8 @@ import os
 import sys
 import json
 import time
+import utils
+import requests
 import threading
 import flet as ft
 import webbrowser
@@ -125,7 +127,7 @@ class DataWidget:
                                 [
                                     ft.Container(
                                         content=ft.Text("Kailand V", italic=True),
-                                        url="https://discord.gg/chwAE86T6W",
+                                        url="https://www.kailand.es/",
                                         opacity=0.5,
                                         animate_opacity=300,
                                         on_hover=self.animation_colaboracion,
@@ -513,17 +515,22 @@ class DataWidget:
         Funcion que se ejecuta al precionar el boton "Guardar" en perfil
         '''
         from game import mc
-        from encryption import encrypt_message
+        from encryption import encrypt_message, create_jwt
+        # Verificamos si a selecionado un tipo de cuenta para su perfil de mc
         if not self.type_login.value:
             self.t.value = "Por favor seleccione un tipo de cuenta"
             e.page.update()
         else:
+            # Este bloque se ejecuta si a elegido algun tipo de cuenta disponible
             if self.type_login.value == "Offline":
+                # SI elegio Offline entonces guardara los datos para un usuario offline
                 self.text_p.disabled = False
                 self.buttom_login.disabled = True
+                self.buttom_save.disabled = True
+                e.page.update()
                 kailand_username = mc.options["username"]
                 if kailand_username:
-                    self.t.value = f"Tipo de cuenta: {self.type_login.value}, Usuario: {mc.options['username']}"
+                    self.t.value = f"Tipo de cuenta: {self.type_login.value}, Usuario: {mc.options['username']}, Estado: Procesando Registro (Espere por favor)..."
                     e.page.update()
                 else:
                     self.t.value = f"Tipo de cuenta: {self.type_login.value} - (Recuerde escribir el Usuario que usara)"
@@ -531,14 +538,36 @@ class DataWidget:
                     mc.options.update(
                         {
                             "username": self.text_p.value,
-                            "uuid": mc.ID,
+                            "uuid": utils.construct_offline_player_uuid(self.text_p.value),
                         }
                     )
                     # Guardar datos de session en un archivo JSON que guarda las configuraciones del usuario
                     encrypt_message(mc.options, mc.archivo_kailand)
-                    self.t.value = f"Tipo de cuenta: {self.type_login.value}, Usuario: {self.text_p.value}"
+                    # Enviamos la informacion al servidor
+                    try:
+                        url_api = f'http://{mc.data_nube['api']}/api/v1'
+                        data = {
+                            "name": self.text_p.value,
+                            "uuid": mc.options['uuid'],
+                        }
+                        token = create_jwt(data)
+                        payload = {"token": token}
+                        response = requests.post(
+                            url_api,
+                            headers={"Content-Type": "application/json"},
+                            data=json.dumps(payload)
+                        )
+                        if response.status_code == 200:
+                            response = "Registro exitoso"
+                        else:
+                            response = "Error al registrar usuario en el servidor"
+                    except Exception as e:
+                        response = "Error al registrar usuario en el servidor"
+                    self.t.value = f"Tipo de cuenta: {self.type_login.value}, Usuario: {self.text_p.value}, Estado: {response}."
+                self.buttom_save.disabled = False
                 e.page.update()
             else:
+                # De lo contrario se ejecuta este bloque si eligio (Online Microsoft)
                 self.buttom_login.disabled = False
                 self.buttom_login.bgcolor = ft.colors.with_opacity(0.2, "blue")
                 self.text_p.disabled = True
