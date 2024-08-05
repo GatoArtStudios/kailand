@@ -1,10 +1,23 @@
-# Codigo de launcher de Kailand V
+# Código de launcher de Kailand V
 
-Hola bienvenido a este repositorio en el cual tenemos todo el codigo del proyecto del launcher de Kailand V, aclaro que el codigo no es de libre uso, solo esta a disposicion del desarrollador [GatoArtStudio](https://linktr.ee/gatoartstudio) y los derechos reservados para [Kai](https://www.instagram.com/soyellioth/) quien es propietario del proyecto, el proyecto tiene como base python y flet que es flutter para el diseños de la interfaz de usuario `(ui/ux)`, el launcher es completamente automatico, instala el minecraft y el cliente que necesite como forge o fabric, la instalacion de mods es completamente automatica y tiene un apartado de mods opcionales, de igual forma la interfaz es limpia y sencilla de usar, lo mas amigable posible para el juegador.
+Hola bienvenido a este repositorio, en el cual tenemos todo el código del proyecto del launcher de Kailand V, ***aclaro que el código no es de libre uso***, solo esta a disposición del desarrollador [GatoArtStudio](https://linktr.ee/gatoartstudio) y los derechos reservados para [Kai](https://www.instagram.com/soyellioth/), quien es propietario del proyecto, el proyecto tiene como base python y Flet, que es flutter para el diseños de la interfaz de usuario `(ui/ux)`, el launcher **es completamente automático**, instala el Minecraft y el ModLoader que necesite como forge o fabric, la instalación de mods es completamente automática y tiene un apartado de mods opcionales (**Client-Side**), de igual forma la interfaz es limpia y sencilla de usar, lo mas amigable posible para el jugador.
 
-## Imagenes
+### Ventanas del launcher de Kailand
 
-##### Instalacion de recursos o actualizacion de los mismos:
+- El launcher tiene un **Anticheat**, para evitar que los jugadores usen hacks.
+- Es completamente **automatizado**, descarga los mods, minecraft, modloader, configuraciones, java, todo de forma automática.
+- Apartado de **mods Client-Side** para personalizar mas tu juego.
+- Datos del juego encriptados para la **maxima seguridad**.
+- **Uso de api**, para actualizar datos rápidamente en el launcher.
+- **Evita bugs** en tus mods, ya que usa la version de java desarrollada por Mojang, para la version en especifico que esta usando tu modloader.
+- **UX Optimizado**, ya que el usuario solo debe configurar su cuenta de Minecraft y darle al botón jugar para disfrutar del juego.
+- **Sistema de Logging** para registrar la actividad del launcher y que puedas solucionar bugs fácilmente o alguien de soporte.
+- **Consola** en tiempo real para poder ver el logging y si presenta un problema, solucionarlo rápidamente viejo la consola.
+- **Plugin complementario** para evitar el uso de launcher de terceros que arruinen la experiencia del jugador en tu servidor de Minecraft.
+
+## Imágenes
+
+##### Instalación de recursos o actualización de los mismos:
 ![Update](https://raw.githubusercontent.com/GatoArtStudios/kailand/main/previews/update.png)
 
 ##### Apartado de Mods opcionales:
@@ -30,20 +43,8 @@ Hola bienvenido a este repositorio en el cual tenemos todo el codigo del proyect
 [Owner-Proyect](https://www.instagram.com/soyellioth/)
 </br>
 
-[Web](https://gatoartstudios.github.io/kailand/)
+[Web Oficial de Kialand](https://gatoartstudios.github.io/kailand/)
 
-### Cambios en proceso:
-
-- Detecta memoria ram :white_check_mark: 
-- Agregando encriptado a archivos de configuracion :white_check_mark: 
-- Codigo por modulos :white_check_mark: 
-- Compatibilidad con linux, windows, MacOS :white_check_mark:
-- AntiCheat :white_check_mark: 
-- Solucion de dependencias :white_check_mark: 
-- Colores en consola con opcion de desactivar en settings :white_check_mark:
-- Rediseño del apartado de mods complementarios :white_check_mark:
-- Tener complementos activos por defecto :white_check_mark:
-- Configuraciones por defecto para el juego (Fancymenu, etc) :white_check_mark:
 
 > [!WARNING]
-> Se prohibe el uso del codigo sin autorizacion.
+> Se prohíbe el uso del código sin autorización.
