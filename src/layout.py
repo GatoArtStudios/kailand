@@ -543,11 +543,12 @@ class DataWidget:
                     )
                     # Guardar datos de session en un archivo JSON que guarda las configuraciones del usuario
                     encrypt_message(mc.options, mc.archivo_kailand)
+                    print(mc.options['uuid'])
                     # Enviamos la informacion al servidor
                     try:
                         url_api = f'http://{mc.data_nube['api']}/api/v1'
                         data = {
-                            "name": self.text_p.value,
+                            "name": mc.options['username'],
                             "uuid": mc.options['uuid'],
                         }
                         token = create_jwt(data)
