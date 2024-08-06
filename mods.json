@@ -694,7 +694,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "180173b8685a90fe7b5eee20348e054173a4fd04ba9c97ae55101883df34e851",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/jeremyseq-damage-indicator"
         },
         {
             "name": "Damage tilt",
@@ -724,7 +724,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "a1a0c5fd4917523ef0fdec43b239fd787837fd989d4d06ec1fd575e10ce4237f",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/butchers-delight"
         },
         {
             "name": "Enhanced Hordes",
@@ -734,7 +734,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "fe9eddbcb5ab794406900f6daeaeaa4c617dc13d149c351ddfa1d1f76f1d3e22",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/enhanced-hordes"
         },
         {
             "name": "Alex’s Mobs",
@@ -751,11 +751,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "3f733191150aefbd5c73e18127d8d9df81e714c05b87adf2eab3559f2907ea5d",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/citadel"
                 }
             ],
             "hash": "dd772255576069a82bee3f01da16f17fb19d77fe4145758a3ae88280200947c5",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/alexs-mobs"
         },
         {
             "name": "Camera mod",
@@ -765,7 +765,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "1513ce3664f68924a6b17130254e1248cf7082ecfb7b238d702fcf34de65e339",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/camera-mod"
         },
         {
             "name": "Yung’s better nether fortresses",
@@ -782,11 +782,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "da0e8682b0be608c2df0758bb188a4eafb138f308ff62e94ec6335ba6fadeb51",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/yungs-api"
                 }
             ],
             "hash": "3740a27ff72b5aed2f7a9839f469d20e8d7214bec661eb9f2bcf50ed6c4d4828",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-nether-fortresses"
         },
         {
             "name": "When dungeons Arise",
@@ -796,7 +796,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "769e3ff215032fc6ab265d58dcafc496f3d751a8f38e97fc4a363d17dfe4ce27",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/when-dungeons-arise"
         },
         {
             "name": "Illage and spillage",
@@ -806,7 +806,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "174f6a7ad29b4bb36925c25c0f5691da38be18db2a76b81f006be2214ba2b6e8",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/illage-and-spillage"
         },
         {
             "name": "Advanced Netherite",
@@ -816,7 +816,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "ee976e6f07524e67d5c894f5cb11702eb384f0bf63d78b921936ec73b6caa998",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/advanced-netherite"
         },
         {
             "name": "ParCool",
@@ -826,7 +826,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "edc3abf5c4af5488e6e0bc15242524cbe28def3491379eaa3dc6ebc885606b86",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/parcool"
         },
         {
             "name": "Farmer’s delight",
@@ -836,7 +836,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "a766849a5f61b9520c1c2aba86a9652a392c9e276faf5bb388b989bd65477f5f",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/farmers-delight"
         },
         {
             "name": "Butchersdelight Foods",
@@ -846,7 +846,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "ef2d10d257624102dd4bdd901c93b13e3190f2a49bdf7537a8529df801a65142",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/butchers-delight-foods"
         },
         {
             "name": "Better villages",
@@ -863,11 +863,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/library-ferret-forge"
                 }
             ],
             "hash": "5d205906afc52d6d50a746fbffcb175ba1562700e76ef64818580d14a32a354d",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/better-village-forge"
         },
         {
             "name": "Awesome dungeon nether",
@@ -884,11 +884,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/library-ferret-forge"
                 }
             ],
             "hash": "5428c8b570cb1ad6dff6e737ac305a4e21e991578ebc4e7eb90f77f094b6950d",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/awesome-dungeon-nether-forge"
         },
         {
             "name": "Awesome dungeon the end",
