@@ -211,8 +211,9 @@ class Mc:
             data_options = encryption.decrypt_message(file=self.archivo_kailand)
             data_options['executablePath'] = JAVA_PATH
             self.options.update(data_options)
-            ocult_uuid = self.options
+            ocult_uuid = self.options.copy()
             ocult_uuid.update({"uuid": "*************** privado **************"})
+            ocult_uuid.update({"username": "*************** privado **************"})
             logger.info(ocult_uuid)
 
     def list_files_directory_mods(self) -> bool:
