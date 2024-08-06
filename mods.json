@@ -58,7 +58,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "05fcb56ccb47865abe136adaf8a03c3c8660685d2d6d3e47ca8fa0908ea4c3f4",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/carry-on"
         },
         {
             "name": "First aid",
@@ -78,7 +78,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "7a5819627caebeedb974cce686c56639d10d4b3985074a8911b6904085cc8553",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/silences-defense-tower"
         },
         {
             "name": "Mine traps",
@@ -98,7 +98,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "498fa82d2e75f82c299b1d32733fde84504684c3f83880b808614f95309d7cdd",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/satako-library"
         },
         {
             "name": "Simple voice chat",
@@ -135,11 +135,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "96b7e5854a24b56cbe68c163ee9db2fc84cff0acd27f0da05951fea37da0b4f0",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/coroutil"
                 }
             ],
             "hash": "b8aa38a1ba44e1a217d7ac25cdf218b4dfa005ddeaac723ef4a8ee3df2ec8c05",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/zombie-awareness"
         },
         {
             "name": "corpse",
@@ -149,7 +149,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "48237fe120831f5f26d2a3836770b93be5e176874adcd8f294a5576e6511df13",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/corpse"
         },
         {
             "name": "The twilight forest",
@@ -169,7 +169,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "a2dfefef7ed90d71ca448e6a78e54c5f87791d856074c7b629def897943fd008",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/jade"
         },
         {
             "name": "Cosmetic armor reworked",
@@ -179,7 +179,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "b4f072dd8a7fc3fce83c11b6a67e4ba2946af4a2946fc1b2041d708c96c08b5e",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/cosmetic-armor-reworked"
         },
         {
             "name": "Sophisticated backpacks",
@@ -196,11 +196,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "37b9931f9c8a61973f1e0cd22ac0362743985f0e2b5a1996b63da07404ca5a22",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core"
                 }
             ],
             "hash": "2d8ef5d36cdb1fd4252f0aff78718c24d7a013a8b962fc9ce3f50ecc4a59e9da",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks"
         },
         {
             "name": "L_Enders_Cataclysm",
@@ -217,7 +217,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "c4699fdb0c3ee6a1dddb1b65479ed0db5e3ab308f7204ce7044a0390c4eb8469",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/curios"
                 },
                 {
                     "name": "lionfish api",
@@ -227,7 +227,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "9b866047472b7e31210b78cdb671d940271d29a7865e499f7ef1b5543054e3d4",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/lionfish-api"
                 },
                 {
                     "name": "Citadel",
@@ -237,7 +237,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "3f733191150aefbd5c73e18127d8d9df81e714c05b87adf2eab3559f2907ea5d",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/citadel/files/4556677"
                 },
                 {
                     "name": "Archaeology Api",
@@ -247,11 +247,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "3f30a48e329eafc8b534da081cef1fd96c8bc914533bafda4535753a2a74cd4d",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/archeology-api"
                 }
             ],
             "hash": "77f865610cf499fe890b78a961f23ef1ef25f83d9ec7bbb8ece0eb1b755ad9f1",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/lendercataclysm"
         },
         {
             "name": "Yung’s better end island",
@@ -268,11 +268,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "da0e8682b0be608c2df0758bb188a4eafb138f308ff62e94ec6335ba6fadeb51",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/yungs-api"
                 }
             ],
             "hash": "549adae7a5306b6e7b416089d5d6713afde6dfdb26b1536d767f6ceed7465d05",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-end-island"
         },
         {
             "name": "Modern online picture frame",
@@ -289,7 +289,7 @@
                     "disponible": false,
                     "dependencia": [],
                     "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/creativecore"
                 },
                 {
                     "name": "Architectury API",
@@ -299,11 +299,11 @@
                     "disponible": false,
                     "dependencia": [],
                     "hash": "c480cb342a5226f7ff863752349752a71f93c7496918b1585ee92d063cd94648",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/architectury-api"
                 }
             ],
             "hash": "not found",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/online-picture-frame"
         },
         {
             "name": "Player revive",
@@ -320,11 +320,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/creativecore"
                 }
             ],
             "hash": "693f48e737d18e55a48a46190f43045e706fa96353ba02b96956873d1182fe6f",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/playerrevive"
         },
         {
             "name": "MrCrayfish’s furniture",
@@ -334,7 +334,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "bd2ed09872890f3407b9ae64cdf9057c096a47caa3393092c14b5abb18eed4c3",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/mrcrayfish-furniture-mod"
         },
         {
             "name": "Journey map",
@@ -344,7 +344,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "e297f63205e3fe3649abc0dde0476e6003cf62d7605652fbaccf359c98ae37ce",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/journeymap"
         },
         {
             "name": "The one probe",
@@ -371,11 +371,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "b35e87c6a8c5f0053afe2a5006072e9322e8747d4e980580cb1de34ca4b926c2",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/balm"
                 }
             ],
             "hash": "a5af51d9a67a6fe38b1fd228a0f91b07e4c99022bca832a657a37a7ccbbe1999",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/forgiving-void"
         },
         {
             "name": "Simple swords",
@@ -392,7 +392,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "c480cb342a5226f7ff863752349752a71f93c7496918b1585ee92d063cd94648",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/architectury-api"
                 },
                 {
                     "name": "Cloth config API",
@@ -402,11 +402,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/cloth-config"
                 }
             ],
             "hash": "fdcb87370c7ee33fe656b026345e99b685cbfa5730ee43761737b458e43daf1d",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/simply-swords"
         },
         {
             "name": "Nether portal fix",
@@ -447,7 +447,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "9c9dfc59e8023a217eb996d0e959839e3f6c9bc118a71f10fbfc22a6c4fab836",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/falling-tree"
         },
         {
             "name": "AI Improvements",
@@ -474,11 +474,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "b35e87c6a8c5f0053afe2a5006072e9322e8747d4e980580cb1de34ca4b926c2",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/balm"
                 }
             ],
             "hash": "2556243dff0cd92f1b259a91c1b09765f5519390cff6dd9a4dc2383d8aa9f157",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/trashslot"
         },
         {
             "name": "Easy npc",
@@ -488,7 +488,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "e7e8e7660047fbe6851b57915826f7e0087c3523cbe701d527b52e1d4e364eb0",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/easy-npc"
         },
         {
             "name": "The Hordes",
@@ -505,11 +505,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "ad4d4414606aa59873ec3d7e4a0b6dbaa687a7325e81b7327138a1c011042299",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/atlas-lib"
                 }
             ],
             "hash": "a1827f173dda494b9abd165e987f03660e206625e1087a4e1826a46a93b7ee8c",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/the-hordes"
         },
         {
             "name": "Immersive portals",
