@@ -79,7 +79,7 @@ class DataWidget:
         self.buttom_shaders = ft.ElevatedButton(text="Shaders", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.open_folder_shaderpacks, icon=ft.icons.FOLDER, icon_color="white", animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.buttom_textures = ft.ElevatedButton(text="Textures", bgcolor = ft.colors.with_opacity(0.2, "white"), color = "white", width=200, on_click=self.open_folder_resourcepacks, icon=ft.icons.FOLDER, icon_color="white", animate_scale=ft.animation.Animation(duration=400, curve="bounceout"), scale=ft.transform.Scale(1))
         self.buttom_login = ft.ElevatedButton(text="Login", bgcolor = ft.colors.with_opacity(0.2, "white"), disabled=True, color="white")
-        self.text_p = ft.TextField(label="Usuario (Offline)", label_style=ft.TextStyle(color="White"), hint_text="Coloca tu usuario y guarda de nuevo", hint_style=ft.TextStyle(color="white"), border_color="white", disabled=[True if not mc.options["username"] else False][0], color="white", bgcolor=ft.colors.with_opacity(0.2, "black"), focused_color="white", value=[None if not mc.options["username"] else mc.options["username"].replace('.', '')][0])
+        self.text_p = ft.TextField(label="Usuario (Offline)", label_style=ft.TextStyle(color="White"), hint_text="Coloca tu usuario y guarda de nuevo", hint_style=ft.TextStyle(color="white"), border_color="white", color="white", bgcolor=ft.colors.with_opacity(0.2, "black"), focused_color="white", value=[None if not mc.options["username"] else mc.options["username"].replace('.', '')][0])
         self.input_offline_name = ft.Container(content=self.text_p)
         self.text_reglas = self.consulta_reglas()
         self.text_reglas_list = self.text_reglas.split("\n")
@@ -195,9 +195,9 @@ class DataWidget:
         self.perfil_widget = ft.Container(
             content=ft.Column([
                     ft.Row([
-                    self.type_login,
+                    # self.type_login,
                     self.input_offline_name,
-                    self.buttom_login,
+                    # self.buttom_login,
                     ]),
                     self.t,
                     ft.Stack([self.buttom_save])
@@ -517,10 +517,7 @@ class DataWidget:
         from game import mc
         from encryption import encrypt_message, create_jwt
         # Verificamos si a selecionado un tipo de cuenta para su perfil de mc
-        if not self.type_login.value:
-            self.t.value = "Por favor seleccione un tipo de cuenta"
-            e.page.update()
-        elif len(f'{self.text_p.value}.') > 16:
+        if len(f'{self.text_p.value}.') > 16:
             self.t.value = "El usuario no puede superar los 16 caracteres"
             e.page.update()
         elif '.' in self.text_p.value:
@@ -537,7 +534,7 @@ class DataWidget:
             e.page.update()
         else:
             # Este bloque se ejecuta si a elegido algun tipo de cuenta disponible
-            if self.type_login.value == "Offline":
+            # if self.type_login.value == "Offline":
                 # SI elegio Offline entonces guardara los datos para un usuario offline
                 self.text_p.disabled = False
                 self.buttom_login.disabled = True
@@ -545,10 +542,10 @@ class DataWidget:
                 e.page.update()
                 kailand_username = mc.options["username"]
                 if kailand_username:
-                    self.t.value = f"Tipo de cuenta: {self.type_login.value}, Usuario: {mc.options['username'].replace('.', '')}, Estado: Procesando Registro (Espere por favor)..."
+                    self.t.value = f"Usuario: {mc.options['username'].replace('.', '')}, Estado: Procesando Registro (Espere por favor)..."
                     e.page.update()
                 else:
-                    self.t.value = f"Tipo de cuenta: {self.type_login.value} - (Recuerde escribir el Usuario que usara)"
+                    self.t.value = f"(Recuerde escribir el Usuario que usara)"
                 if self.text_p.value:
                     mc.options.update(
                         {
@@ -579,16 +576,16 @@ class DataWidget:
                             response = "Error al registrar usuario en el servidor"
                     except Exception as e:
                         response = "Error al registrar usuario en el servidor"
-                    self.t.value = f"Tipo de cuenta: {self.type_login.value}, Usuario: {self.text_p.value.replace('.', '')}, Estado: {response}."
+                    self.t.value = f"Usuario: {self.text_p.value.replace('.', '')}, Estado: {response}."
                 self.buttom_save.disabled = False
                 e.page.update()
-            else:
-                # De lo contrario se ejecuta este bloque si eligio (Online Microsoft)
-                self.buttom_login.disabled = False
-                self.buttom_login.bgcolor = ft.colors.with_opacity(0.2, "blue")
-                self.text_p.disabled = True
-                self.t.value = f"Tipo de cuenta: {self.type_login.value} - (Por favor dele a Login para completar el proceso)"
-                e.page.update()
+            # else:
+            #     # De lo contrario se ejecuta este bloque si eligio (Online Microsoft)
+            #     self.buttom_login.disabled = False
+            #     self.buttom_login.bgcolor = ft.colors.with_opacity(0.2, "blue")
+            #     self.text_p.disabled = True
+            #     self.t.value = f"Tipo de cuenta: {self.type_login.value} - (Por favor dele a Login para completar el proceso)"
+            #     e.page.update()
 
     def save_setting(self, e):
         '''
