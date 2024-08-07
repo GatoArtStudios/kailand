@@ -23,4 +23,4 @@ OUTPUT="$PWD/build"
 
 echo -e "${GREEN}Argumentos de compilacion son $BUILD $VERSION $PRODUCT $COPYRIGHT $DESCRIPTION $COMPANY $OUTPUT${NC}"
 
-cd src && flet build linux -v --build-number $BUILD --build-version "$VERSION" --product "$PRODUCT" --copyright "$COPYRIGHT" --description "$DESCRIPTION" --company "$COMPANY" -o "$OUTPUT"
+cd src && flet build linux -v --build-number $BUILD --build-version "$VERSION" --product "$PRODUCT" --copyright "$COPYRIGHT" --description "$DESCRIPTION" --company "$COMPANY" -o "$OUTPUT" -vv
