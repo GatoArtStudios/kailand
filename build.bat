@@ -31,7 +31,7 @@ if %errorlevel% neq 0 (
 
 REM Definir variables de entorno
 setlocal
-set BUILD=1
+set BUILD=2
 set VERSION="2.0.1"
 set PRODUCT="Kailand"
 set COPYRIGHT="Launcher de Kailand, by GatoArtStudio"
@@ -43,6 +43,6 @@ REM Mostrar argumentos de compilacion
 echo Argumentos de compilacion son %*
 
 REM Ejecutar comando de compilacion
-cd src & flet build windows -v --build-number %BUILD% --build-version %VERSION% --product %PRODUCT% --copyright %COPYRIGHT% --description %DESCRIPTION% --company %COMPANY% -o %OUTPUT%
+cd src & flet build windows -v --build-number %BUILD% --build-version %VERSION% --product %PRODUCT% --copyright %COPYRIGHT% --description %DESCRIPTION% --company %COMPANY% -o %OUTPUT% -vv
 
 endlocal
