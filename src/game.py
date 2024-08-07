@@ -686,8 +686,8 @@ class Mc:
     def download_and_unzip(self, config):
         from log import logger
         from config import DIRECTORY_KAILAND
-        directory = os.path.join(DIRECTORY_KAILAND, 'config', config['directory'])
         name_zip = config['file']
+        directory = os.path.join(DIRECTORY_KAILAND, 'config', config['directory'])
         try:
             logger.info(f"Descargando configuración de {config['name']}")
             response = requests.get(config['url'])
@@ -733,9 +733,28 @@ class Mc:
                 response = self.data_nube
         except Exception as e:
             response = self.data_nube
-        for config in self.data_nube['config']:
+        # Descarga las configuraciones en si
+        for config in response['config']:
             if config['disponible']:
-                if not os.path.exists(os.path.join(DIRECTORY_KAILAND, 'config', config['directory'])):
+                if 'directory' not in config:
+                    # Descargamos las configuranes por defecto para el launcher
+                    directory = os.path.join(DIRECTORY_KAILAND, config['file'])
+                    try:
+                        if os.path.exists(directory):
+                            logger.info(f'Ya tienes unas configuraciones, si deseas las configuraciones por defecto, elimina el archivo {config['file']} y directorio "versions" y vuelve a abrir el launcher de kailand.')
+                        else:
+                            logger.info(f'Descargando configuraciones de {config['name']}')
+                            response = requests.get(config['url'])
+                            if response.status_code == 200:
+                                with open(directory, 'wb') as f:
+                                    f.write(response.content)
+                                logger.info(f'Configuraciones de {config['name']}, descargadas correctamente.')
+                    except Exception as e:
+                        logger.error(f'Error al descargar las configuraciones de {config['name']}')
+
+                
+                # Descargamos carpetas de configuraciones
+                elif not os.path.exists(os.path.join(DIRECTORY_KAILAND, 'config', config['directory'])):
                     self.download_and_unzip(config)
                 else:
                     try:
