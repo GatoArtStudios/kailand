@@ -1392,8 +1392,8 @@
             "doct": "https://www.curseforge.com/minecraft/mc-mods/dynamictrees"
         },
         {
-            "name": "Bloquear Trabajos by zParkk",
-            "descripcion": "Bloquear Trabajos by zParkk",
+            "name": "Villager Enchantment Blocking",
+            "descripcion": "This is a mod to block villager' enchantments, created just for Kailand",
             "file": "BloquearTrabajos-1.19.2.jar",
             "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/BloquearTrabajos-1.19.2.jar",
             "disponible": true,
