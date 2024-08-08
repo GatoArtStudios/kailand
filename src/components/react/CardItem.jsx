@@ -7,7 +7,7 @@ export default function CardItem({ children, itemSrc }) {
         transform: "perspective(1000px) rotateX(20deg) rotateY(10deg)",
     }
     return (
-        <div className="group grid grid-cols-3 gap-4 mb-3 bg-black/10 p-5 rounded-xl">
+        <div className="group grid grid-cols-3 gap-4 mb-3 bg-black/10 p-5 rounded-xl w-full">
             <div className="col-span-2 col-start-0">
                 {children}
             </div>
