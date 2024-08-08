@@ -23,6 +23,8 @@ import MartilloGravedad from "../assets/img/martillogravedad.png";
 import EspadaShulker from "../assets/img/shulker_sword.png";
 import VaraDictado from "../assets/img/voidstaff.png";
 import MoonStaff from "../assets/img/moon_staff.png";
+import StaffGoldenCrook from "../assets/img/staff_golden_crook.png";
+import Negrilla from "./react/Negrilla";
 
 export default function InfoMods() {
     return (
@@ -97,12 +99,28 @@ export default function InfoMods() {
                 <Spam text="Varita lunar:"/> Forjada por Selene, la diosa de la luna. La varita se alimenta por la luz de la luna (por lo que solo funciona en la noche), es un artefacto de inmenso poder. Por otro lado, la varita tiene 2 fases/habilidades. 
                 <ul>
                     <li className="list-disc ml-5">
-                        Dispara un rayo luminoso cada 2 segundos que hace levitar a cualquier enemigo durante 1 segundo.
+                        Dispara un <Negrilla text="rayo luminoso"/> cada 2 segundos que hace levitar a cualquier enemigo durante 1 segundo.
                     </li>
                     <li className="list-disc ml-5">
-                    Invoca un círculo curativo cada 40 segundos, que otorga: regeneración 1 (20 segundos), fuerza 2 (20 segundos), velocidad 1 (20 segundos) y visión nocturna (30 segundos) a quienes se encuentren dentro de ese círculo.
+                        Invoca un <Negrilla text="círculo curativo"/> cada 40 segundos, que otorga: regeneración 1 (20 segundos), fuerza 2 (20 segundos), velocidad 1 (20 segundos) y visión nocturna (30 segundos) a quienes se encuentren dentro de ese círculo.
                     </li>
                 </ul>
+                <Negrilla text="Esta se obtiene comprándola en la tienda."/> 
+            </CardItem>
+            <CardItem itemSrc={StaffGoldenCrook.src}>
+                <Spam text="Báculo dorado:"/> Forjado por los seres más antiguos de Kailand. Este báculo alterna entre tres poderosas habilidades:
+                <ul>
+                    <li className="list-disc ml-5">
+                        <Negrilla text="Área de Regeneración:"/> Crea un círculo curativo cada 35 segundos que da, Regeneración 2 (7 segundos) a todos aquellos que estén dentro.
+                    </li>
+                    <li className="list-disc ml-5">
+                        <Negrilla text="Cadenas de Luz:"/> Lanza un rayo congelante cada 5 segundos (el efecto de congelamiento dura 2 segundos). 
+                    </li>
+                    <li className="list-disc ml-5">
+                        <Negrilla text="Cambio:"/> Permite intercambiar posiciones con cualquier entidad cada 8 segundos.
+                    </li>
+                </ul>
+                <Negrilla text="Esta se obtiene comprándola en la tienda."/> 
             </CardItem>
         </div>
     )
