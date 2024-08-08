@@ -22,6 +22,7 @@ import EspadaMistica from "../assets/img/mistsplitter_reforged.png";
 import MartilloGravedad from "../assets/img/martillogravedad.png";
 import EspadaShulker from "../assets/img/shulker_sword.png";
 import VaraDictado from "../assets/img/voidstaff.png";
+import MoonStaff from "../assets/img/moon_staff.png";
 
 export default function InfoMods() {
     return (
@@ -91,6 +92,17 @@ export default function InfoMods() {
             </CardItem>
             <CardItem itemSrc={VaraDictado.src}>
                 <Spam text="Varita del dictado:"/> Es una varita forjada por unos sabios hechiceros de dudosa procedencia. Esta varita otorga al portador la capacidad de comandar a quienes lo rodean en un radio de 10x10 bloques cada 10 segundos. Ellos deberán obedecer las órdenes, pues de lo contrario les costará su vitalidad. Además, la Varita del dictado tiene 5 de daño, 1.6 de velocidad de ataque y 3500 de durabilidad. Esta se obtiene comprándola en la tienda.
+            </CardItem>
+            <CardItem itemSrc={MoonStaff.src}>
+                <Spam text="Varita lunar:"/> Forjada por Selene, la diosa de la luna. La varita se alimenta por la luz de la luna (por lo que solo funciona en la noche), es un artefacto de inmenso poder. Por otro lado, la varita tiene 2 fases/habilidades. 
+                <ul>
+                    <li className="list-disc ml-5">
+                        Dispara un rayo luminoso cada 2 segundos que hace levitar a cualquier enemigo durante 1 segundo.
+                    </li>
+                    <li className="list-disc ml-5">
+                    Invoca un círculo curativo cada 40 segundos, que otorga: regeneración 1 (20 segundos), fuerza 2 (20 segundos), velocidad 1 (20 segundos) y visión nocturna (30 segundos) a quienes se encuentren dentro de ese círculo.
+                    </li>
+                </ul>
             </CardItem>
         </div>
     )
