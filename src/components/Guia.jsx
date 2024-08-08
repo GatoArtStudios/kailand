@@ -28,7 +28,7 @@ export default function Ingreso() {
                 <b>Paso 4:</b> Abre o <Spam text="ejecuta el Launcher" /> e instala los recursos necesarios que te pide (Estos recursos son: Mods, Java, configuraciones, Forge, entre otros).
             </ParLeft>
             <ParLeft>
-                <b>Paso 5:</b> Seleccionas el apartado de <Spam text="Perfil" />. Escoges tu tipo de cuenta y clickeas <Spam text="Offline" /> (Solo disponible por el momento). Después, escribes tu nombre de usuario (También puedes colocar el nombre de tu cuenta Premiun si deseas). Posteriormente, le das ak botón <Spam text="Guardar." />
+                <b>Paso 5:</b> Seleccionas el apartado de <Spam text="Perfil" />. Después, escribes tu nombre de usuario (También puedes colocar el nombre de tu cuenta Premiun si deseas). Posteriormente, le das ak botón <Spam text="Guardar." />
             </ParLeft>
             <ParLeft>
                 <b>Paso 6:</b> Seleccionas el apartado de <Spam text="Mods" /> y podrás escoger los mods de tu preferencia. Te recomendamos dejar activado y activar 
