@@ -904,11 +904,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/library-ferret-forge"
                 }
             ],
             "hash": "42fe62b6c9410151086b63f969fc0e2e41a79455ac22b5b8de54b243417cbbd3",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/awesome-dungeon-the-end-forge"
         },
         {
             "name": "Awesome dungeon the ocean",
@@ -925,11 +925,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/library-ferret-forge"
                 }
             ],
             "hash": "5de9acd1df4ba1340c34a2ec658f24ebea9af70b833810b086366455eff5f271",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/awesome-dungeon-edition-ocean-forge"
         },
         {
             "name": "Awesome dungeon",
@@ -946,11 +946,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/library-ferret-forge"
                 }
             ],
             "hash": "359bdb04c041d5f4abb843adcbbca3ffcd4ffbb37ad9520c4f752042a60f6632",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/awesome-dungeon-forge"
         },
         {
             "name": "Dungeon crawl",
@@ -960,7 +960,7 @@
             "disponible": false,
             "dependencia": [],
             "hash": "not found",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/dungeon-crawl"
         },
         {
             "name": "Openblocks elevator",
@@ -970,7 +970,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "0081143bb83e2d9a13d1920ce7c9a42d63c7dddcec74e03b9e3a6da9ff12582e",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/openblocks-elevator"
         },
         {
             "name": "Nyf’s spider",
@@ -980,7 +980,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "6a9c4fe15894750ecb5a9670fc4b545145f3bbb6accd7cddff51165c17d7fac2",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/nyfs-spiders"
         },
         {
             "name": "Rechiseled",
@@ -997,7 +997,7 @@
                     "disponible": false,
                     "dependencia": [],
                     "hash": "not found",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/fusion-connected-textures"
                 },
                 {
                     "name": "Super Martijn 642’s config lib",
@@ -1007,7 +1007,7 @@
                     "disponible": false,
                     "dependencia": [],
                     "hash": "not found",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-config-lib"
                 },
                 {
                     "name": "Super Martijn 642’s core lib",
@@ -1017,11 +1017,11 @@
                     "disponible": false,
                     "dependencia": [],
                     "hash": "not found",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-core-lib"
                 }
             ],
             "hash": "not found",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/rechiseled"
         },
         {
             "name": "Repurposed Structures",
@@ -1051,7 +1051,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "4f74497c92b224a12be231b32c50e55db41e6051ebba5d87ce63aad78204b663",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/terralith"
         },
         {
             "name": "Tool leveling",
@@ -1102,7 +1102,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "8a5b052c93a33842c8032d3509d4398d7769905de89fcc0c775c9cbc1d9c67f6",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/the-abyss-chapter-ii"
         },
         {
             "name": "Kailand Mod V3.8",
@@ -1122,7 +1122,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "10d9050f4e40df1c8929fdfcae70e5e7fc8864f7d4196857a8c281a8b81df90a",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/the-lost-cities"
         },
         {
             "name": "SecurityCraft",
@@ -1132,7 +1132,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "a3fec0ee63613303d821b80cdd82a92e5a07dc167ba9afa93f7556396e7cece8",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/the-lost-cities"
         },
         {
             "name": "Marbled’s Arsenal",
@@ -1149,7 +1149,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "b4fd4aba01943d4cc62bba9e2d0fb41d85c871a95fad972fbb2248d3d826ea02",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/geckolib"
                 },
                 {
                     "name": "marbleds api",
@@ -1159,11 +1159,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "edaf930b2901ea303b4e99e2a7ed301dd6372b473c8d0940d17ca360292cac28",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/marbleds-api-mapi"
                 }
             ],
             "hash": "b01eafaaacde4382e9ef1cc5dc6521368438bd6156ac25edc512e6032e64c0de",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/marbleds-arsenal"
         },
         {
             "name": "Simple flashlight port",
@@ -1173,7 +1173,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "82d28b6708c60538785dd81ce83ddcb1d092d45e0f8ae4edfccd7093c15b0b08",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/simple-flashlight-port"
         },
         {
             "name": "Immersive paintings",
@@ -1183,7 +1183,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "29abfda0058f1ec2bf5195ecd9689f9bf8d8c883959eca5175e5b55ae2712cbd",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/immersive-paintings"
         },
         {
             "name": "Horror elements",
@@ -1193,7 +1193,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "a3e5be7a67eac462e6b92378176fcaeb3eec096ab1b6620face579fc62af7a67",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/horror-elements-mod"
         },
         {
             "name": "Zombie Extreme Modificado",
@@ -1203,7 +1203,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "15855cc604bca67075777d58b6bccfba4382b429738aaac469f2293fe1cf8a8a",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/zombie-extreme"
         },
         {
             "name": "Plasmo voice",
@@ -1213,7 +1213,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "4d4ca891aed64eb5739245bedab88533e6a672b58de12a5ce525ee775ba39af4",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/plasmo-voice"
         },
         {
             "name": "AntiXray",
@@ -1223,7 +1223,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "0faa537e7b3bc134e4703c604fb9c54e9336c5d66195baedc9380751055c3975",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/antixray-forge"
         },
         {
             "name": "Bongo",
@@ -1240,11 +1240,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "3fcde1a118a6f2c8d175af5934fa020abad0efe9ca2abab17bf0899f0f5951eb",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/libx"
                 }
             ],
             "hash": "5c326bc9d0f050a933753218a87e1cf7fd368cf9c2e10656e13f1ed8d9e6d71d",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/bongo"
         },
         {
             "name": "Kailand finder",
@@ -1313,11 +1313,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "dd85649c502fc95c60eb47c58643d7e649c08866aad359c92ec44dfba2a23289",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/azurelib"
                 }
             ],
             "hash": "fb936cca1b1abd099001b690ee918df2ea5196eea41b235519af6d1553805a93",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/sculk-horde"
         },
         {
             "name": "Dungeons and tavens",
@@ -1327,7 +1327,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "b90796e42eb28afb4963700ff0d1f6675a23379e2e6e3a2e7ea3c9a36094c94b",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/dungeon-and-taverns"
         },
         {
             "name": "Structure essentials",
@@ -1344,11 +1344,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "6b37c19ff73ffe5d899fdb6757a83aaf173f287ebfedf0733326cdcd63aa631a",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/cupboard"
                 }
             ],
             "hash": "f7d8fec0538fab24adbdf48c350c47f54ee3f08b142a271521498eeab89d5fb5",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/structure-essentials-forge-fabric"
         },
         {
             "name": "Dungeons plus",
@@ -1365,11 +1365,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "966afabbc2bb82c2262aad4e1ff1d162e2804433ec7605bf8df961fa7492a327",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/structure-gel-api"
                 }
             ],
             "hash": "ffe06aee709c60ab6b515fa17e1f7df5b043bc3755957333556f4e0559e29e2d",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/dungeons-plus"
         },
         {
             "name": "Immersive Aircraft",
@@ -1379,7 +1379,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "8ae788453e765257783673783cfbc3ba44257f24c3997578bee06c6ba54b9ddf",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/immersive-aircraft"
         },
         {
             "name": "Dynamic Trees",
@@ -1389,7 +1389,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "aba7713886560d4356ba14da3994226ad9a238cd77ebacbc2b2994ccbab739a7",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/dynamictrees"
         },
         {
             "name": "Bloquear Trabajos by zParkk",
@@ -1409,7 +1409,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "cffcd7b54dd067a27e62e1e4a2e627c28150bb2fa5dc4c2e8c9a98121a0510dd",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/custom-player-models"
         },
         {
             "name": "Pehkui",
@@ -1419,7 +1419,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "d339a56bcde96e8decd0935a0f83ea41dbc1f1df529fc18a8e63d683630596bb",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/pehkui"
         },
         {
             "name": "InvMove",
@@ -1436,11 +1436,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/cloth-config"
                 }
             ],
             "hash": "06b476d939f1ef000b09c0aec944853bf3c1ef58cbeed7d66a38db0c52ed24e3",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/invmove"
         },
         {
             "name": "Unearthed",
@@ -1457,11 +1457,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "05cf768fd34867855e56ebcbe160e87c415d0e3190a26a6ecd12631bd593434b",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/hyle"
                 }
             ],
             "hash": "058f4608afb55de4957c6129e3eee12f1d27c29ba22865814fdf80d8749f9868",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/unearthed"
         },
         {
             "name": "Enhanced celestials",
@@ -1478,11 +1478,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "47e89d59aa28b49239d0f5d18b8532527eb487fd99d2b49bca3e2fd129e676ea",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/corgilib"
                 }
             ],
             "hash": "689f67d3f5b2a30cfdbe501b7f8bdf58a8a85f42ace3a02fa92c6a4f502ffd42",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/enhanced-celestials"
         },
         {
             "name": "Handcrafted",
@@ -1499,11 +1499,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "4f83a8dfa91ad381f2708293ecda6c705039a0dabb774ed429c84c86eb158e56",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/resourceful-lib"
                 }
             ],
             "hash": "2180d20142ed82e954c2a8b0b7a9a1ec4b2a0361efb081dccd75c76699f1bfc0",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/handcrafted"
         },
         {
             "name": "Philip’s Ruins",
@@ -1513,7 +1513,7 @@
             "disponible": false,
             "dependencia": [],
             "hash": "not found",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/ruins"
         },
         {
             "name": "Timeless and classics zero",
@@ -1523,7 +1523,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "93e48e0ad2f0ca8e7c4cb0e5c0631e0b351ffc2c61c71296d86c3d3e87d2ded1",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/timeless-and-classics-zero"
         },
         {
             "name": "What they up to",
@@ -1540,11 +1540,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "96b7e5854a24b56cbe68c163ee9db2fc84cff0acd27f0da05951fea37da0b4f0",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/coroutil"
                 }
             ],
             "hash": "0b4b95c7be644c251ebfb845b7d0b6faf56c6a58473c6c4f8040e613c8e8d841",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/what-are-they-up-to"
         },
         {
             "name": "Enhanced AI",
@@ -1561,11 +1561,11 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "730748b425ecd698a09dae2c1faf2a91165a9729efedbc0d0640868975c1c805",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/insanelib"
                 }
             ],
             "hash": "055b731181771aa4880303cb29e590f1bf90f07ae7ff17cb1484f376fa189678",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/enhanced-ai"
         },
         {
             "name": "In Control",
@@ -1575,7 +1575,7 @@
             "disponible": true,
             "dependencia": [],
             "hash": "975b93e999333ea7e8715136ed134f55da0270f542a38b3424ba428597fd81c7",
-            "doct": "None"
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/in-control"
         }
     ],
     "complementos": [
@@ -1596,7 +1596,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "b9c1ebdf11e7538761aa30f229fb6ce3890057a2af13f11be93c299da9125d1c",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/iceberg"
                 }
             ],
             "hash": "9c4fce5a147c1210ee66568c9cd124c49970d1d3c4ffa9a7b8ea5d2e72c576b9"
@@ -1618,7 +1618,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/creativecore"
                 }
             ],
             "hash": "be0e3bd2c23c9f5c74f479a125e00ae724ed08070a97d3f6273037df436509b5"
@@ -1651,7 +1651,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "6b37c19ff73ffe5d899fdb6757a83aaf173f287ebfedf0733326cdcd63aa631a",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/cupboard"
                 }
             ],
             "hash": "5501b1108750b1485b70d6b71e4272405d821940da80704536df1fbd29f18f2f"
@@ -1673,7 +1673,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/cloth-config"
                 }
             ],
             "hash": "7d8cd9c929180a4b97c9b07a57f5601d0799a6ae8aa95e43d97d277e5fb236e3"
@@ -1695,7 +1695,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/creativecore"
                 }
             ],
             "hash": "5bcf42d9ef88ed06001c7c62a5563a9dd23700a4c4cc6e3478e9b8bb21eef0a3"
@@ -1717,7 +1717,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "2c1902deb1587f28a35874b0e9c4a367111ebb3ea7e39838dd0050b37b483832",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/konkrete"
                 },
                 {
                     "name": "Melody",
@@ -1727,7 +1727,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "c9ce1a75bf33ff10bd1dd6074a7b39ed49fc7e03173e7ea9dc7d61715bd3d11b",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/melody"
                 }
             ],
             "hash": "99f0b0f9baa104a9c90e14a8e15adbca9f2bdc8dbdce48e7485eb26efad7b894"
@@ -1782,7 +1782,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "47687bf19654b0d5b30170ee7138fb3f10622b54671b1f2fb452a5ae4309d6f8",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/prism-lib"
                 },
                 {
                     "name": "Iceberg",
@@ -1792,7 +1792,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "b9c1ebdf11e7538761aa30f229fb6ce3890057a2af13f11be93c299da9125d1c",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/iceberg"
                 }
             ],
             "hash": "cfd6d994210f8ed3e3e3cc1976a5947fe37bbecf81766b843f03bf8d6d705566"
@@ -1814,7 +1814,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "e3c7fd76cbfcd1a601b5995dc77ee793bf6de525784545862d2a36208cbe52ef",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/creativecore"
                 }
             ],
             "hash": "76e58ad38bf3c275c4a9dfb360acbdf67d21e1fe7cb44d72100d86f021b8178c"
@@ -1847,7 +1847,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "47687bf19654b0d5b30170ee7138fb3f10622b54671b1f2fb452a5ae4309d6f8",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/prism-lib"
                 },
                 {
                     "name": "Iceberg",
@@ -1857,7 +1857,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "b9c1ebdf11e7538761aa30f229fb6ce3890057a2af13f11be93c299da9125d1c",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/iceberg"
                 }
             ],
             "hash": "866f0773f15a085896652d7db9f92101ca83ba156ae99687f03d2ee0868b3d5d"
@@ -1890,7 +1890,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "bc3bfef0bf4a41da99832275eae121b9950aefcabf676e13f108961269e6b77e",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/entity-texture-features-fabric"
                 }
             ],
             "hash": "de8852f577e62340eab34248067c61c5c66c47a857238455f935e68a5306d0f7"
@@ -1934,7 +1934,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/cloth-config"
                 }
             ],
             "hash": "58ccde589bf1a4bd94c40168ea12a8a3ca75eede847abdd9d059a1ee05fb1d6f"
@@ -2065,7 +2065,7 @@
                     "disponible": true,
                     "dependencia": [],
                     "hash": "b10fed11104b70aea4ed06eec144e3630447f6bedbd3f8b1f26476bb0430d903",
-                    "doct": "None"
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/bookshelf"
                 }
             ],
             "hash": "12939c1c14242268c8e15c4f93c961ef602ee48ce05e39e4046dc98a1728888b"
