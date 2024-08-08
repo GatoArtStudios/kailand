@@ -44,56 +44,65 @@ export default function InfoMods() {
                 <Spam text="Moneda de oro:"/> Esta moneda se compra en la tienda, necesitarás <b>9 Monedas rotas</b> para obtener <b>1 Moneda de oro</b> y esta sirve para comprar ítems en la tienda.
             </CardItem>
             <CardItem itemSrc={MonedaPurple.src}>
-                <Spam text="Moneda amatista:"/> Esta moneda se consigue participando en cualquier evento organizado por Kailand. Con ella podrás comprar ítems exclusivos en la tienda. Con 4 Monedas amatista podrás obtener 1 Moneda Rubí.
+                <Spam text="Moneda amatista:"/> Esta moneda se consigue participando en cualquier evento organizado por Kailand. Con ella podrás comprar ítems exclusivos en la tienda. Con 4 <Negrilla text="Monedas amatista"/> podrás obtener 1 <Negrilla text="Moneda Rubí"/>.
             </CardItem>
             <CardItem itemSrc={MonedaRed.src}>
-                <Spam text="Moneda Rubí:"/> Esta moneda se consigue ganando cualquier evento organizado por Kailand o intercambiándola por 4 Monedas Amatistas. Esta sirve para reclamar objetos muy exclusivos en la tienda.
+                <Spam text="Moneda Rubí:"/> Esta moneda se consigue ganando cualquier evento organizado por Kailand o intercambiándola por 4 <Negrilla text="Monedas Amatistas"/>. Esta sirve para reclamar objetos muy exclusivos en la tienda.
             </CardItem>
             <SubTitleWiki text="Armas de combate ⚔️" />
             <CardItem itemSrc={HachaNordica.src}>
-                <Spam text="Hacha nórdica:"/> Es un hacha de las mitologías griegas. Tiene todas las funciones de cualquier hacha del Minecraft Vanilla y muchas más, ya que tiene más daño y posibilidad de mejorarla con la Esencia de Ragnarök. La Hacha nórdica tiene 12.5 de daño, 1 de velocidad de ataque y 1500 de durabilidad. Esta se obtiene comprándola en la tienda.
+                <Spam text="Hacha nórdica:"/> Es un hacha de las mitologías griegas. Tiene todas las funciones de cualquier hacha del Minecraft Vanilla y muchas más, 
+                ya que tiene más daño y posibilidad de mejorarla con la <Negrilla text="Esencia de Ragnarök"/>. La <Negrilla text="Hacha nórdica"/> tiene 12.5 de <Negrilla text="daño"/>, 1 de <Negrilla text="Velocidad de ataque"/> y 
+                1500 de <Negrilla text="durabilidad. Esta se obtiene comprándola en la tienda"/>.
             </CardItem>
             <CardItem itemSrc={HachaLeviatan.src}>
-                <Spam text="Hacha Leviatán:"/> Es la mejora del Hacha nórdica. Esta se obtiene combinando el Hacha nórdica y la Esencia de Ragnarök en la mesa de herrería, esto da como resultado el Hacha Leviatán, cuya habilidad es proporcionar efectos positivos después de lanzar rayos a las entidades de alrededor: Fuerza 2 (30 segundos), Absorción 2 (45 segundos), Regeneración 1(45 segundos) y Vida mejorada 2 (45 segundos). Además, el Hacha Leviatán tiene 20 de daño, 1 de velocidad de ataque y 2300 de durabilidad.
+                <Spam text="Hacha Leviatán:"/> Es la mejora del <Negrilla text="Hacha nórdica"/>. Esta se obtiene combinando el <Negrilla text="Hacha nórdica"/> y la <Negrilla text="Esencia de Ragnarök"/> en la mesa de herrería, 
+                esto da como resultado el Hacha Leviatán, cuya habilidad es proporcionar efectos positivos después de lanzar rayos a las entidades de alrededor: <Negrilla text="Fuerza 2"/> 
+                (30 segundos), <Negrilla text="Absorción 2"/> (45 segundos), <Negrilla text="Regeneración 1"/> (45 segundos) y <Negrilla text="Vida mejorada 2"/> (45 segundos). Además, el <Negrilla text="Hacha Leviatán"/> tiene <Negrilla text="20 de daño"/>, 1 de 
+                <Negrilla text="velocidad de ataque"/> y 2300 de <Negrilla text="durabilidad"/>.
             </CardItem>
             <CardItem itemSrc={Katana.src}>
-                <Spam text="Katana:"/> Es una Katana del antiguo Japón que fue forjada con la bendición de Fujin, el dios del viento. Esta Katana te permite utilizar un dash (impulso) hacia adelante cada 3 segundos, permitiéndote cortar todo a tu paso. Además, la Katana tiene 16.4 de daño, 1.4 de Velocidad de ataque y 2100 de durabilidad. Esta se obtiene comprándola en la tienda.
+                <Spam text="Katana:"/> Es una <Negrilla text="Katana"/> del antiguo Japón que fue forjada con la bendición de Fujin, el dios del viento. Esta <Negrilla text="Katana"/> te permite utilizar 
+                un dash (impulso) hacia adelante cada 3 segundos, permitiéndote cortar todo a tu paso. Además, la <Negrilla text="Katana"/> tiene 16.4 de daño, 1.4 de <Negrilla text="Velocidad de ataque"/> 
+                y 2100 de <Negrilla text="durabilidad. Esta se obtiene comprándola en la tienda"/>.
             </CardItem>
             <CardItem itemSrc={Tsuke.src}>
-                <Spam text="Tsuke:"/> Esta espada es capaz de desatar un ataque de mil golpes mágicos a todas las entidades de alrededor del portador, en un rango de 8 bloques. La Tsuke tiene 16 de daño, 1.2 de velocidad de ataque y 2100 de durabilidad. Esta se obtiene comprándola en la tienda.
+                <Spam text="Tsuke:"/> Esta espada es capaz de desatar un ataque de mil golpes mágicos a todas las entidades de alrededor del portador, en un rango de 8 bloques. 
+                La <Negrilla text="Tsuke"/> tiene 16 de <Negrilla text="daño"/>, 1.2 de <Negrilla text="velocidad de ataque"/> y 2100 de <Negrilla text="durabilidad. Esta se obtiene comprándola en la tienda"/>.
             </CardItem>
             <CardItem itemSrc={Cuchilla.src}>
-                <Spam text="Cuchilla:"/> Esta hoja te permite esconderte entre las sombras para tomar a tu objetivo por sorpresa y por si este intenta escapar se verá obstaculizado por su potente veneno. Además, la Cuchilla tiene 14 de daño, 1.1 de velocidad de ataque y 2300 de durabilidad. Esta se obtiene comprándola en la tienda.
+                <Spam text="Cuchilla:"/> Esta hoja te permite esconderte entre las sombras para tomar a tu objetivo por sorpresa y por si este intenta escapar se 
+                verá obstaculizado por su potente veneno. Además, la <Negrilla text="Cuchilla"/> tiene 14 de <Negrilla text="daño"/>, 1.1 de <Negrilla text="velocidad de ataque"/> y 2300 de <Negrilla text="durabilidad. Esta se obtiene comprándola en la tienda"/>.
             </CardItem>
             <CardItem itemSrc={Mjolnir.src}>
-                <Spam text="Mjolnir:"/> Es el martillo de Thor; un arma capaz de dominar los poderes del trueno. Al lanzar el Mjolnir contra sus oponentes liberará toda su ira del dios del trueno. Además, el Mjolnir tiene 13 de daño, 1.6 de velocidad de ataque y 2200 de durabilidad. Este se obtiene comprándola en la tienda.
+                <Spam text="Mjolnir:"/> Es el martillo de Thor; un arma capaz de dominar los poderes del trueno. Al lanzar el <Negrilla text="Mjolnir"/> contra sus oponentes liberará toda su ira del dios del trueno. Además, el <Negrilla text="Mjolnir"/> tiene 13 de <Negrilla text="daño"/>, 1.6 de <Negrilla text="velocidad de ataque"/> y 2200 de <Negrilla text="durabilidad. Este se obtiene comprándola en la tienda"/>.
             </CardItem>
             <CardItem itemSrc={EspadaVampirica.src}>
-                <Spam text="Espada vampírica:"/> Esta es una espada con un insaciable deseo por consumir la sangre y la vida de tus enemigos. Al golpear a un jugador con esta espada existe la posibilidad de reponer la vitalidad de su portador con la sangre del enemigo.  Además, la Espada vampírica tiene 13.5 de daño, 1.5 de velocidad de ataque y 2850 de durabilidad. Esta se obtiene comprándola en la tienda.
+                <Spam text="Espada vampírica:"/> Esta es una espada con un insaciable deseo por consumir la sangre y la vida de tus enemigos. Al golpear a un jugador con esta espada existe la posibilidad de reponer la vitalidad de su portador con la sangre del enemigo.  Además, la <Negrilla text="Espada vampírica"/> tiene 13.5 de <Negrilla text="daño"/>, 1.5 de <Negrilla text="velocidad de ataque"/> y 2850 de <Negrilla text="durabilidad. Esta se obtiene comprándola en la tienda"/>.
             </CardItem>
             <CardItem itemSrc={Guadana.src}>
-                <Spam text="Guadaña:"/> Esta Guadaña contiene el poder de los cielos y de las sombras, elevando a sus enemigos hacia los cielos y cegándolos con una oscuridad profunda. Además, la Guadaña tiene 15.2 de daño, 1.3 de velocidad de ataque y 2100 de durabilidad. Esta se obtiene comprándola en la tienda.
+                <Spam text="Guadaña:"/> Esta <Negrilla text="Guadaña"/> contiene el poder de los cielos y de las sombras, elevando a sus enemigos hacia los cielos y cegándolos con una oscuridad profunda. Además, la <Negrilla text="Guadaña"/> tiene 15.2 de <Negrilla text="daño"/>, 1.3 de <Negrilla text="velocidad de ataque"/> y 2100 de <Negrilla text="durabilidad. Esta se obtiene comprándola en la tienda"/>.
             </CardItem>
             <CardItem itemSrc={MazoHeroico.src}>
-                <Spam text="Mazo heroico:"/> Es un mazo nacido en las forjas sagradas de las tierras de Elyria. Su habilidad mágica llamada Efecto Heroico otorga el poder de ignorar la armadura de cualquier entidad al golpearla, infligiendo un daño brutal y directo. Además, el Mazo heroico tiene 16 de daño, 0.8 de velocidad de ataque y 3200 de durabilidad. Este se obtiene comprándola en la tienda.
+                <Spam text="Mazo heroico:"/> Es un mazo nacido en las forjas sagradas de las tierras de Elyria. Su habilidad mágica llamada <Negrilla text="Efecto Heroico"/> otorga el poder de ignorar la armadura de cualquier entidad al golpearla, infligiendo un daño brutal y directo. Además, el <Negrilla text="Mazo heroico"/> tiene 16 de <Negrilla text="daño"/>, 0.8 de <Negrilla text="velocidad de ataque"/> y 3200 de <Negrilla text="durabilidad. Este se obtiene comprándola en la tienda"/>.
             </CardItem>
             <CardItem itemSrc={EspadaSonica.src}>
-                <Spam text="Espada sónica:"/> Es un arma mágica creada por los antiguos artesanos de Sonoris. Su habilidad especial permite al portador lanzar un devastador rayo sónico, similar al del Warden, que atraviesa cualquier armadura y cualquier bloque. Además, la Espada sónica tiene 14.8 de daño, 1.4 de velocidad de ataque y 2750 de durabilidad. Esta se obtiene comprándola en la tienda.
+                <Spam text="Espada sónica:"/> Es un arma mágica creada por los antiguos artesanos de Sonoris. Su habilidad especial permite al portador lanzar un devastador rayo sónico, similar al del Warden, que atraviesa cualquier armadura y cualquier bloque. Además, la <Negrilla text="Espada sónica"/> tiene 14.8 de <Negrilla text="daño"/>, 1.4 de <Negrilla text="velocidad de ataque"/> y 2750 de <Negrilla text="durabilidad. Esta se obtiene comprándola en la tienda"/>.
             </CardItem>
             <CardItem itemSrc={Antidisturbios.src}>
-                <Spam text="Antidisturbios:"/> Es un escudo antimotines de las fuerzas policiales y militares. Su función es proteger al portador de cualquier tipo de daño, menos de alguno mágicos. Además, el Antidisturbios tiene 3 segundos de cooldown de desarme (dejando al portador al descubierto por un golpe de un hacha o cualquier arma de combate que haga la misma acción) y 3200 de durabilidad. Este se obtiene comprándola en la tienda.
+                <Spam text="Antidisturbios:"/> Es un escudo antimotines de las fuerzas policiales y militares. Su función es proteger al portador de cualquier tipo de daño, menos de alguno mágicos. Además, el <Negrilla text="Antidisturbios"/> tiene 3 segundos de cooldown de desarme (dejando al portador al descubierto por un golpe de un hacha o cualquier arma de combate que haga la misma acción) y 3200 de <Negrilla text="durabilidad. Este se obtiene comprándola en la tienda"/>.
             </CardItem>
             <CardItem itemSrc={EspadaMistica.src}>
-                <Spam text="Espada mística:"/> Es una espada que fue forjada en los bosques encantados de Elaria, su habilidad tiene el poder de desatar una poderosa confusión que hace girar a todos los jugadores en un radio de 8x8 bloques. Además, la Espada mística tiene 13.8 de daño, 1.3 de velocidad de ataque y 1850 de durabilidad. Esta se obtiene comprándola en la tienda.
+                <Spam text="Espada mística:"/> Es una espada que fue forjada en los bosques encantados de Elaria, su habilidad tiene el poder de desatar una poderosa confusión que hace girar a todos los jugadores en un radio de 8x8 bloques. Además, la <Negrilla text="Espada mística"/> tiene 13.8 de <Negrilla text="daño"/>, 1.3 de <Negrilla text="velocidad de ataque"/> y 1850 de <Negrilla text="durabilidad. Esta se obtiene comprándola en la tienda"/>.
             </CardItem>
             <CardItem itemSrc={MartilloGravedad.src}>
-                <Spam text="Martillo de gravedad:"/> Es un martillo forjado por los enanos de Khazad, manipula la fuerza gravitatoria. Su golpe principal atrae y daña a las entidades cercanas, mientras que su golpe secundario las empuja con una fuerza irresistible. Además, el Martillo de gravedad tiene 16 de daño, 0.8 de velocidad de ataque y 2850 de durabilidad. Este se obtiene comprándola en la tienda.
+                <Spam text="Martillo de gravedad:"/> Es un martillo forjado por los enanos de Khazad, manipula la fuerza gravitatoria. Su golpe principal atrae y daña a las entidades cercanas, mientras que su golpe secundario las empuja con una fuerza irresistible. Además, el <Negrilla text="Martillo de gravedad"/> tiene 16 de <Negrilla text="daño"/>, 0.8 de <Negrilla text="velocidad de ataque"/> y 2850 de <Negrilla text="durabilidad. Este se obtiene comprándola en la tienda"/>.
             </CardItem>
             <CardItem itemSrc={EspadaShulker.src}>
-                <Spam text="Espada de Shulker:"/> Es la mejora de la Espada de netherite del Minecraft Vanilla. Esta se obtiene combinando la Espada de netherite y el Caparazón de Shulker (Que se obtiene matando a un Shulker) en la mesa de herrería, esto da como resultado la Espada de Shulker. Esta, cuenta con la habilidad de lanzar el proyectil del Shulker cada 3 segundos. Además, la Espada de Shulker tiene 12 de daño, 1.4 de velocidad de ataque y 1750 de durabilidad.
+                <Spam text="Espada de Shulker:"/> Es la mejora de la <Negrilla text="Espada de netherite"/> del Minecraft Vanilla. Esta se obtiene combinando la <Negrilla text="Espada de netherite"/> y el <Negrilla text="Caparazón de Shulker"/> (Que se obtiene matando a un Shulker) en la mesa de herrería, esto da como resultado la <Negrilla text="Espada de Shulker"/>. Esta, cuenta con la habilidad de lanzar el proyectil del Shulker cada 3 segundos. Además, la <Negrilla text="Espada de Shulker"/> tiene 12 de <Negrilla text="daño"/>, 1.4 de <Negrilla text="velocidad de ataque"/> y 1750 de <Negrilla text="durabilidad"/>.
             </CardItem>
             <CardItem itemSrc={VaraDictado.src}>
-                <Spam text="Varita del dictado:"/> Es una varita forjada por unos sabios hechiceros de dudosa procedencia. Esta varita otorga al portador la capacidad de comandar a quienes lo rodean en un radio de 10x10 bloques cada 10 segundos. Ellos deberán obedecer las órdenes, pues de lo contrario les costará su vitalidad. Además, la Varita del dictado tiene 5 de daño, 1.6 de velocidad de ataque y 3500 de durabilidad. Esta se obtiene comprándola en la tienda.
+                <Spam text="Varita del dictado:"/> Es una varita forjada por unos sabios hechiceros de dudosa procedencia. Esta varita otorga al portador la capacidad de comandar a quienes lo rodean en un radio de 10x10 bloques cada 10 segundos. Ellos deberán obedecer las órdenes, pues de lo contrario les costará su vitalidad. Además, la <Negrilla text="Varita del dictado"/> tiene 5 de <Negrilla text="daño"/>, 1.6 de <Negrilla text="velocidad de ataque"/> y 3500 de <Negrilla text="durabilidad. Esta se obtiene comprándola en la tienda"/>.
             </CardItem>
             <CardItem itemSrc={MoonStaff.src}>
                 <Spam text="Varita lunar:"/> Forjada por Selene, la diosa de la luna. La varita se alimenta por la luz de la luna (por lo que solo funciona en la noche), es un artefacto de inmenso poder. Por otro lado, la varita tiene 2 fases/habilidades. 
