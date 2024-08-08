@@ -35,7 +35,7 @@ export default function InfoMods() {
             </ParLeft>
             <SubTitleWiki text="Economía 💵" />
             <CardItem itemSrc={MonedaRota.src}>
-            <Spam text="Moneda Rota:"/> Esta moneda se obtiene al abrir cofres generados en el mundo. Con 9 de ellas, podrás obtener <b>1 Moneda de oro</b>.
+            <Spam text="Moneda Rota:"/> Esta moneda se obtiene al abrir cofres generados en el mundo. Con 9 de ellas, obtendrán <b>1 Moneda de oro</b> en la tienda..
             </CardItem>
             <CardItem itemSrc={Moneda.src}>
                 <Spam text="Moneda de oro:"/> Esta moneda se compra en la tienda, necesitarás <b>9 Monedas rotas</b> para obtener <b>1 Moneda de oro</b> y esta sirve para comprar ítems en la tienda.
