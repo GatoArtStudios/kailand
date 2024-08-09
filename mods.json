@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.1.6",
+    "configVersion": "1.1.7",
     "launcherVersion": "2.0.1.2",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nSolución de bug a la hora de descargar el FancyMenu.\nNueva utilidad para registrar a los usuarios en el servidor de Kailand por medio de una api.\nNueva utilidad para descargar options.txt que tendrá unas configuraciones optimas.\nSe elimino el apartado para elegir diferentes tipos de cuenta, ahora solo esta disponible el modo Offline.\nAhora los UUID se generan en modo Offline agregando mayor compatibilidad con el servidor de kailand.\nEncriptado de punto a punto para la api de Kailand.",
@@ -1105,13 +1105,13 @@
             "doct": "https://www.curseforge.com/minecraft/mc-mods/the-abyss-chapter-ii"
         },
         {
-            "name": "Kailand Mod V3.8",
+            "name": "Kailand Mod V4.8",
             "descripcion": "Kailand Mod",
-            "file": "Kailand-1.19.2-3.8.jar",
-            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/Kailand-1.19.2-3.8.jar",
+            "file": "Kailand_Mod-4.8.jar",
+            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/Kailand_Mod-4.8.jar",
             "disponible": false,
             "dependencia": [],
-            "hash": "1de15acfc9f21b1ca917410078ba8b7638a100f8840a8d54033a3af3cf9dd785",
+            "hash": "4834974be4516b6124484d164e94f5564959969a31f58adc08e6fe7548b84517",
             "doct": "None"
         },
         {
