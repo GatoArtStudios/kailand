@@ -61,6 +61,7 @@ import Plasmo9 from "../assets/img/Plasmo9.png";
 import Plasmo10 from "../assets/img/Plasmo10.png";
 import Plasmo11 from "../assets/img/Plasmo11.png";
 import Plasmo12 from "../assets/img/Plasmo12.png";
+import ButcherCraftgan from "../assets/img/ButchetCraftGan.png";
 
 export default function InfoMods() {
     return (
@@ -178,6 +179,8 @@ export default function InfoMods() {
             <CardItem itemSrc={VaritaSkull.src}>
                 <Spam text="Varita de Skull:"/> Forjada con las cuerdas vocales de los Wardens antiguos, esta, tiene el poder de canalizar esa energía de grito que ellos utilizan para, lanzar un rayo super sónico que atraviesa cualquier bloque; a una distancia máxima de 18 bloques. Además, la <Negrilla text="Varita de Skull"/> tiene un daño mágico (anulando la armadura) de <Negrilla text="3 corazones"/>, ocasionando un efecto de <Negrilla text="Oscuridad 5"/> durante <Negrilla text="5 segundos"/> y con un <Negrilla text="cooldown de 7 segundos"/> por rayo. <Negrilla text="Esta se obtiene comprándola en la tienda"/>.
             </CardItem>
+            <div id="armaduras"></div>
+            <SubTitleWiki text="Armaduras 🔰"/>
             <CardItem itemSrc={CascoWarden.src}>
                 <Spam text="Casco de Warden:"/> Parte de la <Negrilla text="Armadura de Warden,"/> este se obtiene, teniendo un <Negrilla text="casco de Netherite"/> y un <Negrilla text="Corazón de Warden"/>; en una <Negrilla text="mesa de herrería"/>, los combinas y 
                 obtendrás el <Negrilla text="Casco de Warden"/>. Además de ser indestructible, el <Negrilla text="Casco de Warden"/> tiene 8 de <Negrilla text="armadura"/>, 10 de <Negrilla text="dureza de armadura"/>, 6 de <Negrilla text="resistencia al empuje"/>, otorga <Negrilla text="apnea 2"/> 
@@ -270,7 +273,7 @@ export default function InfoMods() {
             </ParLeft>
             <div className="grid grid-cols-2">
                 <CardImg ImgSrc={BurcherCraftCuchillo.src} heightImg="200px" />
-                <CardImg ImgSrc={BurcherCraftCuchillo.src} heightImg="200px" />
+                <CardImg ImgSrc={ButcherCraftgan.src} heightImg="200px" />
             </div>
             <div id="enhanced_celestials"></div>
             <SubTitleWiki text="Enhanced Celestials 🌟"/>
