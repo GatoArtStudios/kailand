@@ -421,13 +421,13 @@ export default function InfoMods() {
                         </div>
                     </li>
                     <li className="list-disc ml-5">
-                        <Spam text="Noise suppression / Supresión de ruido:"/> Permite activar un filtro de supresión de ruidos. 
+                        <Spam text="Noise suppression / Supresión de ruido:"/> Permite activar un filtro de supresión de ruidos.
                         <div className="h-max-[300px]">
                             <CardImg ImgSrc={Plasmo4.src} heightImg="h-auto" />
                         </div>
                     </li>
                     <li className="list-disc ml-5">
-                        <Spam text="Stereo capture / Captura estéreo:"/> Es un <Negrilla text="filtro"/> que hace que, se te escuche mejor, <Negrilla text="reduciendo el eco"/> y haciendo <Negrilla text="que se te escuche más bajo"/>.
+                        <Spam text="Stereo capture / Captura estéreo:"/> creando una <Negrilla text="sensación de dirección"/> y espacio en la grabación, lo que hace que el sonido parezca más <Negrilla text="tridimensional y realista"/>.
                         <div className="h-max-[300px]">
                             <CardImg ImgSrc={Plasmo5.src} heightImg="h-auto" />
                         </div>
