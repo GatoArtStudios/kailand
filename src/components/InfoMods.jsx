@@ -427,7 +427,7 @@ export default function InfoMods() {
                         </div>
                     </li>
                     <li className="list-disc ml-5">
-                        <Spam text="Stereo capture / Captura estéreo:"/> creando una <Negrilla text="sensación de dirección"/> y espacio en la grabación, lo que hace que el sonido parezca más <Negrilla text="tridimensional y realista"/>.
+                        <Spam text="Stereo capture / Captura estéreo:"/> Crea una <Negrilla text="sensación de dirección"/> y espacio en la grabación, lo que hace que el sonido parezca más <Negrilla text="tridimensional y realista"/>.
                         <div className="h-max-[300px]">
                             <CardImg ImgSrc={Plasmo5.src} heightImg="h-auto" />
                         </div>
