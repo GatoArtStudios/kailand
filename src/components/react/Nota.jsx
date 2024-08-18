@@ -5,14 +5,14 @@ export default function Nota({ children }) {
                 stroke="currentColor"
                 viewBox="0 0 24 24"
                 fill="none"
-                class="h-5 w-5 flex-shrink-0 mr-2 text-green-600"
+                className="h-5 w-5 flex-shrink-0 mr-2 text-green-600"
                 xmlns="http://www.w3.org/2000/svg"
                 >
                 <path
                     d="M13 16h-1v-4h1m0-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    stroke-width="2"
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                 ></path>
             </svg>
             <p className="text-sm font-semibold">

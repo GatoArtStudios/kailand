@@ -20,6 +20,7 @@
     "npx": "^10.2.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-modal-image": "^2.6.0",
     "tailwind": "^4.0.0",
     "typescript": "^5.5.3"
   },
