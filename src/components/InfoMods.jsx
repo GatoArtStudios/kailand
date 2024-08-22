@@ -36,7 +36,7 @@ import GemaHelada from "../assets/img/blue_gem.png";
 import GemaMistica from "../assets/img/gemakailand.png";
 import Prisma from "../assets/img/bens_new_bliss_smp_gem_for_waternetwork.png";
 import VenasWarden from "../assets/img/VenasWarden.png";
-import CorazonWarden from "../assets/img/wardencoso.png";
+import CorazonWarden from "../assets/img/heart_of_the_warden.png";
 import EsenciaRagnarok from "../assets/img/bolt_essence.png";
 import BloqueVelox from "../assets/img/block_velox.png";
 import MineralMistico from "../assets/img/mistic_ore.png";
