@@ -10,7 +10,7 @@ interface Props {
 const { href, title, body, animation, typetarget } = Astro.props;
 ---
 
-<li class="link-card" data-aos={animation}>
+<li class="link-card bg-gradient-to-br from-green-400 to-blue-500" data-aos={animation}>
 	<a href={href} target={typetarget} data-aos={animation}>
 		<h2>
 			{title}
@@ -26,7 +26,7 @@ const { href, title, body, animation, typetarget } = Astro.props;
 		list-style: none;
 		display: flex;
 		padding: 1px;
-		background-color: #23262d;
+		background-color: ;
 		background-image: none;
 		background-size: 400%;
 		border-radius: 7px;
@@ -41,7 +41,7 @@ const { href, title, body, animation, typetarget } = Astro.props;
 		padding: calc(1.5rem - 1px);
 		border-radius: 8px;
 		color: white;
-		background-color: #23262d;
+		background-color: rgba(28, 41, 28, 0.5);
 		opacity: 0.8;
 	}
 	h2 {
