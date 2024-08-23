@@ -57,6 +57,49 @@ export default function Launcher() {
                     </li>
                 </ul>
             </ParLeft>
+            <div id='requisitos' className="w-full mb-10">
+            <SubTitleWiki text="Requisitos del sistema 🖥️" />
+                <h2 data-aos="fade-right" data-aos-delay="200" class="font-bold text-lg my-6">
+                    Minimo:
+                </h2>
+                <ul className="list-disc list-outside translate-x-5">
+                    <li>
+                    <Spam text="CPU:"/> Intel Core i5-2500K o AMD FX-6300 (Escritorio)
+                    </li>
+                    <li>
+                    <Spam text="RAM:"/> 8 GB ( 4 GB de RAM minimo asignado para Minecraft )
+                    </li>
+                    <li>
+                    <Spam text="GPU:"/> NVIDIA GeForce GTX 660 o AMD Radeon HD 7850 con 2 GB de VRAM
+                    </li>
+                    <li>
+                    <Spam text="Almacenamiento:"/> SSD con al menos 10 GB de espacio libre para el juego y los mods (Menos imposible, ya que con 8Gb de ram el sistema usara almacenamiento del disco como memoria RAM SWAP)
+                    </li>
+                    <li>
+                    <Spam text="Sistema Operativo:"/> Windows 10 (64 bits) o equivalente en Linux/macOS (Solo 64 bits como minimo)
+                    </li>
+                </ul>
+                <h2 data-aos="fade-right" data-aos-delay="200" class="font-bold text-lg my-6">
+                    Recomendado:
+                </h2>
+                <ul className="list-disc list-outside translate-x-5">
+                    <li>
+                    <Spam text="CPU:"/> Intel Core i7-4770K o AMD Ryzen 5 1600 (Escritorio)
+                    </li>
+                    <li>
+                    <Spam text="RAM:"/> 16 GB (dedicar al menos 8 GB de RAM para Minecraft)
+                    </li>
+                    <li>
+                    <Spam text="GPU:"/> NVIDIA GeForce GTX 1060 o AMD Radeon RX 580 con 4 GB de VRAM
+                    </li>
+                    <li>
+                    <Spam text="Almacenamiento:"/> SSD con al menos 10 GB de espacio libre
+                    </li>
+                    <li>
+                    <Spam text="Sistema Operativo:"/> Windows 10 (64 bits) o equivalente en Linux/macOS
+                    </li>
+                </ul>
+		    </div>
             <SubTitleWiki text="Notas📔" />
             <ParLeft>
             <ul className="list-disc list-outside">

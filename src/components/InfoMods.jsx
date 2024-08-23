@@ -62,13 +62,14 @@ import Plasmo10 from "../assets/img/Plasmo10.png";
 import Plasmo11 from "../assets/img/Plasmo11.png";
 import Plasmo12 from "../assets/img/Plasmo12.png";
 import ButcherCraftgan from "../assets/img/ButchetCraftGan.png";
+import SubTitleWikiCenter from "./react/SubTitleWikiCenter";
 
 export default function InfoMods() {
     return (
         <div className="flex flex-col justify-center items-center w-full">
             <TitleWiki text="Mod Pack de Kailand" />
             <div id="kailand_mod"></div>
-            <SubTitleWiki text="Kailand Mod" />
+            <SubTitleWikiCenter text="Kailand Mod 🛸" />
             <ParLeft>
                 Es un mod de Kailand V creado para el servidor y la temática del mismo, en el cual contiene muchos ítems variados, 
                 desde armaduras hasta armas de combate con habilidades especiales de larga y corta distancia, entre muchos otros. A 
@@ -249,7 +250,7 @@ export default function InfoMods() {
                 <Spam text="Mineral místico:"/> El tesoro más preciado del Dragón del End. Se genera dentro de las islas del End con mucho menos probabilidad que la Esmeralda y los Escombros de Netherite. 
             </CardItem>
             <div id="kailand_finder"></div>
-            <SubTitleWiki text="Kailand Finder 🔎"/>
+            <SubTitleWikiCenter text="Kailand Finder 🔎"/>
             <ParLeft>
                 Es un mod que tiene una única y simple utilidad, buscar y encontrar cualquier bloque en el mundo. Al momento de poner el comando:
                 <br></br>
@@ -260,7 +261,7 @@ export default function InfoMods() {
                         Este te mostrará las coordenadas del bloque en concreto y muchas otras funciones que tiene el mod. 
             </ParLeft>
             <div id="butcher_delight"></div>
-            <SubTitleWiki text="Butcher Delight 🍗"/>
+            <SubTitleWikiCenter text="Butcher Delight 🍗"/>
             <ParLeft>
                 Consiste en un mod que implementa mecánicas que te permiten obtener una mayor cantidad de comida 
                 provenientes de animales y otras cosas como, cuero e hilo de una forma un poco más realista, pero 
@@ -276,7 +277,7 @@ export default function InfoMods() {
                 <CardImg ImgSrc={ButcherCraftgan.src} heightImg="200px" />
             </div>
             <div id="enhanced_celestials"></div>
-            <SubTitleWiki text="Enhanced Celestials 🌟"/>
+            <SubTitleWikiCenter text="Enhanced Celestials 🌟"/>
             <ParLeft>
                 Es un gran mod que agrega una probabilidad de que aparezca una luna distinta en la noche. No siempre estará la luna que todos conocemos. Este mod agrega tres tipos más de luna:
             </ParLeft>
@@ -321,7 +322,7 @@ export default function InfoMods() {
                 </ul>
             </div>
             <div id="parcool"></div>
-            <SubTitleWiki text="Parcool 🏃‍♂️"/>
+            <SubTitleWikiCenter text="Parcool 🏃‍♂️"/>
             <ParLeft>
                 Es un Mod de movilidad que te ayudará a ser más ágil al momento de moverte. Puedes hacer muchas cosas: trepar muros, esprintar, deslizarte por el suelo, saltar y correr entre paredes, deslizarte en paredes, dashea, voltereta y mucho más.
             </ParLeft>
@@ -372,7 +373,7 @@ export default function InfoMods() {
                 </ul>
             </div>
             <div id="enhanced_ia"></div>
-            <SubTitleWiki text="Enhanced IA 👾"/>
+            <SubTitleWikiCenter text="Enhanced IA 👾"/>
             <ParLeft>
                 Es un Mod que <Negrilla text="modifica la inteligencia"/> de todos los mobs enemigos y algunos otros más, para que 
                 posean comportamientos notablemente diferentes y más difíciles: <Negrilla text="zombies, creeper, esqueletos, arañas, brujas, endermans, blazes, silverfish, etc."/> 
@@ -382,7 +383,7 @@ export default function InfoMods() {
                 y están configurados para <Negrilla text="ser más difíciles de lo normal"/>.
             </ParLeft>
             <div id="the_hordes"></div>
-            <SubTitleWiki text="The hordes 🧟"/>
+            <SubTitleWikiCenter text="The hordes 🧟"/>
             <ParLeft>
                 Es un mod que agrega <Negrilla text="características apocalípticas y modifica el comportamiento de algunos mobs hostiles. 
                 La infección"/>, sin lugar a duda es lo que destaca de este mod. Puedes contraer la infección si <Negrilla text="un zombie 
@@ -396,7 +397,7 @@ export default function InfoMods() {
                 cada determinado tiempo y durante la noche, es posible que aparezca una gran horda de zombies <Negrilla text="cerca"/> tuya.
             </ParLeft>
             <div id="plasmo"></div>
-            <SubTitleWiki text="Plasmo 🎤"/>
+            <SubTitleWikiCenter text="Plasmo 🎤"/>
             <ParLeft>
                 Es un mod de chat de voz muy completo y con múltiples opciones de configuraciones. A continuación, te voy a explicar las más importantes y las que te recomendamos que configures: 
             </ParLeft>
