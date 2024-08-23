@@ -71,22 +71,25 @@ export default function ListMods() {
     }, []);
 
     const buildTree = (data) => {
-        const textTitle = `Mods ${totalMods}`;
-        const textComplementos = `Complementos ${totalComplementos}`;
+        const textTitle = `Mods ${totalMods} + ${totalModsDependientes.size}`;
+        const totalM = totalMods + totalModsDependientes.size;
+        const textComplementos = `Complementos ${totalComplementos} + ${totalComplementosDependientes.size}`;
+        const totalC = totalComplementos + totalComplementosDependientes.size;
         return (
             <div>
                 <div className="flex justify-center">
                     <Spam text={`Kailand V ${data.configVersion} | Launcher v ${data.launcherVersion}`} />
                 </div>
-                {buildBranch(textTitle, data.mods)}
-                {buildBranch(textComplementos, data.complementos)}
+                {buildBranch(textTitle, data.mods, totalM)}
+                {buildBranch(textComplementos, data.complementos, totalC)}
             </div>
         );
     }
-    const buildBranch = (title, data) => {
+    const buildBranch = (title, data, num) => {
         return (
             <div>
                     <SubTitleWiki text={title} />
+                <b className="text-gray-300/50">Total: {num} Mods</b>
                 <ul className="translate-x-4">
                     {
                         data
