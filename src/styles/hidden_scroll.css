@@ -1,8 +1,18 @@
 .hide-scrollbar::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
+    scrollbar-color: rgba(97, 97, 97, 0.295) rgba(0, 0, 0, 0);
+    scrollbar-gutter: stable;
 }
 
 .hide-scrollbar {
--ms-overflow-style: none;
-scrollbar-width: none;
+    scrollbar-color: rgba(97, 97, 97, 0.1) rgba(0, 0, 0, 0);
+    scrollbar-gutter: stable stable;
+    /* -webkit-overflow-scrolling: touch; */
+    /* -ms-overflow-style: none; */
+    /* scrollbar-width: none; */
+}
+
+.hide-scrollbar:hover {
+    scrollbar-color: rgba(97, 97, 97, 0.295) rgba(0, 0, 0, 0);
+    scrollbar-gutter: stable;
 }
