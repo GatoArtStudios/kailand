@@ -1393,7 +1393,7 @@
         },
         {
             "name": "Villager Enchantment Blocking",
-            "descripcion": "This is a mod to block villager' enchantments, created just for Kailand",
+            "descripcion": "Es un mod para bloquear las ofertas de los aldeanos, creado solo para Kailand.",
             "file": "BloquearTrabajos-1.19.2.jar",
             "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/BloquearTrabajos-1.19.2.jar",
             "disponible": true,
