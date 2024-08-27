@@ -146,7 +146,7 @@ export default function Juego() {
                         </div>
                     </li>
                     <li className="list-disc ml-5">
-                        <Spam text="Paso nueve:"/> 
+                        <Spam text="Paso nueve:"/> ¡Disfruta! 😎
                         <div className="flex flex-row">
                             <div className="h-max-[300px]">
                                 <CardImg ImgSrc={Imgur8.src} heightImg="h-auto" wigthImg="w-[400px]" />
