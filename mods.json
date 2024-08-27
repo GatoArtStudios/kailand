@@ -1248,7 +1248,7 @@
         },
         {
             "name": "Kailand finder",
-            "descripcion": "Kailand finger",
+            "descripcion": "Kailand finder",
             "file": "KailandFinder_v1.1.jar",
             "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/KailandFinder_v1.1.jar",
             "disponible": true,
