@@ -97,69 +97,72 @@ export default function Juego() {
             <ul>
                     <li className="list-disc ml-5">
                         <Spam text="Paso uno:"/> Clickear “New post”.
-                        <div className="h-max-[300px]">
-                            <CardImg ImgSrc={Imgur.src} heightImg="h-auto" />
+                        <div className="h-fit w-full flex justify-center">
+                            <CardImg ImgSrc={Imgur.src} heightImg="h-[240px]" wigthImg="w-auto" />
                         </div>
                     </li>
                     <li className="list-disc ml-5">
                         <Spam text="Paso dos:"/> Clickear “Sign in”.
-                        <div className="h-max-[300px]">
-                            <CardImg ImgSrc={Imgur1.src} heightImg="h-auto" />
+                        <div className="h-fit w-full flex justify-center">
+                            <CardImg ImgSrc={Imgur1.src} heightImg="h-[400px]" wigthImg="w-auto" />
                         </div>
                     </li>
                     <li className="list-disc ml-5">
                         <Spam text="Paso tres:"/> Clickear “need an account” sino tienes una cuenta, si ya tiene una clickear “sign in”.
-                        <div className="h-max-[300px]">
-                            <CardImg ImgSrc={Imgur2.src} heightImg="h-auto" />
+                        <div className="h-fit w-full flex justify-center">
+                            <CardImg ImgSrc={Imgur2.src} heightImg="h-[400px]" wigthImg="w-auto" />
                         </div>
                     </li>
                     <li className="list-disc ml-5">
                         <Spam text="Paso cuatro:"/> Poner toda tu información.
-                        <div className="h-max-[300px]">
-                            <CardImg ImgSrc={Imgur3.src} heightImg="h-auto" />
+                        <div className="h-fit w-full flex justify-center">
+                            <CardImg ImgSrc={Imgur3.src} heightImg="h-[400px]" wigthImg="w-auto" />
                         </div>
                     </li>
                     <li className="list-disc ml-5">
                         <Spam text="Paso cinco:"/> Clickear “Choose Photo/Video”.
-                        <div className="h-max-[300px]">
-                            <CardImg ImgSrc={Imgur4.src} heightImg="h-auto" />
+                        <div className="h-fit w-full flex justify-center">
+                            <CardImg ImgSrc={Imgur4.src} heightImg="h-[400px]" wigthImg="w-auto" />
                         </div>
                     </li>
                     <li className="list-disc ml-5">
                         <Spam text="Paso seis:"/> Seleccionar o arrastrar la skin que quieres importar.
-                        <div className="h-max-[300px]">
-                            <CardImg ImgSrc={Imgur5.src} heightImg="h-auto" />
+                        <div className="h-fit w-full flex justify-center">
+                            <CardImg ImgSrc={Imgur5.src} heightImg="h-[400px]" wigthImg="w-auto" />
                         </div>
                     </li>
                     <li className="list-disc ml-5">
                         <Spam text="Paso siete:"/> Copiar la URL o link. 
-                        <div className="h-max-[300px]">
-                            <CardImg ImgSrc={Imgur6.src} heightImg="h-auto" />
+                        <div className="h-fit w-full flex justify-center">
+                            <CardImg ImgSrc={Imgur6.src} heightImg="h-[400px]" wigthImg="w-auto" />
                         </div>
                     </li>
                     <li className="list-disc ml-5">
                         <Spam text="Paso ocho:"/> Escribir cualquiera de estos 2 comandos y luego copiar la URL: <br />
                         <Spam text="/skin <url skin>" /><br />
                         <Spam text="/skin url <url skin>" /><br />
-                        <div className="h-max-[300px]">
+                        <div className="h-fit w-full flex justify-center">
                             <CardImg ImgSrc={Imgur7.src} heightImg="h-auto" />
                         </div>
                     </li>
                     <li className="list-disc ml-5">
                         <Spam text="Paso nueve:"/> ¡Disfruta! 😎
                         <div className="flex flex-row">
-                            <div className="h-max-[300px]">
+                            <div className="h-fit w-full flex justify-center">
                                 <CardImg ImgSrc={Imgur8.src} heightImg="h-auto" wigthImg="w-[400px]" />
                             </div>
-                            <div className="h-max-[300px]">
+                            <div className="h-fit w-full flex justify-center">
                                 <CardImg ImgSrc={Imgur9.src} heightImg="h-auto" wigthImg="w-[387px]" />
                             </div>
                         </div>
                     </li>
                 </ul>
             <ParLeft>
-            Cabe recalcar que: el servidor siempre estará prendido, ya que es 24/7. A menos que esté en mantenimiento. De cualquier manera, el equipo de staff siempre estará avisando a todos y les mantendrá al tanto en nuestro servidor de <a href="https://kailand.es/discord" className="text-blue-500 hover:text-blue-300">discord</a>, específicamente en el canal de 
-            <a href="https://discord.com/channels/1074070315124138078/1086793825726509186"><Spam text="「🟨」avisos. "/></a>
+                Cabe recalcar que: el servidor siempre estará prendido, ya que es 24/7. A menos que esté en mantenimiento. De cualquier manera, el equipo de staff siempre estará avisando a todos y les mantendrá al tanto en nuestro servidor de <a href="https://kailand.es/discord" className="text-blue-500 hover:text-blue-300">discord</a>, específicamente en el canal de 
+                <a href="https://discord.com/channels/1074070315124138078/1086793825726509186"><Spam text="「🟨」avisos. "/></a>
+            </ParLeft>
+            <ParLeft>
+                También tienen que saber que, es importante que todos los jugadores utilicen nuestro Launcher, ya que así podemos garantizar el disfrute de la mejor experiencia de juego y de la mayor seguridad; para evitar el abuso de los famosos hacks o conocidos cheats, los cuales dan ventajas a los jugadores que los utilizan, sobre los usuarios que no. Esto también nos permite evitar ataques de bots al servidor (lo que puede ocasionar lag o hasta un crasheo). Nos aseguramos que todos jueguen en igualdad de condiciones y sin problemas, además de ser una buena forma de representar al servidor de una manera estética. Por todas esas razones el uso del Launcher es obligatorio para Kailand V.
             </ParLeft>
         </div>
     );
