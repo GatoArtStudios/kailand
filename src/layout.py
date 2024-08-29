@@ -614,7 +614,10 @@ class DataWidget:
         if not self.select_bar_ram.value == mc.valor_xmx:
             logger.info(f"Ejecutado changer ram {mc.valor_xmx_temp}")
             mc.ram_launcher_changer(ram = mc.valor_xmx_temp)
-            logger.info(mc.options)
+            _temp = mc.options.copy()
+            _temp.update({"uuid": "*************** privado **************"})
+            _temp.update({"username": "*************** privado **************"})
+            logger.info(_temp)
             self.text_save_setting.value = "Guardado correctamente"
             e.page.update()
         if not self.java_path.value == "Por Defecto":
