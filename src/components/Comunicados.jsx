@@ -1,6 +1,5 @@
 import TitleWiki from "./react/TitleWiki";
 import ParLeft from "./react/ParLeft";
-import SubTitleWiki from "./react/SubTitleWiki";
 import Spam from "./react/Spam";
 
 export default function Comunicados() {

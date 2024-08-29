@@ -129,72 +129,73 @@ import 'aos/dist/aos.css';
 	</main>
 </Layout>
 <script>
-	const bi = document.getElementById('instalador');
-	const bc = document.getElementById('comprimido');
-	const bl = document.getElementById('linux');
-	const modal = document.getElementById('modal');
-	const url_download = document.getElementById('link_descargar');
-	const modal_policies = document.getElementById('modal_policies');
-	const href_avalide = ['Instalador', 'Comprimido', 'Linux']
-	const link_avaliable = document.getElementById('link_avaliable');
+	document.addEventListener('DOMContentLoaded', () => {
+		const bi = document.getElementById('instalador');
+		const bc = document.getElementById('comprimido');
+		const bl = document.getElementById('linux');
+		const modal = document.getElementById('modal');
+		const url_download = document.getElementById('link_descargar');
+		const modal_policies = document.getElementById('modal_policies');
+		const href_avalide = ['Instalador', 'Comprimido', 'Linux']
+		const link_avaliable = document.getElementById('link_avaliable');
 
-	const showModal = (href) => {
-		if (modal_policies) {
-			if (modal_policies.classList.contains('hidden')) {
-				modal_policies.classList.remove('hidden');
-				for (let i = 0; i < href_avalide.length; i++) {
-					try {
-						url_download.classList.remove(href_avalide[i])
-					} catch (error) { }
+		const showModal = (href: string) => {
+			if (modal_policies) {
+				if (modal_policies.classList.contains('hidden')) {
+					modal_policies.classList.remove('hidden');
+					for (let i = 0; i < href_avalide.length; i++) {
+						try {
+							url_download?.classList.remove(href_avalide[i])
+						} catch (error) { }
+					}
+					url_download?.classList.add(href)
+				} else {
+					modal_policies.classList.add('hidden');
+					for (let i = 0; i < href_avalide.length; i++) {
+						try {
+							url_download?.classList.remove(href_avalide[i])
+						} catch (error) { }
+					}
 				}
-				url_download.classList.add(href)
-			} else {
-				modal_policies.classList.add('hidden');
-				for (let i = 0; i < href_avalide.length; i++) {
-					try {
-						url_download.classList.remove(href_avalide[i])
-					} catch (error) { }
+			}
+		}
+		const hiddenModal = () => {
+			if (modal_policies) {
+				if (modal_policies.classList.contains('hidden')) {
+					modal_policies.classList.remove('hidden');
+				} else {
+					modal_policies.classList.add('hidden');
 				}
 			}
 		}
-	}
-	const hiddenModal = () => {
-		if (modal_policies) {
-			if (modal_policies.classList.contains('hidden')) {
-				modal_policies.classList.remove('hidden');
-			} else {
-				modal_policies.classList.add('hidden');
-			}
-		}
-	}
 
-
-	bi.addEventListener('click', () => {
-		showModal('Instalador')
-		console.log('Boton clickeado')
-	});
-	bc.addEventListener('click', () => {
-		showModal('Comprimido')
-		console.log('Boton clickeado')
-	});
-	bl.addEventListener('click', () => {
-		showModal('Linux')
-		console.log('Boton clickeado')
-	});
-	link_avaliable.addEventListener('click', () => {
-		if (link_avaliable.classList.contains('avaliable')) {
-			window.location.href = "#smartscreen"
-			if (url_download.classList.contains('Instalador')) {
-				window.open('https://github.com/GatoArtStudios/kailand/releases/download/v2.0.1.2/Kailand-Installer.exe', '_blank')
-				hiddenModal()
-			} else if (url_download.classList.contains('Comprimido')) {
-				window.open('https://github.com/GatoArtStudios/kailand/releases/download/v2.0.1.2/Kailand-Windows-64.zip', '_blank')
-				hiddenModal()
-			} else if (url_download.classList.contains('Linux')) {
-				window.open('https://github.com/GatoArtStudios/kailand/releases/download/v2.0.1.2/kailand-linux-2-0-1-2.tar.gz', '_blank')
-				hiddenModal()
+		bi?.addEventListener('click', () => {
+			showModal('Instalador')
+			console.log('Boton clickeado')
+		});
+		bc?.addEventListener('click', () => {
+			showModal('Comprimido')
+			console.log('Boton clickeado')
+		});
+		bl?.addEventListener('click', () => {
+			showModal('Linux')
+			console.log('Boton clickeado')
+		});
+		link_avaliable?.addEventListener('click', () => {
+			if (link_avaliable?.classList.contains('avaliable')) {
+				window.location.href = "#smartscreen"
+				if (url_download?.classList.contains('Instalador')) {
+					window.open('https://github.com/GatoArtStudios/kailand/releases/download/v2.0.1.2/Kailand-Installer.exe', '_blank')
+					hiddenModal()
+				} else if (url_download?.classList.contains('Comprimido')) {
+					window.open('https://github.com/GatoArtStudios/kailand/releases/download/v2.0.1.2/Kailand-Windows-64.zip', '_blank')
+					hiddenModal()
+				} else if (url_download?.classList.contains('Linux')) {
+					window.open('https://github.com/GatoArtStudios/kailand/releases/download/v2.0.1.2/kailand-linux-2-0-1-2.tar.gz', '_blank')
+					hiddenModal()
+				}
 			}
-		}
+		})
 	})
 </script>
 <style>
