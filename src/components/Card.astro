@@ -2,24 +2,38 @@
 interface Props {
 	title: string;
 	body: string;
-	href: string;
+	href?: string;
 	animation: string;
 	typetarget: string;
+	id?: string
 }
 
-const { href, title, body, animation, typetarget } = Astro.props;
+const { href = '', title, body, animation, typetarget, id = 'None' } = Astro.props;
+const isClickable = href !== '';
 ---
 
-<li class="link-card bg-gradient-to-br from-green-400 to-blue-500" data-aos={animation}>
-	<a href={href} target={typetarget} data-aos={animation}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p data-aos={animation}>
-			{body}
-		</p>
-	</a>
+<li class="link-card bg-gradient-to-br from-green-400 to-blue-500 cursor-pointer" data-aos={animation} id={id}>
+	{isClickable ? (
+		<a href={href} target={typetarget} data-aos={animation}>
+			<h2>
+				{title}
+				<span>&rarr;</span>
+			</h2>
+			<p data-aos={animation}>
+				{body}
+			</p>
+		</a>
+	) : (
+		<div data-aos={animation}>
+			<h2>
+				{title}
+				<span>&rarr;</span>
+			</h2>
+			<p data-aos={animation}>
+				{body}
+			</p>
+		</div>
+	)}
 </li>
 <style>
 	.link-card {
@@ -35,6 +49,16 @@ const { href, title, body, animation, typetarget } = Astro.props;
 		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 	}
 	.link-card > a {
+		width: 100%;
+		text-decoration: none;
+		line-height: 1.4;
+		padding: calc(1.5rem - 1px);
+		border-radius: 8px;
+		color: white;
+		background-color: rgba(28, 41, 28, 0.5);
+		opacity: 0.8;
+	}
+	.link-card > div {
 		width: 100%;
 		text-decoration: none;
 		line-height: 1.4;
