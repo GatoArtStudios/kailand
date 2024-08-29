@@ -1,20 +1,23 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 interface Props {
-	title: string;
+	title?: string;
+	description?: string;
+	url?: string;
 }
 
-const { title } = Astro.props;
+const { url = "https://www.kailand.es", title = "Descubre Kailand: Tu Aventura Definitiva en Minecraft", description = "Únete a Kailand, un servidor público de Minecraft desarrollado profesionalmente para ofrecerte una experiencia única y emocionante." } = Astro.props;
+
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta property="og:title" content="Descubre Kailand: Tu Aventura Definitiva en Minecraft">
-		<meta property="og:description" content="Únete a Kailand, un servidor público de Minecraft desarrollado profesionalmente para ofrecerte una experiencia única y emocionante.">
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={description}>
 		<meta property="og:image" content="https://raw.githubusercontent.com/GatoArtStudios/kailand/web/public/KLZ.gif">
-		<meta property="og:url" content="https://www.kailand.es">
+		<meta property="og:url" content={url}>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GatoArtStudios/kailand/web/public/favicon.png" />
 		<meta name="generator" content={Astro.generator} />

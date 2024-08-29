@@ -14,5 +14,4 @@
 
 .hide-scrollbar:hover {
     scrollbar-color: rgba(97, 97, 97, 0.295) rgba(0, 0, 0, 0);
-    scrollbar-gutter: stable;
 }
