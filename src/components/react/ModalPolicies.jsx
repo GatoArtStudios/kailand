@@ -29,7 +29,7 @@ export default function ModalPolicies({ href }) {
                 Kailand utiliza la información proporcionada por los usuarios para
                 asegurar una experiencia de juego segura. No vendemos ni compartimos
                 su información personal sin su consentimiento, excepto en caso de orden
-                judicial. Para más detalles, revise nuestras <a href={href} className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
+                judicial. Para más detalles, revise nuestras <a href="https://www.kailand.es/policies/" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
                 políticas de privacidad completas
                 </a>.
             </p>
