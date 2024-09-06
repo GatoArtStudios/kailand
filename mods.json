@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.1.12",
+    "configVersion": "1.1.13",
     "launcherVersion": "2.0.1.3",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nParche para evitar que el username y el uuid se pueda ver desde la consola.",
@@ -1907,6 +1907,17 @@
             "hash": "dd470490f09280c8f7a2043cca6f3a812c8e6778b56da1cb58f338792236cb42"
         },
         {
+            "name": "Notenoughcrashes",
+            "descripcion": "Evita que tu juego se cierre si se bloquea; te devuelve al menú principal del juego para evitar que se cierre por un error.",
+            "doct": "https://modrinth.com/mod/notenoughcrashes",
+            "file": "notenoughcrashes-5.0.0+1.19.2-forge.jar",
+            "url": "https://cdn.modrinth.com/data/yM94ont6/versions/CBGo7yB8/notenoughcrashes-5.0.0%2B1.19.2-forge.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": [],
+            "hash": "3ae3a26acc58cbd743eea39d3d21d47d230e114e1e8fdf20818a3ae4ee17565c"
+        },
+        {
             "name": "Presence Footsteps",
             "descripcion": "Un mod de mejora del sonido de pasos demasiado complicado para Minecraft.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/presence-footsteps-forge",
@@ -2223,6 +2234,28 @@
                 }
             ],
             "hash": "a8fa34d3bd7321c9f8c78bb97055fa4393b24bf1f7226f341d712c37c5dabf89"
+        },
+        {
+            "name": "Connectedness",
+            "descripcion": "Te permite tener iluminación artificial en texture packs y texturas conectadas.",
+            "doct": "https://modrinth.com/mod/connectedness",
+            "file": "connectedness-2.0.1a.jar",
+            "url": "https://cdn.modrinth.com/data/ceiPqFmI/versions/r4SIDnDr/connectedness-2.0.1a.jar",
+            "disponible": true,
+            "active": false,
+            "dependencia": [
+                {
+                    "name": "Reforgium",
+                    "descripcion": "Dependecia de Connectedness",
+                    "file": "reforgium-1.0.12a.jar",
+                    "url": "https://cdn.modrinth.com/data/vmn85VI7/versions/OcW1M8PC/reforgium-1.0.12a.jar",
+                    "disponible": true,
+                    "dependencia": [],
+                    "hash": "9ed1293ebae789f8ec26b7ac0420c371032726916dc8e1f9075334f9b3f72914",
+                    "doct": "https://modrinth.com/mod/reforgium"
+                }
+            ],
+            "hash": "3416f1356e7bd0e0b7facd36e7c373528af5b5db65f06699ab27d9ec79bf6bdb"
         }
     ]
 }
