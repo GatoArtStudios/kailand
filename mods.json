@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.1.13",
+    "configVersion": "1.1.14",
     "launcherVersion": "2.0.1.3",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nParche para evitar que el username y el uuid se pueda ver desde la consola.",
@@ -463,14 +463,14 @@
             "descripcion": "Trash slot",
             "file": "trashslot-forge-1.19.2-12.1.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4753/179/trashslot-forge-1.19.2-12.1.0.jar",
-            "disponible": true,
+            "disponible": false,
             "dependencia": [
                 {
                     "name": "balm",
                     "descripcion": "Balm",
                     "file": "balm-forge-1.19.2-4.6.0.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4751/735/balm-forge-1.19.2-4.6.0.jar",
-                    "disponible": true,
+                    "disponible": false,
                     "dependencia": [],
                     "hash": "b35e87c6a8c5f0053afe2a5006072e9322e8747d4e980580cb1de34ca4b926c2",
                     "doct": "https://www.curseforge.com/minecraft/mc-mods/balm"
