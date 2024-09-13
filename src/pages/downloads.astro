@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import NavBar from '../components/NavBar.astro';
 import ModalPolicies from '../components/react/ModalPolicies.jsx';
+import ButtonScrollDownloads from '../components/react/ButtonScrollDownloads';
 
 import 'aos/dist/aos.css';
 ---
@@ -13,6 +14,14 @@ import 'aos/dist/aos.css';
 		<div class="h-20"></div>
 		<div class="h-0 w-full fixed top-12 left-0 flex justify-end p-5 z-50" id="modal">
 			<ModalPolicies client:load href="#" />
+		</div>
+		<div class="w-full fixed h-full top-0 left-0 flex items-end p-5 z-0">
+			<div class="w-full justify-start">
+				<ButtonScrollDownloads client:load>
+			</div>
+			<div class="w-full justify-end flex">
+				<ButtonScrollDownloads client:load>
+			</div>
 		</div>
 		<h1 data-aos="fade-zoom-in" data-aos-delay="200">Zona de <span class="text-gradient">Descargas</span></h1>
 		<p class="instructions" data-aos="fade-right">
