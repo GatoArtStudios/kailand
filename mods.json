@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.1.18",
+    "configVersion": "1.1.19",
     "launcherVersion": "2.0.1.3",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nParche para evitar que el username y el uuid se pueda ver desde la consola.",
@@ -1105,13 +1105,13 @@
             "doct": "https://www.curseforge.com/minecraft/mc-mods/the-abyss-chapter-ii"
         },
         {
-            "name": "Kailand Mod V5.1",
+            "name": "Kailand Mod V5.8",
             "descripcion": "Kailand Mod",
-            "file": "Kailand_Mod-5.1.jar",
-            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/Kailand_Mod-5.1.jar",
+            "file": "Kailand_Mod-5.8.jar",
+            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/config/mods/Kailand_Mod-5.8.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "169c40f71dd586beb62ba0e32464b3d9fabc3bc916f3e78df93476e423d52d0d",
+            "hash": "66ed124941a5d28fa1c5bd5a9ee0937deab11ed820fc29d8861b12346aae813b",
             "doct": "https://www.kailand.es/wiki/mods/#kailand_mod"
         },
         {
