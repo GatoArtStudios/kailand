@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.1.22",
+    "configVersion": "1.1.23",
     "launcherVersion": "2.0.1.3",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nParche para evitar que el username y el uuid se pueda ver desde la consola.",
@@ -2197,7 +2197,7 @@
             "doct": "https://www.curseforge.com/minecraft/mc-mods/magnesium-extras",
             "file": "rubidium_extras-1.19.2_v1.4.3.jar",
             "url": "https://mediafilez.forgecdn.net/files/4632/201/rubidium_extras-1.19.2_v1.4.3.jar",
-            "disponible": true,
+            "disponible": false,
             "active": false,
             "dependencia": [],
             "hash": "8d2dc00dedd20d93711186f014b3d3a994164963559a33112817ec86ceda8b1b"
