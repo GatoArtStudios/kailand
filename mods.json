@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.1.21",
+    "configVersion": "1.1.22",
     "launcherVersion": "2.0.1.3",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion: \nParche para evitar que el username y el uuid se pueda ver desde la consola.",
@@ -1962,13 +1962,57 @@
             "hash": "da1d4c273ce69719b728e2c63f170c3ee369334574dd15bcfefac9130119454c"
         },
         {
+            "name": "Iris",
+            "descripcion": "Un mod de sombreadores de código abierto compatible con los paquetes de sombreadores OptiFine",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/irisshaders",
+            "file": "iris-mc1.19.2-1.6.9.jar",
+            "url": "https://mediafilez.forgecdn.net/files/4861/705/iris-mc1.19.2-1.6.9.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": [
+                {
+                    "name": "Oculus",
+                    "descripcion": "Oculus es una bifurcación no oficial de 'Iris', diseñada para funcionar con Forge Mod Loader.",
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/oculus",
+                    "file": "oculus-mc1.19.2-1.6.4.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4578/731/oculus-mc1.19.2-1.6.4.jar",
+                    "disponible": true,
+                    "dependencia": [],
+                    "hash": "f12a11c66565bc7867c964fa2d87b2c62867c841fb8b285699d3f8088037f549"
+                }
+            ],
+            "hash": "876cf7b28bb43284ecb8a82caaf778bb2b102582fb1f669b69f792d9c1c3e498"
+        },
+        {
+            "name": "Embeddium",
+            "descripcion": "Mod de rendimiento, te dara mas fps ya que optimiza muchos procesos de renderizado del juego, 100% recomendable.",
+            "doct": "https://www.curseforge.com/minecraft/mc-mods/embeddium",
+            "file": "embeddium-0.3.18.1+mc1.19.2.jar",
+            "url": "https://mediafilez.forgecdn.net/files/5539/178/embeddium-0.3.18.1%2Bmc1.19.2.jar",
+            "disponible": true,
+            "active": true,
+            "dependencia": [
+                {
+                    "name": "Embeddium Plus",
+                    "descripcion": "Mod extra para Embeddium, ofrece mas opciones de rendimiento",
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/embeddiumplus",
+                    "file": "embeddiumplus-1.19.2-v1.2.13.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/5344/502/embeddiumplus-1.19.2-v1.2.13.jar",
+                    "disponible": true,
+                    "dependencia": [],
+                    "hash": "664c8a7ddba26b15b38e1b9c86c5dc164e5fd58a7de009c51937901d284cad80"
+                }
+            ],
+            "hash": "247343f0c32410279bd85eae4ef1125141b6e29b9044f82ba0db4bbad1e61a06"
+        },
+        {
             "name": "Rubidium",
             "descripcion": "Optimizador",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/rubidium",
             "file": "rubidium-mc1.19.2-0.6.2c.jar",
             "url": "https://mediafilez.forgecdn.net/files/4763/255/rubidium-mc1.19.2-0.6.2c.jar",
-            "disponible": true,
-            "active": true,
+            "disponible": false,
+            "active": false,
             "dependencia": [
                 {
                     "name": "Iris",
@@ -1976,7 +2020,7 @@
                     "doct": "https://www.curseforge.com/minecraft/mc-mods/irisshaders",
                     "file": "iris-mc1.19.2-1.6.9.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4861/705/iris-mc1.19.2-1.6.9.jar",
-                    "disponible": true,
+                    "disponible": false,
                     "dependencia": [],
                     "hash": "876cf7b28bb43284ecb8a82caaf778bb2b102582fb1f669b69f792d9c1c3e498"
                 },
@@ -1986,7 +2030,7 @@
                     "doct": "https://www.curseforge.com/minecraft/mc-mods/oculus",
                     "file": "oculus-mc1.19.2-1.6.4.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4578/731/oculus-mc1.19.2-1.6.4.jar",
-                    "disponible": true,
+                    "disponible": false,
                     "dependencia": [],
                     "hash": "f12a11c66565bc7867c964fa2d87b2c62867c841fb8b285699d3f8088037f549"
                 }
