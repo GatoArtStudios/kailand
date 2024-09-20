@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.1.23",
+    "configVersion": "1.1.24",
     "launcherVersion": "2.0.1.3",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion:",
@@ -2006,38 +2006,6 @@
             "hash": "247343f0c32410279bd85eae4ef1125141b6e29b9044f82ba0db4bbad1e61a06"
         },
         {
-            "name": "Rubidium",
-            "descripcion": "Optimizador",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/rubidium",
-            "file": "rubidium-mc1.19.2-0.6.2c.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4763/255/rubidium-mc1.19.2-0.6.2c.jar",
-            "disponible": false,
-            "active": false,
-            "dependencia": [
-                {
-                    "name": "Iris",
-                    "descripcion": "Un mod de sombreadores de código abierto compatible con los paquetes de sombreadores OptiFine",
-                    "doct": "https://www.curseforge.com/minecraft/mc-mods/irisshaders",
-                    "file": "iris-mc1.19.2-1.6.9.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/4861/705/iris-mc1.19.2-1.6.9.jar",
-                    "disponible": false,
-                    "dependencia": [],
-                    "hash": "876cf7b28bb43284ecb8a82caaf778bb2b102582fb1f669b69f792d9c1c3e498"
-                },
-                {
-                    "name": "Oculus",
-                    "descripcion": "Oculus es una bifurcación no oficial de 'Iris', diseñada para funcionar con Forge Mod Loader.",
-                    "doct": "https://www.curseforge.com/minecraft/mc-mods/oculus",
-                    "file": "oculus-mc1.19.2-1.6.4.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/4578/731/oculus-mc1.19.2-1.6.4.jar",
-                    "disponible": false,
-                    "dependencia": [],
-                    "hash": "f12a11c66565bc7867c964fa2d87b2c62867c841fb8b285699d3f8088037f549"
-                }
-            ],
-            "hash": "fc500860374072a77a0e61f45f1d4c59237b897872d60b68e36fe07de723a468"
-        },
-        {
             "name": "Skin Layer",
             "descripcion": "Hace que la segunda capa de las skins sea 3D.",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/skin-layers-3d",
@@ -2190,17 +2158,6 @@
             "active": false,
             "dependencia": [],
             "hash": "1a00b4728d60be3c76be956dbe5551224894abd0f668db6acca6edda328151a9"
-        },
-        {
-            "name": "Rubidium Extras",
-            "descripcion": "Magnesium Extras agrega muchas características al Magnesio o Rubidio (Forge Sodium) para mejorar el mod. Incluye varias funciones de otras modificaciones, empaquetadas en un complemento que querrás instalar para obtener la mejor experiencia.",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/magnesium-extras",
-            "file": "rubidium_extras-1.19.2_v1.4.3.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4632/201/rubidium_extras-1.19.2_v1.4.3.jar",
-            "disponible": false,
-            "active": false,
-            "dependencia": [],
-            "hash": "8d2dc00dedd20d93711186f014b3d3a994164963559a33112817ec86ceda8b1b"
         },
         {
             "name": "Offline Skins",
