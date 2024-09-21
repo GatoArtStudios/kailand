@@ -2342,6 +2342,16 @@
                     "dependencia": [],
                     "hash": "3f30a48e329eafc8b534da081cef1fd96c8bc914533bafda4535753a2a74cd4d",
                     "doct": "https://www.curseforge.com/minecraft/mc-mods/archeology-api"
+                },
+                {
+                    "name": "Cloth config API",
+                    "descripcion": "Cloth config API",
+                    "file": "cloth-config-8.3.115-forge.jar",
+                    "url": "https://mediafilez.forgecdn.net/files/4973/444/cloth-config-8.3.115-forge.jar",
+                    "disponible": true,
+                    "dependencia": [],
+                    "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f",
+                    "doct": "https://www.curseforge.com/minecraft/mc-mods/cloth-config"
                 }
             ],
             "hash": "fe8e58fc1a77a8b9436a0b913f7d932a39cc53119b7e7e0c6d5c1f3c7e6a8c09"
