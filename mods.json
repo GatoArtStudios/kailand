@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.1.27",
+    "configVersion": "1.1.28",
     "launcherVersion": "2.0.1.3",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion:",
@@ -461,22 +461,22 @@
         {
             "name": "Trash slot",
             "descripcion": "Trash slot",
-            "file": "trashslot-forge-1.19.2-12.1.0.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4753/179/trashslot-forge-1.19.2-12.1.0.jar",
-            "disponible": false,
+            "file": "trashslot-forge-1.19.2-12.2.0.jar",
+            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/refs/heads/config/mods/trashslot-forge-1.19.2-12.2.0.jar",
+            "disponible": true,
             "dependencia": [
                 {
                     "name": "balm",
                     "descripcion": "Balm",
                     "file": "balm-forge-1.19.2-4.6.0.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4751/735/balm-forge-1.19.2-4.6.0.jar",
-                    "disponible": false,
+                    "disponible": true,
                     "dependencia": [],
                     "hash": "b35e87c6a8c5f0053afe2a5006072e9322e8747d4e980580cb1de34ca4b926c2",
                     "doct": "https://www.curseforge.com/minecraft/mc-mods/balm"
                 }
             ],
-            "hash": "2556243dff0cd92f1b259a91c1b09765f5519390cff6dd9a4dc2383d8aa9f157",
+            "hash": "0bd8e2d1a3de530213ae4c0b20a2fa821664be93ca49ec90d5a7660e0b07afc8",
             "doct": "https://www.curseforge.com/minecraft/mc-mods/trashslot"
         },
         {
@@ -1105,13 +1105,13 @@
             "doct": "https://www.curseforge.com/minecraft/mc-mods/the-abyss-chapter-ii"
         },
         {
-            "name": "Kailand Mod V5.9",
+            "name": "Kailand Mod V6.0",
             "descripcion": "Kailand Mod",
-            "file": "Kailand_Mod-5.9.jar",
-            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/refs/heads/config/mods/Kailand_Mod-5.9.jar",
+            "file": "Kailand_Mod-6.0.jar",
+            "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/refs/heads/config/mods/Kailand_Mod-6.0.jar",
             "disponible": true,
             "dependencia": [],
-            "hash": "e580fccf13e7502bb4d85dafa164325baedf41935f7f49aefb385d58b8d6183b",
+            "hash": "416e9074fdb7ea63f707c777bfe2139d81dcca8b02615ac9d30f56a0bec23177",
             "doct": "https://www.kailand.es/wiki/mods/#kailand_mod"
         },
         {
