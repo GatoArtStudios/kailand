@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.1.26",
+    "configVersion": "1.1.27",
     "launcherVersion": "2.0.1.3",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion:",
@@ -2323,38 +2323,6 @@
                 }
             ],
             "hash": "03ef65c6ce86a0e0c52db472a79278672c1bad883c56fea1864fac167c9c44be"
-        },
-        {
-            "name": "BetterRecipeBooks",
-            "descripcion": "Better Recipe Books: Ese mod, te permite tener un libro al abrir la mesa de posiones, lo cual te ayuda a hacer posiones sin dificultad.",
-            "doct": "https://www.curseforge.com/minecraft/mc-mods/brb",
-            "file": "brb-1.7.2-forge.jar",
-            "url": "https://mediafilez.forgecdn.net/files/4454/808/brb-1.7.2-forge.jar",
-            "disponible": true,
-            "active": false,
-            "dependencia": [
-                {
-                    "name": "Archaeology Api",
-                    "descripcion": "Archaeology Api | Dependencia",
-                    "file": "archaeology-api-1.19.2-1.0.0.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/5141/973/archaeology-api-1.19.2-1.0.0.jar",
-                    "disponible": true,
-                    "dependencia": [],
-                    "hash": "3f30a48e329eafc8b534da081cef1fd96c8bc914533bafda4535753a2a74cd4d",
-                    "doct": "https://www.curseforge.com/minecraft/mc-mods/archeology-api"
-                },
-                {
-                    "name": "Cloth config API",
-                    "descripcion": "Cloth config API",
-                    "file": "cloth-config-8.3.115-forge.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/4973/444/cloth-config-8.3.115-forge.jar",
-                    "disponible": true,
-                    "dependencia": [],
-                    "hash": "e51cc77660542cd3d187ac5dfe3ee938ba0872867a6f33d2d0058adc314ec68f",
-                    "doct": "https://www.curseforge.com/minecraft/mc-mods/cloth-config"
-                }
-            ],
-            "hash": "fe8e58fc1a77a8b9436a0b913f7d932a39cc53119b7e7e0c6d5c1f3c7e6a8c09"
         }
     ]
 }
