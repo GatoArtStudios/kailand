@@ -1,5 +1,5 @@
 {
-    "configVersion": "1.1.29",
+    "configVersion": "1.1.30",
     "launcherVersion": "2.0.1.3",
     "launcherUrl": "https://www.kailand.es/",
     "updateDescription": "Para seguir usando el launcher descarge la nueva version del launcher por favor\n\nNotas de actualizacion:",
@@ -211,11 +211,11 @@
                 {
                     "name": "Curios API",
                     "descripcion": "Curios API",
-                    "file": "curios-forge-1.19.2-5.1.4.4.jar",
-                    "url": "https://mediafilez.forgecdn.net/files/4985/476/curios-forge-1.19.2-5.1.4.4.jar",
+                    "file": "curios-forge-1.19.2-5.1.6.5.jar",
+                    "url": "https://raw.githubusercontent.com/GatoArtStudios/kailand/refs/heads/config/mods/curios-forge-1.19.2-5.1.6.5.jar",
                     "disponible": true,
                     "dependencia": [],
-                    "hash": "c4699fdb0c3ee6a1dddb1b65479ed0db5e3ab308f7204ce7044a0390c4eb8469",
+                    "hash": "646d85288af735ad1ec303a320262646df6e808e29760c4d43d3572c3e6c87ac",
                     "doct": "https://www.curseforge.com/minecraft/mc-mods/curios"
                 },
                 {
@@ -1230,14 +1230,14 @@
             "descripcion": "Bongo",
             "file": "Bongo-1.19.2-3.2.0.jar",
             "url": "https://mediafilez.forgecdn.net/files/4046/533/Bongo-1.19.2-3.2.0.jar",
-            "disponible": true,
+            "disponible": false,
             "dependencia": [
                 {
                     "name": "LibX",
                     "descripcion": "Dependencia",
                     "file": "LibX-1.19.2-4.2.8.jar",
                     "url": "https://mediafilez.forgecdn.net/files/4052/778/LibX-1.19.2-4.2.8.jar",
-                    "disponible": true,
+                    "disponible": false,
                     "dependencia": [],
                     "hash": "3fcde1a118a6f2c8d175af5934fa020abad0efe9ca2abab17bf0899f0f5951eb",
                     "doct": "https://www.curseforge.com/minecraft/mc-mods/libx"
