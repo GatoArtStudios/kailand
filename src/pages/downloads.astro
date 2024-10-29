@@ -194,13 +194,16 @@ import 'aos/dist/aos.css';
 			if (link_avaliable?.classList.contains('avaliable')) {
 				window.location.href = "#smartscreen"
 				if (url_download?.classList.contains('Instalador')) {
-					window.open('https://github.com/GatoArtStudios/kailand/releases/download/v2.0.1.3/Kailand-Installer.exe', '_blank')
+					// window.open('https://github.com/GatoArtStudios/kailand/releases/download/v2.0.1.3/Kailand-Installer.exe', '_blank')
+					alert('No se encuentra disponible')
 					hiddenModal()
 				} else if (url_download?.classList.contains('Comprimido')) {
-					window.open('https://github.com/GatoArtStudios/kailand/releases/download/v2.0.1.3/Kailand-Windows-64.zip', '_blank')
+					// window.open('https://github.com/GatoArtStudios/kailand/releases/download/v2.0.1.3/Kailand-Windows-64.zip', '_blank')
+					alert('No se encuentra disponible')
 					hiddenModal()
 				} else if (url_download?.classList.contains('Linux')) {
-					window.open('https://github.com/GatoArtStudios/kailand/releases/download/v2.0.1.3/kailand-linux-2-0-1-3.tar.gz', '_blank')
+					// window.open('https://github.com/GatoArtStudios/kailand/releases/download/v2.0.1.3/kailand-linux-2-0-1-3.tar.gz', '_blank')
+					alert('No se encuentra disponible')
 					hiddenModal()
 				}
 			}

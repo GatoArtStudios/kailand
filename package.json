@@ -17,7 +17,7 @@
     "@types/react-dom": "^18.3.0",
     "aos": "^2.3.4",
     "astro": "^4.11.5",
-    "npx": "^10.2.2",
+    "npx": "^3.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-modal-image": "^2.6.0",
