@@ -8,7 +8,7 @@ export default defineConfig({
   load: [async () => ({
     base: process.env.NODE_ENV === 'production' ? '/kailand/' : '/',
     site: {
-      keywords: ['kailand', 'sitio', 'web', 'minecraft', 'kailand v', 'server'],
+      keywords: ['kailand', 'sitio', 'web', 'minecraft', 'kailand', 'server'],
       url: 'https://www.kailand.es'
     }
   })],
