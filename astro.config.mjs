@@ -12,5 +12,18 @@ export default defineConfig({
       url: 'https://www.kailand.es'
     }
   })],
-  integrations: [tailwind(), react()]
+  integrations: [tailwind(), react()],
+  vite: {
+    build: {
+      rollupOptions: {
+        input: [
+          "src/",
+          "public/"
+        ],
+        external: [
+          "archive/**"
+        ]
+      }
+    }
+  }
 });
