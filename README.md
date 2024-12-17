@@ -43,7 +43,7 @@ Hola bienvenido a este repositorio, en el cual tenemos todo el código del proye
 [Owner-Proyect](https://www.instagram.com/soyellioth/)
 </br>
 
-[Web Oficial de Kialand](https://gatoartstudios.github.io/kailand/)
+[Web Oficial de Kailand](https://gatoartstudios.github.io/kailand/)
 
 
 > [!WARNING]
